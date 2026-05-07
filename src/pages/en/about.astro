@@ -1,0 +1,46 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getCounts, getGeneratedAt } from '../../lib/data';
+import { useTranslations, getDateLocale, type Locale } from '../../i18n/messages';
+
+const locale = (Astro.currentLocale ?? 'nl') as Locale;
+const t = useTranslations(locale);
+const counts = getCounts();
+const updated = new Date(getGeneratedAt()).toLocaleDateString(getDateLocale(locale));
+---
+
+<Layout title={t.about.title} description={t.siteDescription}>
+  <main class="container container-narrow detail">
+    <h1 class="detail__title">{t.about.title}</h1>
+    <p style="color: var(--text-secondary); font-size: var(--text-lg); margin: var(--space-4) 0;">
+      {t.siteTagline}
+    </p>
+
+    <section style="margin: var(--space-8) 0;">
+      <h2 style="font-size: var(--text-xl); margin-bottom: var(--space-3);">{t.about.whoHeading}</h2>
+      <p>{t.about.whoIntro(counts.total)}</p>
+      <ul style="color: var(--text-secondary); padding-left: var(--space-5); line-height: var(--leading-relaxed);">
+        <li><strong style="color: var(--text-primary);">GitHub</strong> — {t.about.sourceGH}</li>
+        <li><strong style="color: var(--text-primary);">YouTube</strong> — {t.about.sourceYT}</li>
+        <li><strong style="color: var(--text-primary);">X / Twitter</strong> — {t.about.sourceTW}</li>
+        <li><strong style="color: var(--text-primary);">Bluesky</strong> — {t.about.sourceBSKY}</li>
+      </ul>
+      <p style="color: var(--text-muted); font-size: var(--text-sm); margin-top: var(--space-4);">
+        {t.about.cross(counts.cross, updated)}
+      </p>
+    </section>
+
+    <section style="margin: var(--space-8) 0;">
+      <h2 style="font-size: var(--text-xl); margin-bottom: var(--space-3);">{t.about.criteriaHeading}</h2>
+      <p>{t.about.criteriaBody}</p>
+    </section>
+
+    <section style="margin: var(--space-8) 0;">
+      <h2 style="font-size: var(--text-xl); margin-bottom: var(--space-3);">{t.about.relatedHeading}</h2>
+      <p style="color: var(--text-secondary);">
+        {t.about.relatedBody} <a href="https://feedzzz.online">feedzzz.online</a>.
+        {locale === 'nl' ? 'Voor diepgaande tool-reviews:' : 'For in-depth tool reviews:'} <a href="https://debesteaitools.nl">debesteaitools.nl</a>.
+      </p>
+    </section>
+  </main>
+</Layout>

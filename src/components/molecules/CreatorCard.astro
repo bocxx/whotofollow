@@ -1,0 +1,353 @@
+---
+import type { Creator } from '../../types/creator';
+import { platformLabels, formatNumber, categoryLabel, tierLabel } from '../../lib/data';
+import { localizedHref, type Locale } from '../../i18n/messages';
+import {
+  Github, Youtube, Twitter, Cloud, Globe, Users, Building2, Star, Award,
+  Sparkles, Code, Bot, BookOpen, Briefcase, Microscope, Palette,
+  GraduationCap, Wrench, ShieldCheck, Megaphone
+} from '@lucide/astro';
+
+const CategoryIcon: Record<string, any> = {
+  'claude':        Sparkles,
+  'coding':        Code,
+  'agents':        Bot,
+  'beginners':     BookOpen,
+  'business':      Briefcase,
+  'research':      Microscope,
+  'creative':      Palette,
+  'fundamentals':  GraduationCap,
+  'tool-insights': Wrench,
+  'official':      ShieldCheck,
+  'branding':      Megaphone,
+};
+
+interface Props { creator: Creator; locale?: Locale; }
+const { creator, locale = 'nl' } = Astro.props;
+const href = localizedHref(`/${creator.slug}`, locale);
+
+const PlatformIcon = (type: string) => {
+  switch (type) {
+    case 'github': return Github;
+    case 'youtube': return Youtube;
+    case 'twitter': return Twitter;
+    case 'bluesky': return Cloud;
+    default: return Globe;
+  }
+};
+
+const primaryFollowers = creator.stats?.followers
+  ?? creator.platforms.find((p) => p.followers != null)?.followers
+  ?? 0;
+
+const initials = (creator.name || creator.primary_handle || 'X')
+  .split(/\s+/).map((s) => s[0]).join('').slice(0, 2).toUpperCase();
+
+const isPick = !!creator.is_curator_pick;
+const tier = creator.curator_tier;
+const cats = (creator.tags ?? []).slice(0, 3);
+const hasMoreCats = (creator.tags ?? []).length > cats.length;
+---
+
+<a href={href}
+   class={`creator-card ${isPick ? 'creator-card--pick' : ''} ${tier ? `creator-card--tier-${tier}` : ''}`}
+   data-source={creator.primary_platform}
+   data-tier={tier ?? ''}
+   data-pick={isPick ? '1' : '0'}
+   data-cats={(creator.tags ?? []).join(' ')}>
+
+  <header class="creator-card__head">
+    <div class="creator-card__source">
+      <span class="source-dot"></span>
+      <span class="source-label">{platformLabels[creator.primary_platform] ?? creator.primary_platform}</span>
+      {creator.type === 'organization' && <span class="text-muted">· org</span>}
+    </div>
+    {isPick && (
+      <span class={`tier-pill tier-pill--${tier}`}>
+        {tier === 'must-follow' && <Star size={10} stroke-width={2.5} />}
+        {tier === 'official' && <Award size={10} stroke-width={2.5} />}
+        {tierLabel(tier, locale)}
+      </span>
+    )}
+    {creator.platforms.length > 1 && (
+      <span class="multi-platform-pill" title={`${creator.platforms.length} platforms`}>×{creator.platforms.length}</span>
+    )}
+    {creator.avatar ? (
+      <img src={creator.avatar} alt="" class="creator-card__avatar" width="32" height="32" loading="lazy" />
+    ) : (
+      <span class="creator-card__avatar creator-card__avatar--initials">{initials}</span>
+    )}
+  </header>
+
+  <h3 class="creator-card__name">{creator.name}</h3>
+  <span class="creator-card__handle">@{creator.primary_handle}</span>
+
+  {isPick && creator.editor_note ? (
+    <div class="editor-note" role="note">
+      <span class="editor-note__quote" aria-hidden="true">“</span>
+      <p>{creator.editor_note}</p>
+    </div>
+  ) : creator.bio ? (
+    <p class="creator-card__bio">{creator.bio}</p>
+  ) : null}
+
+  {(cats.length > 0 || creator.location || creator.company) && (
+    <div class="creator-card__chips">
+      {cats.map((c) => {
+        const Icon = CategoryIcon[c];
+        return (
+          <span class="cat-chip" data-cat={c}>
+            {Icon && <Icon size={11} stroke-width={1.8} />}
+            <span>{categoryLabel(c, locale)}</span>
+          </span>
+        );
+      })}
+      {hasMoreCats && <span class="text-muted" style="font-size: var(--text-xs);">+{(creator.tags ?? []).length - cats.length}</span>}
+      {(creator.location || creator.company) && (
+        <span class="creator-card__meta-text">
+          {creator.location || creator.company}
+        </span>
+      )}
+    </div>
+  )}
+
+  <footer class="creator-card__footer">
+    <span class="creator-card__stat">
+      <Users size={12} stroke-width={2} />
+      {formatNumber(primaryFollowers)}
+    </span>
+    <div class="creator-card__platforms">
+      {creator.platforms.map((p) => {
+        const Icon = PlatformIcon(p.type);
+        return <Icon size={13} stroke-width={1.8} />;
+      })}
+    </div>
+    {creator.type === 'organization' && (
+      <Building2 size={12} stroke-width={1.5} class="org-icon" />
+    )}
+  </footer>
+</a>
+
+<style>
+  /* ─── card root ─────────────────────────────────────────── */
+  .creator-card {
+    display: flex; flex-direction: column;
+    gap: var(--space-2-5, 0.625rem);
+    padding: var(--space-4) var(--space-4) var(--space-3);
+    background: var(--bg-panel);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+    color: var(--text-primary);
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    transition:
+      transform var(--duration-fast),
+      border-color var(--duration-fast),
+      box-shadow var(--duration-fast),
+      background var(--duration-fast);
+    min-width: 0;
+  }
+  .creator-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--border-accent);
+    box-shadow: var(--shadow-lg);
+    color: var(--text-primary);
+  }
+
+  /* ─── pick variant — clean: same border, distinction via tier-pill only ──── */
+  .creator-card--pick { /* no extra border or stripe — keep it clean */ }
+  .creator-card--pick:hover {
+    border-color: color-mix(in oklch, var(--primary-bright) 50%, transparent);
+  }
+  .creator-card--tier-official:hover {
+    border-color: color-mix(in oklch, var(--secondary-bright) 50%, transparent);
+  }
+
+  /* ─── header row ──────────────────────────────────────── */
+  .creator-card__head {
+    display: flex; align-items: center; gap: var(--space-2);
+    min-height: 32px;
+  }
+  .creator-card__source {
+    display: inline-flex; align-items: center; gap: var(--space-1-5, 0.375rem);
+    font-size: 10px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-wide);
+    font-weight: var(--font-bold);
+    flex-shrink: 0;
+    min-width: 0;
+  }
+  .source-label { white-space: nowrap; }
+  .source-dot {
+    width: 6px; height: 6px; border-radius: 50%;
+    background: var(--primary-bright);
+    flex-shrink: 0;
+  }
+  .creator-card[data-source="github"]   .source-dot { background: oklch(72% 0.10 250); }
+  .creator-card[data-source="youtube"]  .source-dot { background: oklch(68% 0.20 25); }
+  .creator-card[data-source="twitter"]  .source-dot { background: oklch(72% 0.13 230); }
+  .creator-card[data-source="bluesky"]  .source-dot { background: oklch(72% 0.13 230); }
+
+  /* tier badge — solid, high-contrast, inline; the ONE focal accent on the card */
+  .tier-pill {
+    display: inline-flex; align-items: center; gap: 4px;
+    font-size: 10px;
+    font-weight: var(--font-bold);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 3px 8px;
+    border-radius: var(--radius-full);
+    background: var(--primary-bright);
+    color: oklch(15% 0.02 270);   /* dark text on bright */
+    border: none;
+    white-space: nowrap;
+    flex-shrink: 0;
+    box-shadow: 0 1px 4px color-mix(in oklch, var(--primary-bright) 35%, transparent);
+  }
+  .tier-pill--must-follow {
+    background: linear-gradient(135deg, oklch(78% 0.18 270), oklch(72% 0.22 290));
+    color: white;
+  }
+  .tier-pill--official {
+    background: linear-gradient(135deg, oklch(82% 0.14 195), oklch(76% 0.16 210));
+    color: oklch(15% 0.02 220);
+  }
+  .tier-pill--recommended {
+    background: color-mix(in oklch, var(--primary-bright) 25%, transparent);
+    color: oklch(from var(--primary-bright) min(l + 0.12, 0.95) c h);
+    border: 1px solid color-mix(in oklch, var(--primary-bright) 40%, transparent);
+    box-shadow: none;
+  }
+  .tier-pill--niche {
+    background: color-mix(in oklch, var(--tertiary-bright) 18%, transparent);
+    color: oklch(from var(--tertiary-bright) min(l + 0.12, 0.95) c h);
+    border: 1px solid color-mix(in oklch, var(--tertiary-bright) 35%, transparent);
+    box-shadow: none;
+  }
+
+  .multi-platform-pill {
+    font-size: 10px; font-weight: var(--font-bold);
+    color: var(--text-secondary);
+    background: var(--bg-elevated);
+    border: 1px solid var(--border-subtle);
+    padding: 2px 6px;
+    border-radius: var(--radius-full);
+    flex-shrink: 0;
+    margin-left: auto;
+  }
+
+  .creator-card__avatar {
+    width: 32px; height: 32px;
+    border-radius: var(--radius-md);
+    background: var(--bg-elevated);
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+  .creator-card__avatar--initials {
+    display: grid; place-items: center;
+    font-size: var(--text-xs);
+    font-weight: var(--font-bold);
+    color: var(--primary-bright);
+  }
+  /* If multi-platform pill is present, push avatar; otherwise avatar takes ml-auto */
+  .creator-card__head:not(:has(.multi-platform-pill)) .creator-card__avatar { margin-left: auto; }
+
+  /* ─── name + handle ─────────────────────────────────── */
+  .creator-card__name {
+    font-family: var(--font-display);
+    font-size: var(--text-lg);
+    font-weight: var(--font-semibold);
+    line-height: var(--leading-snug);
+    margin: 0;
+    overflow-wrap: anywhere;
+    color: var(--text-primary);
+  }
+  .creator-card__handle {
+    color: var(--text-muted);
+    font-size: var(--text-xs);
+    font-family: var(--font-mono);
+    overflow-wrap: anywhere;
+    word-break: break-all;
+    margin-top: -2px;
+  }
+
+  /* ─── bio (non-picks) ───────────────────────────────── */
+  .creator-card__bio {
+    color: var(--text-secondary);
+    font-size: var(--text-sm);
+    line-height: var(--leading-snug);
+    margin: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  /* ─── editor note (picks) — distinct, high-contrast ─── */
+  .editor-note {
+    position: relative;
+    background: color-mix(in oklch, var(--primary-bright) 5%, transparent);
+    border-radius: var(--radius-md);
+    padding: var(--space-3) var(--space-3) var(--space-3) var(--space-5);
+    margin: 0;
+  }
+  .creator-card--tier-official .editor-note {
+    background: color-mix(in oklch, var(--secondary-bright) 5%, transparent);
+  }
+  .editor-note p {
+    color: var(--text-primary);
+    font-size: var(--text-sm);
+    line-height: var(--leading-snug);
+    margin: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .editor-note__quote {
+    position: absolute;
+    top: 0; left: 6px;
+    font-family: var(--font-display);
+    font-size: 28px;
+    line-height: 1;
+    color: color-mix(in oklch, var(--primary-bright) 60%, transparent);
+    user-select: none;
+  }
+  .creator-card--tier-official .editor-note__quote {
+    color: color-mix(in oklch, var(--secondary-bright) 60%, transparent);
+  }
+
+  /* ─── chips row ─────────────────────────────────────── */
+  .creator-card__chips {
+    display: flex; flex-wrap: wrap; gap: var(--space-1);
+    align-items: center;
+  }
+  .creator-card__meta-text {
+    color: var(--text-muted);
+    font-size: var(--text-xs);
+    margin-left: var(--space-1);
+  }
+
+  /* ─── footer ────────────────────────────────────────── */
+  .creator-card__footer {
+    margin-top: auto;
+    padding-top: var(--space-2);
+    border-top: 1px solid var(--border-subtle);
+    display: flex; align-items: center; gap: var(--space-3);
+    color: var(--text-muted);
+    font-size: var(--text-xs);
+  }
+  .creator-card__stat {
+    display: inline-flex; align-items: center; gap: 4px;
+    font-family: var(--font-mono);
+    font-weight: var(--font-medium);
+    color: var(--text-secondary);
+  }
+  .creator-card__platforms {
+    display: inline-flex; gap: 4px; align-items: center;
+    color: var(--text-muted);
+  }
+  .org-icon { color: var(--text-muted); margin-left: auto; }
+</style>

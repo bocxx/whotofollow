@@ -1,0 +1,173 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { getAllCreators, platformLabels, formatNumber, categoryLabel, tierLabel } from '../lib/data';
+import { useTranslations, localizedHref, type Locale } from '../i18n/messages';
+import {
+  ArrowLeft, ExternalLink, Github, Youtube, Twitter, Cloud, Globe,
+  Building2, Sparkles, Star, Award, Code, Bot, BookOpen, Briefcase,
+  Microscope, Palette, GraduationCap, Wrench, ShieldCheck, Megaphone
+} from '@lucide/astro';
+
+const CategoryIcon: Record<string, any> = {
+  'claude': Sparkles, 'coding': Code, 'agents': Bot,
+  'beginners': BookOpen, 'business': Briefcase, 'research': Microscope,
+  'creative': Palette, 'fundamentals': GraduationCap,
+  'tool-insights': Wrench, 'official': ShieldCheck, 'branding': Megaphone,
+};
+import type { Creator } from '../types/creator';
+
+export async function getStaticPaths() {
+  return getAllCreators().map((c) => ({
+    params: { slug: c.slug },
+    props: { creator: c },
+  }));
+}
+
+interface Props { creator: Creator; }
+const { creator } = Astro.props;
+
+const locale = (Astro.currentLocale ?? 'nl') as Locale;
+const t = useTranslations(locale);
+
+const initials = (creator.name || creator.primary_handle || 'X')
+  .split(/\s+/).map((s) => s[0]).join('').slice(0, 2).toUpperCase();
+
+const PlatformIcon = (type: string) => {
+  switch (type) {
+    case 'github': return Github;
+    case 'youtube': return Youtube;
+    case 'twitter': return Twitter;
+    case 'bluesky': return Cloud;
+    default: return Globe;
+  }
+};
+
+const personJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': creator.type === 'organization' ? 'Organization' : 'Person',
+  name: creator.name,
+  description: creator.bio || '',
+  url: creator.platforms[0]?.url,
+  sameAs: creator.platforms.map((p) => p.url),
+};
+---
+
+<Layout title={`${creator.name} — ${t.siteName}`}
+        description={creator.bio || `${locale === 'nl' ? 'Volg' : 'Follow'} ${creator.name} ${locale === 'nl' ? 'op' : 'on'} ${platformLabels[creator.primary_platform]}`}
+        ogType="article">
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(personJsonLd)} />
+  </Fragment>
+
+  <main class="container container-narrow detail">
+    <a href={localizedHref('/', locale)} class="detail__back"><ArrowLeft size={14} stroke-width={2} /> {t.detail.back}</a>
+
+    <header class="detail__head">
+      {creator.avatar ? (
+        <img src={creator.avatar} alt="" class="detail__logo" width="72" height="72" loading="eager" />
+      ) : (
+        <span class="detail__logo" style="display: grid; place-items: center; font-size: var(--text-2xl); font-weight: var(--font-bold); color: var(--primary-bright);">{initials}</span>
+      )}
+      <div>
+        <div class="detail__meta">
+          <span class="badge badge--neutral">{platformLabels[creator.primary_platform]}</span>
+          {creator.is_curator_pick && creator.curator_tier === 'must-follow' && (
+            <span class="badge badge--primary"><Star size={11} stroke-width={2.5} /> {tierLabel(creator.curator_tier, locale)}</span>
+          )}
+          {creator.is_curator_pick && creator.curator_tier === 'official' && (
+            <span class="badge badge--secondary"><Award size={11} stroke-width={2.5} /> {tierLabel(creator.curator_tier, locale)}</span>
+          )}
+          {creator.is_curator_pick && (creator.curator_tier === 'recommended' || creator.curator_tier === 'niche') && (
+            <span class="badge badge--primary">{tierLabel(creator.curator_tier, locale)}</span>
+          )}
+          {creator.type === 'organization' && (
+            <span class="badge badge--secondary"><Building2 size={11} stroke-width={2} /> {t.detail.organization}</span>
+          )}
+          {creator.platforms.length > 1 && (
+            <span class="badge badge--primary">×{creator.platforms.length} platforms</span>
+          )}
+        </div>
+        <h1 class="detail__title">{creator.name}</h1>
+        <p class="text-muted mono" style="margin: var(--space-1) 0 0;">@{creator.primary_handle}</p>
+        {creator.is_curator_pick && creator.editor_note && (
+          <blockquote class="editor-note-detail">
+            <Sparkles size={14} stroke-width={2} style="color: var(--primary-bright); flex-shrink: 0; margin-top: 2px;" />
+            <em>{creator.editor_note}</em>
+          </blockquote>
+        )}
+        {creator.bio && <p style="color: var(--text-secondary); font-size: var(--text-base); margin: var(--space-3) 0 0; max-width: 520px;">{creator.bio}</p>}
+        {creator.tags && creator.tags.length > 0 && (
+          <div style="display: flex; gap: var(--space-1); flex-wrap: wrap; margin-top: var(--space-3);">
+            {creator.tags.map((c) => {
+              const Icon = CategoryIcon[c];
+              return (
+                <span class="cat-chip" data-cat={c}>
+                  {Icon && <Icon size={11} stroke-width={1.8} />}
+                  <span>{categoryLabel(c, locale)}</span>
+                </span>
+              );
+            })}
+          </div>
+        )}
+        <a href={creator.platforms[0]?.url} target="_blank" rel="noopener noreferrer" class="detail__cta">
+          {t.detail.openOn} {platformLabels[creator.primary_platform]} <ExternalLink size={14} stroke-width={2} />
+        </a>
+      </div>
+    </header>
+
+    <style>
+      .editor-note-detail {
+        display: flex;
+        gap: var(--space-2);
+        margin: var(--space-4) 0 0;
+        padding: var(--space-3) var(--space-4);
+        background: color-mix(in oklch, var(--primary-bright) 6%, transparent);
+        border-left: 2px solid color-mix(in oklch, var(--primary-bright) 50%, transparent);
+        border-radius: 0 var(--radius-md) var(--radius-md) 0;
+        color: var(--text-secondary);
+        font-size: var(--text-sm);
+        line-height: var(--leading-snug);
+        max-width: 560px;
+      }
+      .editor-note-detail em { font-style: italic; }
+    </style>
+
+    <section style="margin-bottom: var(--space-8);">
+      <h2 style="font-size: var(--text-xl); margin-bottom: var(--space-3);">{t.detail.platforms}</h2>
+      <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: var(--space-3);">
+        {creator.platforms.map((p) => {
+          const Icon = PlatformIcon(p.type);
+          return (
+            <a href={p.url} target="_blank" rel="noopener noreferrer" class="card" style="display: flex; gap: var(--space-3); align-items: center; text-decoration: none;">
+              <Icon size={20} stroke-width={1.8} style="color: var(--primary-bright); flex-shrink: 0;" />
+              <div style="flex: 1; min-width: 0;">
+                <div style="font-weight: var(--font-semibold); color: var(--text-primary); font-size: var(--text-sm);">{platformLabels[p.type]}</div>
+                <div class="mono truncate" style="color: var(--text-muted); font-size: var(--text-xs);">@{p.handle}</div>
+              </div>
+              {p.followers != null && (
+                <span class="mono" style="color: var(--text-secondary); font-size: var(--text-sm);">{formatNumber(p.followers)}</span>
+              )}
+              <ExternalLink size={12} stroke-width={1.5} style="color: var(--text-muted);" />
+            </a>
+          );
+        })}
+      </div>
+    </section>
+
+    {Object.keys(creator.stats || {}).length > 0 && (
+      <section style="margin-bottom: var(--space-8);">
+        <h2 style="font-size: var(--text-xl); margin-bottom: var(--space-3);">{t.detail.stats}</h2>
+        <dl class="dl-grid">
+          {Object.entries(creator.stats).map(([k, v]) => (
+            <Fragment>
+              <dt style="text-transform: capitalize;">{k.replace(/_/g, ' ')}</dt>
+              <dd class="mono">{formatNumber(v as number)}</dd>
+            </Fragment>
+          ))}
+          {creator.location && <Fragment><dt>{t.detail.location}</dt><dd>{creator.location}</dd></Fragment>}
+          {creator.company && <Fragment><dt>{t.detail.worksAt}</dt><dd>{creator.company}</dd></Fragment>}
+        </dl>
+      </section>
+    )}
+  </main>
+</Layout>

@@ -1,0 +1,985 @@
+---
+/**
+ * /galaxy — Three.js 3D galaxy view of all creators.
+ *
+ * Each category becomes a glowing "sun"; creators orbit their primary
+ * category as smaller orbs. Curator picks emit a brighter glow. Multi-platform
+ * creators get a subtle line connecting their topics.
+ *
+ * Drag = rotate, scroll = zoom, hover = tooltip, click = creator detail.
+ */
+import Layout from '../../layouts/Layout.astro';
+import { getAllCreators, getCounts, categoryLabel } from '../../lib/data';
+import { useTranslations, localizedHref, type Locale } from '../../i18n/messages';
+import { Sparkles, Network as NetIcon } from '@lucide/astro';
+
+const locale = (Astro.currentLocale ?? 'nl') as Locale;
+const t = useTranslations(locale);
+const creators = getAllCreators();
+const counts = getCounts();
+
+const nodes = creators.map((c) => ({
+  id: c.id,
+  slug: c.slug,
+  name: c.name,
+  handle: c.primary_handle,
+  platform: c.primary_platform,
+  cats: c.tags ?? [],
+  pick: !!c.is_curator_pick,
+  tier: c.curator_tier ?? null,
+  followers: c.stats?.followers ?? 0,
+  avatar: c.avatar ?? null,
+}));
+---
+
+<Layout title={`Galaxy · ${t.siteName}`} description={`${counts.total} creators in 3D — a navigable AI universe.`}>
+  <main class="galaxy-main">
+    <div class="galaxy-hud galaxy-hud--top">
+      <div>
+        <a href={localizedHref('/', locale)} class="galaxy-back">← {locale === 'nl' ? 'Lijst' : 'List'}</a>
+        <a href={localizedHref('/network', locale)} class="galaxy-back" style="margin-left: 16px;">
+          <NetIcon size={11} stroke-width={2} style="vertical-align: -1px;" />
+          2D
+        </a>
+      </div>
+      <div class="galaxy-hud__title">
+        <Sparkles size={12} stroke-width={2} style="vertical-align: -2px; color: var(--primary-bright);" />
+        {t.siteName} · galaxy
+      </div>
+      <div class="galaxy-hud__stats">
+        {counts.total} creators · {Object.keys(counts.byCategory ?? {}).length} {locale === 'nl' ? 'onderwerpen' : 'topics'}
+      </div>
+    </div>
+
+    <div class="galaxy-hud galaxy-hud--quest">
+      <div class="quest-search">
+        <input type="search" id="galaxy-search-input"
+               placeholder={locale === 'nl' ? 'Zoek een creator…' : 'Search a creator…'}
+               aria-label="Search creators" autocomplete="off" />
+      </div>
+      <div class="quest-filters" id="quest-filters" role="toolbar"></div>
+      <button id="galaxy-discover" class="quest-discover" type="button" title={locale === 'nl' ? 'Vlieg naar een willekeurige top-pick' : 'Fly to a random top pick'}>
+        🎲 <span>{locale === 'nl' ? 'Ontdek' : 'Discover'}</span>
+      </button>
+    </div>
+
+    <div class="galaxy-hud galaxy-hud--bottom">
+      <span class="galaxy-hint" id="galaxy-status">
+        {locale === 'nl' ? 'Sleep om te draaien · scroll om te zoomen · klik op een ster' : 'Drag to rotate · scroll to zoom · click a star'}
+      </span>
+    </div>
+
+    <canvas id="galaxy-canvas"></canvas>
+    <div class="galaxy-tooltip" id="galaxy-tooltip" hidden></div>
+  </main>
+</Layout>
+
+<script id="galaxy-data" type="application/json" set:html={JSON.stringify(nodes)} />
+
+<style is:global>
+  .galaxy-main {
+    position: fixed;
+    inset: var(--header-height) 0 0 0;
+    background: radial-gradient(1200px 800px at 50% 50%,
+      color-mix(in oklch, var(--primary-bright) 4%, oklch(8% 0.01 270)),
+      oklch(6% 0.005 270) 80%);
+    overflow: hidden;
+    isolation: isolate;
+  }
+  #galaxy-canvas {
+    position: absolute; inset: 0;
+    width: 100%; height: 100%;
+    cursor: grab;
+    touch-action: none;
+  }
+  #galaxy-canvas:active { cursor: grabbing; }
+
+  .galaxy-hud {
+    position: absolute;
+    z-index: 10;
+    pointer-events: none;
+  }
+  .galaxy-hud--top {
+    top: 16px; left: 16px; right: 16px;
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 16px;
+  }
+  .galaxy-hud--bottom {
+    bottom: 16px; left: 0; right: 0;
+    display: flex; justify-content: center;
+  }
+  .galaxy-hud > * { pointer-events: auto; }
+  .galaxy-back {
+    display: inline-flex; align-items: center;
+    color: var(--text-secondary);
+    background: var(--bg-glass);
+    backdrop-filter: blur(8px);
+    border: 1px solid var(--border-subtle);
+    padding: 6px 12px;
+    border-radius: var(--radius-md);
+    font-size: var(--text-xs);
+    text-decoration: none;
+  }
+  .galaxy-back:hover { color: var(--primary-bright); border-color: var(--border-accent); }
+  .galaxy-hud__title {
+    color: var(--text-primary);
+    font-family: var(--font-display);
+    font-weight: var(--font-semibold);
+    font-size: var(--text-sm);
+    background: var(--bg-glass);
+    backdrop-filter: blur(8px);
+    border: 1px solid var(--border-subtle);
+    padding: 6px 12px;
+    border-radius: var(--radius-full);
+  }
+  .galaxy-hud__stats {
+    color: var(--text-muted);
+    font-family: var(--font-mono);
+    font-size: 11px;
+    background: var(--bg-glass);
+    backdrop-filter: blur(8px);
+    border: 1px solid var(--border-subtle);
+    padding: 6px 12px;
+    border-radius: var(--radius-md);
+  }
+  .galaxy-hud--quest {
+    position: absolute;
+    top: 64px;
+    left: 16px;
+    right: 16px;
+    z-index: 10;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    pointer-events: none;
+  }
+  .galaxy-hud--quest > * { pointer-events: auto; }
+  .quest-search input {
+    background: var(--bg-glass);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    padding: 7px 12px;
+    color: var(--text-primary);
+    font-size: 12px;
+    font-family: var(--font-body);
+    width: 200px;
+    transition: border-color var(--duration-fast);
+  }
+  .quest-search input:focus {
+    outline: none;
+    border-color: var(--border-accent);
+    box-shadow: 0 0 0 3px color-mix(in oklch, var(--primary-bright) 18%, transparent);
+  }
+  .quest-filters {
+    display: flex; flex-wrap: wrap; gap: 6px;
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+  .quest-filter {
+    background: var(--bg-glass);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--border-subtle);
+    color: var(--text-secondary);
+    padding: 4px 9px;
+    border-radius: var(--radius-full);
+    font-size: 10px;
+    font-weight: var(--font-bold);
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-wide);
+    cursor: pointer;
+    transition: all var(--duration-fast);
+    --c: oklch(72% 0.13 270);
+  }
+  .quest-filter:hover {
+    color: var(--c);
+    border-color: color-mix(in oklch, var(--c) 50%, transparent);
+  }
+  .quest-filter.is-active {
+    color: var(--c);
+    background: color-mix(in oklch, var(--c) 18%, var(--bg-glass));
+    border-color: color-mix(in oklch, var(--c) 60%, transparent);
+  }
+  .quest-discover {
+    background: linear-gradient(135deg, oklch(78% 0.18 270), oklch(72% 0.22 290));
+    border: none;
+    color: white;
+    padding: 7px 14px;
+    border-radius: var(--radius-md);
+    font-size: 12px;
+    font-weight: var(--font-bold);
+    cursor: pointer;
+    box-shadow: 0 2px 12px color-mix(in oklch, var(--primary-bright) 35%, transparent);
+    display: inline-flex; align-items: center; gap: 6px;
+    transition: transform var(--duration-fast), box-shadow var(--duration-fast);
+  }
+  .quest-discover:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 16px color-mix(in oklch, var(--primary-bright) 55%, transparent);
+  }
+
+  @media (max-width: 720px) {
+    .galaxy-hud--quest { flex-direction: column; align-items: stretch; }
+    .quest-search input { width: 100%; }
+  }
+
+  .galaxy-hint {
+    color: var(--text-muted);
+    font-size: 11px;
+    background: var(--bg-glass);
+    backdrop-filter: blur(8px);
+    border: 1px solid var(--border-subtle);
+    padding: 6px 14px;
+    border-radius: var(--radius-full);
+    font-family: var(--font-mono);
+    letter-spacing: var(--tracking-wide);
+  }
+
+  .galaxy-tooltip {
+    position: fixed;
+    z-index: 20;
+    background: var(--bg-elevated);
+    border: 1px solid var(--border-accent);
+    border-radius: var(--radius-md);
+    padding: 8px 12px;
+    font-size: var(--text-xs);
+    pointer-events: none;
+    max-width: 240px;
+    box-shadow: var(--shadow-lg);
+    color: var(--text-primary);
+  }
+  .galaxy-tooltip strong {
+    display: block; color: var(--text-primary);
+    font-size: var(--text-sm); margin-bottom: 2px;
+  }
+  .galaxy-tooltip .handle {
+    color: var(--text-muted); font-family: var(--font-mono);
+    font-size: 11px;
+  }
+  .galaxy-tooltip .cats {
+    margin-top: 4px;
+    color: var(--text-secondary);
+    font-size: 11px;
+  }
+  .galaxy-tooltip .pick-mark {
+    margin-top: 4px;
+    color: var(--primary-bright);
+    font-size: 10px;
+    text-transform: uppercase;
+    font-weight: var(--font-bold);
+    letter-spacing: var(--tracking-wide);
+  }
+</style>
+
+<script>
+  import * as THREE from 'three';
+  import { EffectComposer } from 'three/examples/jsm/postprocessing/EffectComposer.js';
+  import { RenderPass } from 'three/examples/jsm/postprocessing/RenderPass.js';
+  import { UnrealBloomPass } from 'three/examples/jsm/postprocessing/UnrealBloomPass.js';
+  import { OutputPass } from 'three/examples/jsm/postprocessing/OutputPass.js';
+
+  // -----------------------------------------------------------------
+  // Read data
+  // -----------------------------------------------------------------
+  const dataEl = document.getElementById('galaxy-data');
+  if (!dataEl) throw new Error('galaxy-data not found');
+  const creators = JSON.parse(dataEl.textContent || '[]') as Array<{
+    id: string; slug: string; name: string; handle: string;
+    platform: string; cats: string[]; pick: boolean; tier: string | null;
+    followers: number; avatar: string | null;
+  }>;
+
+  // Locale-aware path prefix (read from <html lang>) — fixes EN routing bug
+  const PAGE_LOCALE = document.documentElement.lang === 'en' ? 'en' : 'nl';
+  const localizedHref = (path: string) =>
+    PAGE_LOCALE === 'en' ? `/en${path === '/' ? '' : path}` : path;
+
+  // Category palette (same hues as the rest of the site)
+  const CAT_COLOR_HEX: Record<string, number> = {
+    claude: 0xb59cf5,
+    coding: 0x69d4f5,
+    agents: 0xeb91d4,
+    beginners: 0x88e2a3,
+    business: 0xf3cc6e,
+    research: 0x88aef0,
+    creative: 0xf5a774,
+    fundamentals: 0x8fb1f0,
+    'tool-insights': 0x6cd6c0,
+    official: 0xf5d272,
+    branding: 0xebd28b,
+  };
+  const DEFAULT_HEX = 0x6b6b87;
+
+  // -----------------------------------------------------------------
+  // Scene
+  // -----------------------------------------------------------------
+  const canvas = document.getElementById('galaxy-canvas') as HTMLCanvasElement;
+  const tooltip = document.getElementById('galaxy-tooltip') as HTMLElement;
+
+  const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true });
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+  renderer.toneMapping = THREE.ACESFilmicToneMapping;
+  renderer.toneMappingExposure = 1.0;
+
+  const scene = new THREE.Scene();
+  scene.fog = new THREE.FogExp2(0x07060d, 0.0022);
+
+  const camera = new THREE.PerspectiveCamera(60, 1, 0.1, 5000);
+  camera.position.set(0, 90, 320);
+
+  // Postprocessing — bloom for that "real space" glow
+  let composer: EffectComposer;
+  let bloomPass: UnrealBloomPass;
+
+  function resize() {
+    const w = canvas.clientWidth;
+    const h = canvas.clientHeight;
+    renderer.setSize(w, h, false);
+    camera.aspect = w / h;
+    camera.updateProjectionMatrix();
+    if (composer) composer.setSize(w, h);
+    if (bloomPass) bloomPass.setSize(w, h);
+  }
+  resize();
+  window.addEventListener('resize', resize);
+
+  composer = new EffectComposer(renderer);
+  composer.addPass(new RenderPass(scene, camera));
+  bloomPass = new UnrealBloomPass(
+    new THREE.Vector2(canvas.clientWidth, canvas.clientHeight),
+    0.55,   // strength — toned down so creators stay visible as planets
+    0.55,   // radius
+    0.45,   // threshold — only bright stuff blooms (suns + picks)
+  );
+  composer.addPass(bloomPass);
+  composer.addPass(new OutputPass());
+
+  // Lighting — soft ambient + key directional + fill so planets are visible
+  // even with low emissive
+  scene.add(new THREE.AmbientLight(0xb6b0d8, 0.6));
+  const key = new THREE.DirectionalLight(0xffffff, 0.9);
+  key.position.set(80, 120, 60);
+  scene.add(key);
+  const fill = new THREE.DirectionalLight(0x8a9cf0, 0.4);
+  fill.position.set(-60, -40, -80);
+  scene.add(fill);
+
+  // -----------------------------------------------------------------
+  // Star background — two layers for parallax depth
+  // -----------------------------------------------------------------
+  function makeStars(count: number, radius: number, size: number, opacity: number) {
+    const geom = new THREE.BufferGeometry();
+    const pos = new Float32Array(count * 3);
+    const sizes = new Float32Array(count);
+    for (let i = 0; i < count; i++) {
+      const r = radius * (0.6 + Math.random() * 0.4);
+      const theta = Math.random() * Math.PI * 2;
+      const phi = Math.acos(2 * Math.random() - 1);
+      pos[i*3] = r * Math.sin(phi) * Math.cos(theta);
+      pos[i*3+1] = r * Math.cos(phi);
+      pos[i*3+2] = r * Math.sin(phi) * Math.sin(theta);
+      sizes[i] = (0.4 + Math.random() * 1.4);
+    }
+    geom.setAttribute('position', new THREE.BufferAttribute(pos, 3));
+    const mat = new THREE.PointsMaterial({
+      color: 0xffffff,
+      size,
+      transparent: true,
+      opacity,
+      sizeAttenuation: true,
+      blending: THREE.AdditiveBlending,
+      depthWrite: false,
+    });
+    return new THREE.Points(geom, mat);
+  }
+  scene.add(makeStars(3000, 1200, 1.4, 0.6));     // far stars
+  scene.add(makeStars(800, 500, 0.8, 0.85));      // mid-field
+
+  // Drifting "dust" — slow-moving close particles
+  const dustCount = 400;
+  const dustGeom = new THREE.BufferGeometry();
+  const dustPos = new Float32Array(dustCount * 3);
+  const dustVel = new Float32Array(dustCount * 3);
+  for (let i = 0; i < dustCount; i++) {
+    dustPos[i*3] = (Math.random() - 0.5) * 600;
+    dustPos[i*3+1] = (Math.random() - 0.5) * 200;
+    dustPos[i*3+2] = (Math.random() - 0.5) * 600;
+    dustVel[i*3] = (Math.random() - 0.5) * 0.05;
+    dustVel[i*3+1] = (Math.random() - 0.5) * 0.02;
+    dustVel[i*3+2] = (Math.random() - 0.5) * 0.05;
+  }
+  dustGeom.setAttribute('position', new THREE.BufferAttribute(dustPos, 3));
+  const dustMat = new THREE.PointsMaterial({
+    color: 0xb59cf5, size: 1.2, transparent: true, opacity: 0.5,
+    sizeAttenuation: true, blending: THREE.AdditiveBlending, depthWrite: false,
+  });
+  const dust = new THREE.Points(dustGeom, dustMat);
+  scene.add(dust);
+
+  // -----------------------------------------------------------------
+  // Build the galaxy
+  // -----------------------------------------------------------------
+  // 1) Place each category as a glowing "sun" — slight perturbation so it's
+  //    not a perfect ring (more organic), with vertical variation.
+  const cats = Array.from(new Set(creators.flatMap((c) => c.cats)));
+  cats.sort();
+  const CAT_RING_R = 160;
+  const catPositions: Record<string, THREE.Vector3> = {};
+  cats.forEach((cat, i) => {
+    const t = (i / cats.length) * Math.PI * 2;
+    // Hash-based perturbation so position is stable across reloads
+    const h = hashStr(cat);
+    const radJit = (h % 100) / 100 * 30 - 15;
+    const yJit = ((h >> 8) % 100) / 100 * 40 - 20;
+    const r = CAT_RING_R + radJit;
+    const x = Math.cos(t) * r;
+    const z = Math.sin(t) * r;
+    catPositions[cat] = new THREE.Vector3(x, yJit, z);
+  });
+
+  // 2) Category sun + nebula + halo + label
+  const catSunGeom = new THREE.SphereGeometry(8, 32, 32);
+  const catSuns: THREE.Mesh[] = [];          // for raycaster
+  const catSunByCat: Record<string, THREE.Mesh> = {};
+
+  cats.forEach((cat) => {
+    const color = CAT_COLOR_HEX[cat] ?? DEFAULT_HEX;
+    // Sun (the "star" of each cluster) — bright enough to bloom but not blinding
+    const mat = new THREE.MeshStandardMaterial({
+      color, emissive: color, emissiveIntensity: 1.6,
+      roughness: 0.3, metalness: 0.4,
+    });
+    const sun = new THREE.Mesh(catSunGeom, mat);
+    sun.position.copy(catPositions[cat]);
+    sun.userData.type = 'category';
+    sun.userData.cat = cat;
+    scene.add(sun);
+    catSuns.push(sun);
+    catSunByCat[cat] = sun;
+
+    // Inner halo — tight, semi-transparent so the sun stays the focal point
+    const halo1 = new THREE.Sprite(new THREE.SpriteMaterial({
+      map: makeRadialTexture(color, 1.0),
+      color: 0xffffff, transparent: true, opacity: 0.55,
+      depthWrite: false, blending: THREE.AdditiveBlending,
+    }));
+    halo1.scale.set(35, 35, 1);
+    halo1.position.copy(catPositions[cat]);
+    scene.add(halo1);
+
+    // Soft nebula — large, very subtle so it gives ambient colour without
+    // washing the scene
+    const nebula = new THREE.Sprite(new THREE.SpriteMaterial({
+      map: makeRadialTexture(color, 0.55),
+      color: 0xffffff, transparent: true, opacity: 0.18,
+      depthWrite: false, blending: THREE.AdditiveBlending,
+    }));
+    nebula.scale.set(120, 120, 1);
+    nebula.position.copy(catPositions[cat]);
+    scene.add(nebula);
+
+    const label = makeTextSprite(cat.replace('-', ' ').toUpperCase(), '#ffffff');
+    label.position.copy(catPositions[cat]);
+    label.position.y += 18;
+    scene.add(label);
+  });
+
+  // 3) Creators in orbit — each carries its own orbital state
+  type OrbitState = {
+    anchor: THREE.Vector3;
+    radius: number;
+    speed: number;       // rad/sec
+    phase: number;       // current angle
+    yJit: number;
+    tilt: number;        // axis tilt offset
+  };
+  const creatorMeshes: THREE.Mesh[] = [];
+  const creatorMap = new WeakMap<THREE.Mesh, typeof creators[number]>();
+  const creatorOrbit = new WeakMap<THREE.Mesh, OrbitState>();
+  const creatorHalos = new WeakMap<THREE.Mesh, THREE.Sprite>();
+
+  // Connection lines for multi-category creators (creator → non-primary cat sun)
+  const lineSegments: { a: THREE.Mesh; b: THREE.Vector3; line: THREE.Line; }[] = [];
+
+  creators.forEach((c) => {
+    let primary = c.cats[0];
+    let color = primary ? (CAT_COLOR_HEX[primary] ?? DEFAULT_HEX) : DEFAULT_HEX;
+    let anchor: THREE.Vector3;
+    if (c.cats.length === 0) {
+      // Free-floating
+      const r = 80 + Math.random() * 200;
+      const theta = Math.random() * Math.PI * 2;
+      const y = (Math.random() - 0.5) * 100;
+      anchor = new THREE.Vector3(Math.cos(theta) * r, y, Math.sin(theta) * r);
+    } else {
+      anchor = catPositions[primary] ?? new THREE.Vector3();
+    }
+
+    const orbitR = 20 + Math.random() * 32;
+    const phase = Math.random() * Math.PI * 2;
+    const speed = (0.05 + Math.random() * 0.15) * (Math.random() < 0.5 ? -1 : 1);
+    const yJit = (Math.random() - 0.5) * 28;
+    const tilt = (Math.random() - 0.5) * 0.4;
+
+    // Picks = bright orbs that bloom (above threshold).
+    // Non-picks = solid lit planets that DON'T bloom — visible against the dark.
+    const r = c.pick ? 1.9 : 1.0;
+    const geom = new THREE.SphereGeometry(r, 14, 14);
+    const mat = new THREE.MeshStandardMaterial({
+      color,
+      emissive: color,
+      emissiveIntensity: c.pick ? 1.4 : 0.18,   // picks bright, planets dim-glowing
+      roughness: 0.55,
+      metalness: 0.25,
+    });
+    const m = new THREE.Mesh(geom, mat);
+    const initialX = anchor.x + Math.cos(phase) * orbitR;
+    const initialZ = anchor.z + Math.sin(phase) * orbitR;
+    m.position.set(initialX, anchor.y + yJit, initialZ);
+    m.userData.type = 'creator';
+    creatorMeshes.push(m);
+    creatorMap.set(m, c);
+    creatorOrbit.set(m, { anchor, radius: orbitR, speed, phase, yJit, tilt });
+    scene.add(m);
+
+    if (c.pick) {
+      const halo = new THREE.Sprite(new THREE.SpriteMaterial({
+        map: makeRadialTexture(color, 0.9),
+        color: 0xffffff, transparent: true, opacity: 0.55,
+        depthWrite: false, blending: THREE.AdditiveBlending,
+      }));
+      halo.scale.set(7, 7, 1);
+      halo.position.copy(m.position);
+      scene.add(halo);
+      creatorHalos.set(m, halo);
+    }
+
+    // Multi-category: draw subtle line from creator to each non-primary category
+    if (c.cats.length > 1) {
+      for (let k = 1; k < c.cats.length; k++) {
+        const otherCat = c.cats[k];
+        const target = catPositions[otherCat];
+        if (!target) continue;
+        const lineGeom = new THREE.BufferGeometry().setFromPoints([
+          m.position.clone(), target.clone(),
+        ]);
+        const lineMat = new THREE.LineBasicMaterial({
+          color: CAT_COLOR_HEX[otherCat] ?? DEFAULT_HEX,
+          transparent: true, opacity: 0.12,
+          blending: THREE.AdditiveBlending, depthWrite: false,
+        });
+        const line = new THREE.Line(lineGeom, lineMat);
+        scene.add(line);
+        lineSegments.push({ a: m, b: target.clone(), line });
+      }
+    }
+  });
+
+  // -----------------------------------------------------------------
+  // Hover ring — glowing torus that follows the hovered orb
+  // -----------------------------------------------------------------
+  const hoverRing = new THREE.Mesh(
+    new THREE.RingGeometry(2.6, 3.0, 48),
+    new THREE.MeshBasicMaterial({
+      color: 0xffffff, transparent: true, opacity: 0.0,
+      side: THREE.DoubleSide, blending: THREE.AdditiveBlending, depthWrite: false,
+    }),
+  );
+  hoverRing.rotation.x = Math.PI / 2;
+  scene.add(hoverRing);
+
+  // Stable string hash → integer (for category position perturbation)
+  function hashStr(s: string): number {
+    let h = 5381;
+    for (let i = 0; i < s.length; i++) h = ((h << 5) + h + s.charCodeAt(i)) | 0;
+    return Math.abs(h);
+  }
+
+  // -----------------------------------------------------------------
+  // Helpers — texture & label generation
+  // -----------------------------------------------------------------
+  // intensity: 1.0 = sharp glow (for halos), 0.55 = soft cloud (for nebulas)
+  function makeRadialTexture(colorHex: number, intensity = 1.0): THREE.Texture {
+    const size = 256;
+    const c = document.createElement('canvas');
+    c.width = c.height = size;
+    const ctx = c.getContext('2d')!;
+    const grad = ctx.createRadialGradient(size/2, size/2, 0, size/2, size/2, size/2);
+    const col = '#' + colorHex.toString(16).padStart(6, '0');
+    if (intensity >= 0.9) {
+      grad.addColorStop(0, col);
+      grad.addColorStop(0.3, col + 'cc');
+      grad.addColorStop(0.7, col + '33');
+      grad.addColorStop(1, '#00000000');
+    } else {
+      // soft nebula falloff
+      grad.addColorStop(0, col + '80');
+      grad.addColorStop(0.4, col + '40');
+      grad.addColorStop(0.8, col + '10');
+      grad.addColorStop(1, '#00000000');
+    }
+    ctx.fillStyle = grad;
+    ctx.fillRect(0, 0, size, size);
+    const tex = new THREE.CanvasTexture(c);
+    tex.colorSpace = THREE.SRGBColorSpace;
+    return tex;
+  }
+
+  function makeTextSprite(text: string, color: string): THREE.Sprite {
+    const c = document.createElement('canvas');
+    c.width = 512; c.height = 128;
+    const ctx = c.getContext('2d')!;
+    ctx.fillStyle = color;
+    ctx.font = 'bold 48px "Space Grotesk Variable", "Inter Variable", sans-serif';
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+    ctx.fillText(text, c.width/2, c.height/2);
+    const tex = new THREE.CanvasTexture(c);
+    tex.colorSpace = THREE.SRGBColorSpace;
+    const mat = new THREE.SpriteMaterial({ map: tex, transparent: true });
+    const sprite = new THREE.Sprite(mat);
+    sprite.scale.set(40, 10, 1);
+    return sprite;
+  }
+
+  // -----------------------------------------------------------------
+  // Custom orbit controls (drag = rotate, scroll = zoom)
+  // -----------------------------------------------------------------
+  let camYaw = 0, camPitch = 0.35, camDist = 320;
+  let dragging = false, lastX = 0, lastY = 0;
+
+  function updateCam() {
+    const cy = Math.cos(camPitch) * camDist;
+    camera.position.set(
+      Math.sin(camYaw) * cy,
+      Math.sin(camPitch) * camDist,
+      Math.cos(camYaw) * cy,
+    );
+    camera.lookAt(0, 0, 0);
+  }
+  updateCam();
+
+  canvas.addEventListener('pointerdown', (e) => {
+    dragging = true; lastX = e.clientX; lastY = e.clientY;
+    canvas.setPointerCapture(e.pointerId);
+  });
+  canvas.addEventListener('pointermove', (e) => {
+    if (!dragging) return;
+    const dx = e.clientX - lastX, dy = e.clientY - lastY;
+    lastX = e.clientX; lastY = e.clientY;
+    camYaw += dx * 0.005;
+    camPitch = Math.max(-Math.PI/2 + 0.15, Math.min(Math.PI/2 - 0.15, camPitch - dy * 0.005));
+    updateCam();
+  });
+  canvas.addEventListener('pointerup', (e) => {
+    dragging = false;
+    canvas.releasePointerCapture(e.pointerId);
+  });
+  canvas.addEventListener('wheel', (e) => {
+    e.preventDefault();
+    camDist = Math.max(60, Math.min(700, camDist * (1 + e.deltaY * 0.001)));
+    updateCam();
+  }, { passive: false });
+
+  // -----------------------------------------------------------------
+  // Raycaster for hover + click — picks up creators AND category suns
+  // -----------------------------------------------------------------
+  const raycaster = new THREE.Raycaster();
+  const mouse = new THREE.Vector2();
+  let hovered: THREE.Mesh | null = null;
+  let hoveredType: 'creator' | 'category' | null = null;
+  let didDrag = false;
+
+  canvas.addEventListener('pointerdown', () => { didDrag = false; });
+  canvas.addEventListener('pointermove', (e) => {
+    if (dragging) { didDrag = true; tooltip.hidden = true; return; }
+    const rect = canvas.getBoundingClientRect();
+    mouse.x = ((e.clientX - rect.left) / rect.width) * 2 - 1;
+    mouse.y = -((e.clientY - rect.top) / rect.height) * 2 + 1;
+    raycaster.setFromCamera(mouse, camera);
+    // Check creators first (smaller, more specific), then category suns
+    let hits = raycaster.intersectObjects(creatorMeshes, false);
+    if (hits.length > 0) {
+      const m = hits[0].object as THREE.Mesh;
+      const c = creatorMap.get(m);
+      if (c) {
+        hovered = m; hoveredType = 'creator';
+        tooltip.hidden = false;
+        tooltip.innerHTML = `
+          <strong>${escapeHTML(c.name)}</strong>
+          <span class="handle">@${escapeHTML(c.handle)}</span>
+          <div class="cats">${c.cats.join(' · ') || '—'}</div>
+          ${c.pick ? '<div class="pick-mark">⭐ Top pick</div>' : ''}
+        `;
+        tooltip.style.left = (e.clientX + 14) + 'px';
+        tooltip.style.top = (e.clientY + 14) + 'px';
+        canvas.style.cursor = 'pointer';
+        return;
+      }
+    }
+    hits = raycaster.intersectObjects(catSuns, false);
+    if (hits.length > 0) {
+      const sun = hits[0].object as THREE.Mesh;
+      hovered = sun; hoveredType = 'category';
+      tooltip.hidden = false;
+      const cat = sun.userData.cat as string;
+      const count = creators.filter(c => c.cats.includes(cat)).length;
+      tooltip.innerHTML = `
+        <strong>${cat.replace('-',' ').toUpperCase()}</strong>
+        <div class="cats">${count} creators · ${'click to zoom'}</div>
+      `;
+      tooltip.style.left = (e.clientX + 14) + 'px';
+      tooltip.style.top = (e.clientY + 14) + 'px';
+      canvas.style.cursor = 'pointer';
+      return;
+    }
+    hovered = null; hoveredType = null;
+    tooltip.hidden = true;
+    canvas.style.cursor = '';
+  });
+  canvas.addEventListener('pointerup', () => {
+    if (didDrag || !hovered) return;
+    if (hoveredType === 'creator') {
+      const c = creatorMap.get(hovered);
+      if (c) location.href = localizedHref(`/${c.slug}`);
+    } else if (hoveredType === 'category') {
+      // Tween camera to focus on this category sun
+      const cat = (hovered.userData as any).cat as string;
+      focusCategory(cat);
+    }
+  });
+
+  // -----------------------------------------------------------------
+  // Quest controls — search, category filter, discover
+  // -----------------------------------------------------------------
+  const status = document.getElementById('galaxy-status') as HTMLElement;
+  const filtersEl = document.getElementById('quest-filters') as HTMLElement;
+  const searchInput = document.getElementById('galaxy-search-input') as HTMLInputElement;
+  const discoverBtn = document.getElementById('galaxy-discover') as HTMLButtonElement;
+
+  let activeCat: string | null = null;
+  let targetMesh: THREE.Mesh | null = null;        // creator we're "questing" toward
+  let targetTickerStop = 0;
+
+  function setStatus(text: string) { status.textContent = text; }
+
+  function setOrbVisibility(predicate: (c: typeof creators[number]) => boolean) {
+    for (const m of creatorMeshes) {
+      const c = creatorMap.get(m);
+      if (!c) continue;
+      const visible = predicate(c);
+      const mat = m.material as THREE.MeshStandardMaterial;
+      mat.transparent = !visible;
+      mat.opacity = visible ? 1.0 : 0.08;
+      mat.needsUpdate = true;
+    }
+  }
+
+  function focusCategory(cat: string | null) {
+    activeCat = cat;
+    // Update filter chip active state
+    filtersEl.querySelectorAll<HTMLButtonElement>('.quest-filter').forEach((b) => {
+      b.classList.toggle('is-active', b.dataset.cat === cat);
+    });
+    if (cat) {
+      const sun = catSunByCat[cat];
+      if (sun) tweenCameraTo(sun.position, 90);
+      setOrbVisibility((c) => c.cats.includes(cat));
+      const count = creators.filter(c => c.cats.includes(cat)).length;
+      setStatus(`${PAGE_LOCALE === 'nl' ? 'Cluster' : 'Cluster'}: ${cat.replace('-', ' ').toUpperCase()} · ${count} ${PAGE_LOCALE === 'nl' ? 'creators' : 'creators'}`);
+    } else {
+      setOrbVisibility(() => true);
+      tweenCameraTo(new THREE.Vector3(0, 0, 0), 320);
+      setStatus(PAGE_LOCALE === 'nl'
+        ? 'Sleep om te draaien · scroll om te zoomen · klik op een ster'
+        : 'Drag to rotate · scroll to zoom · click a star');
+    }
+  }
+
+  function flyToCreator(c: typeof creators[number]) {
+    // Find the mesh and quest toward its position. Because creators orbit,
+    // we lock onto its current position once and just tween there.
+    const m = creatorMeshes.find((x) => creatorMap.get(x)?.id === c.id);
+    if (!m) return;
+    targetMesh = m;
+    // Track for ~5 seconds so the user can see the creator "in orbit"
+    targetTickerStop = performance.now() + 5000;
+    // Use the creator's current orbit position
+    tweenCameraTo(m.position.clone(), 35);
+    setOrbVisibility((other) => other.id === c.id || other.cats.some((x) => c.cats.includes(x)));
+    setStatus(`→ @${c.handle}` + (c.pick ? ' ⭐' : ''));
+  }
+
+  // Build filter chips for each known category
+  cats.forEach((cat) => {
+    const btn = document.createElement('button');
+    btn.className = 'quest-filter';
+    btn.dataset.cat = cat;
+    btn.textContent = cat.replace('-', ' ');
+    const colorHex = '#' + (CAT_COLOR_HEX[cat] ?? DEFAULT_HEX).toString(16).padStart(6, '0');
+    btn.style.setProperty('--c', colorHex);
+    btn.addEventListener('click', () => {
+      focusCategory(activeCat === cat ? null : cat);
+    });
+    filtersEl.appendChild(btn);
+  });
+
+  // Search — fly to first matching creator
+  let searchTimer: number | undefined;
+  searchInput.addEventListener('input', () => {
+    clearTimeout(searchTimer);
+    searchTimer = window.setTimeout(() => {
+      const q = searchInput.value.trim().toLowerCase();
+      if (!q) {
+        if (activeCat) focusCategory(activeCat);
+        else focusCategory(null);
+        return;
+      }
+      const match = creators.find((c) =>
+        c.handle.toLowerCase().includes(q) || c.name.toLowerCase().includes(q)
+      );
+      if (match) flyToCreator(match);
+      else setStatus(PAGE_LOCALE === 'nl' ? 'Geen match in deze galaxy' : 'No match in this galaxy');
+    }, 220);
+  });
+  searchInput.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') {
+      const q = searchInput.value.trim().toLowerCase();
+      const match = creators.find((c) =>
+        c.handle.toLowerCase().includes(q) || c.name.toLowerCase().includes(q)
+      );
+      if (match) location.href = localizedHref(`/${match.slug}`);
+    }
+  });
+
+  // Discover — fly to a random must-follow pick
+  discoverBtn.addEventListener('click', () => {
+    const picks = creators.filter((c) => c.pick && c.tier === 'must-follow');
+    if (picks.length === 0) return;
+    const random = picks[Math.floor(Math.random() * picks.length)];
+    flyToCreator(random);
+  });
+
+  // -----------------------------------------------------------------
+  // Camera tween — used by category click-to-zoom and a "reset" key
+  // -----------------------------------------------------------------
+  let tweenStart = 0, tweenDuration = 0;
+  let tweenFromYaw = 0, tweenFromPitch = 0, tweenFromDist = 0;
+  let tweenToYaw = 0, tweenToPitch = 0, tweenToDist = 0;
+  let tweening = false;
+
+  function tweenCameraTo(target: THREE.Vector3, distance: number) {
+    // Compute yaw/pitch that make camera look-at the target from given distance
+    const yaw = Math.atan2(target.x, target.z);
+    const pitch = 0.25;
+    tweenFromYaw = camYaw; tweenFromPitch = camPitch; tweenFromDist = camDist;
+    tweenToYaw = yaw; tweenToPitch = pitch; tweenToDist = distance;
+    tweenStart = performance.now();
+    tweenDuration = 1100;
+    tweening = true;
+    auto = false;
+  }
+
+  function easeInOutCubic(t: number): number {
+    return t < 0.5 ? 4*t*t*t : 1 - Math.pow(-2*t + 2, 3) / 2;
+  }
+
+  // -----------------------------------------------------------------
+  // Animate
+  // -----------------------------------------------------------------
+  let auto = true;
+  canvas.addEventListener('pointerdown', () => {
+    auto = false; tweening = false;
+    // User took control — release any quest-tracking
+    targetMesh = null;
+  });
+
+  let lastTime = performance.now();
+  function tick(now: number) {
+    const dt = Math.min(0.05, (now - lastTime) / 1000);
+    lastTime = now;
+
+    // Camera tween
+    if (tweening) {
+      const t = Math.min(1, (now - tweenStart) / tweenDuration);
+      const e = easeInOutCubic(t);
+      camYaw = tweenFromYaw + (tweenToYaw - tweenFromYaw) * e;
+      camPitch = tweenFromPitch + (tweenToPitch - tweenFromPitch) * e;
+      camDist = tweenFromDist + (tweenToDist - tweenFromDist) * e;
+      updateCam();
+      if (t >= 1) tweening = false;
+    } else if (targetMesh && now < targetTickerStop) {
+      // Soft-track an orbiting creator the camera has been told to chase.
+      // Smoothly lerp camera angles toward looking at its current position.
+      const t = targetMesh.position;
+      const desiredYaw = Math.atan2(t.x, t.z);
+      const desiredPitch = 0.18;
+      const desiredDist = 35;
+      camYaw += (desiredYaw - camYaw) * 0.05;
+      camPitch += (desiredPitch - camPitch) * 0.05;
+      camDist += (desiredDist - camDist) * 0.05;
+      updateCam();
+    } else if (auto) {
+      camYaw += 0.0006;
+      updateCam();
+    }
+    if (targetMesh && now >= targetTickerStop) targetMesh = null;
+
+    // Update creator orbits
+    for (const m of creatorMeshes) {
+      const o = creatorOrbit.get(m);
+      if (!o) continue;
+      o.phase += o.speed * dt;
+      m.position.set(
+        o.anchor.x + Math.cos(o.phase) * o.radius,
+        o.anchor.y + o.yJit + Math.sin(o.phase * 0.4 + o.tilt) * 2,
+        o.anchor.z + Math.sin(o.phase) * o.radius,
+      );
+      const halo = creatorHalos.get(m);
+      if (halo) halo.position.copy(m.position);
+    }
+
+    // Update connection lines (creator may have moved)
+    for (const seg of lineSegments) {
+      const positions = seg.line.geometry.attributes.position as THREE.BufferAttribute;
+      positions.setXYZ(0, seg.a.position.x, seg.a.position.y, seg.a.position.z);
+      positions.setXYZ(1, seg.b.x, seg.b.y, seg.b.z);
+      positions.needsUpdate = true;
+    }
+
+    // Drift dust
+    const dpos = dustGeom.attributes.position as THREE.BufferAttribute;
+    for (let i = 0; i < dustCount; i++) {
+      let x = dpos.getX(i) + dustVel[i*3];
+      let y = dpos.getY(i) + dustVel[i*3+1];
+      let z = dpos.getZ(i) + dustVel[i*3+2];
+      // Wrap so it doesn't drift away forever
+      if (x > 300) x = -300; else if (x < -300) x = 300;
+      if (y > 100) y = -100; else if (y < -100) y = 100;
+      if (z > 300) z = -300; else if (z < -300) z = 300;
+      dpos.setXYZ(i, x, y, z);
+    }
+    dpos.needsUpdate = true;
+
+    // Hover-ring follow + breathing
+    if (hovered) {
+      const baseScale = hoveredType === 'category' ? 16 : 4;
+      const breathing = 1 + Math.sin(now * 0.005) * 0.08;
+      hoverRing.position.copy(hovered.position);
+      hoverRing.lookAt(camera.position);
+      hoverRing.scale.setScalar(baseScale * breathing);
+      (hoverRing.material as THREE.MeshBasicMaterial).opacity = 0.7;
+    } else {
+      (hoverRing.material as THREE.MeshBasicMaterial).opacity = 0.0;
+    }
+
+    composer.render();
+    requestAnimationFrame(tick);
+  }
+  requestAnimationFrame(tick);
+
+  function escapeHTML(s: string) {
+    return s.replace(/[&<>"']/g, (m) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]!));
+  }
+</script>

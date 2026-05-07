@@ -1,0 +1,497 @@
+---
+/**
+ * /network — D3 force-directed 2D graph of all creators clustered by category.
+ *
+ * Each node is a creator; each edge connects a creator to its category anchor.
+ * The simulation pushes creators away from each other but pulls them toward
+ * their category cluster, so the graph self-organises into ~11 visible clusters.
+ *
+ * Mobile-friendly fallback for the heavier /galaxy 3D scene.
+ */
+import Layout from '../layouts/Layout.astro';
+import {
+  getAllCreators, getCounts, categoryLabel, platformLabels,
+} from '../lib/data';
+import { useTranslations, localizedHref, type Locale } from '../i18n/messages';
+import { Network as NetIcon, Sparkles } from '@lucide/astro';
+
+const locale = (Astro.currentLocale ?? 'nl') as Locale;
+const t = useTranslations(locale);
+const creators = getAllCreators();
+const counts = getCounts();
+
+// Build minimal payload for the client (slim down the JSON)
+const nodes = creators.map((c) => ({
+  id: c.id,
+  slug: c.slug,
+  name: c.name,
+  handle: c.primary_handle,
+  platform: c.primary_platform,
+  cats: c.tags ?? [],
+  pick: !!c.is_curator_pick,
+  tier: c.curator_tier ?? null,
+  followers: c.stats?.followers ?? 0,
+  avatar: c.avatar ?? null,
+}));
+---
+
+<Layout title={`Netwerk · ${t.siteName}`} description={`${counts.total} creators clustered by category — interactive 2D graph.`}>
+  <main class="container container-wide" style="padding-block: var(--space-8);">
+    <header class="hero" style="padding-block: var(--space-6) var(--space-4); text-align: left;">
+      <div class="hero__meta" style="justify-content: flex-start;">
+        <span class="badge badge--primary"><NetIcon size={11} stroke-width={2} /> {locale === 'nl' ? 'Netwerk' : 'Network'}</span>
+        <span>{counts.total} creators · {Object.keys(counts.byCategory ?? {}).length} {locale === 'nl' ? 'onderwerpen' : 'topics'}</span>
+        <a href={localizedHref('/galaxy', locale)} style="margin-left: auto; color: var(--primary-bright); display: inline-flex; align-items: center; gap: 4px;">
+          <Sparkles size={12} stroke-width={2} />
+          {locale === 'nl' ? 'Of bekijk de 3D galaxy →' : 'Or view the 3D galaxy →'}
+        </a>
+      </div>
+      <h1 class="hero__title" style="font-size: var(--text-3xl);">
+        <span class="hero__gradient">{locale === 'nl' ? 'Het netwerk' : 'The network'}</span>
+      </h1>
+      <p class="hero__sub" style="margin: 0; max-width: 720px;">
+        {locale === 'nl'
+          ? 'Elke bol is een creator, geclusterd rondom hun primaire onderwerp. Sleep om te bewegen, scroll om in te zoomen, klik op een bol voor het profiel.'
+          : 'Each orb is a creator, clustered around their primary topic. Drag to pan, scroll to zoom, click an orb for the profile.'}
+      </p>
+    </header>
+
+    <div id="network-stage" class="network-stage" aria-label="creator network graph">
+      <svg id="network-svg" width="100%" height="720"></svg>
+      <div class="network-search">
+        <input type="search" id="network-search-input"
+               placeholder={locale === 'nl' ? 'Zoek een creator…' : 'Search a creator…'}
+               aria-label="Search creators" />
+      </div>
+      <div class="network-legend" id="network-legend">
+        <strong>{locale === 'nl' ? 'Onderwerpen' : 'Topics'}</strong>
+        <ul>
+          {Object.entries(counts.byCategory ?? {})
+            .sort((a, b) => b[1] - a[1])
+            .map(([cat, n]) => (
+              <li data-cat={cat}>
+                <span class="dot" data-cat={cat}></span>
+                {categoryLabel(cat, locale)}
+                <span class="text-muted mono" style="margin-left: auto; font-size: 11px;">{n}</span>
+              </li>
+            ))}
+        </ul>
+      </div>
+      <div class="network-tooltip" id="network-tooltip" hidden></div>
+    </div>
+  </main>
+</Layout>
+
+<script id="network-data" type="application/json" set:html={JSON.stringify(nodes)} />
+
+<style>
+  .network-stage {
+    position: relative;
+    background: linear-gradient(180deg,
+      color-mix(in oklch, var(--primary-bright) 4%, var(--bg-deep)),
+      var(--bg-deep) 80%);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    margin-top: var(--space-4);
+  }
+  #network-svg {
+    display: block;
+    cursor: grab;
+    touch-action: none;
+  }
+  #network-svg:active { cursor: grabbing; }
+
+  .network-legend {
+    position: absolute;
+    top: var(--space-4);
+    right: var(--space-4);
+    background: var(--bg-glass);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    padding: var(--space-3);
+    font-size: var(--text-xs);
+    max-width: 200px;
+    pointer-events: auto;
+  }
+  .network-legend strong {
+    display: block;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-wider);
+    font-size: 10px;
+    margin-bottom: var(--space-2);
+  }
+  .network-legend ul { list-style: none; padding: 0; margin: 0; }
+  .network-legend li {
+    display: flex; align-items: center; gap: var(--space-2);
+    padding: 3px 0;
+    color: var(--text-secondary);
+    cursor: pointer;
+  }
+  .network-legend li:hover { color: var(--text-primary); }
+  .network-legend li.is-dimmed { opacity: 0.35; }
+  .network-legend .dot {
+    width: 10px; height: 10px; border-radius: 50%;
+    --c: oklch(72% 0.13 270);
+    background: var(--c);
+    box-shadow: 0 0 8px var(--c);
+  }
+  .network-legend .dot[data-cat="claude"]        { --c: oklch(78% 0.15 270); }
+  .network-legend .dot[data-cat="coding"]        { --c: oklch(78% 0.13 200); }
+  .network-legend .dot[data-cat="agents"]        { --c: oklch(75% 0.15 320); }
+  .network-legend .dot[data-cat="beginners"]     { --c: oklch(78% 0.14 150); }
+  .network-legend .dot[data-cat="business"]      { --c: oklch(82% 0.14 70);  }
+  .network-legend .dot[data-cat="research"]      { --c: oklch(75% 0.13 230); }
+  .network-legend .dot[data-cat="creative"]      { --c: oklch(78% 0.16 30);  }
+  .network-legend .dot[data-cat="fundamentals"]  { --c: oklch(75% 0.13 250); }
+  .network-legend .dot[data-cat="tool-insights"] { --c: oklch(78% 0.13 180); }
+  .network-legend .dot[data-cat="official"]      { --c: oklch(82% 0.14 60);  }
+  .network-legend .dot[data-cat="branding"]      { --c: oklch(82% 0.14 95);  }
+
+  .network-tooltip {
+    position: fixed;
+    z-index: 100;
+    background: var(--bg-elevated);
+    border: 1px solid var(--border-accent);
+    border-radius: var(--radius-md);
+    padding: var(--space-2) var(--space-3);
+    font-size: var(--text-xs);
+    pointer-events: none;
+    max-width: 240px;
+    box-shadow: var(--shadow-lg);
+  }
+  .network-tooltip strong {
+    display: block; color: var(--text-primary);
+    font-size: var(--text-sm); margin-bottom: 2px;
+  }
+  .network-tooltip .handle {
+    color: var(--text-muted); font-family: var(--font-mono);
+  }
+
+  .network-search {
+    position: absolute;
+    top: var(--space-4);
+    left: var(--space-4);
+    z-index: 5;
+  }
+  .network-search input {
+    background: var(--bg-glass);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    padding: 8px 12px;
+    color: var(--text-primary);
+    font-size: var(--text-sm);
+    font-family: var(--font-body);
+    width: 220px;
+    transition: border-color var(--duration-fast);
+  }
+  .network-search input:focus {
+    outline: none;
+    border-color: var(--border-accent);
+    box-shadow: 0 0 0 3px color-mix(in oklch, var(--primary-bright) 18%, transparent);
+  }
+
+  @media (max-width: 720px) {
+    .network-legend { position: static; max-width: none; margin: var(--space-3); }
+    .network-search { position: static; margin: var(--space-3); }
+    .network-search input { width: 100%; }
+    #network-svg { height: 540px; }
+  }
+</style>
+
+<script>
+  import { forceSimulation, forceLink, forceManyBody, forceX, forceY, forceCollide } from 'd3-force';
+  import { select, pointer } from 'd3-selection';
+  import { drag } from 'd3-drag';
+  import { zoom, zoomTransform } from 'd3-zoom';
+
+  // Read data injected by Astro
+  const dataEl = document.getElementById('network-data');
+  if (!dataEl) throw new Error('network-data not found');
+  const creators = JSON.parse(dataEl.textContent || '[]') as Array<{
+    id: string; slug: string; name: string; handle: string;
+    platform: string; cats: string[]; pick: boolean; tier: string | null;
+    followers: number; avatar: string | null;
+  }>;
+
+  // Category palette — same hues as the rest of the site
+  const CAT_COLOR: Record<string, string> = {
+    claude: 'oklch(78% 0.15 270)',
+    coding: 'oklch(78% 0.13 200)',
+    agents: 'oklch(75% 0.15 320)',
+    beginners: 'oklch(78% 0.14 150)',
+    business: 'oklch(82% 0.14 70)',
+    research: 'oklch(75% 0.13 230)',
+    creative: 'oklch(78% 0.16 30)',
+    fundamentals: 'oklch(75% 0.13 250)',
+    'tool-insights': 'oklch(78% 0.13 180)',
+    official: 'oklch(82% 0.14 60)',
+    branding: 'oklch(82% 0.14 95)',
+  };
+  const DEFAULT_COLOR = 'oklch(60% 0.04 270)';
+
+  type GNode = {
+    id: string; type: 'creator' | 'category';
+    cat?: string; data?: typeof creators[number];
+    radius: number; x?: number; y?: number; fx?: number | null; fy?: number | null;
+  };
+  type GLink = { source: string | GNode; target: string | GNode; };
+
+  const nodes: GNode[] = [];
+  const links: GLink[] = [];
+
+  // Discover categories (only ones that exist on at least one creator)
+  const catSet = new Set<string>();
+  creators.forEach((c) => c.cats.forEach((cat) => catSet.add(cat)));
+  const cats = Array.from(catSet);
+
+  // Category anchor nodes (large, fixed-ish)
+  cats.forEach((cat) => {
+    nodes.push({ id: `cat:${cat}`, type: 'category', cat, radius: 22 });
+  });
+
+  // Creator nodes — connect to first category in their list (primary)
+  creators.forEach((c) => {
+    const r = c.pick ? 9 : 4 + Math.min(6, Math.log10(Math.max(1, c.followers)) - 1);
+    nodes.push({ id: c.id, type: 'creator', data: c, cat: c.cats[0], radius: r });
+    if (c.cats.length === 0) {
+      // unbound creators float freely; no link
+      return;
+    }
+    for (const cat of c.cats) {
+      links.push({ source: c.id, target: `cat:${cat}` });
+    }
+  });
+
+  // SVG setup
+  const svgEl = document.getElementById('network-svg') as SVGSVGElement;
+  const stage = document.getElementById('network-stage') as HTMLElement;
+  const tooltip = document.getElementById('network-tooltip') as HTMLElement;
+  const legend = document.getElementById('network-legend') as HTMLElement;
+
+  const W = stage.clientWidth;
+  const H = svgEl.clientHeight || 720;
+  svgEl.setAttribute('viewBox', `0 0 ${W} ${H}`);
+
+  const svg = select(svgEl);
+  const g = svg.append('g');
+
+  // Glow filter
+  const defs = svg.append('defs');
+  defs.append('filter').attr('id', 'glow').html(`
+    <feGaussianBlur stdDeviation="3" result="blur"/>
+    <feMerge>
+      <feMergeNode in="blur"/>
+      <feMergeNode in="SourceGraphic"/>
+    </feMerge>
+  `);
+
+  // Links
+  const link = g.append('g').attr('stroke-opacity', 0.18).selectAll('line')
+    .data(links).join('line')
+    .attr('stroke', (d: any) => {
+      const target = typeof d.target === 'object' ? d.target : nodes.find(n => n.id === d.target);
+      const cat = (target as GNode | undefined)?.cat;
+      return cat ? CAT_COLOR[cat] || DEFAULT_COLOR : DEFAULT_COLOR;
+    })
+    .attr('stroke-width', 0.6);
+
+  // Nodes
+  const node = g.append('g').selectAll('circle')
+    .data(nodes).join('circle')
+    .attr('r', (d: any) => d.radius)
+    .attr('fill', (d: any) => d.type === 'category'
+      ? CAT_COLOR[d.cat] || DEFAULT_COLOR
+      : (d.cat ? CAT_COLOR[d.cat] || DEFAULT_COLOR : DEFAULT_COLOR))
+    .attr('opacity', (d: any) => d.type === 'category' ? 0.95 : 0.85)
+    .attr('stroke', (d: any) => d.type === 'category' ? 'white' : (d.data?.pick ? 'white' : 'transparent'))
+    .attr('stroke-width', (d: any) => d.type === 'category' ? 2 : (d.data?.pick ? 1.5 : 0))
+    .attr('filter', (d: any) => (d.type === 'category' || d.data?.pick) ? 'url(#glow)' : null)
+    .style('cursor', (d: any) => d.type === 'creator' ? 'pointer' : 'default')
+    .on('mouseenter', (event: MouseEvent, d: any) => {
+      if (d.type !== 'creator') return;
+      const c = d.data;
+      tooltip.hidden = false;
+      tooltip.innerHTML = `
+        <strong>${escapeHTML(c.name)}</strong>
+        <span class="handle">@${escapeHTML(c.handle)}</span>
+        <div style="margin-top: 4px; color: var(--text-secondary); font-size: 11px;">
+          ${c.cats.map((x: string) => escapeHTML(x)).join(' · ') || '—'}
+        </div>
+        ${c.pick ? '<div style="margin-top:4px; color: var(--primary-bright); font-size: 10px; text-transform: uppercase; font-weight: bold;">⭐ Top pick</div>' : ''}
+      `;
+    })
+    .on('mousemove', (event: MouseEvent) => {
+      tooltip.style.left = (event.clientX + 14) + 'px';
+      tooltip.style.top = (event.clientY + 14) + 'px';
+    })
+    .on('mouseleave', () => { tooltip.hidden = true; })
+    .on('click', (_event: MouseEvent, d: any) => {
+      if (d.type === 'creator') {
+        location.href = `/${d.data.slug}`;
+      }
+    });
+
+  // Category labels
+  const labels = g.append('g').selectAll('text')
+    .data(nodes.filter((n: any) => n.type === 'category'))
+    .join('text')
+    .attr('text-anchor', 'middle')
+    .attr('dy', '0.35em')
+    .attr('font-family', 'var(--font-display)')
+    .attr('font-weight', 'bold')
+    .attr('font-size', 10)
+    .attr('letter-spacing', '0.1em')
+    .attr('text-transform', 'uppercase')
+    .attr('fill', 'oklch(15% 0.02 270)')
+    .style('pointer-events', 'none')
+    .text((d: any) => d.cat?.replace('-', ' ').toUpperCase());
+
+  // Force simulation: creators repel each other, attract to their category anchor
+  const sim = forceSimulation(nodes as any)
+    .force('charge', forceManyBody().strength((d: any) => d.type === 'category' ? -800 : -25))
+    .force('link', forceLink(links).id((d: any) => d.id).strength(0.15).distance(80))
+    .force('collide', forceCollide().radius((d: any) => d.radius + 2))
+    .force('center', forceX(W / 2).strength(0.02))
+    .force('centerY', forceY(H / 2).strength(0.02))
+    .alphaDecay(0.02);
+
+  sim.on('tick', () => {
+    link
+      .attr('x1', (d: any) => (d.source as any).x)
+      .attr('y1', (d: any) => (d.source as any).y)
+      .attr('x2', (d: any) => (d.target as any).x)
+      .attr('y2', (d: any) => (d.target as any).y);
+    node.attr('cx', (d: any) => d.x).attr('cy', (d: any) => d.y);
+    labels.attr('x', (d: any) => d.x).attr('y', (d: any) => d.y);
+  });
+
+  // Drag
+  const dragHandler = drag<SVGCircleElement, GNode>()
+    .on('start', (event, d) => {
+      if (!event.active) sim.alphaTarget(0.3).restart();
+      d.fx = d.x; d.fy = d.y;
+    })
+    .on('drag', (event, d) => { d.fx = event.x; d.fy = event.y; })
+    .on('end', (event, d) => {
+      if (!event.active) sim.alphaTarget(0);
+      // Categories stay where dragged; creators float free again
+      if (d.type === 'creator') { d.fx = null; d.fy = null; }
+    });
+  node.call(dragHandler as any);
+
+  // Zoom + pan
+  const zoomHandler = zoom<SVGSVGElement, unknown>()
+    .scaleExtent([0.3, 4])
+    .on('zoom', (event) => g.attr('transform', event.transform.toString()));
+  svg.call(zoomHandler as any);
+
+  // Legend filter — click a topic to highlight that cluster
+  let activeLegend: string | null = null;
+  legend.querySelectorAll<HTMLLIElement>('li[data-cat]').forEach((li) => {
+    li.addEventListener('click', () => {
+      const cat = li.dataset.cat!;
+      activeLegend = activeLegend === cat ? null : cat;
+      legend.querySelectorAll('li').forEach((x) => {
+        x.classList.toggle('is-dimmed', activeLegend !== null && x.dataset.cat !== activeLegend);
+      });
+      node.attr('opacity', (d: any) => {
+        if (!activeLegend) return d.type === 'category' ? 0.95 : 0.85;
+        if (d.type === 'category') return d.cat === activeLegend ? 0.95 : 0.15;
+        return d.data?.cats?.includes(activeLegend) ? 0.95 : 0.08;
+      });
+      link.attr('opacity', (d: any) => {
+        if (!activeLegend) return 0.18;
+        const tgt = typeof d.target === 'object' ? d.target : nodes.find((n: any) => n.id === d.target);
+        return (tgt as GNode | undefined)?.cat === activeLegend ? 0.5 : 0.04;
+      });
+    });
+  });
+
+  // -----------------------------------------------------------------
+  // Hover highlight: dim everything except the hovered creator's
+  // categories + sibling creators in those categories
+  // -----------------------------------------------------------------
+  function dimAllExcept(keep: Set<string>) {
+    node.attr('opacity', (d: any) =>
+      keep.has(d.id) ? 1 : (d.type === 'category' ? 0.25 : 0.05),
+    );
+    link.attr('opacity', (d: any) => {
+      const sId = typeof d.source === 'object' ? d.source.id : d.source;
+      const tId = typeof d.target === 'object' ? d.target.id : d.target;
+      return (keep.has(sId) && keep.has(tId)) ? 0.5 : 0.03;
+    });
+  }
+  function clearDim() {
+    if (activeLegend) {
+      // restore legend filter state
+      node.attr('opacity', (d: any) => {
+        if (d.type === 'category') return d.cat === activeLegend ? 0.95 : 0.15;
+        return d.data?.cats?.includes(activeLegend) ? 0.95 : 0.08;
+      });
+      link.attr('opacity', (d: any) => {
+        const tgt = typeof d.target === 'object' ? d.target : nodes.find((n: any) => n.id === d.target);
+        return (tgt as GNode | undefined)?.cat === activeLegend ? 0.5 : 0.04;
+      });
+    } else {
+      node.attr('opacity', (d: any) => d.type === 'category' ? 0.95 : 0.85);
+      link.attr('opacity', 0.18);
+    }
+  }
+  node.on('mouseenter.highlight', (_event: MouseEvent, d: any) => {
+    if (d.type !== 'creator') return;
+    const c = d.data;
+    const keep = new Set<string>();
+    keep.add(d.id);
+    for (const cat of c.cats) keep.add(`cat:${cat}`);
+    // siblings: creators sharing any category
+    for (const other of nodes) {
+      if (other.type !== 'creator' || other === d) continue;
+      const otherCats = (other as any).data?.cats || [];
+      if (c.cats.some((x: string) => otherCats.includes(x))) keep.add(other.id);
+    }
+    dimAllExcept(keep);
+  });
+  node.on('mouseleave.highlight', () => clearDim());
+
+  // -----------------------------------------------------------------
+  // Search box — pan camera to first match
+  // -----------------------------------------------------------------
+  const searchInput = document.getElementById('network-search-input') as HTMLInputElement;
+  searchInput.addEventListener('input', () => {
+    const q = searchInput.value.trim().toLowerCase();
+    if (!q) { clearDim(); return; }
+    const matches = creators.filter((c: any) =>
+      c.name.toLowerCase().includes(q) || c.handle.toLowerCase().includes(q)
+    );
+    if (matches.length === 0) {
+      // Dim everything if no match
+      node.attr('opacity', 0.05);
+      link.attr('opacity', 0.02);
+      return;
+    }
+    const keep = new Set(matches.map((m: any) => m.id));
+    // also include their categories
+    for (const m of matches) for (const cat of m.cats) keep.add(`cat:${cat}`);
+    dimAllExcept(keep);
+    // Pan to first match
+    const first = matches[0];
+    const node0 = nodes.find((n: any) => n.id === first.id) as any;
+    if (node0 && node0.x != null) {
+      const transform = zoomTransform(svgEl);
+      const cx = W / 2 - node0.x * 1.5;
+      const cy = H / 2 - node0.y * 1.5;
+      svg.transition().duration(600).call(
+        (zoomHandler as any).transform,
+        transform.translate(0, 0).scale(1.5).translate(cx / 1.5, cy / 1.5),
+      );
+    }
+  });
+
+  function escapeHTML(s: string) {
+    return s.replace(/[&<>"']/g, (m) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]!));
+  }
+</script>

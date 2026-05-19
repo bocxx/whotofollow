@@ -26,6 +26,7 @@ export interface Creator {
   is_curator_pick?: boolean;
   curator_tier?: CuratorTier;
   editor_note?: string;
+  category_scores?: Record<string, number>;
 }
 
 export interface CreatorsPayload {

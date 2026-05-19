@@ -1,0 +1,210 @@
+---
+/**
+ * /onderwerp/[cat] — category landing page (NL).
+ *
+ * Generates one static page per discovered category. Lists the editor's
+ * picks first (with their editor-notes), then the algorithmically tagged
+ * creators in this category. Cross-links to the other categories at the
+ * bottom for crawl-juice + topical navigation.
+ */
+import Layout from '../../../layouts/Layout.astro';
+import CreatorCard from '../../../components/molecules/CreatorCard.astro';
+import { siteConfig } from '../../../config/site';
+import {
+  getAllCreators, getCounts, categoryLabel, getGeneratedAt,
+  formatNumber,
+} from '../../../lib/data';
+import {
+  useTranslations, localizedHref, categoryHref, type Locale,
+} from '../../../i18n/messages';
+import {
+  Sparkles, Code, Bot, BookOpen, Briefcase, Microscope, Palette,
+  GraduationCap, Wrench, ShieldCheck, Megaphone, ArrowLeft,
+} from '@lucide/astro';
+import type { Creator } from '../../../types/creator';
+
+const CATEGORY_ICON: Record<string, any> = {
+  'claude': Sparkles, 'coding': Code, 'agents': Bot,
+  'beginners': BookOpen, 'business': Briefcase, 'research': Microscope,
+  'creative': Palette, 'fundamentals': GraduationCap,
+  'tool-insights': Wrench, 'official': ShieldCheck, 'branding': Megaphone,
+};
+
+export async function getStaticPaths() {
+  const all = getAllCreators();
+  const cats = new Set<string>();
+  for (const c of all) for (const t of c.tags ?? []) cats.add(t);
+  return Array.from(cats).map((cat) => ({ params: { cat }, props: { cat } }));
+}
+
+interface Props { cat: string; }
+const { cat } = Astro.props;
+
+const locale: Locale = (Astro.currentLocale ?? 'nl') as Locale;
+const t = useTranslations(locale);
+
+const all = getAllCreators();
+const inCat = all.filter((c: Creator) => (c.tags ?? []).includes(cat));
+const picks = inCat
+  .filter((c) => c.is_curator_pick)
+  .sort((a, b) => {
+    const order = { 'must-follow': 0, 'official': 1, 'recommended': 2, 'niche': 3 } as Record<string, number>;
+    return (order[a.curator_tier ?? 'niche'] ?? 9) - (order[b.curator_tier ?? 'niche'] ?? 9);
+  });
+const others = inCat.filter((c) => !c.is_curator_pick).slice(0, 200);
+
+const counts = getCounts();
+const catLabel = categoryLabel(cat, locale);
+const Icon = CATEGORY_ICON[cat];
+
+// Cross-links to other categories that have creators
+const otherCats = Object.entries(counts.byCategory ?? {})
+  .filter(([c]) => c !== cat)
+  .sort((a, b) => b[1] - a[1]);
+
+// JSON-LD CollectionPage
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: `${t.category.titlePrefix} ${catLabel}`,
+  url: `${siteConfig.url}${categoryHref(cat, locale)}`,
+  description: t.category.hero(catLabel, inCat.length),
+  inLanguage: locale,
+  numberOfItems: inCat.length,
+};
+---
+
+<Layout
+  title={`${t.category.titlePrefix} ${catLabel} · ${t.siteName}`}
+  description={t.category.hero(catLabel, inCat.length)}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  </Fragment>
+
+  <main class="container container-wide" style="padding-top: var(--space-6);">
+    <a href={localizedHref('/', locale)} class="detail__back" style="margin-bottom: var(--space-4);">
+      <ArrowLeft size={14} stroke-width={2} /> {t.category.backToAll}
+    </a>
+
+    <header class="cat-hero" data-cat={cat}>
+      <div class="cat-hero__icon-wrap">
+        {Icon && <Icon size={36} stroke-width={1.8} />}
+      </div>
+      <div>
+        <span class="cat-hero__kicker">{locale === 'nl' ? 'Onderwerp' : 'Topic'}</span>
+        <h1 class="cat-hero__title">{catLabel}</h1>
+        <p class="cat-hero__sub">{t.category.hero(catLabel, inCat.length)}</p>
+        <div class="cat-hero__stats">
+          <span><strong>{formatNumber(inCat.length)}</strong> {locale === 'nl' ? 'creators' : 'creators'}</span>
+          <span class="text-muted">·</span>
+          <span><strong>{picks.length}</strong> editor's picks</span>
+        </div>
+      </div>
+    </header>
+
+    {picks.length > 0 ? (
+      <section style="margin-top: var(--space-10);">
+        <h2 style="font-size: var(--text-2xl); margin-bottom: var(--space-4); display: flex; align-items: center; gap: var(--space-2);">
+          <Sparkles size={20} stroke-width={2} style="color: var(--primary-bright);" />
+          {t.category.editorsHeading}
+        </h2>
+        <div class="feed-grid">
+          {picks.map((c) => <CreatorCard creator={c} locale={locale} />)}
+        </div>
+      </section>
+    ) : (
+      <p class="empty" style="margin-top: var(--space-8);">{t.category.editorsEmpty}</p>
+    )}
+
+    {others.length > 0 && (
+      <section style="margin-top: var(--space-12);">
+        <h2 style="font-size: var(--text-2xl); margin-bottom: var(--space-4);">
+          {t.category.othersHeading}
+          <span class="text-muted mono" style="font-size: var(--text-sm); margin-left: var(--space-2);">{others.length}</span>
+        </h2>
+        <div class="feed-grid">
+          {others.map((c) => <CreatorCard creator={c} locale={locale} />)}
+        </div>
+      </section>
+    )}
+
+    <section style="margin-top: var(--space-16); padding-top: var(--space-8); border-top: 1px solid var(--border-subtle);">
+      <h2 style="font-size: var(--text-xl); margin-bottom: var(--space-4);">{t.category.otherCategoriesHeading}</h2>
+      <div class="cat-bar">
+        {otherCats.map(([c, n]) => {
+          const I = CATEGORY_ICON[c];
+          return (
+            <a href={categoryHref(c, locale)} class="cat-pill" data-cat={c}>
+              {I && <I size={11} stroke-width={1.8} />}
+              <span>{categoryLabel(c, locale)}</span>
+              <span class="cat-pill__count">{n}</span>
+            </a>
+          );
+        })}
+      </div>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  .cat-hero {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-5);
+    padding: var(--space-6) var(--space-6);
+    background: linear-gradient(135deg,
+      color-mix(in oklch, var(--cat-color, var(--primary-bright)) 8%, var(--bg-panel)),
+      var(--bg-panel) 70%);
+    border: 1px solid color-mix(in oklch, var(--cat-color, var(--primary-bright)) 30%, transparent);
+    border-radius: var(--radius-xl);
+    --cat-color: oklch(72% 0.13 270);
+  }
+  .cat-hero[data-cat="claude"]        { --cat-color: oklch(78% 0.15 270); }
+  .cat-hero[data-cat="coding"]        { --cat-color: oklch(78% 0.13 200); }
+  .cat-hero[data-cat="agents"]        { --cat-color: oklch(75% 0.15 320); }
+  .cat-hero[data-cat="beginners"]     { --cat-color: oklch(78% 0.14 150); }
+  .cat-hero[data-cat="business"]      { --cat-color: oklch(82% 0.14 70);  }
+  .cat-hero[data-cat="research"]      { --cat-color: oklch(75% 0.13 230); }
+  .cat-hero[data-cat="creative"]      { --cat-color: oklch(78% 0.16 30);  }
+  .cat-hero[data-cat="fundamentals"]  { --cat-color: oklch(75% 0.13 250); }
+  .cat-hero[data-cat="tool-insights"] { --cat-color: oklch(78% 0.13 180); }
+  .cat-hero[data-cat="official"]      { --cat-color: oklch(82% 0.14 60);  }
+  .cat-hero[data-cat="branding"]      { --cat-color: oklch(82% 0.14 95);  }
+
+  .cat-hero__icon-wrap {
+    display: grid; place-items: center;
+    width: 72px; height: 72px;
+    border-radius: var(--radius-lg);
+    background: color-mix(in oklch, var(--cat-color) 15%, transparent);
+    border: 1px solid color-mix(in oklch, var(--cat-color) 40%, transparent);
+    color: var(--cat-color);
+    flex-shrink: 0;
+  }
+  .cat-hero__kicker {
+    font-size: 10px;
+    color: var(--cat-color);
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-wider);
+    font-weight: var(--font-bold);
+  }
+  .cat-hero__title {
+    font-size: var(--text-4xl);
+    margin: var(--space-1) 0 var(--space-3);
+    color: var(--text-primary);
+  }
+  .cat-hero__sub {
+    color: var(--text-secondary);
+    max-width: 640px;
+    margin: 0 0 var(--space-3);
+  }
+  .cat-hero__stats {
+    display: flex; gap: var(--space-2); align-items: center;
+    font-size: var(--text-sm);
+    color: var(--text-secondary);
+  }
+
+  @media (max-width: 640px) {
+    .cat-hero { flex-direction: column; padding: var(--space-4); }
+    .cat-hero__title { font-size: var(--text-3xl); }
+  }
+</style>

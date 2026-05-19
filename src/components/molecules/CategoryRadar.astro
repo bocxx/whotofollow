@@ -1,0 +1,197 @@
+---
+/**
+ * CategoryRadar — pure-SVG radar chart of a creator's per-category scores.
+ *
+ * No D3 / no client-side JS; everything is precomputed in Astro at build
+ * time. Axes = the 11 standard categories; the polygon = the creator's
+ * scores normalised to 0..1 against their own max.
+ *
+ * Per-axis tip color uses the same hue map as cat-chips so the chart is
+ * visually tied to the rest of the UI.
+ */
+import type { Creator } from '../../types/creator';
+import { categoryLabel } from '../../lib/data';
+import type { Locale } from '../../i18n/messages';
+
+interface Props {
+  creator: Creator;
+  locale?: Locale;
+  size?: number;
+}
+const { creator, locale = 'nl', size = 280 } = Astro.props;
+
+// Fixed display order (same as filter pills)
+const AXES = [
+  'claude', 'coding', 'agents', 'tool-insights', 'fundamentals',
+  'research', 'business', 'creative', 'beginners', 'branding', 'official',
+];
+const HUE: Record<string, string> = {
+  claude: 'oklch(78% 0.15 270)',
+  coding: 'oklch(78% 0.13 200)',
+  agents: 'oklch(75% 0.15 320)',
+  beginners: 'oklch(78% 0.14 150)',
+  business: 'oklch(82% 0.14 70)',
+  research: 'oklch(75% 0.13 230)',
+  creative: 'oklch(78% 0.16 30)',
+  fundamentals: 'oklch(75% 0.13 250)',
+  'tool-insights': 'oklch(78% 0.13 180)',
+  official: 'oklch(82% 0.14 60)',
+  branding: 'oklch(82% 0.14 95)',
+};
+
+const scores = creator.category_scores ?? {};
+const maxScore = Math.max(...AXES.map((a) => scores[a] ?? 0), 1);
+
+const cx = size / 2;
+const cy = size / 2;
+const radius = size / 2 - 36;
+const N = AXES.length;
+
+function polarPoint(idx: number, scale: number) {
+  // -PI/2 to put first axis at the top
+  const angle = -Math.PI / 2 + (idx / N) * Math.PI * 2;
+  return {
+    x: cx + Math.cos(angle) * radius * scale,
+    y: cy + Math.sin(angle) * radius * scale,
+  };
+}
+
+// Polygon points
+const polygonPts = AXES.map((axis, i) => {
+  const v = (scores[axis] ?? 0) / maxScore;
+  return polarPoint(i, v);
+});
+const polygonPath = polygonPts.map((p) => `${p.x},${p.y}`).join(' ');
+
+// Grid rings (25/50/75/100)
+const GRID_LEVELS = [0.25, 0.5, 0.75, 1.0];
+
+// Axis labels — outside the outermost ring
+const labelPositions = AXES.map((axis, i) => {
+  const angle = -Math.PI / 2 + (i / N) * Math.PI * 2;
+  const r = radius + 18;
+  return {
+    axis,
+    x: cx + Math.cos(angle) * r,
+    y: cy + Math.sin(angle) * r,
+    color: HUE[axis],
+    score: scores[axis] ?? 0,
+    anchor: Math.cos(angle) > 0.3 ? 'start' : Math.cos(angle) < -0.3 ? 'end' : 'middle',
+    baseline: Math.sin(angle) > 0.3 ? 'hanging' : Math.sin(angle) < -0.3 ? 'auto' : 'middle',
+  };
+});
+
+// Anything to draw? If creator has no scores at all, render an empty
+// state instead of a flat polygon.
+const total = Object.values(scores).reduce((s, v) => s + (v as number), 0);
+const isEmpty = total === 0;
+const heading = locale === 'nl' ? 'Onderwerp-profiel' : 'Topic profile';
+const emptyMsg = locale === 'nl'
+  ? 'Nog geen automatische scores beschikbaar.'
+  : 'No automatic scores available yet.';
+---
+
+{isEmpty ? null : (
+  <section class="radar">
+    <header class="radar__head">
+      <h3 class="radar__title">{heading}</h3>
+      <span class="radar__sub text-muted mono">{locale === 'nl' ? 'op basis van bio + signaal' : 'based on bio + signal'}</span>
+    </header>
+
+    <svg viewBox={`0 0 ${size} ${size}`} width={size} height={size} class="radar__svg" role="img">
+      <!-- Grid rings -->
+      {GRID_LEVELS.map((level) => (
+        <polygon
+          points={AXES.map((_, i) => {
+            const p = polarPoint(i, level);
+            return `${p.x},${p.y}`;
+          }).join(' ')}
+          class={level === 1.0 ? 'radar__grid radar__grid--outer' : 'radar__grid'}
+        />
+      ))}
+
+      <!-- Axis lines -->
+      {AXES.map((_, i) => {
+        const p = polarPoint(i, 1);
+        return <line x1={cx} y1={cy} x2={p.x} y2={p.y} class="radar__axis" />;
+      })}
+
+      <!-- Score polygon -->
+      <polygon points={polygonPath} class="radar__shape" />
+
+      <!-- Score points -->
+      {polygonPts.map((p, i) => (
+        scores[AXES[i]] ? (
+          <circle cx={p.x} cy={p.y} r={3.5} style={`fill: ${HUE[AXES[i]]}`} class="radar__point" />
+        ) : null
+      ))}
+
+      <!-- Labels -->
+      {labelPositions.map((L) => (
+        <text
+          x={L.x} y={L.y}
+          text-anchor={L.anchor}
+          dominant-baseline={L.baseline}
+          class={L.score > 0 ? 'radar__label radar__label--active' : 'radar__label'}
+          style={L.score > 0 ? `fill: ${L.color}` : ''}>
+          {categoryLabel(L.axis, locale)}
+        </text>
+      ))}
+    </svg>
+  </section>
+)}
+
+<style>
+  .radar {
+    background: var(--bg-panel);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+    padding: var(--space-4);
+    margin-top: var(--space-6);
+  }
+  .radar__head {
+    display: flex; align-items: baseline; justify-content: space-between;
+    gap: var(--space-3); flex-wrap: wrap;
+    margin-bottom: var(--space-3);
+  }
+  .radar__title {
+    font-size: var(--text-base);
+    font-weight: var(--font-semibold);
+    margin: 0;
+    color: var(--text-primary);
+  }
+  .radar__sub { font-size: var(--text-xs); }
+  .radar__svg { display: block; max-width: 100%; height: auto; margin-inline: auto; }
+
+  .radar__grid {
+    fill: color-mix(in oklch, var(--primary-bright) 4%, transparent);
+    stroke: var(--border-subtle);
+    stroke-width: 0.7;
+  }
+  .radar__grid--outer { stroke: var(--border-strong); }
+  .radar__axis {
+    stroke: var(--border-subtle);
+    stroke-width: 0.6;
+  }
+  .radar__shape {
+    fill: color-mix(in oklch, var(--primary-bright) 25%, transparent);
+    stroke: var(--primary-bright);
+    stroke-width: 1.5;
+    stroke-linejoin: round;
+  }
+  .radar__point {
+    stroke: var(--bg-deep);
+    stroke-width: 1.5;
+  }
+  .radar__label {
+    fill: var(--text-muted);
+    font-size: 10px;
+    font-family: var(--font-mono);
+    font-weight: var(--font-medium);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  .radar__label--active {
+    font-weight: var(--font-bold);
+  }
+</style>

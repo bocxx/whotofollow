@@ -46,6 +46,17 @@ export const messages = {
       organization: 'Organization',
     },
 
+    category: {
+      titlePrefix: 'AI-creators in',
+      hero: (cat: string, n: number) => `${n} makers, onderzoekers en bedrijven die over ${cat.toLowerCase()} schrijven en bouwen — gecureerd én algoritmisch geselecteerd.`,
+      editorsHeading: 'Editor\'s picks',
+      editorsEmpty: 'Nog geen handmatig gecureerde picks in deze categorie.',
+      othersHeading: 'Alle creators in deze categorie',
+      othersEmpty: 'Nog geen andere creators in deze categorie.',
+      otherCategoriesHeading: 'Andere onderwerpen',
+      backToAll: '← Alle creators',
+    },
+
     about: {
       title: 'Over whotofollow',
       whoHeading: 'Wie staan erop',
@@ -113,6 +124,17 @@ export const messages = {
       organization: 'Organization',
     },
 
+    category: {
+      titlePrefix: 'AI creators in',
+      hero: (cat: string, n: number) => `${n} makers, researchers and companies writing and building about ${cat.toLowerCase()} — curated and algorithmically selected.`,
+      editorsHeading: 'Editor\'s picks',
+      editorsEmpty: 'No hand-curated picks in this category yet.',
+      othersHeading: 'All creators in this category',
+      othersEmpty: 'No other creators in this category yet.',
+      otherCategoriesHeading: 'Other topics',
+      backToAll: '← All creators',
+    },
+
     about: {
       title: 'About whotofollow',
       whoHeading: 'Who\'s listed',
@@ -164,6 +186,10 @@ const PATH_ALIASES: Record<string, { nl: string; en: string }> = {
   about: { nl: '/over', en: '/en/about' },
 };
 
+// Category pages use different slugs per locale (/onderwerp ↔ /en/topic).
+// Resolve them dynamically in getAlternateUrl below.
+const CATEGORY_ROOT = { nl: '/onderwerp', en: '/en/topic' };
+
 function stripTrailingSlash(p: string): string {
   return p.length > 1 && p.endsWith('/') ? p.slice(0, -1) : p;
 }
@@ -179,6 +205,18 @@ export function getAlternateUrl(currentPath: string, currentLocale: Locale): str
     if (cleaned === aliases[currentLocale]) return aliases[target];
   }
 
+  // Category routes — /onderwerp/agents ↔ /en/topic/agents
+  const catMatch = cleaned.match(/^(?:\/en)?\/(onderwerp|topic)\/([a-z0-9-]+)$/);
+  if (catMatch) {
+    const slug = catMatch[2];
+    return `${CATEGORY_ROOT[target]}/${slug}`;
+  }
+
   const noLocale = pathWithoutLocale(cleaned);
   return localizedHref(noLocale, target);
+}
+
+/** Build a localized category page URL: /onderwerp/X or /en/topic/X */
+export function categoryHref(slug: string, locale: Locale): string {
+  return `${CATEGORY_ROOT[locale]}/${slug}`;
 }

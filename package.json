@@ -7,6 +7,7 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
+    "deploy": "npm run build && wrangler deploy",
     "sync-data": "tsx scripts/sync-data.ts"
   },
   "dependencies": {
@@ -17,7 +18,7 @@
     "@fontsource-variable/space-grotesk": "^5.2.10",
     "@fontsource/jetbrains-mono": "^5.2.8",
     "@lucide/astro": "^0.563.0",
-    "astro": "^6.2.1",
+    "astro": "^6.3.5",
     "d3-drag": "^3.0.0",
     "d3-force": "^3.0.0",
     "d3-selection": "^3.0.0",
@@ -27,7 +28,7 @@
     "typescript": "^5.9.3"
   },
   "devDependencies": {
-    "@astrojs/cloudflare": "^13.3.0",
+    "@astrojs/cloudflare": "^13.5.2",
     "wrangler": "^4.78.0"
   }
 }

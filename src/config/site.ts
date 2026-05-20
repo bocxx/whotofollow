@@ -15,7 +15,7 @@ export const siteConfig = {
   ],
   footerLinks: [
     { label: 'RSS', href: '/rss.xml' },
-    { label: 'Feedzzz', href: 'https://feedzzz.online' },
+    { label: 'Feedzz', href: 'https://feedzz.online' },
     { label: 'Debesteaitools', href: 'https://debesteaitools.nl' },
   ],
 } as const;

@@ -47,6 +47,30 @@ const isPick = !!creator.is_curator_pick;
 const tier = creator.curator_tier;
 const cats = (creator.tags ?? []).slice(0, 3);
 const hasMoreCats = (creator.tags ?? []).length > cats.length;
+
+// Fallback "bio" — many GitHub orgs ship without a description. Rather than
+// leaving a blank gap, synthesise a one-liner from what we DO know.
+function buildFallbackBio(): string {
+  const plat = platformLabels[creator.primary_platform] ?? creator.primary_platform;
+  const repos = creator.stats?.repos;
+  const followers = primaryFollowers;
+  if (creator.type === 'organization') {
+    if (repos) {
+      return locale === 'nl'
+        ? `Organisatie op ${plat} met ${repos.toLocaleString('nl-NL')} publieke repositories.`
+        : `Organisation on ${plat} with ${repos.toLocaleString('en-US')} public repositories.`;
+    }
+    return locale === 'nl' ? `AI-organisatie op ${plat}.` : `AI organisation on ${plat}.`;
+  }
+  if (followers > 0) {
+    const f = followers >= 1000 ? `${(followers / 1000).toFixed(0)}K` : `${followers}`;
+    return locale === 'nl'
+      ? `Maker op ${plat} · ${f} volgers.`
+      : `Maker on ${plat} · ${f} followers.`;
+  }
+  return locale === 'nl' ? `Actief op ${plat}.` : `Active on ${plat}.`;
+}
+const displayBio = creator.bio || buildFallbackBio();
 ---
 
 <a href={href}
@@ -87,9 +111,11 @@ const hasMoreCats = (creator.tags ?? []).length > cats.length;
       <span class="editor-note__quote" aria-hidden="true">“</span>
       <p>{creator.editor_note}</p>
     </div>
-  ) : creator.bio ? (
-    <p class="creator-card__bio">{creator.bio}</p>
-  ) : null}
+  ) : (
+    <p class={creator.bio ? 'creator-card__bio' : 'creator-card__bio creator-card__bio--fallback'}>
+      {displayBio}
+    </p>
+  )}
 
   {(cats.length > 0 || creator.location || creator.company) && (
     <div class="creator-card__chips">
@@ -283,6 +309,13 @@ const hasMoreCats = (creator.tags ?? []).length > cats.length;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
+  }
+  /* Synthesised fallback line — visually quieter so it reads as metadata,
+     not as a real bio the creator wrote. */
+  .creator-card__bio--fallback {
+    color: var(--text-muted);
+    font-style: italic;
+    -webkit-line-clamp: 2;
   }
 
   /* ─── editor note (picks) — distinct, high-contrast ─── */

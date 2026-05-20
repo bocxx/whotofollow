@@ -6,28 +6,28 @@
 
 @layer tokens {
   :root {
-    /* Background — cool slate */
-    --bg-deep: oklch(12% 0.012 270);
-    --bg-surface: oklch(15% 0.014 270);
-    --bg-elevated: oklch(18% 0.016 270);
-    --bg-panel: oklch(21% 0.018 270);
+    /* Background — violet-tinted slate (richer chroma = depth, not flat grey) */
+    --bg-deep: oklch(13% 0.028 270);
+    --bg-surface: oklch(16% 0.034 270);
+    --bg-elevated: oklch(20% 0.042 270);
+    --bg-panel: oklch(23% 0.046 270);
 
-    /* Brand — Violet (270°) */
+    /* Brand — Violet (270°) — punchy */
     --primary-h: 270;
-    --primary-bright: oklch(72% 0.16 var(--primary-h));
-    --primary-mid: oklch(60% 0.18 var(--primary-h));
-    --primary-dark: oklch(45% 0.15 var(--primary-h));
+    --primary-bright: oklch(76% 0.21 var(--primary-h));
+    --primary-mid: oklch(64% 0.24 var(--primary-h));
+    --primary-dark: oklch(46% 0.18 var(--primary-h));
 
     /* Secondary — Cyan (counterpoint, 195°) */
     --secondary-h: 195;
-    --secondary-bright: oklch(80% 0.13 var(--secondary-h));
-    --secondary-mid: oklch(70% 0.12 var(--secondary-h));
-    --secondary-dark: oklch(55% 0.10 var(--secondary-h));
+    --secondary-bright: oklch(84% 0.16 var(--secondary-h));
+    --secondary-mid: oklch(74% 0.15 var(--secondary-h));
+    --secondary-dark: oklch(56% 0.12 var(--secondary-h));
 
     /* Tertiary — Pink-magenta accent (315°) */
     --tertiary-h: 315;
-    --tertiary-bright: oklch(72% 0.14 var(--tertiary-h));
-    --tertiary-dark: oklch(52% 0.12 var(--tertiary-h));
+    --tertiary-bright: oklch(76% 0.19 var(--tertiary-h));
+    --tertiary-dark: oklch(54% 0.15 var(--tertiary-h));
 
     /* Semantic */
     --color-success: oklch(75% 0.14 165);
@@ -35,20 +35,20 @@
     --color-error: oklch(68% 0.20 25);
     --color-info: oklch(72% 0.13 230);
 
-    /* Text */
-    --text-primary: oklch(97% 0.01 270);
-    --text-secondary: oklch(72% 0.04 270);
-    --text-muted: oklch(50% 0.03 270);
-    --text-inverse: oklch(8% 0.02 270);
+    /* Text — text-muted lifted to 62% L for WCAG AA on bg-panel */
+    --text-primary: oklch(98% 0.012 270);
+    --text-secondary: oklch(78% 0.05 270);
+    --text-muted: oklch(62% 0.045 270);
+    --text-inverse: oklch(10% 0.03 270);
 
-    /* Borders */
-    --border-subtle: color-mix(in oklch, var(--text-secondary) 16%, transparent);
-    --border-strong: color-mix(in oklch, var(--text-primary) 12%, transparent);
-    --border-accent: color-mix(in oklch, var(--primary-bright) 40%, transparent);
+    /* Borders — stronger so cards visibly lift off the background */
+    --border-subtle: color-mix(in oklch, var(--text-secondary) 22%, transparent);
+    --border-strong: color-mix(in oklch, var(--text-primary) 18%, transparent);
+    --border-accent: color-mix(in oklch, var(--primary-bright) 50%, transparent);
 
-    /* Glow */
-    --glow-primary: color-mix(in oklch, var(--primary-bright) 16%, transparent);
-    --glow-secondary: color-mix(in oklch, var(--secondary-bright) 10%, transparent);
+    /* Glow — richer so accents actually emit light */
+    --glow-primary: color-mix(in oklch, var(--primary-bright) 28%, transparent);
+    --glow-secondary: color-mix(in oklch, var(--secondary-bright) 18%, transparent);
 
     /* Glass */
     --bg-glass: color-mix(in oklch, var(--bg-panel) 72%, transparent);

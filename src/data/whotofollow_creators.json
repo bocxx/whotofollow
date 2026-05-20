@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-05-20T09:01:04.641355",
-  "count": 800,
+  "generated_at": "2026-05-20T10:29:36.638307",
+  "count": 791,
   "creators": [
     {
       "id": "tw-karpathy",
@@ -1444,66 +1444,6 @@
       }
     },
     {
-      "id": "yt-UCAuUUnT6oDeKwE6v1NGQxug",
-      "slug": "ted",
-      "name": "TED",
-      "primary_handle": "@ted",
-      "primary_platform": "youtube",
-      "type": "person",
-      "bio": "The TED Talks channel features the best talks and performances from the TED Conference, where the world's leading thinkers and doers give the talk of their lives in 18 minutes (or less) \u2014 plus originals, podcasts and exclusive content. Look for videos on Technology, Entertainment",
-      "location": "US",
-      "company": "",
-      "avatar": "https://yt3.ggpht.com/ytc/AIdro_koIFcCOrvh0KThLNOiazAIDu6hcs8bjkGNwe1f6A_OYm8=s800-c-k-c0x00ffffff-no-rj",
-      "platforms": [
-        {
-          "type": "youtube",
-          "handle": "@ted",
-          "url": "https://youtube.com/@ted",
-          "followers": 27400000
-        }
-      ],
-      "stats": {
-        "followers": 27400000,
-        "videos": 5626,
-        "views": 3141765325
-      },
-      "tags": [
-        "business"
-      ],
-      "_score": 274000,
-      "category_scores": {
-        "business": 4
-      }
-    },
-    {
-      "id": "yt-UCpVm7bg6pXKo1Pr6k5kxG9A",
-      "slug": "national-geographic",
-      "name": "National Geographic",
-      "primary_handle": "@natgeo",
-      "primary_platform": "youtube",
-      "type": "person",
-      "bio": "Step into wonder and find your inner explorer with National Geographic. \n\nNational Geographic is the world's premium destination for science, exploration, and adventure. Welcome to the National Geographic community, where we bring our stories, images and video to the world in rea",
-      "location": "US",
-      "company": "",
-      "avatar": "https://yt3.ggpht.com/-FOFg8o1y4dAHDB2MvhORHnLMOaaOKnaNUNsrU-U57Eac6gjB5VO8sYJQC1KkULGQvKP2XpArA=s800-c-k-c0x00ffffff-no-rj",
-      "platforms": [
-        {
-          "type": "youtube",
-          "handle": "@natgeo",
-          "url": "https://youtube.com/@natgeo",
-          "followers": 26000000
-        }
-      ],
-      "stats": {
-        "followers": 26000000,
-        "videos": 11386,
-        "views": 6947858645
-      },
-      "tags": [],
-      "_score": 260000,
-      "category_scores": {}
-    },
-    {
       "id": "tw-thecinesthetic",
       "slug": "thecinesthetic",
       "name": "cinesthetic.",
@@ -1534,62 +1474,6 @@
       "category_scores": {
         "creative": 5
       }
-    },
-    {
-      "id": "yt-UCXIJgqnII2ZOINSWNOGFThA",
-      "slug": "fox-news",
-      "name": "Fox News",
-      "primary_handle": "@foxnews",
-      "primary_platform": "youtube",
-      "type": "person",
-      "bio": "FOX News Channel (FNC) is a 24-hour all-encompassing news service dedicated to delivering breaking news as well as political and business news. A top cable network in both total viewers and Adults 25-54, FNC has been the most-watched news channel in the country for almost two dec",
-      "location": "US",
-      "company": "",
-      "avatar": "https://yt3.ggpht.com/G3gLy3HBgiZ21mEt1uzR0VPA6VXpsgJReuD7Z91nHwcgyFVu_QpHNpxuULN1D0YEQBwD0F1HwQ=s800-c-k-c0x00ffffff-no-rj",
-      "platforms": [
-        {
-          "type": "youtube",
-          "handle": "@foxnews",
-          "url": "https://youtube.com/@foxnews",
-          "followers": 15300000
-        }
-      ],
-      "stats": {
-        "followers": 15300000,
-        "videos": 137820,
-        "views": 25331066168
-      },
-      "tags": [],
-      "_score": 153000,
-      "category_scores": {}
-    },
-    {
-      "id": "yt-UCB_qr75-ydFVKSF9Dmo6izg",
-      "slug": "formula-1",
-      "name": "FORMULA 1",
-      "primary_handle": "@formula1",
-      "primary_platform": "youtube",
-      "type": "person",
-      "bio": "2026 - It's All To Drive For\n",
-      "location": "",
-      "company": "",
-      "avatar": "https://yt3.ggpht.com/OjIDFlHinRLmfN75Zunw4e4NpdQKdcpEjRBMBILifgIAya9FLW68C6VPgNGLlk4GJ5z97sR2kQ=s800-c-k-c0x00ffffff-no-rj",
-      "platforms": [
-        {
-          "type": "youtube",
-          "handle": "@formula1",
-          "url": "https://youtube.com/@formula1",
-          "followers": 14600000
-        }
-      ],
-      "stats": {
-        "followers": 14600000,
-        "videos": 10004,
-        "views": 9600138273
-      },
-      "tags": [],
-      "_score": 146000,
-      "category_scores": {}
     },
     {
       "id": "yt-UCK8sQmJBp8GCxrOtXWBpyEA",
@@ -1866,34 +1750,6 @@
       }
     },
     {
-      "id": "yt-UCmOCpBKeoBPp-HwarhIBA2g",
-      "slug": "best-documentary",
-      "name": "Best Documentary",
-      "primary_handle": "@bestdoc",
-      "primary_platform": "youtube",
-      "type": "person",
-      "bio": "Real stories, amazing facts, and eye-opening documentaries\u2014all in one channel.",
-      "location": "US",
-      "company": "",
-      "avatar": "https://yt3.ggpht.com/ytc/AIdro_kPapKGkJXzYhbLk8EQGuVj3wwv6JBcUBVzk6WpRkG6_uE=s800-c-k-c0x00ffffff-no-rj",
-      "platforms": [
-        {
-          "type": "youtube",
-          "handle": "@bestdoc",
-          "url": "https://youtube.com/@bestdoc",
-          "followers": 8130000
-        }
-      ],
-      "stats": {
-        "followers": 8130000,
-        "videos": 3212,
-        "views": 2132616487
-      },
-      "tags": [],
-      "_score": 81300,
-      "category_scores": {}
-    },
-    {
       "id": "gh-sindresorhus",
       "slug": "sindresorhus",
       "name": "Sindre Sorhus",
@@ -1935,38 +1791,6 @@
       "_score": 79521,
       "category_scores": {
         "coding": 3
-      }
-    },
-    {
-      "id": "yt-UC415bOPUcGSamy543abLmRA",
-      "slug": "cleo-abram",
-      "name": "Cleo Abram",
-      "primary_handle": "@cleoabram",
-      "primary_platform": "youtube",
-      "type": "person",
-      "bio": "Video journalist making optimistic tech explainers. Huge If True.\n\nInstagram: https://www.instagram.com/cleoabram\nTikTok: https://www.tiktok.com/@cleoabram \nTwitter: https://twitter.com/cleoabram\n\nIf you'd like to sponsor a Huge If True episode, reach out at the email below.\n\nIf ",
-      "location": "",
-      "company": "",
-      "avatar": "https://yt3.ggpht.com/RdjombbmvvGQGTokXHgVRF7qijHDLcnXs7h4S6N0oOua-veEap9RO7htFE30v7xnWDM1GUlCmI4=s800-c-k-c0x00ffffff-no-rj",
-      "platforms": [
-        {
-          "type": "youtube",
-          "handle": "@cleoabram",
-          "url": "https://youtube.com/@cleoabram",
-          "followers": 7780000
-        }
-      ],
-      "stats": {
-        "followers": 7780000,
-        "videos": 538,
-        "views": 2557545692
-      },
-      "tags": [
-        "beginners"
-      ],
-      "_score": 77800,
-      "category_scores": {
-        "beginners": 5
       }
     },
     {
@@ -2046,34 +1870,6 @@
       "category_scores": {
         "coding": 3
       }
-    },
-    {
-      "id": "yt-UCuxpxCCevIlF-k-K5YU8XPA",
-      "slug": "scotty-kilmer",
-      "name": "Scotty Kilmer",
-      "primary_handle": "@scottykilmer",
-      "primary_platform": "youtube",
-      "type": "person",
-      "bio": "I've been a mechanic for 57 years and I'm here to share my knowledge with you! Over 3 Billion YouTube views. New car stuff every day. The most watched individual car channel in America. Never any sponsored content, just the truth!\n\n",
-      "location": "US",
-      "company": "",
-      "avatar": "https://yt3.ggpht.com/0SlGLun5LWXRvN2Op6EgdvNDN7Uc-8FiCk0gjHocipP86MPhOahdBwN35UX4kzIMSgMjGb0G5A=s800-c-k-c0x00ffffff-no-rj",
-      "platforms": [
-        {
-          "type": "youtube",
-          "handle": "@scottykilmer",
-          "url": "https://youtube.com/@scottykilmer",
-          "followers": 6640000
-        }
-      ],
-      "stats": {
-        "followers": 6640000,
-        "videos": 7163,
-        "views": 3138910701
-      },
-      "tags": [],
-      "_score": 66400,
-      "category_scores": {}
     },
     {
       "id": "tw-rhevolver",
@@ -2194,34 +1990,6 @@
       }
     },
     {
-      "id": "yt-UC4PziMH5MvvsmqM0VCZTy-g",
-      "slug": "the-graham-norton-show",
-      "name": "The Graham Norton Show",
-      "primary_handle": "@officialgrahamnorton",
-      "primary_platform": "youtube",
-      "type": "person",
-      "bio": "Celebrity guests, hilarious stories and all the best bits from The Graham Norton Show. Subscribe to the channel for weekly videos.",
-      "location": "",
-      "company": "",
-      "avatar": "https://yt3.ggpht.com/ytc/AIdro_l86WnagKsZ9PkWTS7qmXi7YD-V3-099lSHydfQn45RTnc=s800-c-k-c0x00ffffff-no-rj",
-      "platforms": [
-        {
-          "type": "youtube",
-          "handle": "@officialgrahamnorton",
-          "url": "https://youtube.com/@officialgrahamnorton",
-          "followers": 5650000
-        }
-      ],
-      "stats": {
-        "followers": 5650000,
-        "videos": 2827,
-        "views": 5197260133
-      },
-      "tags": [],
-      "_score": 56500,
-      "category_scores": {}
-    },
-    {
       "id": "gh-anthropics",
       "slug": "anthropics",
       "name": "Anthropic",
@@ -2290,38 +2058,6 @@
       }
     },
     {
-      "id": "yt-UC9x0AN7BWHpCDHSm9NiJFJQ",
-      "slug": "networkchuck",
-      "name": "NetworkChuck",
-      "primary_handle": "@networkchuck",
-      "primary_platform": "youtube",
-      "type": "person",
-      "bio": "Welcome to NetworkChuck!\n\nI LOVE Information Technology!! My goal is to help as MANY PEOPLE AS POSSIBLE jump into a career in the IT field through obtaining IT Certifications. I talk about Cisco Certifications, CompTIA, AWS, Microsoft...pretty much EVERYTHING in IT. As a CBT Nugg",
-      "location": "US",
-      "company": "",
-      "avatar": "https://yt3.ggpht.com/ytc/AIdro_k01-_GpvVZW8w4ULtaQaa55ls8aMf2a5dXhIe56pjMvG0=s800-c-k-c0x00ffffff-no-rj",
-      "platforms": [
-        {
-          "type": "youtube",
-          "handle": "@networkchuck",
-          "url": "https://youtube.com/@networkchuck",
-          "followers": 5240000
-        }
-      ],
-      "stats": {
-        "followers": 5240000,
-        "videos": 589,
-        "views": 399883052
-      },
-      "tags": [
-        "beginners"
-      ],
-      "_score": 52400,
-      "category_scores": {
-        "beginners": 5
-      }
-    },
-    {
       "id": "bsky-edzitron-com",
       "slug": "edzitron-com",
       "name": "Ed Zitron",
@@ -2355,66 +2091,6 @@
         "business": 12,
         "agents": 10
       }
-    },
-    {
-      "id": "yt-UCWv7vMbMWH4-V0ZXdmDpPBA",
-      "slug": "programming-with-mosh",
-      "name": "Programming with Mosh",
-      "primary_handle": "@programmingwithmosh",
-      "primary_platform": "youtube",
-      "type": "person",
-      "bio": "Hi! I'm Mosh \ud83d\udc4b, a software engineer with over 20 years of experience.  I'm all about clear, concise, practical coding tutorials \u2013 no fluff, just the good stuff! My courses focus on real-world projects and the skills that will get you hired. I've helped millions of students transf",
-      "location": "US",
-      "company": "",
-      "avatar": "https://yt3.ggpht.com/HCv0fXFEEcD0HRyF0_qR1K7b7qO3KCzmIoyH1DEJYB94CIUFhIE5i2t2IDIPX97W1-DK4hegww=s800-c-k-c0x00ffffff-no-rj",
-      "platforms": [
-        {
-          "type": "youtube",
-          "handle": "@programmingwithmosh",
-          "url": "https://youtube.com/@programmingwithmosh",
-          "followers": 5040000
-        }
-      ],
-      "stats": {
-        "followers": 5040000,
-        "videos": 246,
-        "views": 269883939
-      },
-      "tags": [
-        "coding"
-      ],
-      "_score": 50400,
-      "category_scores": {
-        "coding": 11
-      }
-    },
-    {
-      "id": "yt-UCSHZKyawb77ixDdsGog4iWA",
-      "slug": "lex-fridman",
-      "name": "Lex Fridman",
-      "primary_handle": "@lexfridman",
-      "primary_platform": "youtube",
-      "type": "person",
-      "bio": "Lex Fridman Podcast and other videos.\n",
-      "location": "US",
-      "company": "",
-      "avatar": "https://yt3.ggpht.com/ytc/AIdro_ljfMy9kUR1PH9VRf-XsTsPqFMgORC_zodOQVEAm4hx36lC=s800-c-k-c0x00ffffff-no-rj",
-      "platforms": [
-        {
-          "type": "youtube",
-          "handle": "@lexfridman",
-          "url": "https://youtube.com/@lexfridman",
-          "followers": 4980000
-        }
-      ],
-      "stats": {
-        "followers": 4980000,
-        "videos": 862,
-        "views": 906420564
-      },
-      "tags": [],
-      "_score": 49800,
-      "category_scores": {}
     },
     {
       "id": "gh-modelcontextprotocol",
@@ -2485,94 +2161,6 @@
       "category_scores": {
         "coding": 5
       }
-    },
-    {
-      "id": "yt-UCsBjURrPoezykLs9EqgamOA",
-      "slug": "fireship",
-      "name": "Fireship",
-      "primary_handle": "@fireship",
-      "primary_platform": "youtube",
-      "type": "person",
-      "bio": "High-intensity \u26a1 code tutorials and tech news to help you ship your app faster. New videos every week covering the topics every programmer should know. \n\nThe original home of #100SecondsOfCode #TheCodeReport and #CodeThisNotThat. Created by Jeff Delaney. \n\nWant more Fireship?\n\n\ud83d\uddde\ufe0f",
-      "location": "US",
-      "company": "",
-      "avatar": "https://yt3.ggpht.com/3fPNbkf_xPyCleq77ZhcxyeorY97NtMHVNUbaAON_RBDH9ydL4hJkjxC8x_4mpuopkB8oI7Ct6Y=s800-c-k-c0x00ffffff-no-rj",
-      "platforms": [
-        {
-          "type": "youtube",
-          "handle": "@fireship",
-          "url": "https://youtube.com/@fireship",
-          "followers": 4190000
-        }
-      ],
-      "stats": {
-        "followers": 4190000,
-        "videos": 807,
-        "views": 697027657
-      },
-      "tags": [
-        "coding"
-      ],
-      "_score": 41900,
-      "category_scores": {
-        "coding": 4
-      }
-    },
-    {
-      "id": "yt-UChqUTb7kYRX8-EiaN3XFrSQ",
-      "slug": "reuters",
-      "name": "Reuters",
-      "primary_handle": "@reuters",
-      "primary_platform": "youtube",
-      "type": "person",
-      "bio": "Reuters brings you the latest breaking news, business and finance video from around the world. Since our founding in 1851, we have been known globally for unparalleled accuracy and impartiality. \n\nSubscribe to stay up-to-date with global headlines: http://smarturl.it/reuterssubsc",
-      "location": "US",
-      "company": "",
-      "avatar": "https://yt3.ggpht.com/bCcVVrrV0EhGFJKsSvmeZHA9Y-YzSL9Keqrrr0HWYUPQy3-mVUVNHMbjwt7IoVkpsHt4E6BZ3pM=s800-c-k-c0x00ffffff-no-rj",
-      "platforms": [
-        {
-          "type": "youtube",
-          "handle": "@reuters",
-          "url": "https://youtube.com/@reuters",
-          "followers": 4190000
-        }
-      ],
-      "stats": {
-        "followers": 4190000,
-        "videos": 82039,
-        "views": 2297328097
-      },
-      "tags": [],
-      "_score": 41900,
-      "category_scores": {}
-    },
-    {
-      "id": "yt-UCsN32BtMd0IoByjJRNF12cw",
-      "slug": "60-minutes",
-      "name": "60 Minutes",
-      "primary_handle": "@60minutes",
-      "primary_platform": "youtube",
-      "type": "person",
-      "bio": "\"60 Minutes,\" the most successful television broadcast in history. Offering hard-hitting investigative reports, interviews, feature segments and profiles of people in the news, the broadcast began in 1968 and is still a hit, over 50 seasons later, regularly making Nielsen's Top 1",
-      "location": "",
-      "company": "",
-      "avatar": "https://yt3.ggpht.com/TqABNUxcOZskunKayOizy6ge4RekSFL7cCNxGO9Ct-J8sYOthNd5Lc6m4hrfzeHQikTFCFi3pQ=s800-c-k-c0x00ffffff-no-rj",
-      "platforms": [
-        {
-          "type": "youtube",
-          "handle": "@60minutes",
-          "url": "https://youtube.com/@60minutes",
-          "followers": 4110000
-        }
-      ],
-      "stats": {
-        "followers": 4110000,
-        "videos": 5212,
-        "views": 1332884570
-      },
-      "tags": [],
-      "_score": 41100,
-      "category_scores": {}
     },
     {
       "id": "gh-nilbuild",
@@ -2809,34 +2397,6 @@
       }
     },
     {
-      "id": "yt-UCddiUEpeqJcYeBxX1IVBKvQ",
-      "slug": "the-verge",
-      "name": "The Verge",
-      "primary_handle": "@theverge",
-      "primary_platform": "youtube",
-      "type": "person",
-      "bio": "Welcome to the YouTube channel for TheVerge.com, a team of journalists that examines how technology will change life in the future. Subscribe for explainers, product reviews, technology news, and more.\n\nEditorial Director: Kevin McShane\nSupervising Producers:\u00a0 Victoria Barrios, T",
-      "location": "US",
-      "company": "",
-      "avatar": "https://yt3.ggpht.com/ZIj_dq7beCkAkhufNqCid_SjWW4mkv4tqIDtv7_AAKzWdhBWI-rpsRXYXB9X3mB0s0zNzNtYdQ=s800-c-k-c0x00ffffff-no-rj",
-      "platforms": [
-        {
-          "type": "youtube",
-          "handle": "@theverge",
-          "url": "https://youtube.com/@theverge",
-          "followers": 3500000
-        }
-      ],
-      "stats": {
-        "followers": 3500000,
-        "videos": 6045,
-        "views": 1131993578
-      },
-      "tags": [],
-      "_score": 35000,
-      "category_scores": {}
-    },
-    {
       "id": "gh-freeCodeCamp",
       "slug": "freecodecamp",
       "name": "freeCodeCamp.org",
@@ -2925,62 +2485,6 @@
         "agents": 5,
         "coding": 5
       }
-    },
-    {
-      "id": "yt-UCQIyqMWCdx1GBvbw_Yi6lEA",
-      "slug": "oracle-red-bull-racing",
-      "name": "Oracle Red Bull Racing",
-      "primary_handle": "@redbullracing",
-      "primary_platform": "youtube",
-      "type": "person",
-      "bio": "We are Oracle Red Bull Racing. Home of Six Formula 1 World Championships \ud83c\udfc6 #GivesYouWiiings ",
-      "location": "GB",
-      "company": "",
-      "avatar": "https://yt3.ggpht.com/_LA6e_gqZU861i5ngILGqnPnSj1vxEl9QKMA_WbrTpeda6PHdd0H5iSlK1d43t4VT5BH-8WrNA=s800-c-k-c0x00ffffff-no-rj",
-      "platforms": [
-        {
-          "type": "youtube",
-          "handle": "@redbullracing",
-          "url": "https://youtube.com/@redbullracing",
-          "followers": 2850000
-        }
-      ],
-      "stats": {
-        "followers": 2850000,
-        "videos": 2020,
-        "views": 868399206
-      },
-      "tags": [],
-      "_score": 28500,
-      "category_scores": {}
-    },
-    {
-      "id": "yt-UCVvE8kQTuZEykvMFZBVzftg",
-      "slug": "1a-auto-repair-tips-secrets-only-mechanics-know",
-      "name": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
-      "primary_handle": "@1aauto",
-      "primary_platform": "youtube",
-      "type": "person",
-      "bio": "1A Auto offers high-quality parts online with fast and free shipping and thousands of how-to videos. Our goal is to help people save time and money on their own car repairs.\n\nWhether you\u2019re new to fixing cars or a gearhead, our mechanics, who have 70 years of combined experience,",
-      "location": "US",
-      "company": "",
-      "avatar": "https://yt3.ggpht.com/ytc/AIdro_mPiGzAf10M39i4caLoiVy6ghOfzLNQGKx4WAVlg55WMCY=s800-c-k-c0x00ffffff-no-rj",
-      "platforms": [
-        {
-          "type": "youtube",
-          "handle": "@1aauto",
-          "url": "https://youtube.com/@1aauto",
-          "followers": 2830000
-        }
-      ],
-      "stats": {
-        "followers": 2830000,
-        "videos": 10020,
-        "views": 1157202455
-      },
-      "tags": [],
-      "_score": 28300,
-      "category_scores": {}
     },
     {
       "id": "gh-datawhalechina",
@@ -3130,38 +2634,6 @@
       "_score": 24916,
       "category_scores": {
         "research": 5
-      }
-    },
-    {
-      "id": "yt-UC29ju8bIPH5as8OGnQzwJyA",
-      "slug": "traversy-media",
-      "name": "Traversy Media",
-      "primary_handle": "@traversymedia",
-      "primary_platform": "youtube",
-      "type": "person",
-      "bio": "Traversy Media features the best online web development and programming tutorials for all of the latest web technologies from the building blocks of HTML, CSS & JavaScript to frontend frameworks like React and Vue to backend technologies like Node.js, Python and PHP",
-      "location": "US",
-      "company": "",
-      "avatar": "https://yt3.ggpht.com/ytc/AIdro_mLysKc36lc_FVk2j777olWvLOjgDz6NCNGdiQBnAKRENM=s800-c-k-c0x00ffffff-no-rj",
-      "platforms": [
-        {
-          "type": "youtube",
-          "handle": "@traversymedia",
-          "url": "https://youtube.com/@traversymedia",
-          "followers": 2410000
-        }
-      ],
-      "stats": {
-        "followers": 2410000,
-        "videos": 1025,
-        "views": 230230390
-      },
-      "tags": [
-        "coding"
-      ],
-      "_score": 24100,
-      "category_scores": {
-        "coding": 4
       }
     },
     {
@@ -3405,34 +2877,6 @@
         "beginners": 5,
         "coding": 5
       }
-    },
-    {
-      "id": "yt-UCwdVOry0oNF9WIe_3uCfz9Q",
-      "slug": "matt-s-off-road-recovery",
-      "name": "Matt's Off Road Recovery",
-      "primary_handle": "@mattsoffroadrecovery",
-      "primary_platform": "youtube",
-      "type": "person",
-      "bio": "We do off road towing, recoveries, and rescues. We cover beautiful southern Utah, near Zion National park. \nWe have a unique way to do off road recovery with our Jeep XJ affectionately named, the yellow banana. \nWe have the infamous Ed with his positive outlook on life. \nWe treat",
-      "location": "US",
-      "company": "",
-      "avatar": "https://yt3.ggpht.com/hjBAHGX9Gq8O9LGUe0K3h3XeXE90PDCvrG2eyTMMEJ7G0USUPnZdjon-UbRW6N-fVvNAQwSyVvo=s800-c-k-c0x00ffffff-no-rj",
-      "platforms": [
-        {
-          "type": "youtube",
-          "handle": "@mattsoffroadrecovery",
-          "url": "https://youtube.com/@mattsoffroadrecovery",
-          "followers": 2140000
-        }
-      ],
-      "stats": {
-        "followers": 2140000,
-        "videos": 1066,
-        "views": 1148468252
-      },
-      "tags": [],
-      "_score": 21400,
-      "category_scores": {}
     },
     {
       "id": "gh-phodal",
@@ -3823,40 +3267,6 @@
       "category_scores": {}
     },
     {
-      "id": "yt-UCW5YeuERMmlnqo4oq8vwUpg",
-      "slug": "net-ninja",
-      "name": "Net Ninja",
-      "primary_handle": "@netninja",
-      "primary_platform": "youtube",
-      "type": "person",
-      "bio": "Black-belt your web development skills. Over 2000 free programming tutorial videos about:\n\n- Modern JavaScript (beginner to advanced)\n- Node.js\n- React\n- Vue.js\n- Firebase\n- MongoDB\n- HTML & CSS\n- PHP & MySQL\n- Laravel\n- React Native\n- Flutter\n- Open AI\n- SolidJS\n\n...And many mor",
-      "location": "GB",
-      "company": "",
-      "avatar": "https://yt3.ggpht.com/ytc/AIdro_mk2Ex-8sW03SBlBX7D1EC5skH0kv9rS3rU9IXq2I-q2Zg=s800-c-k-c0x00ffffff-no-rj",
-      "platforms": [
-        {
-          "type": "youtube",
-          "handle": "@netninja",
-          "url": "https://youtube.com/@netninja",
-          "followers": 1880000
-        }
-      ],
-      "stats": {
-        "followers": 1880000,
-        "videos": 2778,
-        "views": 211817728
-      },
-      "tags": [
-        "coding",
-        "beginners"
-      ],
-      "_score": 18800,
-      "category_scores": {
-        "coding": 7,
-        "beginners": 4
-      }
-    },
-    {
       "id": "gh-trekhleb",
       "slug": "trekhleb",
       "name": "Oleksii Trekhleb",
@@ -4017,40 +3427,6 @@
       }
     },
     {
-      "id": "yt-UCFbNIlppjAuEX4znoulh0Cw",
-      "slug": "web-dev-simplified",
-      "name": "Web Dev Simplified",
-      "primary_handle": "@webdevsimplified",
-      "primary_platform": "youtube",
-      "type": "person",
-      "bio": "Web Dev Simplified is all about teaching web development skills and techniques in an efficient and practical manner. If you are just getting started in web development Web Dev Simplified has all the tools you need to learn the newest and most popular technologies to convert you f",
-      "location": "US",
-      "company": "",
-      "avatar": "https://yt3.ggpht.com/ytc/AIdro_nO3F7DfVXaf6wsHPS_hF327ggeWUCwZSELb5DCWBL1aw=s800-c-k-c0x00ffffff-no-rj",
-      "platforms": [
-        {
-          "type": "youtube",
-          "handle": "@webdevsimplified",
-          "url": "https://youtube.com/@webdevsimplified",
-          "followers": 1770000
-        }
-      ],
-      "stats": {
-        "followers": 1770000,
-        "videos": 851,
-        "views": 173421710
-      },
-      "tags": [
-        "coding",
-        "beginners"
-      ],
-      "_score": 17700,
-      "category_scores": {
-        "coding": 5,
-        "beginners": 5
-      }
-    },
-    {
       "id": "gh-ageron",
       "slug": "ageron",
       "name": "Aur\u00e9lien Geron",
@@ -4126,34 +3502,6 @@
       },
       "tags": [],
       "_score": 17338,
-      "category_scores": {}
-    },
-    {
-      "id": "yt-UCYeF244yNGuFefuFKqxIAXw",
-      "slug": "the-royal-institution",
-      "name": "The Royal Institution",
-      "primary_handle": "@theroyalinstitution",
-      "primary_platform": "youtube",
-      "type": "person",
-      "bio": "Explosive short films, full length talks from the world\u2019s leading scientists and writers, and videos to challenge the way you look at the world. \n\nThe Royal Institution is a 200 year old independent charity creating opportunities for the public and scientists to explore science t",
-      "location": "GB",
-      "company": "",
-      "avatar": "https://yt3.ggpht.com/qLV0-UhUQjh-u3_dNijQWtKZsNYCqNuUh685p9Yo-Tb7FjldfH-NuxkKdfrRoPAzmalUcdQh=s800-c-k-c0x00ffffff-no-rj",
-      "platforms": [
-        {
-          "type": "youtube",
-          "handle": "@theroyalinstitution",
-          "url": "https://youtube.com/@theroyalinstitution",
-          "followers": 1730000
-        }
-      ],
-      "stats": {
-        "followers": 1730000,
-        "videos": 1743,
-        "views": 277982402
-      },
-      "tags": [],
-      "_score": 17300,
       "category_scores": {}
     },
     {
@@ -4427,34 +3775,6 @@
       }
     },
     {
-      "id": "yt-UCVUSDq6-oSpWAAPUppHFtZQ",
-      "slug": "john-malecki",
-      "name": "John Malecki",
-      "primary_handle": "@john_malecki",
-      "primary_platform": "youtube",
-      "type": "person",
-      "bio": "I used to be an offensive lineman in the NFL, Now myself and my team push the limits on what we think is possible when it comes to building awesome projects. We mix woodworking, with metal work, epoxy and sprinkle in some home DIY and renovation projects too! ",
-      "location": "US",
-      "company": "",
-      "avatar": "https://yt3.ggpht.com/ytc/AIdro_mQHMalfm8eanLXd5p2JDRRLn2m07SN7i_KbNh5-EkACBc=s800-c-k-c0x00ffffff-no-rj",
-      "platforms": [
-        {
-          "type": "youtube",
-          "handle": "@john_malecki",
-          "url": "https://youtube.com/@john_malecki",
-          "followers": 1580000
-        }
-      ],
-      "stats": {
-        "followers": 1580000,
-        "videos": 366,
-        "views": 235651492
-      },
-      "tags": [],
-      "_score": 15800,
-      "category_scores": {}
-    },
-    {
       "id": "gh-anuraghazra",
       "slug": "anuraghazra",
       "name": "Anurag Hazra",
@@ -4725,34 +4045,6 @@
       "category_scores": {}
     },
     {
-      "id": "yt-UCFkFUrV28yy4kpg9b6LNhuQ",
-      "slug": "true-crime-central",
-      "name": "True Crime Central",
-      "primary_handle": "@truecrimecentral",
-      "primary_platform": "youtube",
-      "type": "person",
-      "bio": "True Crime Central uncovers the dark and twisted world of crime. From chilling murder cases, infamous serial killers to fascinating examinations of the criminal mind, we have something for every true crime enthusiast.\n\nAll of the content on this channel is UNDER LEGAL LICENSE (We",
-      "location": "AU",
-      "company": "",
-      "avatar": "https://yt3.ggpht.com/d6Ti1spXFbJaQYTMYTwzc-S-nVj5zJoWMFxFfczzdLhB2IwenSGtcAtmZ4paSZHduW1A0Nx7fQ=s800-c-k-c0x00ffffff-no-rj",
-      "platforms": [
-        {
-          "type": "youtube",
-          "handle": "@truecrimecentral",
-          "url": "https://youtube.com/@truecrimecentral",
-          "followers": 1380000
-        }
-      ],
-      "stats": {
-        "followers": 1380000,
-        "videos": 978,
-        "views": 163945793
-      },
-      "tags": [],
-      "_score": 13800,
-      "category_scores": {}
-    },
-    {
       "id": "gh-yangshun",
       "slug": "yangshun",
       "name": "Yangshun Tay",
@@ -4794,38 +4086,6 @@
       "_score": 13752,
       "category_scores": {
         "coding": 5
-      }
-    },
-    {
-      "id": "yt-UC8wXC0ZCfGt3HaVLy_fdTQw",
-      "slug": "digital-trends",
-      "name": "Digital Trends",
-      "primary_handle": "@digitaltrends",
-      "primary_platform": "youtube",
-      "type": "person",
-      "bio": "Welcome to the official Digital Trends YouTube channel! Digital Trends was founded in 2006 with a simple mission: Give readers the tools and insight they need in order to navigate their increasingly digital world. With sneak peeks, one-of-a-kind reviews, editorials and news, we a",
-      "location": "US",
-      "company": "",
-      "avatar": "https://yt3.ggpht.com/ytc/AIdro_kNubMg5M7TC0RNRPLFtc-OwBejUR6wTVKIu38AsMVexwY=s800-c-k-c0x00ffffff-no-rj",
-      "platforms": [
-        {
-          "type": "youtube",
-          "handle": "@digitaltrends",
-          "url": "https://youtube.com/@digitaltrends",
-          "followers": 1370000
-        }
-      ],
-      "stats": {
-        "followers": 1370000,
-        "videos": 7679,
-        "views": 482450642
-      },
-      "tags": [
-        "beginners"
-      ],
-      "_score": 13700,
-      "category_scores": {
-        "beginners": 4
       }
     },
     {
@@ -4974,34 +4234,6 @@
       },
       "tags": [],
       "_score": 12515,
-      "category_scores": {}
-    },
-    {
-      "id": "yt-UCmXmlB4-HJytD7wek0Uo97A",
-      "slug": "javascript-mastery",
-      "name": "JavaScript Mastery",
-      "primary_handle": "@javascriptmastery",
-      "primary_platform": "youtube",
-      "type": "person",
-      "bio": "Master modern web development with a project-based\u00a0approach\n",
-      "location": "HR",
-      "company": "",
-      "avatar": "https://yt3.ggpht.com/ek0JxMA0h1uXpnYKFL_dYo1ny3LWzAuLwGvaqQwb9Qh2oEQJIPNEPjDrY9yKsvMmIrq_Ooq_=s800-c-k-c0x00ffffff-no-rj",
-      "platforms": [
-        {
-          "type": "youtube",
-          "handle": "@javascriptmastery",
-          "url": "https://youtube.com/@javascriptmastery",
-          "followers": 1240000
-        }
-      ],
-      "stats": {
-        "followers": 1240000,
-        "videos": 198,
-        "views": 111443522
-      },
-      "tags": [],
-      "_score": 12400,
       "category_scores": {}
     },
     {
@@ -5385,38 +4617,6 @@
       }
     },
     {
-      "id": "yt-UCUyeluBRhGPCW4rPe_UvBZQ",
-      "slug": "the-primetime",
-      "name": "The PrimeTime",
-      "primary_handle": "@theprimetimeagen",
-      "primary_platform": "youtube",
-      "type": "person",
-      "bio": "This is a place for all the things that are awesome on stream. ",
-      "location": "US",
-      "company": "",
-      "avatar": "https://yt3.ggpht.com/Eu_xR4JfLlrruwj1lrmfDiOpe8GARBs8M0hgQ6NsGhQ0qC8S-po9HEHw1W21sPN2BHO6EHXrSwM=s800-c-k-c0x00ffffff-no-rj",
-      "platforms": [
-        {
-          "type": "youtube",
-          "handle": "@theprimetimeagen",
-          "url": "https://youtube.com/@theprimetimeagen",
-          "followers": 1110000
-        }
-      ],
-      "stats": {
-        "followers": 1110000,
-        "videos": 1960,
-        "views": 381295693
-      },
-      "tags": [
-        "coding"
-      ],
-      "_score": 11100,
-      "category_scores": {
-        "coding": 11
-      }
-    },
-    {
       "id": "gh-astral-sh",
       "slug": "astral-sh",
       "name": "Astral",
@@ -5683,38 +4883,6 @@
       "category_scores": {}
     },
     {
-      "id": "yt-UCR-DXc1voovS8nhAvccRZhg",
-      "slug": "jeff-geerling",
-      "name": "Jeff Geerling",
-      "primary_handle": "@jeffgeerling",
-      "primary_platform": "youtube",
-      "type": "person",
-      "bio": "Father, author, developer, maker. Sometimes called \"an inflammatory enigma\".\n",
-      "location": "US",
-      "company": "",
-      "avatar": "https://yt3.ggpht.com/RndiKipuEK9TRHOw-ORouGfXDHI_-PedjdwEMYpnGNct46LMa2cnoV4b2Y_shD6kc0Dhi8kG_Q=s800-c-k-c0x00ffffff-no-rj",
-      "platforms": [
-        {
-          "type": "youtube",
-          "handle": "@jeffgeerling",
-          "url": "https://youtube.com/@jeffgeerling",
-          "followers": 1060000
-        }
-      ],
-      "stats": {
-        "followers": 1060000,
-        "videos": 560,
-        "views": 200521922
-      },
-      "tags": [
-        "coding"
-      ],
-      "_score": 10600,
-      "category_scores": {
-        "coding": 5
-      }
-    },
-    {
       "id": "gh-django",
       "slug": "django",
       "name": "Django",
@@ -5780,66 +4948,6 @@
       "category_scores": {
         "coding": 7,
         "fundamentals": 3
-      }
-    },
-    {
-      "id": "yt-UCc0kHafEIzm6PiqyrsC5lyg",
-      "slug": "boos",
-      "name": "BOOS",
-      "primary_handle": "@boos",
-      "primary_platform": "youtube",
-      "type": "person",
-      "bio": "BOOS is een online onderzoeksplatform van BNNVARA. Wij maken verhalen over onrecht in de breedste zin van het woord; van oplichters opsporen tot CEO\u2019s bevragen, en van leugenaars ontmaskeren tot politici aan de tand voelen. Waar nodig roepen wij macht ter verantwoording, altijd m",
-      "location": "NL",
-      "company": "",
-      "avatar": "https://yt3.ggpht.com/feOGZ3OH3C-z-TXzlaxboBDzR1mSEMK59iUXs0C_H_elDD9Kwq2sSJuhEWn2l8E01MCC2amCNtE=s800-c-k-c0x00ffffff-no-rj",
-      "platforms": [
-        {
-          "type": "youtube",
-          "handle": "@boos",
-          "url": "https://youtube.com/@boos",
-          "followers": 1010000
-        }
-      ],
-      "stats": {
-        "followers": 1010000,
-        "videos": 537,
-        "views": 253348482
-      },
-      "tags": [],
-      "_score": 10100,
-      "category_scores": {}
-    },
-    {
-      "id": "yt-UCJZv4d5rbIKd4QHMPkcABCw",
-      "slug": "kevin-powell",
-      "name": "Kevin Powell",
-      "primary_handle": "@kevinpowell",
-      "primary_platform": "youtube",
-      "type": "person",
-      "bio": "Helping you learn how to make the web, and make it look good while you're at it.\n\nWith weekly videos and shorts, I'll be bringing you How Tos and Tutorials, as well as simple tips and tricks, with a big focus on helping people see how wonderful CSS is!",
-      "location": "CA",
-      "company": "",
-      "avatar": "https://yt3.ggpht.com/gABekKWtQFmLIjVuhKwoPfd9nIRxAPPhyymO3XaOCc9wko28S9R_8CO125NFjZToZuLlSyfdrak=s800-c-k-c0x00ffffff-no-rj",
-      "platforms": [
-        {
-          "type": "youtube",
-          "handle": "@kevinpowell",
-          "url": "https://youtube.com/@kevinpowell",
-          "followers": 1000000
-        }
-      ],
-      "stats": {
-        "followers": 1000000,
-        "videos": 1095,
-        "views": 103644508
-      },
-      "tags": [
-        "beginners"
-      ],
-      "_score": 10000,
-      "category_scores": {
-        "beginners": 5
       }
     },
     {
@@ -5931,34 +5039,6 @@
       }
     },
     {
-      "id": "yt-UCO39zTYpvWL5jx2q15Ma_Hw",
-      "slug": "izzy-swan",
-      "name": "izzy swan",
-      "primary_handle": "@izzyswan",
-      "primary_platform": "youtube",
-      "type": "person",
-      "bio": "Here you will find everything from money saving tips,  woodworking projects, jigs and  completely wild contraptions.\\ With a mind for out of the box thinking and an unusual mix of  artful design and engineering interest, you never know what's going to happen next. with new videos",
-      "location": "US",
-      "company": "",
-      "avatar": "https://yt3.ggpht.com/Xa4RJDIO2IlJO87K6NYUOQhjEEuNU3CBQJ4u5QqTqJQIO5kyE12j7egESXZ0Po3_u4E-RC3g=s800-c-k-c0x00ffffff-no-rj",
-      "platforms": [
-        {
-          "type": "youtube",
-          "handle": "@izzyswan",
-          "url": "https://youtube.com/@izzyswan",
-          "followers": 958000
-        }
-      ],
-      "stats": {
-        "followers": 958000,
-        "videos": 494,
-        "views": 136400320
-      },
-      "tags": [],
-      "_score": 9580,
-      "category_scores": {}
-    },
-    {
       "id": "gh-digitalinnovationone",
       "slug": "digitalinnovationone",
       "name": "DIO",
@@ -6028,38 +5108,6 @@
       "_score": 9484,
       "category_scores": {
         "coding": 4
-      }
-    },
-    {
-      "id": "yt-UClb90NQQcskPUGDIXsQEz5Q",
-      "slug": "developedbyed",
-      "name": "developedbyed",
-      "primary_handle": "@developedbyed",
-      "primary_platform": "youtube",
-      "type": "person",
-      "bio": "Hello my gorgeous friends on the internet, welcome to DevelopedByEd, your go-to channel for learning how to code, design, and become more creative in the tech world!\n\nI\u2019m Ed, a self-taught full stack engineer and designer from Romania, and I've been teaching code since 2018. I ma",
-      "location": "GB",
-      "company": "",
-      "avatar": "https://yt3.ggpht.com/fwO10Ay61s_CaO2UweJGalew89tUD3X65vA4Uj2UN9wbgg2MJM5591khoyrUir8FpYrBD0crsw=s800-c-k-c0x00ffffff-no-rj",
-      "platforms": [
-        {
-          "type": "youtube",
-          "handle": "@developedbyed",
-          "url": "https://youtube.com/@developedbyed",
-          "followers": 938000
-        }
-      ],
-      "stats": {
-        "followers": 938000,
-        "videos": 345,
-        "views": 61674911
-      },
-      "tags": [
-        "coding"
-      ],
-      "_score": 9380,
-      "category_scores": {
-        "coding": 15
       }
     },
     {
@@ -6173,34 +5221,6 @@
       "category_scores": {
         "coding": 3
       }
-    },
-    {
-      "id": "yt-UCSLClJLzdUMRMe0E4SPfc-w",
-      "slug": "731-woodworks",
-      "name": "731 Woodworks",
-      "primary_handle": "@731woodworks",
-      "primary_platform": "youtube",
-      "type": "person",
-      "bio": "I'm a tool fanatic and love sharing my passion for tools!  I hope to help you make better buying decisions. \n\nHi, I'm Matt Outlaw. I\u2019ve been working in the trades since 1995, with experience in general construction, carpentry, woodworking, and more. Now, as a full-time YouTuber, ",
-      "location": "US",
-      "company": "",
-      "avatar": "https://yt3.ggpht.com/ytc/AIdro_m1hbY2JDuIY1fGUwmsWY3M7rRDR7oYGsb8A8D7w_NZ1SE=s800-c-k-c0x00ffffff-no-rj",
-      "platforms": [
-        {
-          "type": "youtube",
-          "handle": "@731woodworks",
-          "url": "https://youtube.com/@731woodworks",
-          "followers": 902000
-        }
-      ],
-      "stats": {
-        "followers": 902000,
-        "videos": 1893,
-        "views": 253158669
-      },
-      "tags": [],
-      "_score": 9020,
-      "category_scores": {}
     },
     {
       "id": "bsky-culturecrave-co",
@@ -6845,66 +5865,6 @@
       }
     },
     {
-      "id": "yt-UC80PWRj_ZU8Zu0HSMNVwKWw",
-      "slug": "codevolution",
-      "name": "Codevolution",
-      "primary_handle": "@codevolution",
-      "primary_platform": "youtube",
-      "type": "person",
-      "bio": "Tutorials on the latest tech in web development!",
-      "location": "IN",
-      "company": "",
-      "avatar": "https://yt3.ggpht.com/CZz3YkQI3pkX-F9yoNrKG1KDWWtcas4jXPcZ98ldQx6T-dGdo1t30kKKXHpZ4k4tjfEY4pskoQ=s800-c-k-c0x00ffffff-no-rj",
-      "platforms": [
-        {
-          "type": "youtube",
-          "handle": "@codevolution",
-          "url": "https://youtube.com/@codevolution",
-          "followers": 754000
-        }
-      ],
-      "stats": {
-        "followers": 754000,
-        "videos": 1803,
-        "views": 147550659
-      },
-      "tags": [
-        "coding"
-      ],
-      "_score": 7540,
-      "category_scores": {
-        "coding": 4
-      }
-    },
-    {
-      "id": "yt-UCT4hFq01krOatjiSG7z3iag",
-      "slug": "high-performance",
-      "name": "High Performance",
-      "primary_handle": "@highperformancepodcast",
-      "primary_platform": "youtube",
-      "type": "person",
-      "bio": "This is the official channel for The High Performance Podcast, hosted by Jake Humphrey and Prof. Damian Hughes. We turn the lived experiences of the planet\u2019s highest performers into your life lessons.\n\nSubscribe to stay up to date with monthly giveaways, new episodes and exclusiv",
-      "location": "GB",
-      "company": "",
-      "avatar": "https://yt3.ggpht.com/YXBNN-OYwp4Vv1IEE6ZCuMx8VMD7ncDYEtPuLT__ABAZY997zrx1P65xtUlvm0p6dOlvm4Gd3g=s800-c-k-c0x00ffffff-no-rj",
-      "platforms": [
-        {
-          "type": "youtube",
-          "handle": "@highperformancepodcast",
-          "url": "https://youtube.com/@highperformancepodcast",
-          "followers": 742000
-        }
-      ],
-      "stats": {
-        "followers": 742000,
-        "videos": 1418,
-        "views": 158881551
-      },
-      "tags": [],
-      "_score": 7420,
-      "category_scores": {}
-    },
-    {
       "id": "gh-GoogleChrome",
       "slug": "googlechrome",
       "name": "GoogleChrome",
@@ -7157,34 +6117,6 @@
         "creative": 6,
         "tool-insights": 3
       }
-    },
-    {
-      "id": "yt-UCIjUPDT85E1zkO_a6EGLeDQ",
-      "slug": "origin",
-      "name": "Origin",
-      "primary_handle": "@_origin",
-      "primary_platform": "youtube",
-      "type": "person",
-      "bio": "Videos about pregnancy, birthing, raising a family, parenting and everything in-between. \n\nWhether you\u2019re planning a family or are already a parent you\u2019ll find candid insights into modern families that will fascinate and shock you. \n\nFeaturing content produced for major TV statio",
-      "location": "GB",
-      "company": "",
-      "avatar": "https://yt3.ggpht.com/ytc/AIdro_mTwlvU3GDg5CsuFxN9XcbFSmKgpU4ye1NIM9zTw6ziZQ=s800-c-k-c0x00ffffff-no-rj",
-      "platforms": [
-        {
-          "type": "youtube",
-          "handle": "@_origin",
-          "url": "https://youtube.com/@_origin",
-          "followers": 692000
-        }
-      ],
-      "stats": {
-        "followers": 692000,
-        "videos": 920,
-        "views": 224734970
-      },
-      "tags": [],
-      "_score": 6920,
-      "category_scores": {}
     },
     {
       "id": "gh-modelscope",
@@ -7460,34 +6392,6 @@
       },
       "tags": [],
       "_score": 6662,
-      "category_scores": {}
-    },
-    {
-      "id": "yt-UC7KWe8zbkwGG2KPVWk3ib-w",
-      "slug": "paint-society",
-      "name": "Paint Society",
-      "primary_handle": "@paintsociety",
-      "primary_platform": "youtube",
-      "type": "person",
-      "bio": "Welcome to the #1 Automotive Paint Channel on YouTube tailored for both the DIYer and Paint Professional! On this channel you will find many videos on the complete painting process broken up into digestible bites that are clear and concise to understand. More then just learning, ",
-      "location": "US",
-      "company": "",
-      "avatar": "https://yt3.ggpht.com/CPSsqKz87P2iGhXUTMkbel_AnkoEykKrPBUYPL12eOGr9DKENGHSHp-WLvRTkxZeHSxVNnRhkWo=s800-c-k-c0x00ffffff-no-rj",
-      "platforms": [
-        {
-          "type": "youtube",
-          "handle": "@paintsociety",
-          "url": "https://youtube.com/@paintsociety",
-          "followers": 652000
-        }
-      ],
-      "stats": {
-        "followers": 652000,
-        "videos": 466,
-        "views": 102805097
-      },
-      "tags": [],
-      "_score": 6520,
       "category_scores": {}
     },
     {
@@ -7864,34 +6768,6 @@
       },
       "tags": [],
       "_score": 6218,
-      "category_scores": {}
-    },
-    {
-      "id": "yt-UCvlG_ZnHoZLPv0CVWOC0a1Q",
-      "slug": "bleepinjeep",
-      "name": "BleepinJeep",
-      "primary_handle": "@bleepinjeep",
-      "primary_platform": "youtube",
-      "type": "person",
-      "bio": "BleepinJeep - Everything Off-Road, None of the Boring Stuff!!\n\nThe BleepinJeep YouTube Channel is your source for the Best HD videos of off-road related content.  Our specialty is offroad vehicle builds, how-to's, and adventure videos related to Jeeps, off-road, rock crawling, 4x",
-      "location": "US",
-      "company": "",
-      "avatar": "https://yt3.ggpht.com/qJCs36SRq4IWxXyOTlG5YtnbaIavK0PI0uJ1U9y-qyoAwHxZS8-r_lruDn19eojS_XzbVe8zHg=s800-c-k-c0x00ffffff-no-rj",
-      "platforms": [
-        {
-          "type": "youtube",
-          "handle": "@bleepinjeep",
-          "url": "https://youtube.com/@bleepinjeep",
-          "followers": 617000
-        }
-      ],
-      "stats": {
-        "followers": 617000,
-        "videos": 1442,
-        "views": 167746499
-      },
-      "tags": [],
-      "_score": 6170,
       "category_scores": {}
     },
     {
@@ -8524,34 +7400,6 @@
       }
     },
     {
-      "id": "yt-UCMb7dl9tHKx-zKDchXjeNfQ",
-      "slug": "eastwood-company",
-      "name": "Eastwood Company",
-      "primary_handle": "@eastwoodco",
-      "primary_platform": "youtube",
-      "type": "person",
-      "bio": "Eastwood has been the DIY auto enthusiasts source for tools, supplies and free how-to advice \"to do the job\" right, since 1978. Featuring an industry-leading 100% Lifetime Satisfaction Guarantee, Eastwood offers over 4,000 products and solutions at www.Eastwood.com.\n\nVisit Eastwo",
-      "location": "US",
-      "company": "",
-      "avatar": "https://yt3.ggpht.com/ytc/AIdro_lH0YQF_3cjglzPI_4D8oMycgEICMQ2CJme-J5w0j3QWpQ=s800-c-k-c0x00ffffff-no-rj",
-      "platforms": [
-        {
-          "type": "youtube",
-          "handle": "@eastwoodco",
-          "url": "https://youtube.com/@eastwoodco",
-          "followers": 569000
-        }
-      ],
-      "stats": {
-        "followers": 569000,
-        "videos": 3081,
-        "views": 185476510
-      },
-      "tags": [],
-      "_score": 5690,
-      "category_scores": {}
-    },
-    {
       "id": "gh-allenai",
       "slug": "allenai",
       "name": "Ai2",
@@ -8708,34 +7556,6 @@
       }
     },
     {
-      "id": "yt-UCWSvMDr_RJgwI5PIrCcbXQA",
-      "slug": "crime-a-to-z",
-      "name": "Crime A to Z",
-      "primary_handle": "@crimeatoz",
-      "primary_platform": "youtube",
-      "type": "person",
-      "bio": "We cover true crime cases from their beginnings through how criminals are living their lives today. Join us on journeys beyond where other reporting takes you. \n",
-      "location": "US",
-      "company": "",
-      "avatar": "https://yt3.ggpht.com/27ffzRtuQc6uQ1BA9iXrlK0F8KNXkqwTnrp1EIk1WLTty7JwyzQRsuDjkevYej4S5KIuRo7Z=s800-c-k-c0x00ffffff-no-rj",
-      "platforms": [
-        {
-          "type": "youtube",
-          "handle": "@crimeatoz",
-          "url": "https://youtube.com/@crimeatoz",
-          "followers": 552000
-        }
-      ],
-      "stats": {
-        "followers": 552000,
-        "videos": 64,
-        "views": 66766982
-      },
-      "tags": [],
-      "_score": 5520,
-      "category_scores": {}
-    },
-    {
       "id": "gh-jellyfin",
       "slug": "jellyfin",
       "name": "Jellyfin",
@@ -8838,40 +7658,6 @@
       "category_scores": {}
     },
     {
-      "id": "yt-UCzNf0liwUzMN6_pixbQlMhQ",
-      "slug": "coder-coder",
-      "name": "Coder Coder",
-      "primary_handle": "@thecodercoder",
-      "primary_platform": "youtube",
-      "type": "person",
-      "bio": "Practical tips for the beginner web developer.\n\n",
-      "location": "US",
-      "company": "",
-      "avatar": "https://yt3.ggpht.com/ytc/AIdro_k44gHBoHPwPbUJz36pexiQQyqImaAzZNP-MNbbLZZ11VY=s800-c-k-c0x00ffffff-no-rj",
-      "platforms": [
-        {
-          "type": "youtube",
-          "handle": "@thecodercoder",
-          "url": "https://youtube.com/@thecodercoder",
-          "followers": 541000
-        }
-      ],
-      "stats": {
-        "followers": 541000,
-        "videos": 118,
-        "views": 18189482
-      },
-      "tags": [
-        "beginners",
-        "coding"
-      ],
-      "_score": 5410,
-      "category_scores": {
-        "beginners": 5,
-        "coding": 5
-      }
-    },
-    {
       "id": "gh-kubernetes-sigs",
       "slug": "kubernetes-sigs",
       "name": "Kubernetes SIGs",
@@ -8970,38 +7756,6 @@
       "tags": [],
       "_score": 5341,
       "category_scores": {}
-    },
-    {
-      "id": "yt-UCbRP3c757lWg9M-U7TyEkXA",
-      "slug": "theo-t3-gg",
-      "name": "Theo - t3\u2024gg",
-      "primary_handle": "@t3dotgg",
-      "primary_platform": "youtube",
-      "type": "person",
-      "bio": "Software dev, AI nerd, TypeScript sympathizer, creator of T3 Chat and the T3 Stack.\n",
-      "location": "US",
-      "company": "",
-      "avatar": "https://yt3.ggpht.com/Y6jut5A-dhWRlv7W81kGxVFPtZGjZN97IhBP75uLnx2AVV7ZEJUUUxBKHlFw9GcwILxkz1E_cLc=s800-c-k-c0x00ffffff-no-rj",
-      "platforms": [
-        {
-          "type": "youtube",
-          "handle": "@t3dotgg",
-          "url": "https://youtube.com/@t3dotgg",
-          "followers": 533000
-        }
-      ],
-      "stats": {
-        "followers": 533000,
-        "videos": 1032,
-        "views": 99836800
-      },
-      "tags": [
-        "coding"
-      ],
-      "_score": 5330,
-      "category_scores": {
-        "coding": 7
-      }
     },
     {
       "id": "bsky-karlbode-com",
@@ -9357,38 +8111,6 @@
       }
     },
     {
-      "id": "yt-UC_ML5xP23TOWKUcc-oAE_Eg",
-      "slug": "hussein-nasser",
-      "name": "Hussein Nasser",
-      "primary_handle": "@hnasr",
-      "primary_platform": "youtube",
-      "type": "person",
-      "bio": "Join me as we discuss various software engineering topics with examples and add fun elements to them. We always try to learn by example here in this educational Youtube channel which we believe is the right way to learn. I love Software engineering (especially the backend) and I ",
-      "location": "US",
-      "company": "",
-      "avatar": "https://yt3.ggpht.com/wdZxAigelIgebOT-NlWwVnvOijYuHttaa5jSpCuxlYajSEbfp75dVPSItmer-6jCrKACKChheAE=s800-c-k-c0x00ffffff-no-rj",
-      "platforms": [
-        {
-          "type": "youtube",
-          "handle": "@hnasr",
-          "url": "https://youtube.com/@hnasr",
-          "followers": 491000
-        }
-      ],
-      "stats": {
-        "followers": 491000,
-        "videos": 1029,
-        "views": 27875120
-      },
-      "tags": [
-        "coding"
-      ],
-      "_score": 4910,
-      "category_scores": {
-        "coding": 5
-      }
-    },
-    {
       "id": "gh-NielsRogge",
       "slug": "nielsrogge",
       "name": "NielsRogge",
@@ -9585,38 +8307,6 @@
       "category_scores": {}
     },
     {
-      "id": "yt-UCyU5wkjgQYGRB0hIHMwm2Sg",
-      "slug": "syntax",
-      "name": "Syntax",
-      "primary_handle": "@syntaxfm",
-      "primary_platform": "youtube",
-      "type": "person",
-      "bio": "Hosted by Wes Bos and Scott Tolinski since 2017, Syntax has published over 900 podcast episodes on full-stack web development, covering everything from HTML, CSS, JavaScript, server side languages, databases, deployment environments, and more.\n\nIn 2023 Syntax.fm joined forces wit",
-      "location": "US",
-      "company": "",
-      "avatar": "https://yt3.ggpht.com/gvvHQOWCRiNehiIKqDNS59DapvDsXsZugPnNqWumcp9OYCZPdmPTQw0AGaFEOb0uUKEg7VNpkA=s800-c-k-c0x00ffffff-no-rj",
-      "platforms": [
-        {
-          "type": "youtube",
-          "handle": "@syntaxfm",
-          "url": "https://youtube.com/@syntaxfm",
-          "followers": 473000
-        }
-      ],
-      "stats": {
-        "followers": 473000,
-        "videos": 1355,
-        "views": 35792861
-      },
-      "tags": [
-        "coding"
-      ],
-      "_score": 4730,
-      "category_scores": {
-        "coding": 18
-      }
-    },
-    {
       "id": "gh-fastapi",
       "slug": "fastapi",
       "name": "FastAPI",
@@ -9779,34 +8469,6 @@
         "followers": 3150,
         "following": 0,
         "repos": 89
-      },
-      "tags": [],
-      "_score": 4650,
-      "category_scores": {}
-    },
-    {
-      "id": "yt-UCORX3Cl7ByidjEgzSCgv9Yw",
-      "slug": "anastasi-in-tech",
-      "name": "Anastasi In Tech",
-      "primary_handle": "@anastasiintech",
-      "primary_platform": "youtube",
-      "type": "person",
-      "bio": "Explaining the key technologies that run the world.\n\nPlease double-check that you\u2019ve subscribed \u2014 it really helps me keep going. Thank you!\n\nIf you represent a brand and want to collaborate, please reach out to yama@ycaagency.com\nFor events or any other topics, you can reach my t",
-      "location": "US",
-      "company": "",
-      "avatar": "https://yt3.ggpht.com/MjRARaN9YsYMbGm2tDaGEb2YYcsbk58uPWIpjDgZvhimxu8TCVLyV79KNp_33A8j_Zj1-XiIrA=s800-c-k-c0x00ffffff-no-rj",
-      "platforms": [
-        {
-          "type": "youtube",
-          "handle": "@anastasiintech",
-          "url": "https://youtube.com/@anastasiintech",
-          "followers": 465000
-        }
-      ],
-      "stats": {
-        "followers": 465000,
-        "videos": 105,
-        "views": 28778135
       },
       "tags": [],
       "_score": 4650,
@@ -10083,38 +8745,6 @@
       "category_scores": {}
     },
     {
-      "id": "yt-UCgdTVe88YVSrOZ9qKumhULQ",
-      "slug": "hardware-haven",
-      "name": "Hardware Haven",
-      "primary_handle": "@hardwarehaven",
-      "primary_platform": "youtube",
-      "type": "person",
-      "bio": "I like to tinker with things like older computers, programming, networking, home automation, and many other things that I know barely anything about. \n\nMy Theme Music - https://youtu.be/FwD2mOYDPNA\n\nCheck out the Discord server! - https://discord.gg/25a6qVdSMh\n",
-      "location": "US",
-      "company": "",
-      "avatar": "https://yt3.ggpht.com/jy4MP-krEoywG-EE8VrSdC3OcU92KZutV8VJeSh0NLK22StRcaV3VNM-Fwf40PMpD3votNDojQ=s800-c-k-c0x00ffffff-no-rj",
-      "platforms": [
-        {
-          "type": "youtube",
-          "handle": "@hardwarehaven",
-          "url": "https://youtube.com/@hardwarehaven",
-          "followers": 448000
-        }
-      ],
-      "stats": {
-        "followers": 448000,
-        "videos": 191,
-        "views": 60120265
-      },
-      "tags": [
-        "coding"
-      ],
-      "_score": 4480,
-      "category_scores": {
-        "coding": 5
-      }
-    },
-    {
       "id": "gh-jupyter",
       "slug": "jupyter",
       "name": "Project Jupyter",
@@ -10191,38 +8821,6 @@
       "tags": [],
       "_score": 4448,
       "category_scores": {}
-    },
-    {
-      "id": "yt-UC5DNytAJ6_FISueUfzZCVsw",
-      "slug": "code-with-ania-kub-w",
-      "name": "Code with Ania Kub\u00f3w",
-      "primary_handle": "@aniakubow",
-      "primary_platform": "youtube",
-      "type": "person",
-      "bio": "Worked with Google, Amazon, Microsoft and many more. \n\nWant to learn how to code from nothing? I will show you how!\n\nMy name is Ania and I am a Software Developer and Course Creator.\n\nI quit working as a Software Developer for Eurostar in 2019 to focus on creating video tutorials",
-      "location": "GB",
-      "company": "",
-      "avatar": "https://yt3.ggpht.com/CALIyblKHLncjzU4Fx4WmdC1vDhZTBTBosbYJI5DsWJVHXrtlftBhzn681EmvUjGViePBN-GrsI=s800-c-k-c0x00ffffff-no-rj",
-      "platforms": [
-        {
-          "type": "youtube",
-          "handle": "@aniakubow",
-          "url": "https://youtube.com/@aniakubow",
-          "followers": 442000
-        }
-      ],
-      "stats": {
-        "followers": 442000,
-        "videos": 471,
-        "views": 20464335
-      },
-      "tags": [
-        "coding"
-      ],
-      "_score": 4420,
-      "category_scores": {
-        "coding": 16
-      }
     },
     {
       "id": "gh-unslothai",
@@ -10722,38 +9320,6 @@
       "tags": [],
       "_score": 4194,
       "category_scores": {}
-    },
-    {
-      "id": "yt-UCvM5YYWwfLwpcQgbRr68JLQ",
-      "slug": "adrian-twarog",
-      "name": "Adrian Twarog",
-      "primary_handle": "@adriantwarog",
-      "primary_platform": "youtube",
-      "type": "person",
-      "bio": "I'm Adrian from Australia, a designer and developer who makes websites and apps using platforms like React Native. I'm hoping to share some of the things I've learnt over the years about my career and hobbies for coding, user interface and experience!\n\nSome of the things we will ",
-      "location": "AU",
-      "company": "",
-      "avatar": "https://yt3.ggpht.com/vid8YE1bhiQRe_UHZg2pCk8mZ8HBw9pQt9t0wgYW5fztogTsQGF3KzmjHxVxSV2g9-j-4XPytBU=s800-c-k-c0x00ffffff-no-rj",
-      "platforms": [
-        {
-          "type": "youtube",
-          "handle": "@adriantwarog",
-          "url": "https://youtube.com/@adriantwarog",
-          "followers": 418000
-        }
-      ],
-      "stats": {
-        "followers": 418000,
-        "videos": 139,
-        "views": 40880536
-      },
-      "tags": [
-        "coding"
-      ],
-      "_score": 4180,
-      "category_scores": {
-        "coding": 4
-      }
     },
     {
       "id": "gh-vllm-project",
@@ -11379,38 +9945,6 @@
       }
     },
     {
-      "id": "yt-UCqeTj_QAnNlmt7FwzNwHZnA",
-      "slug": "sonny-sangha",
-      "name": "Sonny Sangha",
-      "primary_handle": "@sonnysangha",
-      "primary_platform": "youtube",
-      "type": "person",
-      "bio": "I'm Sonny. \ud83d\udcaf\n\nYou might also know me as PAPA React!\n\nI've been coding for over 10 years now. As a Full Stack developer I've worked both with startups and large corporations to help build & scale their companies. Along the journey I realised my passion existed in helping others ex",
-      "location": "GB",
-      "company": "",
-      "avatar": "https://yt3.ggpht.com/R5lIbdDAdEAUxkLiEaaARvFVXRTTXfGi1aW5ZlL5ag7TyjXsQCI66npOEu0IwTU7UiwOaOeMGw0=s800-c-k-c0x00ffffff-no-rj",
-      "platforms": [
-        {
-          "type": "youtube",
-          "handle": "@sonnysangha",
-          "url": "https://youtube.com/@sonnysangha",
-          "followers": 389000
-        }
-      ],
-      "stats": {
-        "followers": 389000,
-        "videos": 309,
-        "views": 31335937
-      },
-      "tags": [
-        "coding"
-      ],
-      "_score": 3890,
-      "category_scores": {
-        "coding": 7
-      }
-    },
-    {
       "id": "gh-IDEA-Research",
       "slug": "idea-research",
       "name": "IDEA-Research",
@@ -11600,40 +10134,6 @@
       "category_scores": {
         "research": 5,
         "agents": 5
-      }
-    },
-    {
-      "id": "yt-UCijY8oOfMEHM0IiPru615Bg",
-      "slug": "blog-with-ben",
-      "name": "Blog With Ben",
-      "primary_handle": "@blogwithben",
-      "primary_platform": "youtube",
-      "type": "person",
-      "bio": "I help people build, grow, and monetize their blogs with my free step-by-step video tutorials.",
-      "location": "US",
-      "company": "",
-      "avatar": "https://yt3.ggpht.com/ytc/AIdro_mrbgVZH9BJzkcnHovn7bcVh6LoMvMPui7QHgauHeyoZag=s800-c-k-c0x00ffffff-no-rj",
-      "platforms": [
-        {
-          "type": "youtube",
-          "handle": "@blogwithben",
-          "url": "https://youtube.com/@blogwithben",
-          "followers": 369000
-        }
-      ],
-      "stats": {
-        "followers": 369000,
-        "videos": 309,
-        "views": 8395299
-      },
-      "tags": [
-        "business",
-        "beginners"
-      ],
-      "_score": 3690,
-      "category_scores": {
-        "business": 6,
-        "beginners": 5
       }
     },
     {
@@ -12487,34 +10987,6 @@
         "coding": 5,
         "tool-insights": 5
       }
-    },
-    {
-      "id": "yt-UCDmYblK8ScOM4LEfXCQNzCw",
-      "slug": "bright",
-      "name": "Bright",
-      "primary_handle": "@brightnl",
-      "primary_platform": "youtube",
-      "type": "person",
-      "bio": "Bright is vol van vernieuwing. Altijd op zoek naar het vernuft in technologie, design en style. Abonneer en zet de bel aan \ud83d\udd14 dan mis je geen enkele video!\n\nKijk ook op https://www.bright.nl voor al onze artikelen \n\nVOLG ons op \nFacebook https://www.facebook.com/bright.nl\nInstagra",
-      "location": "NL",
-      "company": "",
-      "avatar": "https://yt3.ggpht.com/ytc/AIdro_nfdsulGipgbfiJ_fRrSzYN1r7J7vhc3Hjl_lBH0_Qi9pE=s800-c-k-c0x00ffffff-no-rj",
-      "platforms": [
-        {
-          "type": "youtube",
-          "handle": "@brightnl",
-          "url": "https://youtube.com/@brightnl",
-          "followers": 343000
-        }
-      ],
-      "stats": {
-        "followers": 343000,
-        "videos": 3891,
-        "views": 161740483
-      },
-      "tags": [],
-      "_score": 3430,
-      "category_scores": {}
     },
     {
       "id": "bsky-hypervisible-blacksky-app",
@@ -13691,34 +12163,6 @@
       }
     },
     {
-      "id": "yt-UCZzV1zRj0oLYNv-GBSilJZw",
-      "slug": "pete-matheson",
-      "name": "Pete Matheson",
-      "primary_handle": "@petematheson",
-      "primary_platform": "youtube",
-      "type": "person",
-      "bio": "Helping you choose the right tech ecosystem \u2014 Apple, Samsung, or Google.\n\nI'm Pete \ud83d\udc4b\ud83c\udffc a 40-year-old husband and dad of two who's spent years living across multiple ecosystems so you don't have to guess which one's right for you.\n\nHere you'll find honest buying guides, long-term r",
-      "location": "GB",
-      "company": "",
-      "avatar": "https://yt3.ggpht.com/gVnMpze3n3KHxMLJM0HI_MM4jnjaqdYXvWezrLN8TmXHzvR0K-NZHiC1XJvIb_3uxVyxCOWy=s800-c-k-c0x00ffffff-no-rj",
-      "platforms": [
-        {
-          "type": "youtube",
-          "handle": "@petematheson",
-          "url": "https://youtube.com/@petematheson",
-          "followers": 307000
-        }
-      ],
-      "stats": {
-        "followers": 307000,
-        "videos": 765,
-        "views": 110082338
-      },
-      "tags": [],
-      "_score": 3070,
-      "category_scores": {}
-    },
-    {
       "id": "gh-Mintplex-Labs",
       "slug": "mintplex-labs",
       "name": "Mintplex Labs",
@@ -14320,34 +12764,6 @@
       }
     },
     {
-      "id": "yt-UCwwuSBYcErVlOpveYubHv4g",
-      "slug": "mark-ellis-reviews",
-      "name": "Mark Ellis Reviews",
-      "primary_handle": "@markellisreviews",
-      "primary_platform": "youtube",
-      "type": "person",
-      "bio": "Relatable tech reviews and advice for normal people.\n\nI have zero interest in deep spec dives or long-winded comparisons. I review laptops, smartphones, tablets, headphones and the latest tech based on real experience. I'll tell you how it'll make you feel, whether or not it's wo",
-      "location": "GB",
-      "company": "",
-      "avatar": "https://yt3.ggpht.com/ytc/AIdro_nIw2H3CEqOBG2B3ZJfKfzfAhsQ5UcnDxyEdcnQXfsTpQ=s800-c-k-c0x00ffffff-no-rj",
-      "platforms": [
-        {
-          "type": "youtube",
-          "handle": "@markellisreviews",
-          "url": "https://youtube.com/@markellisreviews",
-          "followers": 289000
-        }
-      ],
-      "stats": {
-        "followers": 289000,
-        "videos": 1287,
-        "views": 66569506
-      },
-      "tags": [],
-      "_score": 2890,
-      "category_scores": {}
-    },
-    {
       "id": "gh-tldraw",
       "slug": "tldraw",
       "name": "tldraw",
@@ -14622,34 +13038,6 @@
       "category_scores": {}
     },
     {
-      "id": "yt-UCj5-ugDYrbrzKYzTAHbkCnQ",
-      "slug": "repair-geek",
-      "name": "Repair Geek",
-      "primary_handle": "@repairgeek",
-      "primary_platform": "youtube",
-      "type": "person",
-      "bio": "My channel is dedicated to making repairs, modifications, or testing anything automotive related. That may be a car, truck, shop equipment, products or tools. I will only produce a video if I feel that it is of some use.  I really strive to make my content as clear and concise as",
-      "location": "US",
-      "company": "",
-      "avatar": "https://yt3.ggpht.com/ytc/AIdro_nCOIiOSMRZCFn7mM9GYwMmmBVVqrwVzEFKrmsBqplG6b8=s800-c-k-c0x00ffffff-no-rj",
-      "platforms": [
-        {
-          "type": "youtube",
-          "handle": "@repairgeek",
-          "url": "https://youtube.com/@repairgeek",
-          "followers": 282000
-        }
-      ],
-      "stats": {
-        "followers": 282000,
-        "videos": 163,
-        "views": 42624689
-      },
-      "tags": [],
-      "_score": 2820,
-      "category_scores": {}
-    },
-    {
       "id": "gh-remotion-dev",
       "slug": "remotion-dev",
       "name": "Remotion",
@@ -14781,38 +13169,6 @@
       "_score": 2803,
       "category_scores": {
         "coding": 3
-      }
-    },
-    {
-      "id": "yt-UCx3aQVRyX6ucminQklUbLXA",
-      "slug": "senator-we-run-ads",
-      "name": "Senator We Run Ads",
-      "primary_handle": "@senatorwerunads",
-      "primary_platform": "youtube",
-      "type": "person",
-      "bio": "I\u2019m Ovais Ahmad, Founder of Senator We Run Ads \u2014 a Dubai-based Performance Marketing agency and training platform\n\nWorked with leading companies like Google, Delivery Hero, Talabat and Global agencies like Initiative and Boopin working with some top clients like Etisalat, SkyNews",
-      "location": "AE",
-      "company": "",
-      "avatar": "https://yt3.ggpht.com/ytc/AIdro_lTuBUezzDLAJNF_2brPS1Q3cJoyy62eYmnaCY5JgcXF_4=s800-c-k-c0x00ffffff-no-rj",
-      "platforms": [
-        {
-          "type": "youtube",
-          "handle": "@senatorwerunads",
-          "url": "https://youtube.com/@senatorwerunads",
-          "followers": 280000
-        }
-      ],
-      "stats": {
-        "followers": 280000,
-        "videos": 282,
-        "views": 10643524
-      },
-      "tags": [
-        "business"
-      ],
-      "_score": 2800,
-      "category_scores": {
-        "business": 4
       }
     },
     {
@@ -15294,38 +13650,6 @@
       "tags": [],
       "_score": 2688,
       "category_scores": {}
-    },
-    {
-      "id": "yt-UCsrVDPJBYeXItETFHG0qzyw",
-      "slug": "web-dev-cody",
-      "name": "Web Dev Cody",
-      "primary_handle": "@webdevcody",
-      "primary_platform": "youtube",
-      "type": "person",
-      "bio": "This channel is a collection of various programming videos, tutorials, projects, talks, or anything software engineering and programming related.  If you are new to coding and want to learn how to program or get a job in the industry, be sure to subscribe to my channel.  There is",
-      "location": "US",
-      "company": "",
-      "avatar": "https://yt3.ggpht.com/5NNfqG72CaaDSjWSR-0dzpEsTmHBNcTQTdwIP8mSyJ0qGCfDfvpD5tqiD3J3CN3KPZDZLPajGmU=s800-c-k-c0x00ffffff-no-rj",
-      "platforms": [
-        {
-          "type": "youtube",
-          "handle": "@webdevcody",
-          "url": "https://youtube.com/@webdevcody",
-          "followers": 266000
-        }
-      ],
-      "stats": {
-        "followers": 266000,
-        "videos": 1274,
-        "views": 26045907
-      },
-      "tags": [
-        "coding"
-      ],
-      "_score": 2660,
-      "category_scores": {
-        "coding": 8
-      }
     },
     {
       "id": "gh-amanchadha",
@@ -16597,34 +14921,6 @@
       "category_scores": {
         "coding": 3
       }
-    },
-    {
-      "id": "yt-UCoL8olX-259lS1N6QPyP4IQ",
-      "slug": "action-retro",
-      "name": "Action Retro",
-      "primary_handle": "@actionretro",
-      "primary_platform": "youtube",
-      "type": "person",
-      "bio": "Totally normal computing.\n\nFor business inquiries, trygve@smallscreenmarketing.com. \n\nFor everything else, my preferred contact is through BitBang! https://bitbang.social/@ActionRetro\n",
-      "location": "US",
-      "company": "",
-      "avatar": "https://yt3.ggpht.com/eJe0hnpFwxpgJi_2_vCXuYmeDFcNJfdOXtKOd0Ca3AZYWS7eIMngAGZ0Bu9nliYT8e4HNMtb=s800-c-k-c0x00ffffff-no-rj",
-      "platforms": [
-        {
-          "type": "youtube",
-          "handle": "@actionretro",
-          "url": "https://youtube.com/@actionretro",
-          "followers": 244000
-        }
-      ],
-      "stats": {
-        "followers": 244000,
-        "videos": 404,
-        "views": 41012705
-      },
-      "tags": [],
-      "_score": 2440,
-      "category_scores": {}
     },
     {
       "id": "gh-CorentinJ",
@@ -18651,38 +16947,6 @@
       }
     },
     {
-      "id": "yt-UC6vRUjYqDuoUsYsku86Lrsw",
-      "slug": "jack-herrington",
-      "name": "Jack Herrington",
-      "primary_handle": "@jherr",
-      "primary_platform": "youtube",
-      "type": "person",
-      "bio": "Frontend videos from basic to very advanced; tutorials, technology deep dives. You'll love it!\n",
-      "location": "US",
-      "company": "",
-      "avatar": "https://yt3.ggpht.com/ytc/AIdro_kGCkFeDznNTPpHJCV01GxQVeJQ4HYIYgDSyzQPJue8q2s=s800-c-k-c0x00ffffff-no-rj",
-      "platforms": [
-        {
-          "type": "youtube",
-          "handle": "@jherr",
-          "url": "https://youtube.com/@jherr",
-          "followers": 211000
-        }
-      ],
-      "stats": {
-        "followers": 211000,
-        "videos": 509,
-        "views": 15817391
-      },
-      "tags": [
-        "coding"
-      ],
-      "_score": 2110,
-      "category_scores": {
-        "coding": 6
-      }
-    },
-    {
       "id": "gh-MobSF",
       "slug": "mobsf",
       "name": "Mobile Security Framework ",
@@ -18914,38 +17178,6 @@
       "_score": 2072,
       "category_scores": {
         "coding": 5
-      }
-    },
-    {
-      "id": "yt-UC-T8W79DN6PBnzomelvqJYw",
-      "slug": "james-q-quick",
-      "name": "James Q Quick",
-      "primary_handle": "@jamesqquick",
-      "primary_platform": "youtube",
-      "type": "person",
-      "bio": "I publish weekly videos about Web Development!  I am constantly learning the latest and greatest in Web Development and am excited to help you do the same.",
-      "location": "US",
-      "company": "",
-      "avatar": "https://yt3.ggpht.com/GJHAeZ84wUut2sYiR7KdGOS_P8erXg_EeSsXV0QYyhjMtBIy-4doMzTG07qRiEBrgoJsiNv3Jg=s800-c-k-c0x00ffffff-no-rj",
-      "platforms": [
-        {
-          "type": "youtube",
-          "handle": "@jamesqquick",
-          "url": "https://youtube.com/@jamesqquick",
-          "followers": 207000
-        }
-      ],
-      "stats": {
-        "followers": 207000,
-        "videos": 762,
-        "views": 19556289
-      },
-      "tags": [
-        "coding"
-      ],
-      "_score": 2070,
-      "category_scores": {
-        "coding": 4
       }
     },
     {
@@ -19308,38 +17540,6 @@
       "_score": 2014,
       "category_scores": {
         "coding": 5
-      }
-    },
-    {
-      "id": "yt-UCThrs0qvb_MrW9UGSes4uIA",
-      "slug": "dave-bennett",
-      "name": "Dave Bennett",
-      "primary_handle": "@davebennetttech",
-      "primary_platform": "youtube",
-      "type": "person",
-      "bio": "My technology sandbox for trying out new things in software, hardware and consumer electronics.",
-      "location": "US",
-      "company": "",
-      "avatar": "https://yt3.ggpht.com/JciMGQZnyK0lcXCoHjp6E5ij5tVnXFlY1gsLuRbKpMxV0ykSy53b4RxP5ajIYDNVal-Dw_gSn9k=s800-c-k-c0x00ffffff-no-rj",
-      "platforms": [
-        {
-          "type": "youtube",
-          "handle": "@davebennetttech",
-          "url": "https://youtube.com/@davebennetttech",
-          "followers": 201000
-        }
-      ],
-      "stats": {
-        "followers": 201000,
-        "videos": 446,
-        "views": 54065009
-      },
-      "tags": [
-        "coding"
-      ],
-      "_score": 2010,
-      "category_scores": {
-        "coding": 3
       }
     },
     {
@@ -20505,34 +18705,6 @@
       "category_scores": {}
     },
     {
-      "id": "yt-UCTy8D3wAtiJtSuA-2YOEfAw",
-      "slug": "greenemath-com",
-      "name": "GreeneMath.com",
-      "primary_handle": "@greenemath",
-      "primary_platform": "youtube",
-      "type": "person",
-      "bio": "The goal of GreeneMath.com is to provide free and low cost math education resources to anyone with an internet connection. To learn more please visit our website: \n\nhttp://www.greenemath.com/",
-      "location": "US",
-      "company": "",
-      "avatar": "https://yt3.ggpht.com/ytc/AIdro_keGbFviucORBVSUbPm0M10AAeEeNW2kZtcoKVuMSwWIwM=s800-c-k-c0x00ffffff-no-rj",
-      "platforms": [
-        {
-          "type": "youtube",
-          "handle": "@greenemath",
-          "url": "https://youtube.com/@greenemath",
-          "followers": 190000
-        }
-      ],
-      "stats": {
-        "followers": 190000,
-        "videos": 796,
-        "views": 12004375
-      },
-      "tags": [],
-      "_score": 1900,
-      "category_scores": {}
-    },
-    {
       "id": "gh-linagora",
       "slug": "linagora",
       "name": "LINAGORA",
@@ -20680,34 +18852,6 @@
         "coding": 5,
         "beginners": 5
       }
-    },
-    {
-      "id": "yt-UCvKRFNawVcuz4b9ihUTApCg",
-      "slug": "david-shapiro",
-      "name": "David Shapiro",
-      "primary_handle": "@daveshap",
-      "primary_platform": "youtube",
-      "type": "person",
-      "bio": "I'm the Post-Labor Economics guy. Mission: Liberate humanity from drudgery.\n",
-      "location": "US",
-      "company": "",
-      "avatar": "https://yt3.ggpht.com/3PuQVkaSA3n4B-JTnn3lfamE87B4Yt_zzLSLmHt2pQCT_roXvNIEmOaOEIvhTvX8PmtxCKIZ9ZI=s800-c-k-c0x00ffffff-no-rj",
-      "platforms": [
-        {
-          "type": "youtube",
-          "handle": "@daveshap",
-          "url": "https://youtube.com/@daveshap",
-          "followers": 189000
-        }
-      ],
-      "stats": {
-        "followers": 189000,
-        "videos": 660,
-        "views": 17980880
-      },
-      "tags": [],
-      "_score": 1890,
-      "category_scores": {}
     },
     {
       "id": "gh-VectifyAI",
@@ -21999,34 +20143,6 @@
       "category_scores": {}
     },
     {
-      "id": "yt-UCWrF0oN6unbXrWsTN7RctTw",
-      "slug": "sequoia-capital",
-      "name": "Sequoia Capital",
-      "primary_handle": "@sequoiacapital",
-      "primary_platform": "youtube",
-      "type": "person",
-      "bio": "We help the daring build legendary companies \u2013 from idea to IPO and beyond.",
-      "location": "",
-      "company": "",
-      "avatar": "https://yt3.ggpht.com/uCN-D7KzMQY-Ti-xTsNAwilXVFFMYjEBRju_mXrR22HUYxJZjVZgP_SnamO9KbPo2XN-nE3O-A=s800-c-k-c0x00ffffff-no-rj",
-      "platforms": [
-        {
-          "type": "youtube",
-          "handle": "@sequoiacapital",
-          "url": "https://youtube.com/@sequoiacapital",
-          "followers": 175000
-        }
-      ],
-      "stats": {
-        "followers": 175000,
-        "videos": 201,
-        "views": 13996163
-      },
-      "tags": [],
-      "_score": 1750,
-      "category_scores": {}
-    },
-    {
       "id": "gh-pbakaus",
       "slug": "pbakaus",
       "name": "Paul Bakaus",
@@ -22339,34 +20455,6 @@
       }
     },
     {
-      "id": "yt-UCbU6yTk6NzZSKuBEl0PhABQ",
-      "slug": "the-practical-engineer",
-      "name": "The Practical Engineer",
-      "primary_handle": "@thepracticalengineer",
-      "primary_platform": "youtube",
-      "type": "person",
-      "bio": "Mijn hele leven vraag ik mij al af hoe de dingen om mij heen werken. Als klein kind vond ik het geweldig om oude apparaten open te schroeven en alle componenten er uit te halen. \nMijn tools hierbij waren een hamer en schroevendraaiers, het meeste ging dan ook nooit meer in elkaar",
-      "location": "NL",
-      "company": "",
-      "avatar": "https://yt3.ggpht.com/ytc/AIdro_lv89mUQjvmDazaBOyrrxnkxRRQx3wM-IZE426fCeg3erM=s800-c-k-c0x00ffffff-no-rj",
-      "platforms": [
-        {
-          "type": "youtube",
-          "handle": "@thepracticalengineer",
-          "url": "https://youtube.com/@thepracticalengineer",
-          "followers": 170000
-        }
-      ],
-      "stats": {
-        "followers": 170000,
-        "videos": 373,
-        "views": 15831465
-      },
-      "tags": [],
-      "_score": 1700,
-      "category_scores": {}
-    },
-    {
       "id": "gh-bowang-lab",
       "slug": "bowang-lab",
       "name": "WangLab @ U of T",
@@ -22648,34 +20736,6 @@
       "category_scores": {}
     },
     {
-      "id": "yt-UC2GRwEADsEKEX5k-Xg9YphA",
-      "slug": "theelec",
-      "name": "\ub514\uc77c\ub809 THEELEC",
-      "primary_handle": "@theelec9812",
-      "primary_platform": "youtube",
-      "type": "person",
-      "bio": "\ub514\uc77c\ub809(THE ELEC)\uc740\n\ubc18\ub3c4\uccb4\uc640 \ub514\uc2a4\ud50c\ub808\uc774, \ubc30\ud130\ub9ac \ub4f1\n\uac01\uc885 \uc804\uc790\ubd80\ud488 \uc5c5\uacc4\uc758 \uc18c\uc2dd\uc744\n\uc804\ubb38\uc73c\ub85c \ub2e4\ub8e8\ub294 \uc778\ud130\ub137 \uc2e0\ubb38\uc0ac\uc785\ub2c8\ub2e4.\n\n\uacf5\uc2dd \ud648\ud398\uc774\uc9c0 http://www.thelec.kr\n\ubb38\uc758 thelec@thelec.kr\n\n\uc804\uc790\ubd80\ud488 \uc804\ubb38 \ubbf8\ub514\uc5b4 \ub514\uc77c\ub809",
-      "location": "KR",
-      "company": "",
-      "avatar": "https://yt3.ggpht.com/ytc/AIdro_kld9cYUO17EYjLHEq2UrrKcSecf0CgAoQuAbGvuxxxkA=s800-c-k-c0x00ffffff-no-rj",
-      "platforms": [
-        {
-          "type": "youtube",
-          "handle": "@theelec9812",
-          "url": "https://youtube.com/@theelec9812",
-          "followers": 166000
-        }
-      ],
-      "stats": {
-        "followers": 166000,
-        "videos": 3267,
-        "views": 38643613
-      },
-      "tags": [],
-      "_score": 1660,
-      "category_scores": {}
-    },
-    {
       "id": "gh-kirodotdev",
       "slug": "kirodotdev",
       "name": "Kiro",
@@ -22745,34 +20805,6 @@
       },
       "tags": [],
       "_score": 1641,
-      "category_scores": {}
-    },
-    {
-      "id": "yt-UC_kw_59aBWQn7HLGaH7IHVA",
-      "slug": "dexjs",
-      "name": "DeXJs",
-      "primary_handle": "@dexjs",
-      "primary_platform": "youtube",
-      "type": "person",
-      "bio": "As a guy that's owned over well 3000 Jeep Cherokees and currently owns over 1000 which are mainly ones saved from being turned into scrap metal. I can say with no issues I have learned about all there is to know about 1984-2004 Jeep Cherokee's and such. Started this YouTube chann",
-      "location": "US",
-      "company": "",
-      "avatar": "https://yt3.ggpht.com/0N287boeTnhDkrxjZxg4pPujK4in2CPEDitZrQACFrPnMEnaaRRIZ-6rrNecH31gJOwbsirLvw=s800-c-k-c0x00ffffff-no-rj",
-      "platforms": [
-        {
-          "type": "youtube",
-          "handle": "@dexjs",
-          "url": "https://youtube.com/@dexjs",
-          "followers": 162000
-        }
-      ],
-      "stats": {
-        "followers": 162000,
-        "videos": 1250,
-        "views": 102168192
-      },
-      "tags": [],
-      "_score": 1620,
       "category_scores": {}
     },
     {
@@ -22918,34 +20950,6 @@
       "category_scores": {}
     },
     {
-      "id": "yt-UC1gB1vmHzzmRUBnXIcmobkA",
-      "slug": "supernanny-full-episodes",
-      "name": "Supernanny Full Episodes",
-      "primary_handle": "@supernannyfulleps",
-      "primary_platform": "youtube",
-      "type": "person",
-      "bio": "Welcome to the official Supernanny Full Episodes YouTube channel!\nNot subscribed? That is UNACCEPTABLE behaviour!\n\nSupernanny is here to tackle tantrums, fights and naughty kids all over the world! Supernanny will help families get their behavior back on track- but it won\u2019t be ea",
-      "location": "US",
-      "company": "",
-      "avatar": "https://yt3.ggpht.com/zAFxzKYxWe6xdKZajQXg5CGW8hc_DB3j8SBaMf1iy8JWTqKsR4ozwoOTFuikV5lvnAC2lkXa=s800-c-k-c0x00ffffff-no-rj",
-      "platforms": [
-        {
-          "type": "youtube",
-          "handle": "@supernannyfulleps",
-          "url": "https://youtube.com/@supernannyfulleps",
-          "followers": 157000
-        }
-      ],
-      "stats": {
-        "followers": 157000,
-        "videos": 195,
-        "views": 48874358
-      },
-      "tags": [],
-      "_score": 1570,
-      "category_scores": {}
-    },
-    {
       "id": "gh-ArcInstitute",
       "slug": "arcinstitute",
       "name": "Arc Research Institute",
@@ -23081,34 +21085,6 @@
         "followers": 550,
         "following": 0,
         "repos": 30
-      },
-      "tags": [],
-      "_score": 1550,
-      "category_scores": {}
-    },
-    {
-      "id": "yt-UC3-bMz3L8wgzLlkLcXA4O0Q",
-      "slug": "jk-gear-and-gadgets",
-      "name": "JK Gear and Gadgets",
-      "primary_handle": "@jkgearandgadgets",
-      "primary_platform": "youtube",
-      "type": "person",
-      "bio": "Love Jeeps and Off-roading? Who in their right mind doesn\u2019t!\nWelcome to JK Gear and Gadgets, bringing you all types of Videos including; Installs, Reviews, Off-roading, General knowledge and even bringing some humor into the offroad community.  My goal is to make informative yet ",
-      "location": "US",
-      "company": "",
-      "avatar": "https://yt3.ggpht.com/ytc/AIdro_knybmvJMZLwxqizRwC1exvm7PTfDxhYG5mNoxZZij7axg7=s800-c-k-c0x00ffffff-no-rj",
-      "platforms": [
-        {
-          "type": "youtube",
-          "handle": "@jkgearandgadgets",
-          "url": "https://youtube.com/@jkgearandgadgets",
-          "followers": 155000
-        }
-      ],
-      "stats": {
-        "followers": 155000,
-        "videos": 327,
-        "views": 25535066
       },
       "tags": [],
       "_score": 1550,
@@ -23616,73 +21592,6 @@
       "category_scores": {
         "claude": 8,
         "fundamentals": 6
-      }
-    },
-    {
-      "id": "yt-UCGD_0i6L48hucTiiyhb5QzQ",
-      "slug": "basarat",
-      "name": "basarat",
-      "primary_handle": "@basarat",
-      "primary_platform": "youtube",
-      "type": "person",
-      "bio": "Premium quality free educational content for Web/JavaScript/TypeScript Developers \u2764\ufe0f Subscribe to LEVEL UP \ud83c\udf39\n\nBasarat has held many high-level roles like Enterprise Practice Lead, Frontend Architect and Principal Engineer. \nHis community contributions have been acknowledged by va",
-      "location": "AU",
-      "company": "",
-      "avatar": "https://yt3.ggpht.com/ax8FO2I-5zqzboZ4rX-eSrINEIW3bV-3UahTvyA2mJXq1prHf5r5g45rbFI1V73bQfFo0gJLxA=s800-c-k-c0x00ffffff-no-rj",
-      "platforms": [
-        {
-          "type": "youtube",
-          "handle": "@basarat",
-          "url": "https://youtube.com/@basarat",
-          "followers": 147000
-        }
-      ],
-      "stats": {
-        "followers": 147000,
-        "videos": 516,
-        "views": 2530298
-      },
-      "tags": [
-        "coding"
-      ],
-      "_score": 1470,
-      "category_scores": {
-        "coding": 11
-      }
-    },
-    {
-      "id": "bsky-segyges-bsky-social",
-      "slug": "segyges-bsky-social",
-      "name": "SE Gyges",
-      "primary_handle": "segyges.bsky.social",
-      "primary_platform": "bluesky",
-      "type": "person",
-      "bio": "",
-      "location": "",
-      "company": "",
-      "avatar": null,
-      "platforms": [
-        {
-          "type": "bluesky",
-          "handle": "segyges.bsky.social",
-          "url": "https://bsky.app/profile/segyges.bsky.social",
-          "followers": null
-        }
-      ],
-      "stats": {
-        "posts": 20,
-        "likes": 1470
-      },
-      "tags": [
-        "claude",
-        "fundamentals",
-        "coding"
-      ],
-      "_score": 1470,
-      "category_scores": {
-        "claude": 8,
-        "fundamentals": 6,
-        "coding": 3
       }
     },
     {
@@ -24319,6 +22228,41 @@
       "_score": 1406,
       "category_scores": {
         "claude": 8
+      }
+    },
+    {
+      "id": "bsky-segyges-bsky-social",
+      "slug": "segyges-bsky-social",
+      "name": "SE Gyges",
+      "primary_handle": "segyges.bsky.social",
+      "primary_platform": "bluesky",
+      "type": "person",
+      "bio": "",
+      "location": "",
+      "company": "",
+      "avatar": null,
+      "platforms": [
+        {
+          "type": "bluesky",
+          "handle": "segyges.bsky.social",
+          "url": "https://bsky.app/profile/segyges.bsky.social",
+          "followers": null
+        }
+      ],
+      "stats": {
+        "posts": 19,
+        "likes": 1400
+      },
+      "tags": [
+        "claude",
+        "fundamentals",
+        "coding"
+      ],
+      "_score": 1400,
+      "category_scores": {
+        "claude": 8,
+        "fundamentals": 6,
+        "coding": 3
       }
     },
     {
@@ -25232,34 +23176,6 @@
       }
     },
     {
-      "id": "yt-UCXzw-OdotBUcNA9yhuYQBwA",
-      "slug": "awesome",
-      "name": "Awesome",
-      "primary_handle": "@awesome-coding",
-      "primary_platform": "youtube",
-      "type": "person",
-      "bio": "Your second favorite tech channel.\n",
-      "location": "RO",
-      "company": "",
-      "avatar": "https://yt3.ggpht.com/fkqTwkC52t-y6qbkUBw4cn-ZLXSuxHd1nwa_HDoL3LConFxObxoPxx0p5htk8k1gh0HyY8Di5_I=s800-c-k-c0x00ffffff-no-rj",
-      "platforms": [
-        {
-          "type": "youtube",
-          "handle": "@awesome-coding",
-          "url": "https://youtube.com/@awesome-coding",
-          "followers": 128000
-        }
-      ],
-      "stats": {
-        "followers": 128000,
-        "videos": 324,
-        "views": 11919144
-      },
-      "tags": [],
-      "_score": 1280,
-      "category_scores": {}
-    },
-    {
       "id": "gh-nagix",
       "slug": "nagix",
       "name": "Akihiko Kusanagi",
@@ -25468,38 +23384,6 @@
       "category_scores": {}
     },
     {
-      "id": "yt-UCnty0z0pNRDgnuoirYXnC5A",
-      "slug": "codetv",
-      "name": "CodeTV",
-      "primary_handle": "@codetv-dev",
-      "primary_platform": "youtube",
-      "type": "person",
-      "bio": "CodeTV is a place for developers to watch programming designed for them. Watch original shows featuring professional developers across all skill levels and career paths.\n\nOur mission is to remind developers everywhere that learning, building, and growing a technical skill set can",
-      "location": "US",
-      "company": "",
-      "avatar": "https://yt3.ggpht.com/e8gTP8LmpD2_l4kiWCHwdp8fkYKAj44c3TaGSrm8JmL4kkWCqGU4T6rG9znhWYVsEONlHiqqcw=s800-c-k-c0x00ffffff-no-rj",
-      "platforms": [
-        {
-          "type": "youtube",
-          "handle": "@codetv-dev",
-          "url": "https://youtube.com/@codetv-dev",
-          "followers": 122000
-        }
-      ],
-      "stats": {
-        "followers": 122000,
-        "videos": 817,
-        "views": 11109797
-      },
-      "tags": [
-        "coding"
-      ],
-      "_score": 1220,
-      "category_scores": {
-        "coding": 11
-      }
-    },
-    {
       "id": "gh-philc",
       "slug": "philc",
       "name": "Phil Crosby",
@@ -25680,34 +23564,6 @@
         "followers": 1200,
         "following": 2,
         "repos": 7
-      },
-      "tags": [],
-      "_score": 1200,
-      "category_scores": {}
-    },
-    {
-      "id": "yt-UCymySKUCz5QUAoVUjZbhX6w",
-      "slug": "d-e-in-the-garage",
-      "name": "D&E In The Garage",
-      "primary_handle": "@deinthegarage",
-      "primary_platform": "youtube",
-      "type": "person",
-      "bio": "Follow more D&E projects on FaceBook and Instagram\n\nEmail us directly with technical questions or content suggestions at dandeoffroad@gmail.com\n\nIf you have enjoyed D&E content and would like to see more, please consider supporting the channel on Patreon. https://www.patreon.com/",
-      "location": "US",
-      "company": "",
-      "avatar": "https://yt3.ggpht.com/ytc/AIdro_kVrjzLkkdN2ntBSZSNy7Gv6k2C9aWlRPN7FVclSf7QUfA=s800-c-k-c0x00ffffff-no-rj",
-      "platforms": [
-        {
-          "type": "youtube",
-          "handle": "@deinthegarage",
-          "url": "https://youtube.com/@deinthegarage",
-          "followers": 120000
-        }
-      ],
-      "stats": {
-        "followers": 120000,
-        "videos": 1230,
-        "views": 49349497
       },
       "tags": [],
       "_score": 1200,
@@ -25913,34 +23769,6 @@
       },
       "tags": [],
       "_score": 1151,
-      "category_scores": {}
-    },
-    {
-      "id": "yt-UCLq8gNoee7oXM7MvTdjyQvA",
-      "slug": "vercel",
-      "name": "Vercel",
-      "primary_handle": "@vercelhq",
-      "primary_platform": "youtube",
-      "type": "person",
-      "bio": "Build, scale, and secure intelligent applications with the AI Cloud.\n",
-      "location": "US",
-      "company": "",
-      "avatar": "https://yt3.ggpht.com/ytc/AIdro_mzdwl3VkFwHuALGOV7ZFk4BHZFkm_sQpt4fFyR_IOuY9Y=s800-c-k-c0x00ffffff-no-rj",
-      "platforms": [
-        {
-          "type": "youtube",
-          "handle": "@vercelhq",
-          "url": "https://youtube.com/@vercelhq",
-          "followers": 114000
-        }
-      ],
-      "stats": {
-        "followers": 114000,
-        "videos": 432,
-        "views": 7037555
-      },
-      "tags": [],
-      "_score": 1140,
       "category_scores": {}
     },
     {
@@ -26564,68 +24392,6 @@
       "category_scores": {}
     },
     {
-      "id": "yt-UCkGTJyIqAzQ5QIAkzLUW-Tg",
-      "slug": "aihr-academy-to-innovate-hr",
-      "name": "AIHR - Academy to Innovate HR",
-      "primary_handle": "@aihracademytoinnovatehr",
-      "primary_platform": "youtube",
-      "type": "person",
-      "bio": "At AIHR, the Academy to Innovate HR, it is our mission to make HR future-proof by offering world-class online education programs available anywhere, anytime.\nIn our Academy, any HR professional who is committed to lifelong learning can expand their skill-set with top-notch, relev",
-      "location": "US",
-      "company": "",
-      "avatar": "https://yt3.ggpht.com/gVcVFCP239j2dluCsTKkpYU5JMiualc8iRg4R6NilMWXDYla1vaWzAQdVXoNiM6LEif3hW8o=s800-c-k-c0x00ffffff-no-rj",
-      "platforms": [
-        {
-          "type": "youtube",
-          "handle": "@aihracademytoinnovatehr",
-          "url": "https://youtube.com/@aihracademytoinnovatehr",
-          "followers": 103000
-        }
-      ],
-      "stats": {
-        "followers": 103000,
-        "videos": 429,
-        "views": 5268923
-      },
-      "tags": [],
-      "_score": 1030,
-      "category_scores": {}
-    },
-    {
-      "id": "yt-UCjc1vfduI7BhVMXBLJLDjmA",
-      "slug": "brock-mesarich-ai-for-non-techies",
-      "name": "Brock Mesarich | AI for Non Techies",
-      "primary_handle": "@brockmesarich",
-      "primary_platform": "youtube",
-      "type": "person",
-      "bio": "Helping Non-Techies Navigate the World of AI | sponsorships@brockmesarich.com",
-      "location": "US",
-      "company": "",
-      "avatar": "https://yt3.ggpht.com/89BRGyY3ICStX8CdzrfETSo3KrGptanUi5DF8OCAkRhZMm0zHHj0461bPqIoaGlUER7vA_affw=s800-c-k-c0x00ffffff-no-rj",
-      "platforms": [
-        {
-          "type": "youtube",
-          "handle": "@brockmesarich",
-          "url": "https://youtube.com/@brockmesarich",
-          "followers": 103000
-        }
-      ],
-      "stats": {
-        "followers": 103000,
-        "videos": 476,
-        "views": 7831661
-      },
-      "tags": [
-        "business",
-        "coding"
-      ],
-      "_score": 1030,
-      "category_scores": {
-        "business": 4,
-        "coding": 3
-      }
-    },
-    {
       "id": "gh-czlonkowski",
       "slug": "czlonkowski",
       "name": "Romuald Cz\u0142onkowski",
@@ -26934,34 +24700,6 @@
       "category_scores": {}
     },
     {
-      "id": "yt-UCbrXRQHV4TOU4Pqzw325Z1A",
-      "slug": "pluralsight",
-      "name": "Pluralsight",
-      "primary_handle": "@pluralsight",
-      "primary_platform": "youtube",
-      "type": "person",
-      "bio": "We\u2019re the technology workforce development company that helps individuals and organizations transform with tech skills.",
-      "location": "US",
-      "company": "",
-      "avatar": "https://yt3.ggpht.com/l8QtBgT5GIR5KYbkqVP11gZ1kvb_a07FrG_Uj6mSphGuJtVrgf49M7C_n7L1PaYcVh8sgJz9_P0=s800-c-k-c0x00ffffff-no-rj",
-      "platforms": [
-        {
-          "type": "youtube",
-          "handle": "@pluralsight",
-          "url": "https://youtube.com/@pluralsight",
-          "followers": 94700
-        }
-      ],
-      "stats": {
-        "followers": 94700,
-        "videos": 3976,
-        "views": 17390278
-      },
-      "tags": [],
-      "_score": 947,
-      "category_scores": {}
-    },
-    {
       "id": "yt-UCHaF9kM2wn8C3CLRwLkC2GQ",
       "slug": "matt-williams",
       "name": "Matt Williams",
@@ -26996,34 +24734,6 @@
         "claude": 5,
         "tool-insights": 4
       }
-    },
-    {
-      "id": "yt-UCWALr0VavEm8SgPXGafhFDQ",
-      "slug": "bnr",
-      "name": "BNR",
-      "primary_handle": "@bnr",
-      "primary_platform": "youtube",
-      "type": "person",
-      "bio": "BNR Nieuwsradio is de meest alerte nieuwszender van Nederland. BNR concentreert zich op het brengen van nieuws uit binnen- en buitenland, de financi\u00eble wereld, tech en natuurlijk de politiek! Van de Amerikaanse politiek tot aan nieuws uit de Tweede Kamer en van geopolitieke situa",
-      "location": "NL",
-      "company": "",
-      "avatar": "https://yt3.ggpht.com/39nmFPIQi3ivPYvWPn8My5TgU_YpLIpmuX0-Wt0gETTN5T7esHIzuqtsibT0l5KoUkgOoNUv2F0=s800-c-k-c0x00ffffff-no-rj",
-      "platforms": [
-        {
-          "type": "youtube",
-          "handle": "@bnr",
-          "url": "https://youtube.com/@bnr",
-          "followers": 94000
-        }
-      ],
-      "stats": {
-        "followers": 94000,
-        "videos": 11267,
-        "views": 82645945
-      },
-      "tags": [],
-      "_score": 940,
-      "category_scores": {}
     },
     {
       "id": "gh-Marktechpost",
@@ -27161,34 +24871,6 @@
       },
       "tags": [],
       "_score": 931,
-      "category_scores": {}
-    },
-    {
-      "id": "yt-UCkjnA7clTdKtYDBHsxBxodQ",
-      "slug": "jeepsolid",
-      "name": "JeepSolid",
-      "primary_handle": "@jeepsolid",
-      "primary_platform": "youtube",
-      "type": "person",
-      "bio": "JeepSolid is your best choice for Jeep repair videos!",
-      "location": "US",
-      "company": "",
-      "avatar": "https://yt3.ggpht.com/ytc/AIdro_mMtLS8LWNFOzRuRgc_40eOZVh5pBPyfPObQqpTp-RGa6I=s800-c-k-c0x00ffffff-no-rj",
-      "platforms": [
-        {
-          "type": "youtube",
-          "handle": "@jeepsolid",
-          "url": "https://youtube.com/@jeepsolid",
-          "followers": 92700
-        }
-      ],
-      "stats": {
-        "followers": 92700,
-        "videos": 570,
-        "views": 22162407
-      },
-      "tags": [],
-      "_score": 927,
       "category_scores": {}
     },
     {
@@ -27591,34 +25273,6 @@
       "category_scores": {}
     },
     {
-      "id": "yt-UCN3hBQBQYU4v-UkH3NkkjLg",
-      "slug": "diy-pro",
-      "name": "DIY PRO",
-      "primary_handle": "@-diypro-",
-      "primary_platform": "youtube",
-      "type": "person",
-      "bio": "Everything DIY\nI love building/making things...\nand don't forget new tools!\n",
-      "location": "US",
-      "company": "",
-      "avatar": "https://yt3.ggpht.com/8Qjp90BM8niLQdUCWeiFLKpJr6sX1NabxzsVlHuIlJniQAGG4XFHj_wZdQ40K15f7Ba3FloHAA=s800-c-k-c0x00ffffff-no-rj",
-      "platforms": [
-        {
-          "type": "youtube",
-          "handle": "@-diypro-",
-          "url": "https://youtube.com/@-diypro-",
-          "followers": 85600
-        }
-      ],
-      "stats": {
-        "followers": 85600,
-        "videos": 207,
-        "views": 25693259
-      },
-      "tags": [],
-      "_score": 856,
-      "category_scores": {}
-    },
-    {
       "id": "gh-gildas-lormeau",
       "slug": "gildas-lormeau",
       "name": "Gildas",
@@ -27879,62 +25533,6 @@
       "category_scores": {}
     },
     {
-      "id": "yt-UCdCR4-uYOg5ju-IUuDnfnQA",
-      "slug": "simon-scrapes",
-      "name": "Simon Scrapes",
-      "primary_handle": "@simonscrapes",
-      "primary_platform": "youtube",
-      "type": "person",
-      "bio": "Build agentic systems that run your business.\n",
-      "location": "GB",
-      "company": "",
-      "avatar": "https://yt3.ggpht.com/GpwpGLZm6c7wAv-WA99mUo1B0dZueHJm7GM8u9AillNEuQhqPOYpnMaMIOO4sHec6UhK7FBwZuQ=s800-c-k-c0x00ffffff-no-rj",
-      "platforms": [
-        {
-          "type": "youtube",
-          "handle": "@simonscrapes",
-          "url": "https://youtube.com/@simonscrapes",
-          "followers": 80700
-        }
-      ],
-      "stats": {
-        "followers": 80700,
-        "videos": 145,
-        "views": 3292809
-      },
-      "tags": [],
-      "_score": 807,
-      "category_scores": {}
-    },
-    {
-      "id": "yt-UCNxUdsuH8-kEGIwSD0r8RhQ",
-      "slug": "maximilian-schwarzm-ller",
-      "name": "Maximilian Schwarzm\u00fcller",
-      "primary_handle": "@maximilian-schwarzmueller",
-      "primary_platform": "youtube",
-      "type": "person",
-      "bio": "I'm Maximilian Schwarzm\u00fcller - a self-taught developer & online course instructor.\n\nOn this channel, I share my opinions on coding, AI & the world.\n",
-      "location": "DE",
-      "company": "",
-      "avatar": "https://yt3.ggpht.com/YsQa-CTIc1WZB4CaUyjNsQGD1Rn1-Ss2w0-XQBSzbVzBvk_6t77gF6RjqRCohDbeCF2M70Vi2Q=s800-c-k-c0x00ffffff-no-rj",
-      "platforms": [
-        {
-          "type": "youtube",
-          "handle": "@maximilian-schwarzmueller",
-          "url": "https://youtube.com/@maximilian-schwarzmueller",
-          "followers": 80700
-        }
-      ],
-      "stats": {
-        "followers": 80700,
-        "videos": 199,
-        "views": 4686653
-      },
-      "tags": [],
-      "_score": 807,
-      "category_scores": {}
-    },
-    {
       "id": "gh-ItzCrazyKns",
       "slug": "itzcrazykns",
       "name": "Kushagra Srivastava",
@@ -28029,38 +25627,6 @@
       "category_scores": {}
     },
     {
-      "id": "yt-UCZMli3czZnd1uoc1ShTouQw",
-      "slug": "leerob",
-      "name": "leerob",
-      "primary_handle": "@leerob",
-      "primary_platform": "youtube",
-      "type": "person",
-      "bio": "Developer and writer",
-      "location": "US",
-      "company": "",
-      "avatar": "https://yt3.ggpht.com/oDcRpUB1QqqCk94ud3WfkUjbNc4EXBryaLI261_Bw2zmWeYF3iR_2L3LlmRUXl2fT74WawWwB9Y=s800-c-k-c0x00ffffff-no-rj",
-      "platforms": [
-        {
-          "type": "youtube",
-          "handle": "@leerob",
-          "url": "https://youtube.com/@leerob",
-          "followers": 78400
-        }
-      ],
-      "stats": {
-        "followers": 78400,
-        "videos": 109,
-        "views": 3625352
-      },
-      "tags": [
-        "coding"
-      ],
-      "_score": 784,
-      "category_scores": {
-        "coding": 9
-      }
-    },
-    {
       "id": "bsky-lorak-bsky-social",
       "slug": "lorak-bsky-social",
       "name": "Lora Kolodny",
@@ -28131,38 +25697,6 @@
       "_score": 782,
       "category_scores": {
         "fundamentals": 3
-      }
-    },
-    {
-      "id": "yt-UCNTVzV1InxHV-YR0fSajqPQ",
-      "slug": "supabase",
-      "name": "Supabase",
-      "primary_handle": "@supabase",
-      "primary_platform": "youtube",
-      "type": "person",
-      "bio": "Supabase is the Postgres development platform. Create a backend in less than 2 minutes. Start your project with a Postgres Database, Authentication, instant APIs, & realtime subscriptions. \n\nWhether you're new to development or looking to migrate existing workloads, you'll find S",
-      "location": "US",
-      "company": "",
-      "avatar": "https://yt3.ggpht.com/KVjptxDSWT7rjVfGax2TgTNVAYgplgo1z_fwaV3MFjPpcmNVZC0TIgQV030BPJ0ybCP3_Fz-2w=s800-c-k-c0x00ffffff-no-rj",
-      "platforms": [
-        {
-          "type": "youtube",
-          "handle": "@supabase",
-          "url": "https://youtube.com/@supabase",
-          "followers": 77700
-        }
-      ],
-      "stats": {
-        "followers": 77700,
-        "videos": 539,
-        "views": 6900580
-      },
-      "tags": [
-        "coding"
-      ],
-      "_score": 777,
-      "category_scores": {
-        "coding": 4
       }
     },
     {
@@ -28412,40 +25946,6 @@
       "category_scores": {}
     },
     {
-      "id": "yt-UCSxPE9PHHxQUEt6ajGmQyMA",
-      "slug": "brian-casel",
-      "name": "Brian Casel",
-      "primary_handle": "@briancasel",
-      "primary_platform": "youtube",
-      "type": "person",
-      "bio": "I'm Brian Casel, a full stack product builder who's gone all-in on AI-first development.\n\nBuilding with AI isn't just hype\u2014it's leverage. It's transforming how we create software products, and I'm here to show you why mastering these techniques now will define who wins in the nex",
-      "location": "US",
-      "company": "",
-      "avatar": "https://yt3.ggpht.com/tT69wBrDunwS-n-kWo0hDjCch54VFuxKuPqdsthazlalmLvBJqXZM_Vh9df86p48xIiczFQS=s800-c-k-c0x00ffffff-no-rj",
-      "platforms": [
-        {
-          "type": "youtube",
-          "handle": "@briancasel",
-          "url": "https://youtube.com/@briancasel",
-          "followers": 67000
-        }
-      ],
-      "stats": {
-        "followers": 67000,
-        "videos": 161,
-        "views": 2116914
-      },
-      "tags": [
-        "business",
-        "coding"
-      ],
-      "_score": 670,
-      "category_scores": {
-        "business": 6,
-        "coding": 5
-      }
-    },
-    {
       "id": "gh-OthmanAdi",
       "slug": "othmanadi",
       "name": "Ahmad Othman Ammar Adi.",
@@ -28510,34 +26010,6 @@
       "category_scores": {
         "fundamentals": 3
       }
-    },
-    {
-      "id": "yt-UCkzGZ6ECGCBh0WK9bVUprtw",
-      "slug": "code-with-dary",
-      "name": "Code With Dary",
-      "primary_handle": "@codewithdary",
-      "primary_platform": "youtube",
-      "type": "person",
-      "bio": "Hi, welcome to my channel!\n\nI've been coding professionally and for fun for over seven years now. Currently, I work as a freelance backend developer, helping startups and large corporations build and scale projects that use Laravel or PHP. If you need any help, just send me an em",
-      "location": "NL",
-      "company": "",
-      "avatar": "https://yt3.ggpht.com/6woepvQjAxlUby45pUWPqdAsxDupd53yZtC8k83Dr1tERtchGDoegTxNOs0qwXTOh-TzV8vv=s800-c-k-c0x00ffffff-no-rj",
-      "platforms": [
-        {
-          "type": "youtube",
-          "handle": "@codewithdary",
-          "url": "https://youtube.com/@codewithdary",
-          "followers": 65100
-        }
-      ],
-      "stats": {
-        "followers": 65100,
-        "videos": 559,
-        "views": 6956715
-      },
-      "tags": [],
-      "_score": 651,
-      "category_scores": {}
     },
     {
       "id": "gh-shiyu-coder",
@@ -28770,34 +26242,6 @@
       }
     },
     {
-      "id": "yt-UCaPX53JLxxSbwZz_Ra_cL0g",
-      "slug": "digitalocean",
-      "name": "DigitalOcean",
-      "primary_handle": "@digitalocean",
-      "primary_platform": "youtube",
-      "type": "person",
-      "bio": "DigitalOcean provides the easiest cloud platform to deploy, manage, and scale applications of any size, removing infrastructure friction and providing predictability so developers and their teams can spend more time building \u2014 whether you're building world-changing AI apps, runni",
-      "location": "US",
-      "company": "",
-      "avatar": "https://yt3.ggpht.com/X9jwNWH5n16whcSd_Tn4nU-0thSLZzYDQjICQ--bOy0Sq0uziZqtCjJNgkz0m8u199dQU6RB=s800-c-k-c0x00ffffff-no-rj",
-      "platforms": [
-        {
-          "type": "youtube",
-          "handle": "@digitalocean",
-          "url": "https://youtube.com/@digitalocean",
-          "followers": 59800
-        }
-      ],
-      "stats": {
-        "followers": 59800,
-        "videos": 589,
-        "views": 18705710
-      },
-      "tags": [],
-      "_score": 598,
-      "category_scores": {}
-    },
-    {
       "id": "bsky-aljazeera-com",
       "slug": "aljazeera-com",
       "name": "Al Jazeera English",
@@ -28863,66 +26307,6 @@
         "claude": 3,
         "coding": 3,
         "tool-insights": 3
-      }
-    },
-    {
-      "id": "yt-UCleNYx6zYVSPBoTDtgHXDgA",
-      "slug": "upholstery-tips",
-      "name": "Upholstery Tips",
-      "primary_handle": "@upholsterytips",
-      "primary_platform": "youtube",
-      "type": "person",
-      "bio": "",
-      "location": "US",
-      "company": "",
-      "avatar": "https://yt3.ggpht.com/ytc/AIdro_kIvfeKU2fneVApMzGWS7XWGYGqtcTDwya9sw4nmdI5I9k=s800-c-k-c0x00ffffff-no-rj",
-      "platforms": [
-        {
-          "type": "youtube",
-          "handle": "@upholsterytips",
-          "url": "https://youtube.com/@upholsterytips",
-          "followers": 56900
-        }
-      ],
-      "stats": {
-        "followers": 56900,
-        "videos": 177,
-        "views": 5618971
-      },
-      "tags": [],
-      "_score": 569,
-      "category_scores": {}
-    },
-    {
-      "id": "yt-UCUSxKiac-miugK9CDsxGS9Q",
-      "slug": "coding-in-public",
-      "name": "Coding in Public",
-      "primary_handle": "@codinginpublic",
-      "primary_platform": "youtube",
-      "type": "person",
-      "bio": "\ud83d\udc4b Hi! My name is Chris Pennington \ud83d\udc4b I\u2019m a relative beginner to development and enjoy teaching what I\u2019m learning to others. I mostly teach beginner to intermediate web dev on the channel through project and component builds. Coding in public gives us all the chance to learn togeth",
-      "location": "US",
-      "company": "",
-      "avatar": "https://yt3.ggpht.com/LsV7kznIwsOqK3p5TyDJvyrJujx1a6d0V5K8nc_U5C7sx9F5idcsdQEgNRypxPZmhtsAxdLztSU=s800-c-k-c0x00ffffff-no-rj",
-      "platforms": [
-        {
-          "type": "youtube",
-          "handle": "@codinginpublic",
-          "url": "https://youtube.com/@codinginpublic",
-          "followers": 56500
-        }
-      ],
-      "stats": {
-        "followers": 56500,
-        "videos": 494,
-        "views": 4245165
-      },
-      "tags": [
-        "coding"
-      ],
-      "_score": 565,
-      "category_scores": {
-        "coding": 4
       }
     },
     {
@@ -29114,6 +26498,2514 @@
       "_score": 543,
       "category_scores": {
         "fundamentals": 3
+      }
+    },
+    {
+      "id": "gh-musistudio",
+      "slug": "musistudio",
+      "name": "musi",
+      "primary_handle": "musistudio",
+      "primary_platform": "github",
+      "type": "person",
+      "bio": "Focusing on AI",
+      "location": "Hangzhou",
+      "company": "",
+      "avatar": "https://avatars.githubusercontent.com/u/21162426?v=4",
+      "platforms": [
+        {
+          "type": "github",
+          "handle": "musistudio",
+          "url": "https://github.com/musistudio",
+          "followers": 534
+        }
+      ],
+      "stats": {
+        "followers": 534,
+        "following": 39,
+        "repos": 192
+      },
+      "tags": [],
+      "_score": 534,
+      "category_scores": {}
+    },
+    {
+      "id": "gh-Tanu-N-Prabhu",
+      "slug": "tanu-n-prabhu",
+      "name": "Tanu Nanda Prabhu",
+      "primary_handle": "Tanu-N-Prabhu",
+      "primary_platform": "github",
+      "type": "person",
+      "bio": "MSc. in Computer Science | Tech and pet enthusiast | 157th most active GitHub user in Canada \r\n| Writing since June 19, 2019 | ",
+      "location": "Online",
+      "company": "Medium",
+      "avatar": "https://avatars.githubusercontent.com/u/49044332?v=4",
+      "platforms": [
+        {
+          "type": "github",
+          "handle": "Tanu-N-Prabhu",
+          "url": "https://github.com/Tanu-N-Prabhu",
+          "followers": 533
+        },
+        {
+          "type": "website",
+          "handle": "medium.com",
+          "url": "https://medium.com/@tanunprabhu95",
+          "followers": null
+        }
+      ],
+      "stats": {
+        "followers": 533,
+        "following": 1,
+        "repos": 39
+      },
+      "tags": [],
+      "_score": 533,
+      "category_scores": {}
+    },
+    {
+      "id": "bsky-financialtimes-com",
+      "slug": "financialtimes-com",
+      "name": "Financial Times",
+      "primary_handle": "financialtimes.com",
+      "primary_platform": "bluesky",
+      "type": "person",
+      "bio": "",
+      "location": "",
+      "company": "",
+      "avatar": null,
+      "platforms": [
+        {
+          "type": "bluesky",
+          "handle": "financialtimes.com",
+          "url": "https://bsky.app/profile/financialtimes.com",
+          "followers": null
+        }
+      ],
+      "stats": {
+        "posts": 14,
+        "likes": 526
+      },
+      "tags": [
+        "business",
+        "claude"
+      ],
+      "_score": 526,
+      "category_scores": {
+        "business": 6,
+        "claude": 3
+      }
+    },
+    {
+      "id": "gh-MahmoudAshraf97",
+      "slug": "mahmoudashraf97",
+      "name": "Mahmoud Ashraf",
+      "primary_handle": "MahmoudAshraf97",
+      "primary_platform": "github",
+      "type": "person",
+      "bio": "Speech ML/AI Engineer at @TarteelAI, \r\n\r\nComputer Engineering Graduate. Interested in Deep Learning and its applications Especially in Speech Recognition",
+      "location": "",
+      "company": "@TarteelAI",
+      "avatar": "https://avatars.githubusercontent.com/u/32404268?v=4",
+      "platforms": [
+        {
+          "type": "github",
+          "handle": "MahmoudAshraf97",
+          "url": "https://github.com/MahmoudAshraf97",
+          "followers": 525
+        }
+      ],
+      "stats": {
+        "followers": 525,
+        "following": 9,
+        "repos": 24
+      },
+      "tags": [
+        "fundamentals"
+      ],
+      "_score": 525,
+      "category_scores": {
+        "fundamentals": 3
+      }
+    },
+    {
+      "id": "gh-HenryNdubuaku",
+      "slug": "henryndubuaku",
+      "name": "Henry Ndubuaku",
+      "primary_handle": "HenryNdubuaku",
+      "primary_platform": "github",
+      "type": "person",
+      "bio": "EECS + MS AI + 4x ICLR + YC S25",
+      "location": "London",
+      "company": "Cactus Compute",
+      "avatar": "https://avatars.githubusercontent.com/u/26547576?v=4",
+      "platforms": [
+        {
+          "type": "github",
+          "handle": "HenryNdubuaku",
+          "url": "https://github.com/HenryNdubuaku",
+          "followers": 525
+        }
+      ],
+      "stats": {
+        "followers": 525,
+        "following": 46,
+        "repos": 16
+      },
+      "tags": [],
+      "_score": 525,
+      "category_scores": {}
+    },
+    {
+      "id": "gh-reisxd",
+      "slug": "reisxd",
+      "name": "Reis Can",
+      "primary_handle": "reisxd",
+      "primary_platform": "github",
+      "type": "person",
+      "bio": "Turkish high school student who likes developing stuff.",
+      "location": "Turkey",
+      "company": "",
+      "avatar": "https://avatars.githubusercontent.com/u/29177546?v=4",
+      "platforms": [
+        {
+          "type": "github",
+          "handle": "reisxd",
+          "url": "https://github.com/reisxd",
+          "followers": 522
+        },
+        {
+          "type": "website",
+          "handle": "6513006.xyz",
+          "url": "https://6513006.xyz",
+          "followers": null
+        }
+      ],
+      "stats": {
+        "followers": 522,
+        "following": 9,
+        "repos": 34
+      },
+      "tags": [],
+      "_score": 522,
+      "category_scores": {}
+    },
+    {
+      "id": "gh-gaotianliuyun",
+      "slug": "gaotianliuyun",
+      "name": "gaotianliuyun",
+      "primary_handle": "gaotianliuyun",
+      "primary_platform": "github",
+      "type": "person",
+      "bio": "",
+      "location": "",
+      "company": "",
+      "avatar": "https://avatars.githubusercontent.com/u/58679624?v=4",
+      "platforms": [
+        {
+          "type": "github",
+          "handle": "gaotianliuyun",
+          "url": "https://github.com/gaotianliuyun",
+          "followers": 520
+        }
+      ],
+      "stats": {
+        "followers": 520,
+        "following": 18,
+        "repos": 39
+      },
+      "tags": [],
+      "_score": 520,
+      "category_scores": {}
+    },
+    {
+      "id": "bsky-isolyth-dev",
+      "slug": "isolyth-dev",
+      "name": "Eris (prev. Isolyth)",
+      "primary_handle": "isolyth.dev",
+      "primary_platform": "bluesky",
+      "type": "person",
+      "bio": "",
+      "location": "",
+      "company": "",
+      "avatar": null,
+      "platforms": [
+        {
+          "type": "bluesky",
+          "handle": "isolyth.dev",
+          "url": "https://bsky.app/profile/isolyth.dev",
+          "followers": null
+        }
+      ],
+      "stats": {
+        "posts": 14,
+        "likes": 509
+      },
+      "tags": [
+        "claude",
+        "fundamentals"
+      ],
+      "_score": 509,
+      "category_scores": {
+        "claude": 10,
+        "fundamentals": 3
+      }
+    },
+    {
+      "id": "gh-itdoginfo",
+      "slug": "itdoginfo",
+      "name": "Kirill Sobakin",
+      "primary_handle": "itdoginfo",
+      "primary_platform": "github",
+      "type": "person",
+      "bio": "",
+      "location": "",
+      "company": "",
+      "avatar": "https://avatars.githubusercontent.com/u/11143109?v=4",
+      "platforms": [
+        {
+          "type": "github",
+          "handle": "itdoginfo",
+          "url": "https://github.com/itdoginfo",
+          "followers": 481
+        }
+      ],
+      "stats": {
+        "followers": 481,
+        "following": 1,
+        "repos": 17
+      },
+      "tags": [],
+      "_score": 481,
+      "category_scores": {}
+    },
+    {
+      "id": "gh-stephengpope",
+      "slug": "stephengpope",
+      "name": "Stephen G. Pope",
+      "primary_handle": "stephengpope",
+      "primary_platform": "github",
+      "type": "person",
+      "bio": "Entrepreneur, software developer, content creator, content automation expert. Skool investor.",
+      "location": "Los Angeles Area",
+      "company": "",
+      "avatar": "https://avatars.githubusercontent.com/u/1420454?v=4",
+      "platforms": [
+        {
+          "type": "github",
+          "handle": "stephengpope",
+          "url": "https://github.com/stephengpope",
+          "followers": 480
+        },
+        {
+          "type": "website",
+          "handle": "skool.com",
+          "url": "https://skool.com/ai-architects",
+          "followers": null
+        }
+      ],
+      "stats": {
+        "followers": 480,
+        "following": 1,
+        "repos": 7
+      },
+      "tags": [],
+      "_score": 480,
+      "category_scores": {}
+    },
+    {
+      "id": "gh-aandrew-me",
+      "slug": "aandrew-me",
+      "name": "Andrew",
+      "primary_handle": "aandrew-me",
+      "primary_platform": "github",
+      "type": "person",
+      "bio": "\ud83d\udc68\u200d\ud83d\udcbb",
+      "location": "127.0.0.1",
+      "company": "",
+      "avatar": "https://avatars.githubusercontent.com/u/66430340?v=4",
+      "platforms": [
+        {
+          "type": "github",
+          "handle": "aandrew-me",
+          "url": "https://github.com/aandrew-me",
+          "followers": 477
+        },
+        {
+          "type": "website",
+          "handle": "aandrew.netlify.app",
+          "url": "https://aandrew.netlify.app",
+          "followers": null
+        }
+      ],
+      "stats": {
+        "followers": 477,
+        "following": 16,
+        "repos": 39
+      },
+      "tags": [],
+      "_score": 477,
+      "category_scores": {}
+    },
+    {
+      "id": "bsky-chriso-wiki-bsky-social",
+      "slug": "chriso-wiki-bsky-social",
+      "name": "ChrisO_wiki",
+      "primary_handle": "chriso-wiki.bsky.social",
+      "primary_platform": "bluesky",
+      "type": "person",
+      "bio": "",
+      "location": "",
+      "company": "",
+      "avatar": null,
+      "platforms": [
+        {
+          "type": "bluesky",
+          "handle": "chriso-wiki.bsky.social",
+          "url": "https://bsky.app/profile/chriso-wiki.bsky.social",
+          "followers": null
+        }
+      ],
+      "stats": {
+        "posts": 9,
+        "likes": 477
+      },
+      "tags": [
+        "agents"
+      ],
+      "_score": 477,
+      "category_scores": {
+        "agents": 6
+      }
+    },
+    {
+      "id": "bsky-davidcrespo-bsky-social",
+      "slug": "davidcrespo-bsky-social",
+      "name": "conputer dipshit",
+      "primary_handle": "davidcrespo.bsky.social",
+      "primary_platform": "bluesky",
+      "type": "person",
+      "bio": "",
+      "location": "",
+      "company": "",
+      "avatar": null,
+      "platforms": [
+        {
+          "type": "bluesky",
+          "handle": "davidcrespo.bsky.social",
+          "url": "https://bsky.app/profile/davidcrespo.bsky.social",
+          "followers": null
+        }
+      ],
+      "stats": {
+        "posts": 16,
+        "likes": 468
+      },
+      "tags": [
+        "agents",
+        "claude"
+      ],
+      "_score": 468,
+      "category_scores": {
+        "agents": 5,
+        "claude": 3
+      }
+    },
+    {
+      "id": "bsky-antirez-bsky-social",
+      "slug": "antirez-bsky-social",
+      "name": "antirez",
+      "primary_handle": "antirez.bsky.social",
+      "primary_platform": "bluesky",
+      "type": "person",
+      "bio": "",
+      "location": "",
+      "company": "",
+      "avatar": null,
+      "platforms": [
+        {
+          "type": "bluesky",
+          "handle": "antirez.bsky.social",
+          "url": "https://bsky.app/profile/antirez.bsky.social",
+          "followers": null
+        }
+      ],
+      "stats": {
+        "posts": 9,
+        "likes": 451
+      },
+      "tags": [
+        "tool-insights",
+        "business"
+      ],
+      "_score": 451,
+      "category_scores": {
+        "tool-insights": 5,
+        "business": 3
+      }
+    },
+    {
+      "id": "gh-yichuan-w",
+      "slug": "yichuan-w",
+      "name": "Yichuan Wang",
+      "primary_handle": "yichuan-w",
+      "primary_platform": "github",
+      "type": "person",
+      "bio": "EECS PhD SkyLab@UC Berkeley, Undergraduate ACM Class SJTU",
+      "location": "",
+      "company": "",
+      "avatar": "https://avatars.githubusercontent.com/u/73766326?v=4",
+      "platforms": [
+        {
+          "type": "github",
+          "handle": "yichuan-w",
+          "url": "https://github.com/yichuan-w",
+          "followers": 445
+        },
+        {
+          "type": "website",
+          "handle": "yichuan-w.github.io",
+          "url": "https://yichuan-w.github.io/",
+          "followers": null
+        }
+      ],
+      "stats": {
+        "followers": 445,
+        "following": 266,
+        "repos": 74
+      },
+      "tags": [],
+      "_score": 445,
+      "category_scores": {}
+    },
+    {
+      "id": "gh-gyoridavid",
+      "slug": "gyoridavid",
+      "name": "David Gyori",
+      "primary_handle": "gyoridavid",
+      "primary_platform": "github",
+      "type": "person",
+      "bio": "AI expert + product engineer \r\nex InVision, ex Scarab Research (Emarsys, SAP) Helped companies like Deutsche Telekom, Vodafone, McDonalds, Coca Cola, Samsung",
+      "location": "Budapest",
+      "company": "",
+      "avatar": "https://avatars.githubusercontent.com/u/912459?v=4",
+      "platforms": [
+        {
+          "type": "github",
+          "handle": "gyoridavid",
+          "url": "https://github.com/gyoridavid",
+          "followers": 441
+        }
+      ],
+      "stats": {
+        "followers": 441,
+        "following": 1,
+        "repos": 10
+      },
+      "tags": [],
+      "_score": 441,
+      "category_scores": {}
+    },
+    {
+      "id": "gh-pixeltris",
+      "slug": "pixeltris",
+      "name": "pixeltris",
+      "primary_handle": "pixeltris",
+      "primary_platform": "github",
+      "type": "person",
+      "bio": "",
+      "location": "",
+      "company": "",
+      "avatar": "https://avatars.githubusercontent.com/u/6952411?v=4",
+      "platforms": [
+        {
+          "type": "github",
+          "handle": "pixeltris",
+          "url": "https://github.com/pixeltris",
+          "followers": 435
+        }
+      ],
+      "stats": {
+        "followers": 435,
+        "following": 0,
+        "repos": 11
+      },
+      "tags": [],
+      "_score": 435,
+      "category_scores": {}
+    },
+    {
+      "id": "bsky-legal-reuters-com",
+      "slug": "legal-reuters-com",
+      "name": "Reuters Legal",
+      "primary_handle": "legal.reuters.com",
+      "primary_platform": "bluesky",
+      "type": "person",
+      "bio": "",
+      "location": "",
+      "company": "",
+      "avatar": null,
+      "platforms": [
+        {
+          "type": "bluesky",
+          "handle": "legal.reuters.com",
+          "url": "https://bsky.app/profile/legal.reuters.com",
+          "followers": null
+        }
+      ],
+      "stats": {
+        "posts": 11,
+        "likes": 435
+      },
+      "tags": [
+        "claude",
+        "creative",
+        "fundamentals"
+      ],
+      "_score": 435,
+      "category_scores": {
+        "claude": 5,
+        "creative": 5,
+        "fundamentals": 3
+      }
+    },
+    {
+      "id": "gh-xinnan-tech",
+      "slug": "xinnan-tech",
+      "name": "\u6b23\u5357\u79d1\u6280",
+      "primary_handle": "xinnan-tech",
+      "primary_platform": "github",
+      "type": "person",
+      "bio": "",
+      "location": "",
+      "company": "",
+      "avatar": "https://avatars.githubusercontent.com/u/197497371?v=4",
+      "platforms": [
+        {
+          "type": "github",
+          "handle": "xinnan-tech",
+          "url": "https://github.com/xinnan-tech",
+          "followers": 422
+        }
+      ],
+      "stats": {
+        "followers": 422,
+        "following": 1,
+        "repos": 7
+      },
+      "tags": [],
+      "_score": 422,
+      "category_scores": {}
+    },
+    {
+      "id": "yt-UCHaSwvPfNrjZ9RZy17rAhPw",
+      "slug": "gareth-pronovost-build-without-code",
+      "name": "Gareth Pronovost | Build Without Code",
+      "primary_handle": "@garethpronovost",
+      "primary_platform": "youtube",
+      "type": "person",
+      "bio": "\ud83d\ude80 Build Smarter, Automate Faster \u2013 No-Code Made Simple!\n\nWelcome to Gareth Pronovost | No-Code & Automation, where you\u2019ll learn how to build powerful, automated workflows without writing a single line of code.\n\nIf you're an entrepreneur, business owner, or freelancer looking to s",
+      "location": "US",
+      "company": "",
+      "avatar": "https://yt3.ggpht.com/Q1lAIrVuwEG69VQbbZYVLpMLZAyJ56q-GmP0M1Zteuzr-4Ts4Nn1Z1dM9oHP8-yPBOQCEqdszdQ=s800-c-k-c0x00ffffff-no-rj",
+      "platforms": [
+        {
+          "type": "youtube",
+          "handle": "@garethpronovost",
+          "url": "https://youtube.com/@garethpronovost",
+          "followers": 42000
+        }
+      ],
+      "stats": {
+        "followers": 42000,
+        "videos": 642,
+        "views": 5933576
+      },
+      "tags": [
+        "business",
+        "tool-insights"
+      ],
+      "_score": 420,
+      "category_scores": {
+        "business": 6,
+        "tool-insights": 6
+      }
+    },
+    {
+      "id": "bsky-theregister-com",
+      "slug": "theregister-com",
+      "name": "The Register",
+      "primary_handle": "theregister.com",
+      "primary_platform": "bluesky",
+      "type": "person",
+      "bio": "",
+      "location": "",
+      "company": "",
+      "avatar": null,
+      "platforms": [
+        {
+          "type": "bluesky",
+          "handle": "theregister.com",
+          "url": "https://bsky.app/profile/theregister.com",
+          "followers": null
+        }
+      ],
+      "stats": {
+        "posts": 34,
+        "likes": 420
+      },
+      "tags": [
+        "claude",
+        "coding",
+        "agents"
+      ],
+      "_score": 420,
+      "category_scores": {
+        "claude": 11,
+        "coding": 6,
+        "agents": 6
+      }
+    },
+    {
+      "id": "gh-benjitaylor",
+      "slug": "benjitaylor",
+      "name": "Benji Taylor",
+      "primary_handle": "benjitaylor",
+      "primary_platform": "github",
+      "type": "person",
+      "bio": "",
+      "location": "Los Angeles",
+      "company": "",
+      "avatar": "https://avatars.githubusercontent.com/u/30378142?v=4",
+      "platforms": [
+        {
+          "type": "github",
+          "handle": "benjitaylor",
+          "url": "https://github.com/benjitaylor",
+          "followers": 415
+        }
+      ],
+      "stats": {
+        "followers": 415,
+        "following": 3,
+        "repos": 2
+      },
+      "tags": [],
+      "_score": 415,
+      "category_scores": {}
+    },
+    {
+      "id": "gh-Wei-Shaw",
+      "slug": "wei-shaw",
+      "name": "Wesley Liddick",
+      "primary_handle": "Wei-Shaw",
+      "primary_platform": "github",
+      "type": "person",
+      "bio": "My name is Wesley Liddick, I'm a college student, and I spend most of my time studying. I'm passionate about exploring different genres of music, practicing mar",
+      "location": "",
+      "company": "",
+      "avatar": "https://avatars.githubusercontent.com/u/26101719?v=4",
+      "platforms": [
+        {
+          "type": "github",
+          "handle": "Wei-Shaw",
+          "url": "https://github.com/Wei-Shaw",
+          "followers": 412
+        }
+      ],
+      "stats": {
+        "followers": 412,
+        "following": 1,
+        "repos": 56
+      },
+      "tags": [],
+      "_score": 412,
+      "category_scores": {}
+    },
+    {
+      "id": "bsky-clapifyoulikeme-favrd-social",
+      "slug": "clapifyoulikeme-favrd-social",
+      "name": "Mrs. Detective Pikajew, Esq.",
+      "primary_handle": "clapifyoulikeme.favrd.social",
+      "primary_platform": "bluesky",
+      "type": "person",
+      "bio": "",
+      "location": "",
+      "company": "",
+      "avatar": null,
+      "platforms": [
+        {
+          "type": "bluesky",
+          "handle": "clapifyoulikeme.favrd.social",
+          "url": "https://bsky.app/profile/clapifyoulikeme.favrd.social",
+          "followers": null
+        }
+      ],
+      "stats": {
+        "posts": 5,
+        "likes": 412
+      },
+      "tags": [],
+      "_score": 412,
+      "category_scores": {}
+    },
+    {
+      "id": "bsky-katie-drummond-bsky-social",
+      "slug": "katie-drummond-bsky-social",
+      "name": "Katie Drummond",
+      "primary_handle": "katie-drummond.bsky.social",
+      "primary_platform": "bluesky",
+      "type": "person",
+      "bio": "",
+      "location": "",
+      "company": "",
+      "avatar": null,
+      "platforms": [
+        {
+          "type": "bluesky",
+          "handle": "katie-drummond.bsky.social",
+          "url": "https://bsky.app/profile/katie-drummond.bsky.social",
+          "followers": null
+        }
+      ],
+      "stats": {
+        "posts": 6,
+        "likes": 407
+      },
+      "tags": [
+        "claude",
+        "fundamentals"
+      ],
+      "_score": 407,
+      "category_scores": {
+        "claude": 3,
+        "fundamentals": 3
+      }
+    },
+    {
+      "id": "bsky-kameronhurley-com",
+      "slug": "kameronhurley-com",
+      "name": "Kameron Hurley",
+      "primary_handle": "kameronhurley.com",
+      "primary_platform": "bluesky",
+      "type": "person",
+      "bio": "",
+      "location": "",
+      "company": "",
+      "avatar": null,
+      "platforms": [
+        {
+          "type": "bluesky",
+          "handle": "kameronhurley.com",
+          "url": "https://bsky.app/profile/kameronhurley.com",
+          "followers": null
+        }
+      ],
+      "stats": {
+        "posts": 5,
+        "likes": 393
+      },
+      "tags": [
+        "agents"
+      ],
+      "_score": 393,
+      "category_scores": {
+        "agents": 6
+      }
+    },
+    {
+      "id": "bsky-astrra-space",
+      "slug": "astrra-space",
+      "name": "astra!",
+      "primary_handle": "astrra.space",
+      "primary_platform": "bluesky",
+      "type": "person",
+      "bio": "",
+      "location": "",
+      "company": "",
+      "avatar": null,
+      "platforms": [
+        {
+          "type": "bluesky",
+          "handle": "astrra.space",
+          "url": "https://bsky.app/profile/astrra.space",
+          "followers": null
+        }
+      ],
+      "stats": {
+        "posts": 9,
+        "likes": 390
+      },
+      "tags": [
+        "claude"
+      ],
+      "_score": 390,
+      "category_scores": {
+        "claude": 8
+      }
+    },
+    {
+      "id": "bsky-davidgerard-co-uk",
+      "slug": "davidgerard-co-uk",
+      "name": "your #3 source for absurdist true crime \ud83d\udd28",
+      "primary_handle": "davidgerard.co.uk",
+      "primary_platform": "bluesky",
+      "type": "person",
+      "bio": "",
+      "location": "",
+      "company": "",
+      "avatar": null,
+      "platforms": [
+        {
+          "type": "bluesky",
+          "handle": "davidgerard.co.uk",
+          "url": "https://bsky.app/profile/davidgerard.co.uk",
+          "followers": null
+        }
+      ],
+      "stats": {
+        "posts": 9,
+        "likes": 389
+      },
+      "tags": [
+        "claude"
+      ],
+      "_score": 389,
+      "category_scores": {
+        "claude": 8
+      }
+    },
+    {
+      "id": "gh-raullenchai",
+      "slug": "raullenchai",
+      "name": "Raullen Chai",
+      "primary_handle": "raullenchai",
+      "primary_platform": "github",
+      "type": "person",
+      "bio": "\ud83d\udef0\ufe0f Building AI that reads the physical world \u2014 Cogitating....",
+      "location": "San Francisco",
+      "company": "",
+      "avatar": "https://avatars.githubusercontent.com/u/989846?v=4",
+      "platforms": [
+        {
+          "type": "github",
+          "handle": "raullenchai",
+          "url": "https://github.com/raullenchai",
+          "followers": 386
+        }
+      ],
+      "stats": {
+        "followers": 386,
+        "following": 10,
+        "repos": 123
+      },
+      "tags": [],
+      "_score": 386,
+      "category_scores": {}
+    },
+    {
+      "id": "gh-FlorianBruniaux",
+      "slug": "florianbruniaux",
+      "name": "Florian BRUNIAUX",
+      "primary_handle": "FlorianBruniaux",
+      "primary_platform": "github",
+      "type": "person",
+      "bio": "Hands-on AI engineer | OSS contributor (RTK core team). Ex-leadership, back to code. Direct but kind, facts over feelings.",
+      "location": "Provins",
+      "company": "M\u00e9thode Aristote",
+      "avatar": "https://avatars.githubusercontent.com/u/3902606?v=4",
+      "platforms": [
+        {
+          "type": "github",
+          "handle": "FlorianBruniaux",
+          "url": "https://github.com/FlorianBruniaux",
+          "followers": 385
+        },
+        {
+          "type": "website",
+          "handle": "florian.bruniaux.com",
+          "url": "https://www.florian.bruniaux.com/",
+          "followers": null
+        }
+      ],
+      "stats": {
+        "followers": 385,
+        "following": 60,
+        "repos": 50
+      },
+      "tags": [],
+      "_score": 385,
+      "category_scores": {}
+    },
+    {
+      "id": "gh-maxim5",
+      "slug": "maxim5",
+      "name": "Maxim Podkolzine",
+      "primary_handle": "maxim5",
+      "primary_platform": "github",
+      "type": "person",
+      "bio": "Software Engineer at Google.\r\nMachine learning enthusiast. Big and small data explorer. Neural networker.",
+      "location": "Zurich",
+      "company": "@Google",
+      "avatar": "https://avatars.githubusercontent.com/u/2580604?v=4",
+      "platforms": [
+        {
+          "type": "github",
+          "handle": "maxim5",
+          "url": "https://github.com/maxim5",
+          "followers": 382
+        }
+      ],
+      "stats": {
+        "followers": 382,
+        "following": 1,
+        "repos": 48
+      },
+      "tags": [
+        "fundamentals",
+        "coding"
+      ],
+      "_score": 382,
+      "category_scores": {
+        "fundamentals": 6,
+        "coding": 5
+      }
+    },
+    {
+      "id": "bsky-politico-eu",
+      "slug": "politico-eu",
+      "name": "POLITICO Europe",
+      "primary_handle": "politico.eu",
+      "primary_platform": "bluesky",
+      "type": "person",
+      "bio": "",
+      "location": "",
+      "company": "",
+      "avatar": null,
+      "platforms": [
+        {
+          "type": "bluesky",
+          "handle": "politico.eu",
+          "url": "https://bsky.app/profile/politico.eu",
+          "followers": null
+        }
+      ],
+      "stats": {
+        "posts": 6,
+        "likes": 375
+      },
+      "tags": [],
+      "_score": 375,
+      "category_scores": {}
+    },
+    {
+      "id": "gh-Alishahryar1",
+      "slug": "alishahryar1",
+      "name": "Ali Khokhar",
+      "primary_handle": "Alishahryar1",
+      "primary_platform": "github",
+      "type": "person",
+      "bio": "Writing easily understandable code...",
+      "location": "Sunnyvale, CA",
+      "company": "",
+      "avatar": "https://avatars.githubusercontent.com/u/20476625?v=4",
+      "platforms": [
+        {
+          "type": "github",
+          "handle": "Alishahryar1",
+          "url": "https://github.com/Alishahryar1",
+          "followers": 371
+        }
+      ],
+      "stats": {
+        "followers": 371,
+        "following": 1,
+        "repos": 7
+      },
+      "tags": [],
+      "_score": 371,
+      "category_scores": {}
+    },
+    {
+      "id": "gh-advplyr",
+      "slug": "advplyr",
+      "name": "advplyr",
+      "primary_handle": "advplyr",
+      "primary_platform": "github",
+      "type": "person",
+      "bio": "",
+      "location": "",
+      "company": "",
+      "avatar": "https://avatars.githubusercontent.com/u/67830747?v=4",
+      "platforms": [
+        {
+          "type": "github",
+          "handle": "advplyr",
+          "url": "https://github.com/advplyr",
+          "followers": 365
+        }
+      ],
+      "stats": {
+        "followers": 365,
+        "following": 0,
+        "repos": 25
+      },
+      "tags": [],
+      "_score": 365,
+      "category_scores": {}
+    },
+    {
+      "id": "bsky-erikahall-bsky-social",
+      "slug": "erikahall-bsky-social",
+      "name": "Erika Hall",
+      "primary_handle": "erikahall.bsky.social",
+      "primary_platform": "bluesky",
+      "type": "person",
+      "bio": "",
+      "location": "",
+      "company": "",
+      "avatar": null,
+      "platforms": [
+        {
+          "type": "bluesky",
+          "handle": "erikahall.bsky.social",
+          "url": "https://bsky.app/profile/erikahall.bsky.social",
+          "followers": null
+        }
+      ],
+      "stats": {
+        "posts": 6,
+        "likes": 364
+      },
+      "tags": [
+        "fundamentals"
+      ],
+      "_score": 364,
+      "category_scores": {
+        "fundamentals": 11
+      }
+    },
+    {
+      "id": "bsky-gigazine-net",
+      "slug": "gigazine-net",
+      "name": "GIGAZINE",
+      "primary_handle": "gigazine.net",
+      "primary_platform": "bluesky",
+      "type": "person",
+      "bio": "",
+      "location": "",
+      "company": "",
+      "avatar": null,
+      "platforms": [
+        {
+          "type": "bluesky",
+          "handle": "gigazine.net",
+          "url": "https://bsky.app/profile/gigazine.net",
+          "followers": null
+        }
+      ],
+      "stats": {
+        "posts": 33,
+        "likes": 362
+      },
+      "tags": [
+        "claude"
+      ],
+      "_score": 362,
+      "category_scores": {
+        "claude": 13
+      }
+    },
+    {
+      "id": "gh-hmjz100",
+      "slug": "hmjz100",
+      "name": "Hmjz100",
+      "primary_handle": "hmjz100",
+      "primary_platform": "github",
+      "type": "person",
+      "bio": "\u72ec\u7acb\u5f00\u53d1\u8005 | \u4ee3\u7801\u5982\u8bd7 (\uff61>\u1d17\u2022)\u2727 | \u4f60\u80fd\u5728\u5404\u5927\u5e73\u53f0\u4e2d\u627e\u5230\u6211~",
+      "location": "\u865a\u62df\u57ce \u00b7 \u865a\u62df\u5e02",
+      "company": "\u865a\u62df\u5b66\u9662",
+      "avatar": "https://avatars.githubusercontent.com/u/98228280?v=4",
+      "platforms": [
+        {
+          "type": "github",
+          "handle": "hmjz100",
+          "url": "https://github.com/hmjz100",
+          "followers": 359
+        },
+        {
+          "type": "website",
+          "handle": "hmjz100blog.rf.gd",
+          "url": "https://hmjz100blog.rf.gd",
+          "followers": null
+        }
+      ],
+      "stats": {
+        "followers": 359,
+        "following": 22,
+        "repos": 28
+      },
+      "tags": [],
+      "_score": 359,
+      "category_scores": {}
+    },
+    {
+      "id": "gh-xnx3",
+      "slug": "xnx3",
+      "name": "xnx3",
+      "primary_handle": "xnx3",
+      "primary_platform": "github",
+      "type": "person",
+      "bio": "",
+      "location": "Chinese, shandongsheng ,weifangshi,hantingqu",
+      "company": "God",
+      "avatar": "https://avatars.githubusercontent.com/u/8872471?v=4",
+      "platforms": [
+        {
+          "type": "github",
+          "handle": "xnx3",
+          "url": "https://github.com/xnx3",
+          "followers": 356
+        },
+        {
+          "type": "website",
+          "handle": "guanleiming.com",
+          "url": "http://www.guanleiming.com",
+          "followers": null
+        }
+      ],
+      "stats": {
+        "followers": 356,
+        "following": 3,
+        "repos": 79
+      },
+      "tags": [],
+      "_score": 356,
+      "category_scores": {}
+    },
+    {
+      "id": "gh-wonderwhy-er",
+      "slug": "wonderwhy-er",
+      "name": "Eduard Ruzga",
+      "primary_handle": "wonderwhy-er",
+      "primary_platform": "github",
+      "type": "person",
+      "bio": "",
+      "location": "Riga",
+      "company": "",
+      "avatar": "https://avatars.githubusercontent.com/u/1150639?v=4",
+      "platforms": [
+        {
+          "type": "github",
+          "handle": "wonderwhy-er",
+          "url": "https://github.com/wonderwhy-er",
+          "followers": 355
+        },
+        {
+          "type": "website",
+          "handle": "wonderwhy-er.com",
+          "url": "http://www.wonderwhy-er.com",
+          "followers": null
+        }
+      ],
+      "stats": {
+        "followers": 355,
+        "following": 13,
+        "repos": 58
+      },
+      "tags": [],
+      "_score": 355,
+      "category_scores": {}
+    },
+    {
+      "id": "yt-UCjSOwkYUtTDjDoPczoTv_Hw",
+      "slug": "automation-helpers",
+      "name": "Automation Helpers",
+      "primary_handle": "@automationhelpers",
+      "primary_platform": "youtube",
+      "type": "person",
+      "bio": "Join us on a journey as we dig into automation and software to help streamline your business or team.\n\nLearn best practices in:\n* Airtable, Fillout, Softr, Zite, and other low-code/no-code applications\n* Integrations using tools like Make and Zapier\n* How to configure and extend ",
+      "location": "US",
+      "company": "",
+      "avatar": "https://yt3.ggpht.com/rC9oQGsr7rh5DO-QqR6kFYnhIfEEBaoOXDHlI_N0uK-yno4qNX68_qobvBO_-XwciG5wqy3E=s800-c-k-c0x00ffffff-no-rj",
+      "platforms": [
+        {
+          "type": "youtube",
+          "handle": "@automationhelpers",
+          "url": "https://youtube.com/@automationhelpers",
+          "followers": 35500
+        }
+      ],
+      "stats": {
+        "followers": 35500,
+        "videos": 509,
+        "views": 3918277
+      },
+      "tags": [
+        "tool-insights"
+      ],
+      "_score": 355,
+      "category_scores": {
+        "tool-insights": 4
+      }
+    },
+    {
+      "id": "gh-maboloshi",
+      "slug": "maboloshi",
+      "name": "\u6c99\u6f20\u4e4b\u5b50",
+      "primary_handle": "maboloshi",
+      "primary_platform": "github",
+      "type": "person",
+      "bio": "",
+      "location": "",
+      "company": "",
+      "avatar": "https://avatars.githubusercontent.com/u/7850715?v=4",
+      "platforms": [
+        {
+          "type": "github",
+          "handle": "maboloshi",
+          "url": "https://github.com/maboloshi",
+          "followers": 338
+        }
+      ],
+      "stats": {
+        "followers": 338,
+        "following": 10,
+        "repos": 72
+      },
+      "tags": [],
+      "_score": 338,
+      "category_scores": {}
+    },
+    {
+      "id": "gh-TibixDev",
+      "slug": "tibixdev",
+      "name": "Tibix",
+      "primary_handle": "TibixDev",
+      "primary_platform": "github",
+      "type": "person",
+      "bio": "I do code stuff",
+      "location": "Romania",
+      "company": "",
+      "avatar": "https://avatars.githubusercontent.com/u/21055141?v=4",
+      "platforms": [
+        {
+          "type": "github",
+          "handle": "TibixDev",
+          "url": "https://github.com/TibixDev",
+          "followers": 337
+        }
+      ],
+      "stats": {
+        "followers": 337,
+        "following": 28,
+        "repos": 45
+      },
+      "tags": [],
+      "_score": 337,
+      "category_scores": {}
+    },
+    {
+      "id": "gh-nrslib",
+      "slug": "nrslib",
+      "name": "nrs",
+      "primary_handle": "nrslib",
+      "primary_platform": "github",
+      "type": "person",
+      "bio": "",
+      "location": "",
+      "company": "",
+      "avatar": "https://avatars.githubusercontent.com/u/38722970?v=4",
+      "platforms": [
+        {
+          "type": "github",
+          "handle": "nrslib",
+          "url": "https://github.com/nrslib",
+          "followers": 327
+        },
+        {
+          "type": "website",
+          "handle": "nrslib.com",
+          "url": "http://nrslib.com",
+          "followers": null
+        }
+      ],
+      "stats": {
+        "followers": 327,
+        "following": 0,
+        "repos": 86
+      },
+      "tags": [],
+      "_score": 327,
+      "category_scores": {}
+    },
+    {
+      "id": "bsky-colin-fraser-net",
+      "slug": "colin-fraser-net",
+      "name": "Colin",
+      "primary_handle": "colin-fraser.net",
+      "primary_platform": "bluesky",
+      "type": "person",
+      "bio": "",
+      "location": "",
+      "company": "",
+      "avatar": null,
+      "platforms": [
+        {
+          "type": "bluesky",
+          "handle": "colin-fraser.net",
+          "url": "https://bsky.app/profile/colin-fraser.net",
+          "followers": null
+        }
+      ],
+      "stats": {
+        "posts": 12,
+        "likes": 320
+      },
+      "tags": [
+        "fundamentals",
+        "claude"
+      ],
+      "_score": 320,
+      "category_scores": {
+        "fundamentals": 11,
+        "claude": 5
+      }
+    },
+    {
+      "id": "bsky-hikikomorphism-bsky-social",
+      "slug": "hikikomorphism-bsky-social",
+      "name": "hikikomorphism",
+      "primary_handle": "hikikomorphism.bsky.social",
+      "primary_platform": "bluesky",
+      "type": "person",
+      "bio": "",
+      "location": "",
+      "company": "",
+      "avatar": null,
+      "platforms": [
+        {
+          "type": "bluesky",
+          "handle": "hikikomorphism.bsky.social",
+          "url": "https://bsky.app/profile/hikikomorphism.bsky.social",
+          "followers": null
+        }
+      ],
+      "stats": {
+        "posts": 8,
+        "likes": 319
+      },
+      "tags": [
+        "claude"
+      ],
+      "_score": 319,
+      "category_scores": {
+        "claude": 8
+      }
+    },
+    {
+      "id": "bsky-brunodias-bsky-social",
+      "slug": "brunodias-bsky-social",
+      "name": "Bruno Dias",
+      "primary_handle": "brunodias.bsky.social",
+      "primary_platform": "bluesky",
+      "type": "person",
+      "bio": "",
+      "location": "",
+      "company": "",
+      "avatar": null,
+      "platforms": [
+        {
+          "type": "bluesky",
+          "handle": "brunodias.bsky.social",
+          "url": "https://bsky.app/profile/brunodias.bsky.social",
+          "followers": null
+        }
+      ],
+      "stats": {
+        "posts": 6,
+        "likes": 308
+      },
+      "tags": [
+        "fundamentals",
+        "agents",
+        "claude"
+      ],
+      "_score": 308,
+      "category_scores": {
+        "fundamentals": 8,
+        "agents": 6,
+        "claude": 5
+      }
+    },
+    {
+      "id": "bsky-ed3d-net",
+      "slug": "ed3d-net",
+      "name": "Ed",
+      "primary_handle": "ed3d.net",
+      "primary_platform": "bluesky",
+      "type": "person",
+      "bio": "",
+      "location": "",
+      "company": "",
+      "avatar": null,
+      "platforms": [
+        {
+          "type": "bluesky",
+          "handle": "ed3d.net",
+          "url": "https://bsky.app/profile/ed3d.net",
+          "followers": null
+        }
+      ],
+      "stats": {
+        "posts": 6,
+        "likes": 301
+      },
+      "tags": [
+        "claude",
+        "agents"
+      ],
+      "_score": 301,
+      "category_scores": {
+        "claude": 8,
+        "agents": 6
+      }
+    },
+    {
+      "id": "bsky-sleepinggiantsbr-bsky-social",
+      "slug": "sleepinggiantsbr-bsky-social",
+      "name": "Sleeping Giants Brasil",
+      "primary_handle": "sleepinggiantsbr.bsky.social",
+      "primary_platform": "bluesky",
+      "type": "person",
+      "bio": "",
+      "location": "",
+      "company": "",
+      "avatar": null,
+      "platforms": [
+        {
+          "type": "bluesky",
+          "handle": "sleepinggiantsbr.bsky.social",
+          "url": "https://bsky.app/profile/sleepinggiantsbr.bsky.social",
+          "followers": null
+        }
+      ],
+      "stats": {
+        "posts": 6,
+        "likes": 300
+      },
+      "tags": [],
+      "_score": 300,
+      "category_scores": {}
+    },
+    {
+      "id": "bsky-techmeme-com",
+      "slug": "techmeme-com",
+      "name": "Techmeme",
+      "primary_handle": "techmeme.com",
+      "primary_platform": "bluesky",
+      "type": "person",
+      "bio": "",
+      "location": "",
+      "company": "",
+      "avatar": null,
+      "platforms": [
+        {
+          "type": "bluesky",
+          "handle": "techmeme.com",
+          "url": "https://bsky.app/profile/techmeme.com",
+          "followers": null
+        }
+      ],
+      "stats": {
+        "posts": 31,
+        "likes": 300
+      },
+      "tags": [
+        "claude",
+        "business",
+        "agents"
+      ],
+      "_score": 300,
+      "category_scores": {
+        "claude": 8,
+        "business": 8,
+        "agents": 6
+      }
+    },
+    {
+      "id": "bsky-osintradar-bsky-social",
+      "slug": "osintradar-bsky-social",
+      "name": "OSINTRadar",
+      "primary_handle": "osintradar.bsky.social",
+      "primary_platform": "bluesky",
+      "type": "person",
+      "bio": "",
+      "location": "",
+      "company": "",
+      "avatar": null,
+      "platforms": [
+        {
+          "type": "bluesky",
+          "handle": "osintradar.bsky.social",
+          "url": "https://bsky.app/profile/osintradar.bsky.social",
+          "followers": null
+        }
+      ],
+      "stats": {
+        "posts": 6,
+        "likes": 296
+      },
+      "tags": [
+        "claude"
+      ],
+      "_score": 296,
+      "category_scores": {
+        "claude": 5
+      }
+    },
+    {
+      "id": "bsky-arstechnica-com",
+      "slug": "arstechnica-com",
+      "name": "Ars Technica",
+      "primary_handle": "arstechnica.com",
+      "primary_platform": "bluesky",
+      "type": "person",
+      "bio": "",
+      "location": "",
+      "company": "",
+      "avatar": null,
+      "platforms": [
+        {
+          "type": "bluesky",
+          "handle": "arstechnica.com",
+          "url": "https://bsky.app/profile/arstechnica.com",
+          "followers": null
+        }
+      ],
+      "stats": {
+        "posts": 7,
+        "likes": 295
+      },
+      "tags": [
+        "agents",
+        "claude"
+      ],
+      "_score": 295,
+      "category_scores": {
+        "agents": 8,
+        "claude": 5
+      }
+    },
+    {
+      "id": "bsky-arteesetica-bsky-social",
+      "slug": "arteesetica-bsky-social",
+      "name": "Arte es \u00c9tica",
+      "primary_handle": "arteesetica.bsky.social",
+      "primary_platform": "bluesky",
+      "type": "person",
+      "bio": "",
+      "location": "",
+      "company": "",
+      "avatar": null,
+      "platforms": [
+        {
+          "type": "bluesky",
+          "handle": "arteesetica.bsky.social",
+          "url": "https://bsky.app/profile/arteesetica.bsky.social",
+          "followers": null
+        }
+      ],
+      "stats": {
+        "posts": 6,
+        "likes": 285
+      },
+      "tags": [],
+      "_score": 285,
+      "category_scores": {}
+    },
+    {
+      "id": "yt-UC0BHO4AbCeBpghWNifMbH5Q",
+      "slug": "leonardo-grigorio-build-ship-with-ai",
+      "name": "Leonardo Grigorio | Build & Ship with AI",
+      "primary_handle": "@leonardogrig",
+      "primary_platform": "youtube",
+      "type": "person",
+      "bio": "Your idea deserves to exist. I help builders at any level ship production data-driven apps using AI, modern tools, and a bias toward action.\n",
+      "location": "BR",
+      "company": "",
+      "avatar": "https://yt3.ggpht.com/5tgwuoFlVr7KvRob8iCxakr4L8Xi-iU5QXcX5ygN1E87LlNlDuE-ZrGQtH0VXzzet30SURONtw=s800-c-k-c0x00ffffff-no-rj",
+      "platforms": [
+        {
+          "type": "youtube",
+          "handle": "@leonardogrig",
+          "url": "https://youtube.com/@leonardogrig",
+          "followers": 28200
+        }
+      ],
+      "stats": {
+        "followers": 28200,
+        "videos": 100,
+        "views": 1586647
+      },
+      "tags": [
+        "tool-insights"
+      ],
+      "_score": 282,
+      "category_scores": {
+        "tool-insights": 4
+      }
+    },
+    {
+      "id": "bsky-eicathomefinn-bsky-social",
+      "slug": "eicathomefinn-bsky-social",
+      "name": "Margot Finn",
+      "primary_handle": "eicathomefinn.bsky.social",
+      "primary_platform": "bluesky",
+      "type": "person",
+      "bio": "",
+      "location": "",
+      "company": "",
+      "avatar": null,
+      "platforms": [
+        {
+          "type": "bluesky",
+          "handle": "eicathomefinn.bsky.social",
+          "url": "https://bsky.app/profile/eicathomefinn.bsky.social",
+          "followers": null
+        }
+      ],
+      "stats": {
+        "posts": 8,
+        "likes": 273
+      },
+      "tags": [
+        "claude",
+        "research",
+        "fundamentals"
+      ],
+      "_score": 273,
+      "category_scores": {
+        "claude": 5,
+        "research": 4,
+        "fundamentals": 3
+      }
+    },
+    {
+      "id": "bsky-anthropicbot-bsky-social",
+      "slug": "anthropicbot-bsky-social",
+      "name": "Anthropic {bot}",
+      "primary_handle": "anthropicbot.bsky.social",
+      "primary_platform": "bluesky",
+      "type": "person",
+      "bio": "",
+      "location": "",
+      "company": "",
+      "avatar": null,
+      "platforms": [
+        {
+          "type": "bluesky",
+          "handle": "anthropicbot.bsky.social",
+          "url": "https://bsky.app/profile/anthropicbot.bsky.social",
+          "followers": null
+        }
+      ],
+      "stats": {
+        "posts": 10,
+        "likes": 272
+      },
+      "tags": [
+        "claude",
+        "agents",
+        "research"
+      ],
+      "_score": 272,
+      "category_scores": {
+        "claude": 16,
+        "agents": 5,
+        "research": 4
+      }
+    },
+    {
+      "id": "bsky-fintwitter-bsky-social",
+      "slug": "fintwitter-bsky-social",
+      "name": "FinTwitter",
+      "primary_handle": "fintwitter.bsky.social",
+      "primary_platform": "bluesky",
+      "type": "person",
+      "bio": "",
+      "location": "",
+      "company": "",
+      "avatar": null,
+      "platforms": [
+        {
+          "type": "bluesky",
+          "handle": "fintwitter.bsky.social",
+          "url": "https://bsky.app/profile/fintwitter.bsky.social",
+          "followers": null
+        }
+      ],
+      "stats": {
+        "posts": 5,
+        "likes": 271
+      },
+      "tags": [
+        "agents",
+        "claude"
+      ],
+      "_score": 271,
+      "category_scores": {
+        "agents": 6,
+        "claude": 5
+      }
+    },
+    {
+      "id": "bsky-robertscotthorton-bsky-social",
+      "slug": "robertscotthorton-bsky-social",
+      "name": "Scott Horton",
+      "primary_handle": "robertscotthorton.bsky.social",
+      "primary_platform": "bluesky",
+      "type": "person",
+      "bio": "",
+      "location": "",
+      "company": "",
+      "avatar": null,
+      "platforms": [
+        {
+          "type": "bluesky",
+          "handle": "robertscotthorton.bsky.social",
+          "url": "https://bsky.app/profile/robertscotthorton.bsky.social",
+          "followers": null
+        }
+      ],
+      "stats": {
+        "posts": 6,
+        "likes": 268
+      },
+      "tags": [],
+      "_score": 268,
+      "category_scores": {}
+    },
+    {
+      "id": "bsky-us-theguardian-com",
+      "slug": "us-theguardian-com",
+      "name": "Guardian US",
+      "primary_handle": "us.theguardian.com",
+      "primary_platform": "bluesky",
+      "type": "person",
+      "bio": "",
+      "location": "",
+      "company": "",
+      "avatar": null,
+      "platforms": [
+        {
+          "type": "bluesky",
+          "handle": "us.theguardian.com",
+          "url": "https://bsky.app/profile/us.theguardian.com",
+          "followers": null
+        }
+      ],
+      "stats": {
+        "posts": 7,
+        "likes": 265
+      },
+      "tags": [],
+      "_score": 265,
+      "category_scores": {}
+    },
+    {
+      "id": "bsky-penpenguin2023-bsky-social",
+      "slug": "penpenguin2023-bsky-social",
+      "name": "\u30da\u30f3\u30ae\u30f3",
+      "primary_handle": "penpenguin2023.bsky.social",
+      "primary_platform": "bluesky",
+      "type": "person",
+      "bio": "",
+      "location": "",
+      "company": "",
+      "avatar": null,
+      "platforms": [
+        {
+          "type": "bluesky",
+          "handle": "penpenguin2023.bsky.social",
+          "url": "https://bsky.app/profile/penpenguin2023.bsky.social",
+          "followers": null
+        }
+      ],
+      "stats": {
+        "posts": 7,
+        "likes": 263
+      },
+      "tags": [
+        "claude"
+      ],
+      "_score": 263,
+      "category_scores": {
+        "claude": 8
+      }
+    },
+    {
+      "id": "bsky-aflcio-org",
+      "slug": "aflcio-org",
+      "name": "AFL-CIO",
+      "primary_handle": "aflcio.org",
+      "primary_platform": "bluesky",
+      "type": "person",
+      "bio": "",
+      "location": "",
+      "company": "",
+      "avatar": null,
+      "platforms": [
+        {
+          "type": "bluesky",
+          "handle": "aflcio.org",
+          "url": "https://bsky.app/profile/aflcio.org",
+          "followers": null
+        }
+      ],
+      "stats": {
+        "posts": 8,
+        "likes": 258
+      },
+      "tags": [
+        "beginners"
+      ],
+      "_score": 258,
+      "category_scores": {
+        "beginners": 3
+      }
+    },
+    {
+      "id": "yt-UC0pEW_GOrMJ23l8QcrGdKSw",
+      "slug": "apollo-graphql",
+      "name": "Apollo GraphQL",
+      "primary_handle": "@apollographql",
+      "primary_platform": "youtube",
+      "type": "person",
+      "bio": "API orchestration platform for AI agents and modern applications. Connect to GraphQL and REST APIs with enterprise-proven infrastructure. \ud83d\ude80\n\nStart building today: https://studio.apollographql.com/signup\n",
+      "location": "US",
+      "company": "",
+      "avatar": "https://yt3.ggpht.com/f6D18gEBziF4P-yPRdJA_8SkSAnsFZn5G7EQibCSUIa8u5xkf70crhhlYS19EYSRYNLDai8y=s800-c-k-c0x00ffffff-no-rj",
+      "platforms": [
+        {
+          "type": "youtube",
+          "handle": "@apollographql",
+          "url": "https://youtube.com/@apollographql",
+          "followers": 25500
+        }
+      ],
+      "stats": {
+        "followers": 25500,
+        "videos": 415,
+        "views": 1202434
+      },
+      "tags": [
+        "agents"
+      ],
+      "_score": 255,
+      "category_scores": {
+        "agents": 6
+      }
+    },
+    {
+      "id": "bsky-richraho-bsky-social",
+      "slug": "richraho-bsky-social",
+      "name": "Rich Raho",
+      "primary_handle": "richraho.bsky.social",
+      "primary_platform": "bluesky",
+      "type": "person",
+      "bio": "",
+      "location": "",
+      "company": "",
+      "avatar": null,
+      "platforms": [
+        {
+          "type": "bluesky",
+          "handle": "richraho.bsky.social",
+          "url": "https://bsky.app/profile/richraho.bsky.social",
+          "followers": null
+        }
+      ],
+      "stats": {
+        "posts": 5,
+        "likes": 252
+      },
+      "tags": [],
+      "_score": 252,
+      "category_scores": {}
+    },
+    {
+      "id": "yt-UCpT2cryC3ahbsQXqOo2BYiQ",
+      "slug": "solopreneur",
+      "name": "Solopreneur",
+      "primary_handle": "@solopreneur",
+      "primary_platform": "youtube",
+      "type": "person",
+      "bio": "Hey, I\u2019m Kevin.\n\nI help entrepreneurs build leverage through tools and automation. My videos cut through the noise and show you practical ways to grow your business faster, save time, and work with more freedom.\n\nIf you\u2019re tired of wasting time on tools that don\u2019t deliver, this c",
+      "location": "CA",
+      "company": "",
+      "avatar": "https://yt3.ggpht.com/DYsguOOhl2ACN70nCrdEFHAMJ5L2_OpXF-6uVqHV0QJ7CTVvutnq_PBJMHpNnNN6DFNZsi7ejw=s800-c-k-c0x00ffffff-no-rj",
+      "platforms": [
+        {
+          "type": "youtube",
+          "handle": "@solopreneur",
+          "url": "https://youtube.com/@solopreneur",
+          "followers": 25000
+        }
+      ],
+      "stats": {
+        "followers": 25000,
+        "videos": 318,
+        "views": 1252223
+      },
+      "tags": [
+        "business",
+        "tool-insights"
+      ],
+      "_score": 250,
+      "category_scores": {
+        "business": 9,
+        "tool-insights": 7
+      }
+    },
+    {
+      "id": "yt-UCaC9B0wDQKkQpUGVjaNNkIQ",
+      "slug": "ethan-nelson",
+      "name": "Ethan Nelson",
+      "primary_handle": "@ethannelsonscalewithai",
+      "primary_platform": "youtube",
+      "type": "person",
+      "bio": "I build AI Agents for my clients and show you how to do the same. I also discuss AI Ethics and the future of work. If you want to accelerate to $10k/month without being technical, join my Accelerator program in the link of bio. If you want to work with me and get AI click and sig",
+      "location": "US",
+      "company": "",
+      "avatar": "https://yt3.ggpht.com/oLz78nOC-oBEbvaP9KXRGT-3MZ5BlbVNt0nlsozVhoBiOnUCkiVt40UORRSFDRgstccorBYiuA=s800-c-k-c0x00ffffff-no-rj",
+      "platforms": [
+        {
+          "type": "youtube",
+          "handle": "@ethannelsonscalewithai",
+          "url": "https://youtube.com/@ethannelsonscalewithai",
+          "followers": 24500
+        }
+      ],
+      "stats": {
+        "followers": 24500,
+        "videos": 993,
+        "views": 1031733
+      },
+      "tags": [
+        "agents"
+      ],
+      "_score": 245,
+      "category_scores": {
+        "agents": 6
+      }
+    },
+    {
+      "id": "bsky-thdxr-com",
+      "slug": "thdxr-com",
+      "name": "dax",
+      "primary_handle": "thdxr.com",
+      "primary_platform": "bluesky",
+      "type": "person",
+      "bio": "",
+      "location": "",
+      "company": "",
+      "avatar": null,
+      "platforms": [
+        {
+          "type": "bluesky",
+          "handle": "thdxr.com",
+          "url": "https://bsky.app/profile/thdxr.com",
+          "followers": null
+        }
+      ],
+      "stats": {
+        "posts": 6,
+        "likes": 239
+      },
+      "tags": [
+        "claude",
+        "coding"
+      ],
+      "_score": 239,
+      "category_scores": {
+        "claude": 5,
+        "coding": 5
+      }
+    },
+    {
+      "id": "bsky-dollspace-gay",
+      "slug": "dollspace-gay",
+      "name": "Doll",
+      "primary_handle": "dollspace.gay",
+      "primary_platform": "bluesky",
+      "type": "person",
+      "bio": "",
+      "location": "",
+      "company": "",
+      "avatar": null,
+      "platforms": [
+        {
+          "type": "bluesky",
+          "handle": "dollspace.gay",
+          "url": "https://bsky.app/profile/dollspace.gay",
+          "followers": null
+        }
+      ],
+      "stats": {
+        "posts": 9,
+        "likes": 238
+      },
+      "tags": [
+        "agents",
+        "claude",
+        "beginners"
+      ],
+      "_score": 238,
+      "category_scores": {
+        "agents": 6,
+        "claude": 3,
+        "beginners": 3
+      }
+    },
+    {
+      "id": "yt-UCLw78juKiPI8YjpSK7sJ_eg",
+      "slug": "asapguide",
+      "name": "AsapGuide",
+      "primary_handle": "@asapguide",
+      "primary_platform": "youtube",
+      "type": "person",
+      "bio": "I make AI tutorial videos\n",
+      "location": "",
+      "company": "",
+      "avatar": "https://yt3.ggpht.com/DWuxK-_8M5O-qaqF2vI4tY5afjepFdALOR-M7Ou46HFKu_n6_3vEnOlZTAOdWUn9XNrwNp6lNOo=s800-c-k-c0x00ffffff-no-rj",
+      "platforms": [
+        {
+          "type": "youtube",
+          "handle": "@asapguide",
+          "url": "https://youtube.com/@asapguide",
+          "followers": 20200
+        }
+      ],
+      "stats": {
+        "followers": 20200,
+        "videos": 2251,
+        "views": 6523426
+      },
+      "tags": [
+        "business",
+        "tool-insights"
+      ],
+      "_score": 202,
+      "category_scores": {
+        "business": 5,
+        "tool-insights": 5
+      }
+    },
+    {
+      "id": "yt-UCktI_HQAkbr-tJbdWnQ_osw",
+      "slug": "logrocket",
+      "name": "LogRocket",
+      "primary_handle": "@logrocket",
+      "primary_platform": "youtube",
+      "type": "person",
+      "bio": "LogRocket combines session replay, product analytics, and error tracking \u2013 empowering software teams to create the ideal product experience.\n\nUsing LogRocket, Software teams can fix user-reported issues faster, de-noise their error alerts, and see the \"why\" behind their product a",
+      "location": "US",
+      "company": "",
+      "avatar": "https://yt3.ggpht.com/JD7X5oRqm_P3nw-ues71O7yorLZn37LjDtaR-bvHUmY-XhvE0jMdeGzQDsWdqJZRGtAsmMMU7Lk=s800-c-k-c0x00ffffff-no-rj",
+      "platforms": [
+        {
+          "type": "youtube",
+          "handle": "@logrocket",
+          "url": "https://youtube.com/@logrocket",
+          "followers": 13900
+        }
+      ],
+      "stats": {
+        "followers": 13900,
+        "videos": 582,
+        "views": 2152284
+      },
+      "tags": [
+        "fundamentals"
+      ],
+      "_score": 139,
+      "category_scores": {
+        "fundamentals": 3
+      }
+    },
+    {
+      "id": "yt-UCN9kvWCDywqRPHG5SjKTEBA",
+      "slug": "bradford-carlton-automate-business-ai",
+      "name": "Bradford Carlton - Automate Business AI",
+      "primary_handle": "@bradfordscarlton",
+      "primary_platform": "youtube",
+      "type": "person",
+      "bio": "\ud83d\ude80 Supercharge Your Business With Beginner & Advanced AI Workflows + Tutorials.\n\nWelcome to Dr. Bradford Carlton's Automate Business AI \u2013 your ultimate resource for automating, streamlining & scaling your business using generative AI and smart systems.\n\nWhether you\u2019re a startup fo",
+      "location": "US",
+      "company": "",
+      "avatar": "https://yt3.ggpht.com/Fv216lA4qhT1w0e5S6tBuISHAGyh9WHtBctBOht3zTR5bc5dJa-252nm4N_H5kQVS9S5VdYP9g=s800-c-k-c0x00ffffff-no-rj",
+      "platforms": [
+        {
+          "type": "youtube",
+          "handle": "@bradfordscarlton",
+          "url": "https://youtube.com/@bradfordscarlton",
+          "followers": 12500
+        }
+      ],
+      "stats": {
+        "followers": 12500,
+        "videos": 582,
+        "views": 868317
+      },
+      "tags": [
+        "business",
+        "tool-insights"
+      ],
+      "_score": 125,
+      "category_scores": {
+        "business": 16,
+        "tool-insights": 14
+      }
+    },
+    {
+      "id": "yt-UCC0AT6XjO_ebWIifTDp5REg",
+      "slug": "motherduck",
+      "name": "MotherDuck",
+      "primary_handle": "@motherduckdb",
+      "primary_platform": "youtube",
+      "type": "person",
+      "bio": "The data warehouse built for getting answers from your data. Works with AI agents and SQL.\n",
+      "location": "US",
+      "company": "",
+      "avatar": "https://yt3.ggpht.com/cfk5Q6QPh0NzpItVKiBobtm01kRRc8HZlj3uLfo0I63-eiBoFTjHTKI6nscxdnWhdDp6p7fekw=s800-c-k-c0x00ffffff-no-rj",
+      "platforms": [
+        {
+          "type": "youtube",
+          "handle": "@motherduckdb",
+          "url": "https://youtube.com/@motherduckdb",
+          "followers": 12000
+        }
+      ],
+      "stats": {
+        "followers": 12000,
+        "videos": 165,
+        "views": 1022957
+      },
+      "tags": [
+        "agents"
+      ],
+      "_score": 120,
+      "category_scores": {
+        "agents": 6
+      }
+    },
+    {
+      "id": "yt-UCUBQHgk72kKZJM2NyRm0dfg",
+      "slug": "let-s-automate-it",
+      "name": "Let's Automate It",
+      "primary_handle": "@letsautomateit123",
+      "primary_platform": "youtube",
+      "type": "person",
+      "bio": "\ud83d\ude80 Your go-to channel for mastering automation, AI, and no-code/low-code tools like Make.com and n8n.io. Whether you're looking to save time, boost efficiency, or just have fun making computers do cool stuff, this is the channel.\n",
+      "location": "ZA",
+      "company": "",
+      "avatar": "https://yt3.ggpht.com/dybJmkp8ZF_lSdlOeodqdeqGtU5R-WTIN1OzRZMhUafCj0VQl2Ek38y9vqqUzgNp425bYnFWL8M=s800-c-k-c0x00ffffff-no-rj",
+      "platforms": [
+        {
+          "type": "youtube",
+          "handle": "@letsautomateit123",
+          "url": "https://youtube.com/@letsautomateit123",
+          "followers": 11300
+        }
+      ],
+      "stats": {
+        "followers": 11300,
+        "videos": 115,
+        "views": 572054
+      },
+      "tags": [
+        "claude",
+        "tool-insights"
+      ],
+      "_score": 113,
+      "category_scores": {
+        "claude": 8,
+        "tool-insights": 4
+      }
+    },
+    {
+      "id": "yt-UC_Zlfeeie_hiRUJckqEp8hg",
+      "slug": "alejo-paige-amplify-voice-ai",
+      "name": "Alejo & Paige - Amplify Voice AI",
+      "primary_handle": "@alejoandpaige",
+      "primary_platform": "youtube",
+      "type": "person",
+      "bio": "On a mission to educate and empower people and businesses with Voice AI, we at Amplify Voice care about sharing what's possible with this technology and bringing people together.\n\nWe strive to harness AI to amplify those parts of your business and life where being human matters.\n",
+      "location": "US",
+      "company": "",
+      "avatar": "https://yt3.ggpht.com/FvC1wCg7Ph1CSk0jGg_KzRBaX2WgRoi8-ESuQ9_DVLslMclCSjxWY4tht4gcezLQVn4kzv2F5w=s800-c-k-c0x00ffffff-no-rj",
+      "platforms": [
+        {
+          "type": "youtube",
+          "handle": "@alejoandpaige",
+          "url": "https://youtube.com/@alejoandpaige",
+          "followers": 6140
+        }
+      ],
+      "stats": {
+        "followers": 6140,
+        "videos": 171,
+        "views": 277141
+      },
+      "tags": [
+        "agents"
+      ],
+      "_score": 61,
+      "category_scores": {
+        "agents": 6
+      }
+    },
+    {
+      "id": "yt-UCqdcw2d1yFdIKizp0mQLEuQ",
+      "slug": "logan-hallucinates",
+      "name": "Logan Hallucinates",
+      "primary_handle": "@loganhallucinates",
+      "primary_platform": "youtube",
+      "type": "person",
+      "bio": "ML engineer in Silicon Valley turned indie AI builder. Subscribe for more content!\n",
+      "location": "US",
+      "company": "",
+      "avatar": "https://yt3.ggpht.com/5P1a6aPvZcdx353HmwfQe4iQPue1pO1bh3HH-23MOXzN-8Gnv1xLDe7KfhvWoYqcVfP5ODax=s800-c-k-c0x00ffffff-no-rj",
+      "platforms": [
+        {
+          "type": "youtube",
+          "handle": "@loganhallucinates",
+          "url": "https://youtube.com/@loganhallucinates",
+          "followers": 5930
+        }
+      ],
+      "stats": {
+        "followers": 5930,
+        "videos": 21,
+        "views": 312783
+      },
+      "tags": [
+        "coding",
+        "fundamentals"
+      ],
+      "_score": 59,
+      "category_scores": {
+        "coding": 5,
+        "fundamentals": 5
+      }
+    },
+    {
+      "id": "yt-UC4P-y2WYvVAUUmcAZNI03Bw",
+      "slug": "sw-automation",
+      "name": "SW Automation",
+      "primary_handle": "@swautomation",
+      "primary_platform": "youtube",
+      "type": "person",
+      "bio": "Hi, we\u2019re Sil & Stef, and we\u2019re passionate about helping people learn how to leverage AI & automation to save time, work smarter, and scale without limits.\n\nAs the founders of SW Automation, we\u2019ve built a thriving community and educational platform that makes AI and automation ac",
+      "location": "NL",
+      "company": "",
+      "avatar": "https://yt3.ggpht.com/VsfPLV-94gRU7AG4okU_ZoxUMxp0E-ZZapa6ZqZC_1hoG-B85DoYgWiF6HH5GydECqFRF2ZHa1I=s800-c-k-c0x00ffffff-no-rj",
+      "platforms": [
+        {
+          "type": "youtube",
+          "handle": "@swautomation",
+          "url": "https://youtube.com/@swautomation",
+          "followers": 5340
+        }
+      ],
+      "stats": {
+        "followers": 5340,
+        "videos": 90,
+        "views": 337547
+      },
+      "tags": [
+        "tool-insights",
+        "agents",
+        "business"
+      ],
+      "_score": 53,
+      "category_scores": {
+        "tool-insights": 14,
+        "agents": 6,
+        "business": 5
+      }
+    },
+    {
+      "id": "yt-UCmVG9CRYrI5A-czvJLLVI4g",
+      "slug": "tech-with-mobin",
+      "name": "Tech With Mobin",
+      "primary_handle": "@techwithmobin",
+      "primary_platform": "youtube",
+      "type": "person",
+      "bio": "I\u2019m Mobin! I share videos on useful software, AI tools, websites, and tech tips to help you get more done and spend time on what really matters.\nSo if you're into that, hit the sub button to get all the cool tools and tips right when they drop!\n",
+      "location": "TR",
+      "company": "",
+      "avatar": "https://yt3.ggpht.com/mSKDvI-iIriD9xzaFxez5bkLt2JzAj_upFRfqNOkDkNSca0CX_rDKv9rmWsGfNHWhsxkvh-J=s800-c-k-c0x00ffffff-no-rj",
+      "platforms": [
+        {
+          "type": "youtube",
+          "handle": "@techwithmobin",
+          "url": "https://youtube.com/@techwithmobin",
+          "followers": 4510
+        }
+      ],
+      "stats": {
+        "followers": 4510,
+        "videos": 57,
+        "views": 430389
+      },
+      "tags": [
+        "tool-insights"
+      ],
+      "_score": 45,
+      "category_scores": {
+        "tool-insights": 5
+      }
+    },
+    {
+      "id": "yt-UCJZAbtkkD8UWEL1AfuodtzQ",
+      "slug": "gui-bibeau",
+      "name": "Gui Bibeau",
+      "primary_handle": "@guibibeau",
+      "primary_platform": "youtube",
+      "type": "person",
+      "bio": "Quick, well-done content for developers. https://www.guibibeau.com/newsletter\n\nThings move fast these days; this channel is meant to help you keep up. You can expect quick explainers that give you just enough information, not less, not more. \n \nFor Collaboration and Business inqu",
+      "location": "CA",
+      "company": "",
+      "avatar": "https://yt3.ggpht.com/zAaqm29r3vWh0yDnVlnH2LIqmxOTt5M3rGjafJuNRITHIoU95dX3Kurhrk9OVt7WZ9gG7P9k=s800-c-k-c0x00ffffff-no-rj",
+      "platforms": [
+        {
+          "type": "youtube",
+          "handle": "@guibibeau",
+          "url": "https://youtube.com/@guibibeau",
+          "followers": 3750
+        }
+      ],
+      "stats": {
+        "followers": 3750,
+        "videos": 102,
+        "views": 299808
+      },
+      "tags": [
+        "fundamentals",
+        "coding"
+      ],
+      "_score": 37,
+      "category_scores": {
+        "fundamentals": 12,
+        "coding": 11
+      }
+    },
+    {
+      "id": "yt-UCkz9ydcDvkt0wzuaPPGBRDA",
+      "slug": "roy-derks",
+      "name": "Roy Derks",
+      "primary_handle": "@gethackteam",
+      "primary_platform": "youtube",
+      "type": "person",
+      "bio": "Practical videos to help you create awesome programming projects",
+      "location": "NL",
+      "company": "",
+      "avatar": "https://yt3.ggpht.com/o8KPeYUNxPqYYhU2od15U_z3v2q_cPoHjvHH8tLesQJ0PYnjQJEurhHZyaCi760S4CJ1SPtDAA=s800-c-k-c0x00ffffff-no-rj",
+      "platforms": [
+        {
+          "type": "youtube",
+          "handle": "@gethackteam",
+          "url": "https://youtube.com/@gethackteam",
+          "followers": 2960
+        }
+      ],
+      "stats": {
+        "followers": 2960,
+        "videos": 54,
+        "views": 454717
+      },
+      "tags": [
+        "coding",
+        "agents"
+      ],
+      "_score": 29,
+      "category_scores": {
+        "coding": 4,
+        "agents": 3
+      }
+    },
+    {
+      "id": "yt-UCPdQO2vDFUXeXslUOq5NcAg",
+      "slug": "small-ai",
+      "name": "Small AI",
+      "primary_handle": "@smallgrp",
+      "primary_platform": "youtube",
+      "type": "person",
+      "bio": "AI isn't here to take away jobs\u2014it's here to help you scale your business.\n\nOver the past 10 months, my team of 22 has helped 25+ businesses build practical AI systems across 55+ projects. Now I'm sharing everything we've learned, one use case at a time.\n\nThis channel is for solo",
+      "location": "US",
+      "company": "",
+      "avatar": "https://yt3.ggpht.com/nBy4KDKbx5eeEsQ2uEFBM-rs912TlXscPwRllg5wyFpWF9hmXEah2zQ5uJd6MDvd6CQlVXQk=s800-c-k-c0x00ffffff-no-rj",
+      "platforms": [
+        {
+          "type": "youtube",
+          "handle": "@smallgrp",
+          "url": "https://youtube.com/@smallgrp",
+          "followers": 2220
+        }
+      ],
+      "stats": {
+        "followers": 2220,
+        "videos": 80,
+        "views": 805207
+      },
+      "tags": [
+        "business",
+        "tool-insights",
+        "agents"
+      ],
+      "_score": 22,
+      "category_scores": {
+        "business": 12,
+        "tool-insights": 12,
+        "agents": 8
+      }
+    },
+    {
+      "id": "yt-UCjCYGoX0EzoYRYRX3c6gGHA",
+      "slug": "arindam-majumder",
+      "name": "Arindam Majumder",
+      "primary_handle": "@arindam_1729",
+      "primary_platform": "youtube",
+      "type": "person",
+      "bio": "Simplifying LLMs, RAG & AI Agent Workflows - Join in \ud83d\udc47\ud83c\udffc\n",
+      "location": "IN",
+      "company": "",
+      "avatar": "https://yt3.ggpht.com/ytc/AIdro_ltFli7E36OnbQ-sYHWGJQOSBMTJqHMrKqYI49O-sSe7P9m=s800-c-k-c0x00ffffff-no-rj",
+      "platforms": [
+        {
+          "type": "youtube",
+          "handle": "@arindam_1729",
+          "url": "https://youtube.com/@arindam_1729",
+          "followers": 2080
+        }
+      ],
+      "stats": {
+        "followers": 2080,
+        "videos": 86,
+        "views": 95206
+      },
+      "tags": [
+        "agents",
+        "claude",
+        "coding"
+      ],
+      "_score": 20,
+      "category_scores": {
+        "agents": 6,
+        "claude": 5,
+        "coding": 5
       }
     }
   ]

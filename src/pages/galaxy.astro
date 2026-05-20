@@ -438,6 +438,22 @@ const nodes = creators.map((c) => ({
     catPositions[cat] = new THREE.Vector3(x, yJit, z);
   });
 
+  // Flight trail — a fading ribbon of the camera's recent positions,
+  // visible while the camera tweens toward a quest target.
+  const TRAIL_LEN = 48;
+  const trailGeom = new THREE.BufferGeometry();
+  const trailPos = new Float32Array(TRAIL_LEN * 3);
+  trailGeom.setAttribute('position', new THREE.BufferAttribute(trailPos, 3));
+  const trailColors = new Float32Array(TRAIL_LEN * 3);
+  trailGeom.setAttribute('color', new THREE.BufferAttribute(trailColors, 3));
+  const trail = new THREE.Line(trailGeom, new THREE.LineBasicMaterial({
+    vertexColors: true, transparent: true, opacity: 0.0,
+    blending: THREE.AdditiveBlending, depthWrite: false,
+  }));
+  trail.frustumCulled = false;
+  scene.add(trail);
+  let trailHistory: THREE.Vector3[] = [];
+
   // 2) Category sun + nebula + halo + label
   const catSunGeom = new THREE.SphereGeometry(8, 32, 32);
   const catSuns: THREE.Mesh[] = [];          // for raycaster
@@ -502,6 +518,41 @@ const nodes = creators.map((c) => ({
   // Connection lines for multi-category creators (creator → non-primary cat sun)
   const lineSegments: { a: THREE.Mesh; b: THREE.Vector3; line: THREE.Line; }[] = [];
 
+  // Avatar billboards that ride on top of pick orbs
+  const avatarSprites: { sprite: THREE.Sprite; orb: THREE.Mesh }[] = [];
+  // Pick meshes grouped by primary category — used to draw constellations
+  const picksByCat: Record<string, THREE.Mesh[]> = {};
+
+  /** Load a circular avatar as a camera-facing sprite pinned to a pick orb. */
+  function loadAvatarSprite(url: string, orb: THREE.Mesh, orbRadius: number) {
+    const img = new Image();
+    img.crossOrigin = 'anonymous';
+    img.onload = () => {
+      const S = 128;
+      const cv = document.createElement('canvas');
+      cv.width = cv.height = S;
+      const ctx = cv.getContext('2d')!;
+      ctx.beginPath();
+      ctx.arc(S / 2, S / 2, S / 2, 0, Math.PI * 2);
+      ctx.closePath();
+      ctx.clip();
+      // cover-fit the (usually square) avatar
+      ctx.drawImage(img, 0, 0, S, S);
+      const tex = new THREE.CanvasTexture(cv);
+      tex.colorSpace = THREE.SRGBColorSpace;
+      const spr = new THREE.Sprite(new THREE.SpriteMaterial({
+        map: tex, transparent: true, depthWrite: false,
+      }));
+      const s = orbRadius * 2.6;
+      spr.scale.set(s, s, 1);
+      spr.position.copy(orb.position);
+      scene.add(spr);
+      avatarSprites.push({ sprite: spr, orb });
+    };
+    img.onerror = () => { /* keep the glowing orb as fallback */ };
+    img.src = url;
+  }
+
   creators.forEach((c) => {
     let primary = c.cats[0];
     let color = primary ? (CAT_COLOR_HEX[primary] ?? DEFAULT_HEX) : DEFAULT_HEX;
@@ -553,6 +604,14 @@ const nodes = creators.map((c) => ({
       halo.position.copy(m.position);
       scene.add(halo);
       creatorHalos.set(m, halo);
+
+      // Real avatar on top of the orb
+      if (c.avatar) loadAvatarSprite(c.avatar, m, r);
+
+      // Register for constellation lines (group by primary category)
+      if (primary) {
+        (picksByCat[primary] ||= []).push(m);
+      }
     }
 
     // Multi-category: draw subtle line from creator to each non-primary category
@@ -575,6 +634,32 @@ const nodes = creators.map((c) => ({
       }
     }
   });
+
+  // -----------------------------------------------------------------
+  // Constellations — connect the curator picks within each category
+  // into a chain, so every topic forms its own little star pattern.
+  // -----------------------------------------------------------------
+  const constellations: { meshes: THREE.Mesh[]; line: THREE.Line }[] = [];
+  for (const [cat, picks] of Object.entries(picksByCat)) {
+    if (picks.length < 2) continue;
+    // Order picks by orbit phase so the chain doesn't criss-cross wildly
+    const ordered = [...picks].sort((a, b) => {
+      const pa = creatorOrbit.get(a)?.phase ?? 0;
+      const pb = creatorOrbit.get(b)?.phase ?? 0;
+      return pa - pb;
+    });
+    const pts = ordered.map((m) => m.position.clone());
+    pts.push(ordered[0].position.clone());   // close the loop
+    const geom = new THREE.BufferGeometry().setFromPoints(pts);
+    const mat = new THREE.LineBasicMaterial({
+      color: CAT_COLOR_HEX[cat] ?? DEFAULT_HEX,
+      transparent: true, opacity: 0.28,
+      blending: THREE.AdditiveBlending, depthWrite: false,
+    });
+    const line = new THREE.Line(geom, mat);
+    scene.add(line);
+    constellations.push({ meshes: [...ordered, ordered[0]], line });
+  }
 
   // -----------------------------------------------------------------
   // Hover ring — glowing torus that follows the hovered orb
@@ -940,12 +1025,52 @@ const nodes = creators.map((c) => ({
       if (halo) halo.position.copy(m.position);
     }
 
+    // Avatar billboards ride along with their orb
+    for (const { sprite, orb } of avatarSprites) {
+      sprite.position.copy(orb.position);
+    }
+
     // Update connection lines (creator may have moved)
     for (const seg of lineSegments) {
       const positions = seg.line.geometry.attributes.position as THREE.BufferAttribute;
       positions.setXYZ(0, seg.a.position.x, seg.a.position.y, seg.a.position.z);
       positions.setXYZ(1, seg.b.x, seg.b.y, seg.b.z);
       positions.needsUpdate = true;
+    }
+
+    // Update constellations — picks orbit, so re-stitch each frame
+    for (const con of constellations) {
+      const positions = con.line.geometry.attributes.position as THREE.BufferAttribute;
+      con.meshes.forEach((mesh, i) => {
+        positions.setXYZ(i, mesh.position.x, mesh.position.y, mesh.position.z);
+      });
+      positions.needsUpdate = true;
+    }
+
+    // Flight trail — sample the camera position; show only while questing
+    const questing = tweening || (targetMesh && now < targetTickerStop);
+    if (questing) {
+      trailHistory.push(camera.position.clone());
+      if (trailHistory.length > TRAIL_LEN) trailHistory.shift();
+    } else if (trailHistory.length > 0) {
+      trailHistory.shift();   // drain the tail when the flight ends
+    }
+    if (trailHistory.length > 1) {
+      const tPos = trailGeom.attributes.position as THREE.BufferAttribute;
+      const tCol = trailGeom.attributes.color as THREE.BufferAttribute;
+      for (let i = 0; i < TRAIL_LEN; i++) {
+        const h = trailHistory[Math.min(i, trailHistory.length - 1)];
+        tPos.setXYZ(i, h.x, h.y, h.z);
+        // fade newer→brighter
+        const a = i / TRAIL_LEN;
+        tCol.setXYZ(i, 0.71 * a, 0.55 * a, 0.96 * a);  // violet fade
+      }
+      tPos.needsUpdate = true;
+      tCol.needsUpdate = true;
+      trailGeom.setDrawRange(0, trailHistory.length);
+      (trail.material as THREE.LineBasicMaterial).opacity = 0.85;
+    } else {
+      (trail.material as THREE.LineBasicMaterial).opacity = 0.0;
     }
 
     // Drift dust

@@ -1,0 +1,57 @@
+# =============================================
+# whotofollow.online — robots.txt
+# Doel: volledige indexering van de creator-directory
+# (1600+ pagina's) + maximale AI-zichtbaarheid.
+# =============================================
+
+# Alle standaard crawlers
+User-agent: *
+Allow: /
+Disallow: /api/
+
+# ——— OPENAI ———
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+# ——— ANTHROPIC (Claude) ———
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: claude-web
+Allow: /
+
+# ——— PERPLEXITY ———
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+# ——— GOOGLE (Gemini / Search) ———
+User-agent: Googlebot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+# ——— MICROSOFT (Bing / Copilot) ———
+User-agent: Bingbot
+Allow: /
+
+# ——— APPLE ———
+User-agent: Applebot
+Allow: /
+
+# =============================================
+# Sitemaps
+# =============================================
+Sitemap: https://whotofollow.online/sitemap-index.xml

@@ -1,61 +1,62 @@
 /**
  * whotofollow.online — Design Tokens
- * Forked from debesteaitools.nl Editorial theme.
- * Primary hue shifted to 270 (violet) — "people / community".
+ * Color tokens aligned with hetlaatsteainieuws.nl editorial palette.
+ * Editorial Yellow primary (92°), Teal secondary (175°), Cyan tertiary (200°).
  */
 
 @layer tokens {
   :root {
-    /* Background — violet-tinted slate (richer chroma = depth, not flat grey).
-       Surfaces lifted (~+5% L) so cards/panels visibly step off bg-deep
-       instead of melting into one dark zone. "Lift & contrast" direction. */
-    --bg-deep: oklch(12% 0.028 270);
-    --bg-surface: oklch(18% 0.036 270);
-    --bg-elevated: oklch(24% 0.044 270);
-    --bg-panel: oklch(28% 0.050 270);
+    /* Background Palette — Slate Deep */
+    --bg-deep: #010405;
+    --bg-surface: #040a0d;
+    --bg-elevated: #071114;
+    --bg-panel: #0d181c;
 
-    /* Brand — Violet (270°) — punchy */
-    --primary-h: 270;
-    --primary-bright: oklch(76% 0.21 var(--primary-h));
-    --primary-mid: oklch(64% 0.24 var(--primary-h));
-    --primary-dark: oklch(46% 0.18 var(--primary-h));
+    /* Brand Colors — Editorial Yellow (Primary) */
+    --primary-h: 92;
+    --primary-bright: oklch(88% 0.19 92);
+    --primary-mid: oklch(72% 0.18 75);
+    --primary-dark: oklch(55% 0.16 55);
+    --primary-dim: oklch(32% 0.09 50);
 
-    /* Secondary — Cyan (counterpoint, 195°) */
-    --secondary-h: 195;
-    --secondary-bright: oklch(84% 0.16 var(--secondary-h));
-    --secondary-mid: oklch(74% 0.15 var(--secondary-h));
-    --secondary-dark: oklch(56% 0.12 var(--secondary-h));
+    /* Brand Colors — Teal (Secondary) */
+    --secondary-h: 175;
+    --secondary-bright: oklch(75% 0.14 var(--secondary-h));
+    --secondary-mid: oklch(62% 0.12 var(--secondary-h));
+    --secondary-dark: oklch(48% 0.10 var(--secondary-h));
+    --secondary-dim: oklch(32% 0.08 var(--secondary-h));
 
-    /* Tertiary — Pink-magenta accent (315°) */
-    --tertiary-h: 315;
-    --tertiary-bright: oklch(76% 0.19 var(--tertiary-h));
-    --tertiary-dark: oklch(54% 0.15 var(--tertiary-h));
+    /* Support Colors — Cyan (Tertiary) */
+    --tertiary-h: 200;
+    --tertiary-bright: oklch(70% 0.12 var(--tertiary-h));
+    --tertiary-mid: oklch(55% 0.10 var(--tertiary-h));
+    --tertiary-dark: oklch(42% 0.08 var(--tertiary-h));
 
     /* Semantic */
     --color-success: oklch(75% 0.14 165);
-    --color-warning: oklch(85% 0.15 95);
+    --color-warning: oklch(72% 0.18 60);
     --color-error: oklch(68% 0.20 25);
     --color-info: oklch(72% 0.13 230);
 
-    /* Text — muted lifted to 70% L: surfaces are now lighter (bg-panel 28%),
-       so muted needs more L to keep WCAG AA contrast + legible counts/meta. */
-    --text-primary: oklch(98% 0.012 270);
-    --text-secondary: oklch(82% 0.05 270);
-    --text-muted: oklch(70% 0.045 270);
-    --text-inverse: oklch(10% 0.03 270);
+    /* Text Palette */
+    --text-primary: #f1f5fc;
+    --text-secondary: #94a6be;
+    --text-muted: #798898;
+    --text-inverse: #000205;
 
-    /* Borders — stronger so cards visibly lift off the background */
-    --border-subtle: color-mix(in oklch, var(--text-secondary) 30%, transparent);
-    --border-strong: color-mix(in oklch, var(--text-primary) 26%, transparent);
-    --border-accent: color-mix(in oklch, var(--primary-bright) 55%, transparent);
+    /* Borders */
+    --border-subtle: color-mix(in oklch, var(--text-secondary) 16%, transparent);
+    --border-strong: color-mix(in oklch, var(--text-primary) 12%, transparent);
+    --border-accent: color-mix(in oklch, var(--primary-bright) 40%, transparent);
 
-    /* Glow — richer so accents actually emit light */
-    --glow-primary: color-mix(in oklch, var(--primary-bright) 28%, transparent);
-    --glow-secondary: color-mix(in oklch, var(--secondary-bright) 18%, transparent);
+    /* Glow Effects */
+    --glow-primary: color-mix(in oklch, var(--primary-bright) 15%, transparent);
+    --glow-secondary: color-mix(in oklch, var(--secondary-bright) 10%, transparent);
+    --glow-tertiary: color-mix(in oklch, var(--tertiary-bright) 8%, transparent);
 
     /* Glass */
     --bg-glass: color-mix(in oklch, var(--bg-panel) 72%, transparent);
-    --bg-overlay: color-mix(in oklch, var(--bg-deep) 78%, transparent);
+    --bg-overlay: color-mix(in oklch, var(--bg-deep) 72%, transparent);
 
     /* Typography */
     --font-display: 'Space Grotesk Variable', 'Inter Variable', system-ui, sans-serif;
@@ -128,5 +129,62 @@
     --duration-fast: 120ms;
     --duration-base: 200ms;
     --duration-slow: 320ms;
+  }
+
+  [data-theme="light"] {
+    /* Background Palette — Subtiel Warm Wit */
+    --bg-deep: #fcfaf7;
+    --bg-surface: #f3f0eb;
+    --bg-elevated: #ffffff;
+    --bg-panel: #fefdfb;
+
+    /* Brand Colors — Orange-amber (contrast op wit) */
+    --primary-bright: oklch(58% 0.18 55);
+    --primary-mid: oklch(48% 0.17 50);
+    --primary-dark: oklch(38% 0.14 45);
+    --primary-dim: oklch(94% 0.06 92);
+
+    /* Brand Colors — Teal (Secondary) */
+    --secondary-bright: oklch(48% 0.14 var(--secondary-h));
+    --secondary-mid: oklch(40% 0.12 var(--secondary-h));
+    --secondary-dark: oklch(34% 0.10 var(--secondary-h));
+    --secondary-dim: oklch(92% 0.03 var(--secondary-h));
+
+    /* Support Colors — Cyan (Tertiary) */
+    --tertiary-bright: oklch(48% 0.12 var(--tertiary-h));
+    --tertiary-mid: oklch(40% 0.10 var(--tertiary-h));
+    --tertiary-dark: oklch(34% 0.08 var(--tertiary-h));
+
+    /* Semantic Colors */
+    --color-success: oklch(45% 0.16 165);
+    --color-warning: oklch(55% 0.18 55);
+    --color-error: oklch(48% 0.20 25);
+    --color-info: oklch(48% 0.14 230);
+
+    /* Text Palette */
+    --text-primary: #1e293b;
+    --text-secondary: #475569;
+    --text-muted: #64748b;
+    --text-inverse: #ffffff;
+
+    /* Borders */
+    --border-subtle: #e2e8f0;
+    --border-strong: #cbd5e1;
+    --border-accent: color-mix(in oklch, var(--primary-bright) 35%, transparent);
+
+    /* Glow Effects */
+    --glow-primary: color-mix(in oklch, var(--primary-bright) 10%, transparent);
+    --glow-secondary: color-mix(in oklch, var(--secondary-bright) 8%, transparent);
+    --glow-tertiary: color-mix(in oklch, var(--tertiary-bright) 6%, transparent);
+
+    /* Glass */
+    --bg-glass: color-mix(in oklch, var(--bg-panel) 85%, transparent);
+    --bg-overlay: color-mix(in oklch, var(--bg-deep) 75%, transparent);
+
+    /* Shadows */
+    --shadow-sm: 0 1px 2px rgba(30, 41, 59, 0.05);
+    --shadow-md: 0 4px 8px rgba(30, 41, 59, 0.07);
+    --shadow-lg: 0 12px 24px rgba(30, 41, 59, 0.09);
+    --shadow-glow: 0 0 24px var(--glow-primary);
   }
 }

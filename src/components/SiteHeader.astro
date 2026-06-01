@@ -11,10 +11,11 @@ const otherHref = getAlternateUrl(Astro.url.pathname, locale);
 
 const nav = [
   { label: t.nav.everyone, href: localizedHref('/', locale) },
-  { label: t.nav.github, href: localizedHref('/?platform=github', locale) },
-  { label: t.nav.youtube, href: localizedHref('/?platform=youtube', locale) },
-  { label: t.nav.twitter, href: localizedHref('/?platform=twitter', locale) },
-  { label: t.nav.bluesky, href: localizedHref('/?platform=bluesky', locale) },
+  { label: 'Must-follow', href: localizedHref('/must-follow', locale) },
+  { label: t.nav.github, href: localizedHref('/github', locale) },
+  { label: t.nav.youtube, href: localizedHref('/youtube', locale) },
+  { label: t.nav.twitter, href: localizedHref('/twitter', locale) },
+  { label: t.nav.bluesky, href: localizedHref('/bluesky', locale) },
   { label: t.nav.network, href: localizedHref('/network', locale) },
   { label: t.nav.galaxy, href: localizedHref('/galaxy', locale) },
   { label: t.nav.about, href: t.aboutPath },

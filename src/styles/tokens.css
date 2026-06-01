@@ -6,11 +6,13 @@
 
 @layer tokens {
   :root {
-    /* Background — violet-tinted slate (richer chroma = depth, not flat grey) */
-    --bg-deep: oklch(13% 0.028 270);
-    --bg-surface: oklch(16% 0.034 270);
-    --bg-elevated: oklch(20% 0.042 270);
-    --bg-panel: oklch(23% 0.046 270);
+    /* Background — violet-tinted slate (richer chroma = depth, not flat grey).
+       Surfaces lifted (~+5% L) so cards/panels visibly step off bg-deep
+       instead of melting into one dark zone. "Lift & contrast" direction. */
+    --bg-deep: oklch(12% 0.028 270);
+    --bg-surface: oklch(18% 0.036 270);
+    --bg-elevated: oklch(24% 0.044 270);
+    --bg-panel: oklch(28% 0.050 270);
 
     /* Brand — Violet (270°) — punchy */
     --primary-h: 270;
@@ -35,16 +37,17 @@
     --color-error: oklch(68% 0.20 25);
     --color-info: oklch(72% 0.13 230);
 
-    /* Text — text-muted lifted to 62% L for WCAG AA on bg-panel */
+    /* Text — muted lifted to 70% L: surfaces are now lighter (bg-panel 28%),
+       so muted needs more L to keep WCAG AA contrast + legible counts/meta. */
     --text-primary: oklch(98% 0.012 270);
-    --text-secondary: oklch(78% 0.05 270);
-    --text-muted: oklch(62% 0.045 270);
+    --text-secondary: oklch(82% 0.05 270);
+    --text-muted: oklch(70% 0.045 270);
     --text-inverse: oklch(10% 0.03 270);
 
     /* Borders — stronger so cards visibly lift off the background */
-    --border-subtle: color-mix(in oklch, var(--text-secondary) 22%, transparent);
-    --border-strong: color-mix(in oklch, var(--text-primary) 18%, transparent);
-    --border-accent: color-mix(in oklch, var(--primary-bright) 50%, transparent);
+    --border-subtle: color-mix(in oklch, var(--text-secondary) 30%, transparent);
+    --border-strong: color-mix(in oklch, var(--text-primary) 26%, transparent);
+    --border-accent: color-mix(in oklch, var(--primary-bright) 55%, transparent);
 
     /* Glow — richer so accents actually emit light */
     --glow-primary: color-mix(in oklch, var(--primary-bright) 28%, transparent);

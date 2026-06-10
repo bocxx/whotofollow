@@ -1,0 +1,106 @@
+---
+/**
+ * ReadingProgress — minimalistische voortgangsbalk voor artikelen.
+ *
+ * Per briefing: "dunne lijn die voller wordt". V1's percent/min-pill is
+ * weggelaten — die voelde te HUD-achtig voor editorial. Alleen de balk.
+ *
+ * Activeert alleen op pagina's met `.article__content`. Op andere
+ * pagina's blijft de bar verborgen (ipv 0% te tonen).
+ */
+
+interface Props {
+  /** CSS-selector voor het content-element waarvan we de voortgang meten */
+  selector?: string;
+}
+const { selector = '.article__content' } = Astro.props;
+---
+
+<div
+  class="reading-progress"
+  id="reading-progress"
+  data-selector={selector}
+  aria-hidden="true"
+>
+  <div class="reading-progress__bar" id="reading-progress-bar"></div>
+</div>
+
+<style>
+  /* Dunne lijn boven het smart-sticky-header. Zit boven --z-sticky (200)
+     zodat ie altijd zichtbaar is, óók wanneer de header inglijdt. */
+  .reading-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    z-index: calc(var(--z-sticky) + 1);
+    background: transparent;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity var(--duration-base) var(--ease-out);
+  }
+
+  .reading-progress[data-active="true"] {
+    opacity: 1;
+  }
+
+  .reading-progress__bar {
+    height: 100%;
+    width: 0%;
+    background: var(--primary-bright);
+    transition: width 60ms linear;
+    will-change: width;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .reading-progress,
+    .reading-progress__bar {
+      transition: none;
+    }
+  }
+</style>
+
+<script>
+  function initReadingProgress() {
+    const root = document.getElementById('reading-progress');
+    const bar = document.getElementById('reading-progress-bar');
+    if (!root || !bar) return;
+
+    const selector = root.dataset.selector || '.article__content';
+    const article = document.querySelector(selector) as HTMLElement | null;
+
+    if (!article) {
+      root.dataset.active = 'false';
+      bar.style.width = '0%';
+      return;
+    }
+
+    root.dataset.active = 'true';
+
+    let ticking = false;
+    function update() {
+      const rect = article!.getBoundingClientRect();
+      const articleTop = rect.top + window.scrollY;
+      const articleEnd = articleTop + rect.height - window.innerHeight;
+      const range = Math.max(1, articleEnd - articleTop);
+      const scrolled = window.scrollY - articleTop;
+      const progress = Math.min(100, Math.max(0, (scrolled / range) * 100));
+      bar!.style.width = `${progress}%`;
+      ticking = false;
+    }
+
+    function onScroll() {
+      if (!ticking) {
+        ticking = true;
+        requestAnimationFrame(update);
+      }
+    }
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    update();
+  }
+
+  initReadingProgress();
+  document.addEventListener('astro:page-load', initReadingProgress);
+</script>

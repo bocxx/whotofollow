@@ -216,41 +216,37 @@ const displayBio = creator.bio || buildFallbackBio();
   .creator-card[data-source="twitter"]  .source-dot { background: oklch(72% 0.13 230); }
   .creator-card[data-source="bluesky"]  .source-dot { background: oklch(72% 0.13 230); }
 
-  /* tier badge — solid, high-contrast, inline; the ONE focal accent on the card */
+  /* tier badge — subtle outline pill; quiet by default, brand accent only on picks */
   .tier-pill {
     display: inline-flex; align-items: center; gap: 4px;
     font-size: 10px;
-    font-weight: var(--font-bold);
-    letter-spacing: 0.06em;
+    font-weight: var(--font-semibold);
+    letter-spacing: 0.04em;
     text-transform: uppercase;
-    padding: 3px 8px;
+    padding: 2px 7px;
     border-radius: var(--radius-full);
-    background: var(--primary-bright);
-    color: oklch(15% 0.02 270);   /* dark text on bright */
-    border: none;
+    background: color-mix(in oklch, var(--primary-bright) 12%, transparent);
+    color: var(--primary-bright);
+    border: 1px solid color-mix(in oklch, var(--primary-bright) 30%, transparent);
     white-space: nowrap;
     flex-shrink: 0;
-    box-shadow: 0 1px 4px color-mix(in oklch, var(--primary-bright) 35%, transparent);
   }
+  /* Must-follow = the one brand accent, just a touch stronger */
   .tier-pill--must-follow {
-    background: linear-gradient(135deg, oklch(78% 0.18 270), oklch(72% 0.22 290));
-    color: white;
+    background: color-mix(in oklch, var(--primary-bright) 16%, transparent);
+    color: var(--primary-bright);
+    border-color: color-mix(in oklch, var(--primary-bright) 42%, transparent);
   }
   .tier-pill--official {
-    background: linear-gradient(135deg, oklch(82% 0.14 195), oklch(76% 0.16 210));
-    color: oklch(15% 0.02 220);
+    background: color-mix(in oklch, var(--secondary-bright) 14%, transparent);
+    color: var(--secondary-bright);
+    border-color: color-mix(in oklch, var(--secondary-bright) 32%, transparent);
   }
-  .tier-pill--recommended {
-    background: color-mix(in oklch, var(--primary-bright) 25%, transparent);
-    color: oklch(from var(--primary-bright) min(l + 0.12, 0.95) c h);
-    border: 1px solid color-mix(in oklch, var(--primary-bright) 40%, transparent);
-    box-shadow: none;
-  }
+  .tier-pill--recommended,
   .tier-pill--niche {
-    background: color-mix(in oklch, var(--tertiary-bright) 18%, transparent);
-    color: oklch(from var(--tertiary-bright) min(l + 0.12, 0.95) c h);
-    border: 1px solid color-mix(in oklch, var(--tertiary-bright) 35%, transparent);
-    box-shadow: none;
+    background: transparent;
+    color: var(--text-muted);
+    border-color: var(--border-subtle);
   }
 
   .multi-platform-pill {

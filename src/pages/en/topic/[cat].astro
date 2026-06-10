@@ -9,6 +9,7 @@
  */
 import Layout from '../../../layouts/Layout.astro';
 import CreatorCard from '../../../components/molecules/CreatorCard.astro';
+import LoadMore from '../../../components/LoadMore.astro';
 import { siteConfig } from '../../../config/site';
 import {
   getAllCreators, getCounts, categoryLabel, getGeneratedAt,
@@ -122,9 +123,10 @@ const jsonLd = {
           {t.category.othersHeading}
           <span class="text-muted mono" style="font-size: var(--text-sm); margin-left: var(--space-2);">{others.length}</span>
         </h2>
-        <div class="feed-grid">
+        <div class="feed-grid" id="cat-others-grid">
           {others.map((c) => <CreatorCard creator={c} locale={locale} />)}
         </div>
+        <LoadMore gridId="cat-others-grid" initial={24} step={24} locale={locale} />
       </section>
     )}
 

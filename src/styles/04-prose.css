@@ -1,0 +1,662 @@
+/**
+ * Prose styling — long-form article content.
+ *
+ * Target-class: `.article__content` (gebruikt in ArticleView).
+ * Werkt ook op `.prose` voor backwards-compat met legacy contexten.
+ *
+ * Stack-aware:
+ *   - Body (Geist) voor paragrafen/lists
+ *   - Display (Boldonse) voor h2-h4 inline in artikel
+ *   - Mono (JetBrains Mono) voor code, tags, pill-labels
+ *
+ * Plugin-classes (zie src/plugins/*.mjs):
+ *   .callout--beginner   .callout--advanced   .callout--audience
+ *   .action-layers       .action-layers__tier (.tier-step / .tier-team)
+ *   .category-pill[data-category]   .category-pills
+ *   .nl-handle           .red-thread
+ *   .item-deck           .source-line   .source-line__label
+ *   .digest-icon
+ */
+
+@layer prose {
+
+  .article__content,
+  .prose {
+    --prose-text: #b3c2d4;        /* dark mode: soft slate-blue op donkere bg */
+    --prose-heading: var(--text-primary);
+    --prose-link: var(--primary-bright);
+    --prose-rule: var(--border-subtle);
+  }
+
+  /* Light mode: #b3c2d4 zakt naar 1.74:1 op de warme witte pagina (WCAG FAIL).
+     Slate-700 geeft ~9.9:1 (AAA) — luxe longform-leesbaarheid, en blijft
+     net iets zachter dan de bijna-zwarte heading (#1e293b, ~14:1) zodat de
+     editorial body-onder-kop hiërarchie behouden blijft. */
+  [data-theme="light"] .article__content,
+  [data-theme="light"] .prose {
+    --prose-text: #334155;
+  }
+
+  /* ============================================
+     Paragraphs
+     ============================================ */
+  .article__content > p,
+  .prose > p {
+    font-family: var(--font-body);
+    font-size: var(--text-lg);
+    line-height: var(--leading-relaxed);
+    color: var(--prose-text);
+    margin: 0 0 var(--space-5) 0;
+    max-width: 70ch;
+  }
+
+  /* ============================================
+     Headings binnen artikel (h2 / h3 / h4)
+     ============================================ */
+  .article__content h2,
+  .prose h2 {
+    font-family: var(--font-display);
+    font-weight: var(--font-regular);
+    font-size: clamp(1.6rem, 1.4rem + 1vw, 2rem);
+    line-height: 1.2;
+    letter-spacing: var(--tracking-tight);
+    color: var(--prose-heading);
+    margin: var(--space-12) 0 var(--space-4) 0;
+
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-2);
+  }
+
+  .article__content h3,
+  .prose h3 {
+    font-family: var(--font-display);
+    font-weight: var(--font-regular);
+    font-size: clamp(1.25rem, 1.1rem + 0.6vw, 1.5rem);
+    line-height: 1.25;
+    letter-spacing: var(--tracking-tight);
+    color: var(--prose-heading);
+    margin: var(--space-10) 0 var(--space-3) 0;
+
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-2);
+  }
+
+  .article__content h4,
+  .prose h4 {
+    font-family: var(--font-body);
+    font-size: var(--text-lg);
+    font-weight: var(--font-semibold);
+    color: var(--prose-heading);
+    margin: var(--space-8) 0 var(--space-2) 0;
+  }
+
+  .article__content :is(h2, h3, h4)[id],
+  .prose :is(h2, h3, h4)[id] {
+    scroll-margin-top: 80px;
+  }
+
+  /* ============================================
+     Plugin: digest-icon (rehype-digest-icons)
+     ============================================ */
+  .article__content svg.digest-icon,
+  .prose svg.digest-icon {
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    margin-top: 0.25em;
+    color: var(--primary-bright);
+  }
+  .article__content h3 svg.digest-icon,
+  .prose h3 svg.digest-icon {
+    width: 16px;
+    height: 16px;
+    color: var(--secondary-bright);
+  }
+
+  /* ============================================
+     Plugin: rehype-item-deck — italic <p> na H3
+     ============================================ */
+  .article__content .item-deck,
+  .prose .item-deck {
+    font-family: var(--font-body);
+    font-size: var(--text-base);
+    color: var(--text-muted);
+    line-height: var(--leading-snug);
+    margin: calc(-1 * var(--space-2)) 0 var(--space-4) 0;
+    font-style: italic;
+    max-width: 60ch;
+  }
+
+  /* ============================================
+     Lists
+     ============================================ */
+  .article__content ul,
+  .article__content ol,
+  .prose ul,
+  .prose ol {
+    margin: 0 0 var(--space-5) 0;
+    color: var(--prose-text);
+    font-family: var(--font-body);
+    font-size: var(--text-lg);
+    line-height: var(--leading-relaxed);
+    max-width: 70ch;
+  }
+
+  .article__content ul,
+  .prose ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  .article__content ul > li,
+  .prose ul > li {
+    position: relative;
+    padding-left: var(--space-6);
+    margin-bottom: var(--space-3);
+  }
+  /* Bullets als chevron-right — CSS-gedrawn via twee borders, blijft crisp
+     bij elke zoom-factor en theme-bewust via currentColor. Past bij de
+     overige editorial-arrows op de site (anchor-cards, share-strips). */
+  .article__content ul > li::before,
+  .prose ul > li::before {
+    content: '';
+    position: absolute;
+    left: 4px;
+    top: 0.55em;
+    width: 6px;
+    height: 6px;
+    border-right: 1.5px solid var(--primary-bright);
+    border-bottom: 1.5px solid var(--primary-bright);
+    transform: rotate(-45deg);
+  }
+
+  .article__content ol,
+  .prose ol {
+    list-style: decimal;
+    padding-left: var(--space-7);
+  }
+  .article__content ol > li,
+  .prose ol > li {
+    margin-bottom: var(--space-3);
+    padding-left: var(--space-1);
+  }
+  .article__content ol > li::marker,
+  .prose ol > li::marker {
+    color: var(--text-muted);
+    font-family: var(--font-mono);
+    font-size: var(--text-sm);
+    font-weight: var(--font-regular);
+  }
+
+  /* ============================================
+     Links — onderscheidend maar terughoudend
+     ============================================ */
+  .article__content a:not(.category-pill),
+  .prose a:not(.category-pill) {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 1px solid color-mix(in oklch, var(--prose-link) 35%, transparent);
+    transition:
+      color var(--transition-fast),
+      border-color var(--transition-fast);
+  }
+  .article__content a:hover:not(.category-pill),
+  .prose a:hover:not(.category-pill) {
+    color: var(--prose-link);
+    border-bottom-color: var(--prose-link);
+  }
+
+  /* ============================================
+     Strong, em, inline code
+     ============================================ */
+  .article__content strong,
+  .prose strong {
+    color: var(--text-primary);
+    font-weight: var(--font-semibold);
+  }
+  .article__content em,
+  .prose em {
+    font-style: italic;
+  }
+  .article__content code:not(pre code),
+  .prose code:not(pre code) {
+    font-family: var(--font-mono);
+    font-size: 0.92em;
+    padding: 1px 5px;
+    background: var(--bg-elevated);
+    border: 1px solid var(--border-subtle);
+    border-radius: 3px;
+    color: var(--text-primary);
+  }
+
+  /* ============================================
+     Code blocks
+     ============================================ */
+  .article__content pre,
+  .prose pre {
+    margin: var(--space-6) 0;
+    padding: var(--space-5);
+    background: var(--bg-panel);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    overflow-x: auto;
+    font-size: var(--text-sm);
+  }
+  .article__content pre code,
+  .prose pre code {
+    font-family: var(--font-mono);
+    font-size: inherit;
+    color: var(--text-primary);
+    background: none;
+    border: none;
+    padding: 0;
+  }
+
+  /* ============================================
+     Generic blockquotes (niet plugin-callouts) — kaal italic
+     Geen border-left, geen background — alleen italic + indent.
+     ============================================ */
+  .article__content blockquote:not([class*="callout--"]),
+  .prose blockquote:not([class*="callout--"]) {
+    margin: var(--space-8) 0;
+    padding: 0 0 0 var(--space-5);
+    font-family: var(--font-body);
+    font-size: var(--text-base);
+    font-style: italic;
+    line-height: var(--leading-relaxed);
+    color: var(--text-secondary);
+    max-width: 65ch;
+  }
+  .article__content blockquote p:last-child,
+  .prose blockquote p:last-child {
+    margin-bottom: 0;
+  }
+
+  /* ============================================
+     Plugin: rehype-callout-tags — labels zonder kleurpoespas.
+     Alleen het strong-label krijgt een mono-kicker boven de tekst.
+     Geen border-left, geen background-fill, geen iconen — terughoudend.
+     ============================================ */
+  .article__content blockquote.callout--beginner,
+  .article__content blockquote.callout--advanced,
+  .article__content blockquote.callout--audience,
+  .prose blockquote.callout--beginner,
+  .prose blockquote.callout--advanced,
+  .prose blockquote.callout--audience {
+    margin: var(--space-8) 0;
+    padding: 0;
+    background: transparent;
+    border: none;
+    font-family: var(--font-body);
+    font-size: var(--text-base);
+    font-style: normal;
+    font-weight: var(--font-regular);
+    line-height: var(--leading-relaxed);
+    color: var(--text-secondary);
+    max-width: 70ch;
+  }
+
+  /* Eerste <strong> wordt de mono-kicker — klein, uppercase, tracked.
+     Werkt voor "Beginner-tip", "Voor gevorderden", "Voor wie is dit artikel". */
+  .article__content blockquote.callout--beginner > p:first-of-type strong:first-of-type,
+  .article__content blockquote.callout--advanced > p:first-of-type strong:first-of-type,
+  .article__content blockquote.callout--audience > p:first-of-type strong:first-of-type,
+  .prose blockquote.callout--beginner > p:first-of-type strong:first-of-type,
+  .prose blockquote.callout--advanced > p:first-of-type strong:first-of-type,
+  .prose blockquote.callout--audience > p:first-of-type strong:first-of-type {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: var(--text-2xs);
+    font-weight: var(--font-medium);
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-widest);
+    margin-bottom: var(--space-2);
+  }
+
+  /* ============================================
+     Plugin: rehype-action-layers
+     ============================================ */
+  .article__content .action-layers,
+  .prose .action-layers {
+    display: grid;
+    gap: var(--space-4);
+    margin: var(--space-10) 0;
+  }
+  @media (min-width: 48em) {
+    .action-layers {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  .action-layers__tier {
+    padding: var(--space-5) var(--space-6);
+    background: var(--bg-elevated);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    display: grid;
+    grid-template-columns: 24px 1fr;
+    gap: var(--space-3);
+    align-items: start;
+  }
+
+  .action-layers__icon {
+    width: 20px;
+    height: 20px;
+    margin-top: 2px;
+    color: var(--primary-bright);
+    flex-shrink: 0;
+  }
+  .action-layers .tier-team .action-layers__icon {
+    color: var(--secondary-bright);
+  }
+
+  .action-layers__label {
+    font-family: var(--font-mono);
+    font-size: var(--text-2xs);
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-widest);
+    margin: 0 0 var(--space-2) 0;
+    grid-column: 2;
+  }
+
+  .action-layers__body {
+    grid-column: 2;
+    margin: 0;
+    font-size: var(--text-base);
+    color: var(--text-secondary);
+    line-height: var(--leading-snug);
+  }
+
+  /* ============================================
+     Plugin: rehype-category-pills
+     ============================================ */
+  .article__content .category-pills,
+  .prose .category-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+    margin: var(--space-4) 0;
+  }
+
+  .category-pill {
+    display: inline-flex;
+    align-items: center;
+    padding: 2px var(--space-2);
+    background: transparent;
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-sm);
+    font-family: var(--font-mono);
+    font-size: var(--text-2xs);
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-wide);
+    color: var(--text-muted);
+    text-decoration: none !important;
+    border-bottom: 1px solid var(--border-subtle) !important;
+    transition: color var(--transition-fast), border-color var(--transition-fast);
+  }
+  .category-pill:hover {
+    color: var(--primary-bright);
+    border-color: var(--primary-bright) !important;
+  }
+  .category-pill[data-category="juridisch"]    { color: var(--color-error); }
+  .category-pill[data-category="ethiek"]       { color: var(--tertiary-bright); }
+  .category-pill[data-category="technologie"]  { color: var(--primary-bright); }
+  .category-pill[data-category="markt"]        { color: var(--secondary-bright); }
+
+  /* ============================================
+     Plugin: rehype-nl-handle
+     "Wat dit betekent in Nederland" — editorial sidebar.
+     Block-callout in action-layers stijl: subtiele kicker, body
+     eronder, geen kleurige fill maar wel een dunne accent-rail
+     links zodat hij visueel los staat van de prose.
+     ============================================ */
+  .article__content .nl-handle,
+  .prose .nl-handle {
+    display: block;
+    margin: var(--space-8) 0;
+    padding: var(--space-5) var(--space-6);
+    background: var(--bg-elevated);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    max-width: 70ch;
+  }
+  .article__content .nl-handle__label,
+  .prose .nl-handle__label {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    font-family: var(--font-mono);
+    font-size: var(--text-2xs);
+    font-weight: var(--font-medium);
+    color: var(--secondary-bright);
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-widest);
+    margin-bottom: var(--space-3);
+  }
+  .article__content .nl-handle__icon,
+  .prose .nl-handle__icon {
+    width: 14px;
+    height: 14px;
+    color: var(--secondary-bright);
+    flex-shrink: 0;
+  }
+  .article__content .nl-handle__body,
+  .prose .nl-handle__body {
+    margin: 0;
+    font-family: var(--font-body);
+    font-size: var(--text-base);
+    line-height: var(--leading-relaxed);
+    color: var(--text-primary);
+  }
+
+  /* Source-line binnen het callout-blok: rechtsonder, zelfde mono-stijl
+     maar zonder de buiten-de-prose left-border. Margin negatief zodat
+     hij subtiel uitlijnt tegen de callout-padding-rand. */
+  .article__content .nl-handle .source-line,
+  .prose .nl-handle .source-line {
+    margin: var(--space-4) 0 0;
+    padding: var(--space-2) 0 0;
+    border-left: none;
+    border-top: 1px solid var(--border-subtle);
+    text-align: right;
+  }
+  .article__content .nl-handle .source-line__label,
+  .prose .nl-handle .source-line__label {
+    margin-right: var(--space-1);
+  }
+
+  .article__content .red-thread,
+  .prose .red-thread {
+    display: block;
+    margin: var(--space-8) 0;
+    padding: var(--space-5) var(--space-6);
+    background: var(--bg-elevated);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    max-width: 70ch;
+  }
+  .article__content .red-thread__label,
+  .prose .red-thread__label {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    font-family: var(--font-mono);
+    font-size: var(--text-2xs);
+    font-weight: var(--font-medium);
+    color: var(--color-error);
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-widest);
+    margin-bottom: var(--space-3);
+  }
+  .article__content .red-thread__icon,
+  .prose .red-thread__icon {
+    width: 14px;
+    height: 14px;
+    color: var(--color-error);
+    flex-shrink: 0;
+  }
+  .article__content .red-thread__body,
+  .prose .red-thread__body {
+    margin: 0;
+    font-family: var(--font-body);
+    font-size: var(--text-base);
+    line-height: var(--leading-relaxed);
+    color: var(--text-primary);
+  }
+
+  /* ============================================
+     Plugin: rehype-source-line
+     ============================================ */
+  .article__content .source-line,
+  .prose .source-line {
+    display: block;
+    margin: var(--space-2) 0 var(--space-6);
+    padding-left: var(--space-4);
+    border-left: 1px solid var(--border-subtle);
+    font-family: var(--font-mono);
+    font-size: var(--text-2xs);
+    color: var(--text-muted);
+    letter-spacing: var(--tracking-wide);
+  }
+  .article__content .source-line__label,
+  .prose .source-line__label {
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    margin-right: var(--space-1);
+  }
+
+  /* ============================================
+     Tables
+     ============================================ */
+  .article__content table,
+  .prose table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: var(--space-8) 0;
+    font-family: var(--font-body);
+    font-size: var(--text-sm);
+  }
+  .article__content thead,
+  .prose thead {
+    border-bottom: 2px solid var(--border-strong);
+  }
+  .article__content th,
+  .prose th {
+    text-align: left;
+    padding: var(--space-3) var(--space-4);
+    font-family: var(--font-mono);
+    font-size: var(--text-2xs);
+    font-weight: var(--font-medium);
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-widest);
+  }
+  .article__content td,
+  .prose td {
+    padding: var(--space-3) var(--space-4);
+    border-bottom: 1px solid var(--border-subtle);
+    color: var(--text-secondary);
+    line-height: var(--leading-snug);
+  }
+
+  /* ============================================
+     Images & figures
+     ============================================ */
+  .article__content img,
+  .prose img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius-sm);
+    margin: var(--space-8) 0;
+  }
+  /* Inlined, theme-aware chart SVGs (rehype-markdown-images.mjs).
+     viewBox + width:100% scales them responsively; colors flip with the
+     active data-theme because the SVG <style> uses var(--token) fills. */
+  .article__content svg.article-chart,
+  .prose svg.article-chart {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: var(--space-8) 0;
+    border-radius: var(--radius-sm);
+  }
+  .article__content figure,
+  .prose figure {
+    margin: var(--space-10) 0;
+  }
+  .article__content figcaption,
+  .prose figcaption {
+    margin-top: var(--space-2);
+    font-family: var(--font-mono);
+    font-size: var(--text-2xs);
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-widest);
+    text-align: center;
+  }
+
+  /* ============================================
+     Horizontal rule met editorial flourish
+     ============================================ */
+  .article__content hr,
+  .prose hr {
+    border: none;
+    height: 1px;
+    background: var(--prose-rule);
+    margin: var(--space-12) 0;
+    position: relative;
+  }
+  .article__content hr::after,
+  .prose hr::after {
+    content: '◆';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--bg-deep);
+    padding: 0 var(--space-3);
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    color: var(--text-muted);
+    opacity: 0.5;
+  }
+
+  /* ============================================
+     Embeds — YouTube + Twitter/X
+     Geïnjecteerd door rehype-embeds.mjs uit
+     <YouTubeEmbed url=".." /> en <TweetEmbed url=".." />.
+     ============================================ */
+  .article__content .embed-youtube,
+  .prose .embed-youtube {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    margin: var(--space-10) 0;
+    border-radius: var(--radius-md, 0.5rem);
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.04);
+  }
+  .article__content .embed-youtube iframe,
+  .prose .embed-youtube iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+
+  .article__content .embed-tweet,
+  .prose .embed-tweet {
+    margin: var(--space-10) 0;
+    display: flex;
+    justify-content: center;
+  }
+  .article__content .embed-tweet .twitter-tweet,
+  .prose .embed-tweet .twitter-tweet {
+    max-width: 550px;
+    margin: 0 auto;
+  }
+}

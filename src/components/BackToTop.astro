@@ -1,0 +1,99 @@
+---
+/**
+ * BackToTop — floating "terug naar boven"-knop.
+ *
+ * Verschijnt na een scroll-drempel rechtsonder en scrollt smooth omhoog.
+ * Editorial-stijl: donker vlak, dunne border, geel chevron-icoon — geen
+ * filled accent-knop (zie de button-richtlijn: minimalistisch, outline).
+ * Toegankelijk: aria-label, ≥44px touch-target, respecteert
+ * prefers-reduced-motion (instant scroll i.p.v. smooth).
+ *
+ * Zonder JS niet zichtbaar (puur progressieve verbetering) — de browser
+ * heeft zelf al scroll-naar-boven via Home/⌘↑.
+ */
+import { ChevronUp } from '@lucide/astro';
+---
+
+<button type="button" class="back-to-top" data-back-to-top aria-label="Terug naar boven">
+  <ChevronUp size={20} stroke-width={2} aria-hidden="true" />
+</button>
+
+<style>
+  .back-to-top {
+    position: fixed;
+    right: var(--space-5);
+    bottom: var(--space-5);
+    z-index: var(--z-fixed);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    background: var(--bg-elevated);
+    border: 1px solid var(--border-strong);
+    border-radius: var(--radius-sm);
+    color: var(--primary-bright);
+    cursor: pointer;
+    /* Verborgen tot JS de scroll-drempel detecteert. */
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(8px);
+    transition:
+      opacity var(--transition-fast),
+      transform var(--transition-fast),
+      visibility var(--transition-fast),
+      border-color var(--transition-fast);
+  }
+
+  .back-to-top[data-visible] {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+
+  .back-to-top:hover {
+    border-color: var(--primary-bright);
+  }
+
+  .back-to-top:focus-visible {
+    outline: none;
+    box-shadow: var(--ring-primary);
+  }
+
+  @media (min-width: 64em) {
+    .back-to-top {
+      right: var(--space-8);
+      bottom: var(--space-8);
+    }
+  }
+</style>
+
+<script>
+  function initBackToTop() {
+    const btn = document.querySelector<HTMLButtonElement>('[data-back-to-top]');
+    if (!btn || btn.dataset.bound) return;
+    btn.dataset.bound = '1';
+
+    const THRESHOLD = 600;
+
+    const sync = () => {
+      const show = window.scrollY > THRESHOLD;
+      if (show === btn.hasAttribute('data-visible')) return;
+      btn.toggleAttribute('data-visible', show);
+    };
+
+    btn.addEventListener('click', () => {
+      const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' });
+    });
+
+    window.addEventListener('scroll', sync, { passive: true });
+    sync();
+  }
+
+  initBackToTop();
+  document.addEventListener('astro:page-load', initBackToTop);
+</script>

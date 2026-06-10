@@ -6,7 +6,7 @@ import { getAllCreators, getCounts, getGeneratedAt, platformLabels, categoryLabe
 import { useTranslations, getDateLocale, type Locale } from '../i18n/messages';
 import {
   Users, Network, Sparkles, Code, Bot, BookOpen, Briefcase,
-  Microscope, Palette, GraduationCap, Wrench, ShieldCheck, Megaphone, Layers,
+  Microscope, Palette, GraduationCap, Wrench, ShieldCheck, Megaphone, Layers, ChevronDown,
 } from '@lucide/astro';
 
 const CategoryIcon: Record<string, any> = {
@@ -100,46 +100,87 @@ const websiteJsonLd = {
     <div class="feed-grid" id="feed-grid">
       {creators.map((c) => <CreatorCard creator={c} locale={locale} />)}
     </div>
+
+    <p class="empty" id="feed-empty" hidden>{t.ui.noResults}</p>
+
+    <div class="load-more" id="home-load-more" data-count-tmpl={t.ui.showingTemplate} hidden>
+      <button type="button" class="btn btn-outline btn-lg" id="home-load-more-btn">
+        <span>{t.ui.loadMore}</span>
+        <ChevronDown size={18} stroke-width={2} />
+      </button>
+      <p class="load-more__count" id="home-load-more-count" aria-live="polite"></p>
+    </div>
   </main>
 </Layout>
 
 <script>
-  // Two-dimensional filtering: scope (all/picks/cross/platform) AND category.
-  // A card is visible only when BOTH dimensions match.
+  // Two-dimensional filtering (scope × category) + progressive reveal.
+  // A card shows only when BOTH dimensions match AND it's within the current
+  // reveal budget. "Show more" lifts the budget; changing a filter resets it.
   const grid = document.getElementById('feed-grid');
   const scopePills = document.querySelectorAll<HTMLButtonElement>('.filter-pill');
   const catPills = document.querySelectorAll<HTMLButtonElement>('.cat-pill');
+  const emptyEl = document.getElementById('feed-empty');
+  const moreWrap = document.getElementById('home-load-more');
+  const moreBtn = document.getElementById('home-load-more-btn');
+  const moreCount = document.getElementById('home-load-more-count');
+  const countTmpl = moreWrap?.dataset.countTmpl ?? '';
+
+  const STEP = 24;
+  const cards = grid
+    ? Array.from(grid.querySelectorAll<HTMLAnchorElement>('.creator-card, .feed-card'))
+    : [];
 
   let activeScope = 'all';
   let activeCategory = 'all';
+  let limit = STEP;
 
-  function applyFilters() {
-    const cards = grid?.querySelectorAll<HTMLAnchorElement>('.creator-card, .feed-card');
-    cards?.forEach((c) => {
-      const src = c.dataset.source;
-      const isCross = !!(c.querySelector('.multi-platform-pill') || c.querySelector('.badge--secondary'));
-      const isPick = c.dataset.pick === '1';
-      const cats = (c.dataset.cats ?? '').split(' ').filter(Boolean);
+  function matches(c: HTMLElement): boolean {
+    const src = c.dataset.source;
+    const isCross = !!(c.querySelector('.multi-platform-pill') || c.querySelector('.badge--secondary'));
+    const isPick = c.dataset.pick === '1';
+    const cats = (c.dataset.cats ?? '').split(' ').filter(Boolean);
 
-      // scope
-      let scopeMatch = true;
-      if (activeScope === 'cross') scopeMatch = isCross;
-      else if (activeScope === 'picks') scopeMatch = isPick;
-      else if (activeScope !== 'all') scopeMatch = src === activeScope;
+    let scopeMatch = true;
+    if (activeScope === 'cross') scopeMatch = isCross;
+    else if (activeScope === 'picks') scopeMatch = isPick;
+    else if (activeScope !== 'all') scopeMatch = src === activeScope;
 
-      // category
-      const catMatch = activeCategory === 'all' || cats.includes(activeCategory);
-
-      c.style.display = (scopeMatch && catMatch) ? '' : 'none';
-    });
+    const catMatch = activeCategory === 'all' || cats.includes(activeCategory);
+    return scopeMatch && catMatch;
   }
+
+  function apply() {
+    let total = 0;
+    let shown = 0;
+    cards.forEach((c) => {
+      if (matches(c)) {
+        total++;
+        if (shown < limit) { c.style.display = ''; shown++; }
+        else c.style.display = 'none';
+      } else {
+        c.style.display = 'none';
+      }
+    });
+    if (emptyEl) emptyEl.hidden = total !== 0;
+    if (moreWrap) {
+      moreWrap.hidden = shown >= total;
+      if (moreCount && countTmpl) {
+        moreCount.textContent = countTmpl
+          .replace('{shown}', String(shown))
+          .replace('{total}', String(total));
+      }
+    }
+  }
+
+  function resetAndApply() { limit = STEP; apply(); }
 
   scopePills.forEach((p) => {
     p.addEventListener('click', () => {
       scopePills.forEach((x) => x.classList.remove('is-active'));
       p.classList.add('is-active');
       activeScope = p.dataset.filter || 'all';
-      applyFilters();
+      resetAndApply();
     });
   });
 
@@ -148,20 +189,23 @@ const websiteJsonLd = {
       catPills.forEach((x) => x.classList.remove('is-active'));
       p.classList.add('is-active');
       activeCategory = p.dataset.catFilter || 'all';
-      applyFilters();
+      resetAndApply();
     });
   });
 
-  // URL params: ?platform=... or ?filter=... (scope), ?cat=... (category)
+  moreBtn?.addEventListener('click', () => { limit += STEP; apply(); });
+
+  // URL params: ?platform=/?filter= (scope), ?cat=/?category= (category)
   const params = new URLSearchParams(location.search);
   const scopeParam = params.get('platform') || params.get('filter');
   if (scopeParam) {
-    const pill = document.querySelector<HTMLButtonElement>(`.filter-pill[data-filter="${scopeParam}"]`);
-    pill?.click();
+    document.querySelector<HTMLButtonElement>(`.filter-pill[data-filter="${scopeParam}"]`)?.click();
   }
   const catParam = params.get('cat') || params.get('category');
   if (catParam) {
-    const pill = document.querySelector<HTMLButtonElement>(`.cat-pill[data-cat-filter="${catParam}"]`);
-    pill?.click();
+    document.querySelector<HTMLButtonElement>(`.cat-pill[data-cat-filter="${catParam}"]`)?.click();
   }
+
+  // Initial paint (covers the no-URL-param case)
+  apply();
 </script>

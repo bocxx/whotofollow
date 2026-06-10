@@ -1,2 +1,45 @@
+/**
+ * whotofollow.online — Design System
+ * Gebouwd op de nebula architectuur van debesteaitools.nl.
+ *
+ * Layer volgorde is deterministisch — nooit wijzigen zonder cascade te begrijpen.
+ * Rebrand: verander --primary-h in tokens.css (nu 62 = amber-orange).
+ */
+
+@layer tokens, animations, reset, base, components, specialized, atmospherics, prose, utilities;
+
+/* 1. Base tokens (nebula systeem) + site-specifieke overrides (amber-orange hues, fonts) */
 @import './tokens.css';
-@import './base.css';
+
+/* 2–6. Nebula foundation layers (van debesteaitools) */
+@import './01-animations.css';
+@import './02-base.css';
+@import './03-components.css';
+@import './05-utilities.css';
+
+/* 7. Prose — lange-vorm artikel inhoud */
+@import './04-prose.css';
+
+/* 8. whotofollow site-specifiek (hero, filter bars, feed grid, detail pages) */
+@import './06-site.css';
+
+/* ── Legacy aliases (backwards compat met eventuele inline styles) ── */
+:root {
+  --coral-bright: var(--primary-bright);
+  --coral-mid:    var(--primary-mid);
+  --coral-dark:   var(--primary-dark);
+  --cyan-bright:  var(--secondary-bright);
+  --cyan-mid:     var(--secondary-mid);
+  --cyan-dark:    var(--secondary-dark);
+  --cyan-glow:    var(--glow-secondary);
+}
+
+/* ── Print ──────────────────────────────────────────────── */
+@media print {
+  @page { margin: 2cm; }
+  .nebula, .starfield, .stars, .gradient-orb,
+  nav, .site-header, .back-to-top, .reading-progress { display: none !important; }
+}
+
+/* ── Dev helpers ────────────────────────────────────────── */
+img:not([alt]) { outline: 5px solid red; }

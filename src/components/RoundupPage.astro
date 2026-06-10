@@ -6,6 +6,7 @@
  */
 import Layout from '../layouts/Layout.astro';
 import CreatorCard from './molecules/CreatorCard.astro';
+import LoadMore from './LoadMore.astro';
 import { siteConfig } from '../config/site';
 import { getRoundupConfig, getRoundupData, ROUNDUPS } from '../lib/roundups';
 import { getGeneratedAt, formatNumber } from '../lib/data';
@@ -82,9 +83,11 @@ const jsonLd = {
       </p>
     </header>
 
-    <div class="feed-grid">
+    <div class="feed-grid" id="roundup-grid">
       {data.items.map((c) => <CreatorCard creator={c} locale={locale} />)}
     </div>
+
+    <LoadMore gridId="roundup-grid" initial={24} step={24} locale={locale} />
 
     <section class="roundup-more">
       <h2>{locale === 'nl' ? 'Meer overzichten' : 'More roundups'}</h2>

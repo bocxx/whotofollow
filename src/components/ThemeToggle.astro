@@ -9,7 +9,6 @@ import { Sun, Moon } from '@lucide/astro';
 
 <button
   class="theme-toggle"
-  id="theme-toggle"
   type="button"
   aria-label="Schakel tussen donker en licht thema"
   aria-pressed="true"
@@ -80,33 +79,37 @@ import { Sun, Moon } from '@lucide/astro';
 </style>
 
 <script>
-  function initThemeToggle() {
-    const btn = document.getElementById('theme-toggle');
-    if (!btn) return;
+  function syncPressed() {
+    const isDark = (document.documentElement.getAttribute('data-theme') || 'dark') === 'dark';
+    document.querySelectorAll('.theme-toggle').forEach((b) =>
+      b.setAttribute('aria-pressed', String(isDark)),
+    );
+  }
 
-    const syncPressed = () => {
-      const isDark = (document.documentElement.getAttribute('data-theme') || 'dark') === 'dark';
-      btn.setAttribute('aria-pressed', String(isDark));
-    };
+  function initThemeToggle() {
+    // Multiple toggles can be on the page (desktop pill + mobile bar) — wire each.
+    const buttons = document.querySelectorAll<HTMLButtonElement>('.theme-toggle');
+    if (!buttons.length) return;
     syncPressed();
 
-    if (btn.dataset.bound === '1') return;
-    btn.dataset.bound = '1';
+    buttons.forEach((btn) => {
+      if (btn.dataset.bound === '1') return;
+      btn.dataset.bound = '1';
 
-    btn.addEventListener('click', () => {
-      const html = document.documentElement;
-      const current = html.getAttribute('data-theme') || 'dark';
-      const next = current === 'dark' ? 'light' : 'dark';
+      btn.addEventListener('click', () => {
+        const html = document.documentElement;
+        const next = (html.getAttribute('data-theme') || 'dark') === 'dark' ? 'light' : 'dark';
 
-      html.setAttribute('data-theme', next);
-      btn.setAttribute('aria-pressed', String(next === 'dark'));
-      localStorage.setItem('theme', next);
+        html.setAttribute('data-theme', next);
+        localStorage.setItem('theme', next);
+        syncPressed();
 
-      const colorScheme = document.querySelector('meta[name="color-scheme"]');
-      if (colorScheme) colorScheme.setAttribute('content', next);
+        const colorScheme = document.querySelector('meta[name="color-scheme"]');
+        if (colorScheme) colorScheme.setAttribute('content', next);
 
-      const themeColor = document.querySelector('meta[name="theme-color"]');
-      if (themeColor) themeColor.setAttribute('content', next === 'light' ? '#fcfaf7' : '#010405');
+        const themeColor = document.querySelector('meta[name="theme-color"]');
+        if (themeColor) themeColor.setAttribute('content', next === 'light' ? '#fcfaf7' : '#010405');
+      });
     });
   }
 

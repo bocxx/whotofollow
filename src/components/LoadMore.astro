@@ -1,0 +1,78 @@
+---
+/**
+ * LoadMore — progressive reveal for long card grids.
+ *
+ * Renders all cards server-side (good for SEO + no-JS), then this control
+ * collapses everything past `initial` and reveals `step` more per click.
+ * One script wires every [data-loadmore-for] on the page, so the component
+ * can be dropped onto multiple grids.
+ */
+import { ChevronDown } from '@lucide/astro';
+import { useTranslations, type Locale } from '../i18n/messages';
+
+interface Props {
+  /** id of the grid whose direct children are the cards */
+  gridId: string;
+  initial?: number;
+  step?: number;
+  locale?: Locale;
+}
+const { gridId, initial = 24, step = 24, locale = 'nl' } = Astro.props;
+const t = useTranslations(locale);
+---
+
+<div
+  class="load-more"
+  data-loadmore-for={gridId}
+  data-initial={initial}
+  data-step={step}
+  data-count-tmpl={t.ui.showingTemplate}
+  hidden
+>
+  <button type="button" class="btn btn-outline btn-lg load-more__btn">
+    <span>{t.ui.loadMore}</span>
+    <ChevronDown size={18} stroke-width={2} />
+  </button>
+  <p class="load-more__count" aria-live="polite"></p>
+</div>
+
+<script>
+  function initLoadMore() {
+    document.querySelectorAll<HTMLElement>('[data-loadmore-for]').forEach((wrap) => {
+      if (wrap.dataset.bound === '1') return;
+      wrap.dataset.bound = '1';
+
+      const grid = document.getElementById(wrap.dataset.loadmoreFor || '');
+      if (!grid) return;
+
+      const step = parseInt(wrap.dataset.step || '24', 10);
+      const tmpl = wrap.dataset.countTmpl || '';
+      const btn = wrap.querySelector('button');
+      const count = wrap.querySelector<HTMLElement>('.load-more__count');
+      const cards = Array.from(grid.children) as HTMLElement[];
+      let shown = parseInt(wrap.dataset.initial || '24', 10);
+
+      function render() {
+        cards.forEach((c, i) => c.toggleAttribute('data-lm-hidden', i >= shown));
+        const visible = Math.min(shown, cards.length);
+        if (count && tmpl) {
+          count.textContent = tmpl
+            .replace('{shown}', String(visible))
+            .replace('{total}', String(cards.length));
+        }
+        wrap.hidden = shown >= cards.length;
+      }
+
+      if (cards.length > shown) wrap.hidden = false;
+      render();
+
+      btn?.addEventListener('click', () => {
+        shown += step;
+        render();
+      });
+    });
+  }
+
+  initLoadMore();
+  document.addEventListener('astro:after-swap', initLoadMore);
+</script>

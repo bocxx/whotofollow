@@ -14,8 +14,6 @@ export const messages = {
       youtube: 'YouTube',
       twitter: 'Twitter',
       bluesky: 'Bluesky',
-      network: 'Netwerk',
-      galaxy: 'Galaxy',
       about: 'Over',
     },
 
@@ -78,6 +76,12 @@ export const messages = {
       dataNote: 'Data uit NewsFlux.',
     },
 
+    ui: {
+      loadMore: 'Toon meer',
+      noResults: 'Geen creators gevonden voor deze filter.',
+      showingTemplate: '{shown} van {total} getoond',
+    },
+
     aboutPath: '/over',
   },
 
@@ -92,8 +96,6 @@ export const messages = {
       youtube: 'YouTube',
       twitter: 'Twitter',
       bluesky: 'Bluesky',
-      network: 'Network',
-      galaxy: 'Galaxy',
       about: 'About',
     },
 
@@ -154,6 +156,12 @@ export const messages = {
     footer: {
       tagline: 'Who do you follow for AI?',
       dataNote: 'Data from NewsFlux.',
+    },
+
+    ui: {
+      loadMore: 'Show more',
+      noResults: 'No creators found for this filter.',
+      showingTemplate: '{shown} of {total} shown',
     },
 
     aboutPath: '/en/about',

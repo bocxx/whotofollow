@@ -1,10 +1,20 @@
 ---
-import '@fontsource-variable/inter';
-import '@fontsource-variable/space-grotesk';
-import '@fontsource/jetbrains-mono';
+/**
+ * whotofollow.online — Base Layout
+ *
+ * Built on astro-starter pattern (same as hln-v2 quality level).
+ * Additions over the generic starter:
+ *  - hreflang (NL/EN bilingual site)
+ *  - Locale-aware canonical + meta
+ *  - Umami analytics (inline, View-Transitions-aware)
+ */
+import { Font } from 'astro:assets';
+import { ClientRouter } from 'astro:transitions';
 import '../styles/main.css';
 import SiteHeader from '../components/SiteHeader.astro';
 import SiteFooter from '../components/SiteFooter.astro';
+import BackToTop from '../components/BackToTop.astro';
+import ReadingProgress from '../components/ReadingProgress.astro';
 import { siteConfig } from '../config/site';
 import { useTranslations, getAlternateUrl, type Locale } from '../i18n/messages';
 
@@ -12,8 +22,13 @@ interface Props {
   title: string;
   description?: string;
   ogImage?: string;
-  robots?: string;
   ogType?: 'website' | 'article';
+  /** Relative path to LCP hero image — adds <link rel=preload fetchpriority=high> */
+  preloadImage?: string;
+  /** noindex this page (e.g. stale archive pages) */
+  noindex?: boolean;
+  /** CSS selector for reading progress bar (article pages only) */
+  progressTarget?: string;
 }
 
 const locale = (Astro.currentLocale ?? 'nl') as Locale;
@@ -23,14 +38,20 @@ const {
   title,
   description = t.siteDescription,
   ogImage,
-  robots = 'index, follow, max-image-preview:large',
   ogType = 'website',
+  preloadImage,
+  noindex = false,
+  progressTarget = '.article__content',
 } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, siteConfig.url);
-const resolvedOgImage = ogImage ?? `${siteConfig.url}${siteConfig.defaultOg}`;
+const resolvedOgImage = ogImage
+  ? (ogImage.startsWith('http') ? ogImage : `${siteConfig.url}${ogImage}`)
+  : `${siteConfig.url}${siteConfig.defaultOg}`;
+const ogImageType = /\.png$/i.test(resolvedOgImage) ? 'image/png'
+  : /\.jpe?g$/i.test(resolvedOgImage) ? 'image/jpeg' : 'image/webp';
 
-// Build hreflang map: same logical page in each locale, honouring per-locale slug aliases.
+// hreflang — same logical page in each locale
 const currentPath = Astro.url.pathname;
 const altPath = getAlternateUrl(currentPath, locale);
 const nlPath = locale === 'nl' ? currentPath : altPath;
@@ -48,67 +69,92 @@ const hreflangs = [
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
-    <meta name="color-scheme" content="dark" />
-    <meta name="robots" content={robots} />
-    <meta name="theme-color" content="#010405" />
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <!-- Dual theme-color: browser chrome matches the active theme -->
+    <meta name="theme-color" content="#010405" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#faf9f7" media="(prefers-color-scheme: light)" />
+    <meta name="generator" content={Astro.generator} />
+
+    {noindex && <meta name="robots" content="noindex, follow" />}
     <link rel="canonical" href={canonicalURL.href} />
-    {hreflangs.map((h) => (
-      <link rel="alternate" hreflang={h.hreflang} href={h.href} />
-    ))}
-    <link rel="alternate" type="application/rss+xml" title={`${t.siteName} — feed`} href={locale === 'en' ? '/en/rss.xml' : '/rss.xml'} />
+
+    <!-- hreflang — bilingual NL/EN -->
+    {hreflangs.map((h) => <link rel="alternate" hreflang={h.hreflang} href={h.href} />)}
+
+    <!-- Open Graph -->
+    <meta property="og:type"        content={ogType} />
+    <meta property="og:site_name"   content={t.siteName} />
+    <meta property="og:locale"      content={locale === 'en' ? 'en_US' : 'nl_NL'} />
+    <meta property="og:url"         content={canonicalURL.href} />
+    <meta property="og:title"       content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image"       content={resolvedOgImage} />
+    <meta property="og:image:width"  content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:type"   content={ogImageType} />
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card"        content="summary_large_image" />
+    <meta name="twitter:title"       content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image"       content={resolvedOgImage} />
+
+    <!-- Preload LCP image — critical CWV improvement on hero pages -->
+    {preloadImage && (
+      <link rel="preload" as="image" href={preloadImage} fetchpriority="high" />
+    )}
+
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="alternate" type="application/rss+xml" title={`${t.siteName} — feed`}
+      href={locale === 'en' ? '/en/rss.xml' : '/rss.xml'} />
     <link rel="sitemap" href="/sitemap-index.xml" />
 
-    <meta property="og:locale" content={locale === 'en' ? 'en_US' : 'nl_NL'} />
-    {locale === 'nl' && <meta property="og:locale:alternate" content="en_US" />}
-    {locale === 'en' && <meta property="og:locale:alternate" content="nl_NL" />}
-    <meta property="og:title" content={title} />
-    <meta property="og:description" content={description} />
-    <meta property="og:type" content={ogType} />
-    <meta property="og:url" content={canonicalURL.href} />
-    <meta property="og:image" content={resolvedOgImage} />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content={title} />
-    <meta name="twitter:description" content={description} />
-    <meta name="twitter:image" content={resolvedOgImage} />
+    <!-- Brand fonts (Astro Fonts API). Boldonse + Geist preloaded voor LCP. -->
+    <Font cssVariable="--font-boldonse" preload />
+    <Font cssVariable="--font-geist" preload />
+    <Font cssVariable="--font-jetbrains-mono" />
 
     <title>{title}</title>
 
-    <!-- Theme persistence (inline to prevent flash) -->
+    <!-- ⚡ FOUC-prevention — MUST be inline, runs before first paint -->
     <script is:inline>
       (function () {
-        var stored = localStorage.getItem('theme');
-        var theme = stored || (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
-        document.documentElement.setAttribute('data-theme', theme);
-        if (theme === 'light') {
-          var cs = document.querySelector('meta[name="color-scheme"]');
-          if (cs) cs.setAttribute('content', 'light');
-          var tc = document.querySelector('meta[name="theme-color"]');
-          if (tc) tc.setAttribute('content', '#fcfaf7');
-        }
+        var s = localStorage.getItem('theme');
+        var t = s || (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+        document.documentElement.setAttribute('data-theme', t);
       })();
+      // Re-apply after each View Transition (Astro swaps the <html> element)
       document.addEventListener('astro:after-swap', function () {
-        var stored = localStorage.getItem('theme');
-        var theme = stored || (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
-        document.documentElement.setAttribute('data-theme', theme);
-        var tc = document.querySelector('meta[name="theme-color"]');
-        if (tc) tc.setAttribute('content', theme === 'light' ? '#fcfaf7' : '#010405');
+        var t = localStorage.getItem('theme') || 'dark';
+        document.documentElement.setAttribute('data-theme', t);
       });
     </script>
 
-    <!-- Umami Analytics -->
+    <!-- Umami Analytics — View Transitions-aware -->
     <link rel="preconnect" href="https://cloud.umami.is" crossorigin />
     <link rel="dns-prefetch" href="https://cloud.umami.is" />
-    <script defer src="https://cloud.umami.is/script.js" data-website-id="b6ff128c-262a-4356-886a-c3eb15adab1f"></script>
+    <script defer src="https://cloud.umami.is/script.js" data-website-id="b6ff128c-262a-4356-886a-c3eb15adab1f" data-auto-track="false"></script>
+    <script is:inline>{`
+      (function(){
+        function t(){if(window.umami&&typeof window.umami.track==='function')window.umami.track();}
+        if(document.readyState!=='loading')t();else document.addEventListener('DOMContentLoaded',t);
+        document.addEventListener('astro:page-load',t);
+      })();
+    `}</script>
 
     <slot name="head" />
+
+    <!-- View Transitions — SPA-feel without full-page reload -->
+    <ClientRouter />
   </head>
   <body>
+    <ReadingProgress selector={progressTarget} />
     <SiteHeader locale={locale} />
-    <slot />
+
+    <main id="main">
+      <slot />
+    </main>
+
     <SiteFooter locale={locale} />
+    <BackToTop />
   </body>
 </html>

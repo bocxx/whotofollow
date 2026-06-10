@@ -42,8 +42,6 @@ python3 src/export_for_sites.py --copy-to-sites
 | `/twitter` | Twitter AI-experts |
 | `/youtube` | YouTube AI-kanalen |
 | `/must-follow` | Curator's top picks |
-| `/galaxy` | Interactieve network-visualisatie (three.js) |
-| `/network` | Interactieve grafische weergave (d3) |
 | `/onderwerp` | Topic-based curations |
 | `/over` + `/en/about` | Info-pagina |
 
@@ -54,7 +52,6 @@ python3 src/export_for_sites.py --copy-to-sites
 - **Framework:** Astro (static output)
 - **Hosting:** Cloudflare Workers
 - **Data-laag:** `src/lib/data.ts` — `getAllCreators()`, `getByPlatform()`, `getBySlug()`, `curatorPicks()`, `getCounts()`
-- **Visualisaties:** d3.js + three.js (galaxy + network)
 - **Build:** `npm run build` (genereert OG-images, daarna Astro build)
 - **Deploy:** GitHub Actions bij push naar `main` (`.github/workflows/deploy.yml`); handmatig kan met `npm run deploy`
 

@@ -56,7 +56,7 @@ python3 src/export_for_sites.py --copy-to-sites
 - **Data-laag:** `src/lib/data.ts` — `getAllCreators()`, `getByPlatform()`, `getBySlug()`, `curatorPicks()`, `getCounts()`
 - **Visualisaties:** d3.js + three.js (galaxy + network)
 - **Build:** `npm run build` (genereert OG-images, daarna Astro build)
-- **Deploy:** `npm run build && npx wrangler deploy` (handmatig)
+- **Deploy:** GitHub Actions bij push naar `main` (`.github/workflows/deploy.yml`); handmatig kan met `npm run deploy`
 
 ---
 
@@ -67,7 +67,7 @@ cd ~/Projects/DEPLOYED/whotofollow.online
 npm run build && npx wrangler deploy
 ```
 
-**Geen auto-deploy op git push.** Data-updates (zondag) vereisen ook een handmatige deploy om live te gaan.
+**Auto-deploy via GitHub Actions bij push naar `main`** zodra het repo-secret `CLOUDFLARE_API_TOKEN` gezet is (`gh secret set CLOUDFLARE_API_TOKEN -R bocxx/whotofollow`); tot die tijd skipt de workflow en is handmatig deployen nodig. Data-updates (zondag) gaan pas live na een commit+push (of handmatige deploy).
 
 ---
 

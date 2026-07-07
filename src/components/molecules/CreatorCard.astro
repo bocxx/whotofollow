@@ -2,37 +2,36 @@
 import type { Creator } from '../../types/creator';
 import { platformLabels, formatNumber, categoryLabel, tierLabel } from '../../lib/data';
 import { localizedHref, type Locale } from '../../i18n/messages';
-import {
-  Github, Youtube, Twitter, Cloud, Globe, Users, Building2, Star, Award,
-  Sparkles, Code, Bot, BookOpen, Briefcase, Microscope, Palette,
-  GraduationCap, Wrench, ShieldCheck, Megaphone
-} from '@lucide/astro';
+// Icons via de <symbol>-sprite (IconSprite.astro in Layout) — dit component
+// rendert ~800× per lijstpagina; inline @lucide/astro-SVG's bliezen de
+// homepage-DOM op tot 3.700+ SVG-kopieën (audit juli 2026).
+import SpriteIcon from '../atoms/SpriteIcon.astro';
 
-const CategoryIcon: Record<string, any> = {
-  'claude':        Sparkles,
-  'coding':        Code,
-  'agents':        Bot,
-  'beginners':     BookOpen,
-  'business':      Briefcase,
-  'research':      Microscope,
-  'creative':      Palette,
-  'fundamentals':  GraduationCap,
-  'tool-insights': Wrench,
-  'official':      ShieldCheck,
-  'branding':      Megaphone,
+const categoryIconName: Record<string, string> = {
+  'claude':        'sparkles',
+  'coding':        'code',
+  'agents':        'bot',
+  'beginners':     'book-open',
+  'business':      'briefcase',
+  'research':      'microscope',
+  'creative':      'palette',
+  'fundamentals':  'graduation-cap',
+  'tool-insights': 'wrench',
+  'official':      'shield-check',
+  'branding':      'megaphone',
 };
 
 interface Props { creator: Creator; locale?: Locale; }
 const { creator, locale = 'nl' } = Astro.props;
 const href = localizedHref(`/${creator.slug}`, locale);
 
-const PlatformIcon = (type: string) => {
+const platformIconName = (type: string): string => {
   switch (type) {
-    case 'github': return Github;
-    case 'youtube': return Youtube;
-    case 'twitter': return Twitter;
-    case 'bluesky': return Cloud;
-    default: return Globe;
+    case 'github': return 'github';
+    case 'youtube': return 'youtube';
+    case 'twitter': return 'twitter';
+    case 'bluesky': return 'cloud';
+    default: return 'globe';
   }
 };
 
@@ -88,8 +87,8 @@ const displayBio = (locale === 'en' && creator.bio_en) || creator.bio || buildFa
     </div>
     {isPick && (
       <span class={`tier-pill tier-pill--${tier}`}>
-        {tier === 'must-follow' && <Star size={10} stroke-width={2.5} />}
-        {tier === 'official' && <Award size={10} stroke-width={2.5} />}
+        {tier === 'must-follow' && <SpriteIcon name="star" size={10} stroke-width={2.5} />}
+        {tier === 'official' && <SpriteIcon name="award" size={10} stroke-width={2.5} />}
         {tierLabel(tier, locale)}
       </span>
     )}
@@ -120,10 +119,10 @@ const displayBio = (locale === 'en' && creator.bio_en) || creator.bio || buildFa
   {(cats.length > 0 || creator.location || creator.company) && (
     <div class="creator-card__chips">
       {cats.map((c) => {
-        const Icon = CategoryIcon[c];
+        const icon = categoryIconName[c];
         return (
           <span class="cat-chip" data-cat={c}>
-            {Icon && <Icon size={11} stroke-width={1.8} />}
+            {icon && <SpriteIcon name={icon} size={11} stroke-width={1.8} />}
             <span>{categoryLabel(c, locale)}</span>
           </span>
         );
@@ -139,17 +138,16 @@ const displayBio = (locale === 'en' && creator.bio_en) || creator.bio || buildFa
 
   <footer class="creator-card__footer">
     <span class="creator-card__stat">
-      <Users size={12} stroke-width={2} />
+      <SpriteIcon name="users" size={12} stroke-width={2} />
       {formatNumber(primaryFollowers)}
     </span>
     <div class="creator-card__platforms">
-      {creator.platforms.map((p) => {
-        const Icon = PlatformIcon(p.type);
-        return <Icon size={13} stroke-width={1.8} />;
-      })}
+      {creator.platforms.map((p) => (
+        <SpriteIcon name={platformIconName(p.type)} size={13} stroke-width={1.8} />
+      ))}
     </div>
     {creator.type === 'organization' && (
-      <Building2 size={12} stroke-width={1.5} class="org-icon" />
+      <SpriteIcon name="building-2" size={12} stroke-width={1.5} class="org-icon" />
     )}
   </footer>
 </a>
@@ -173,6 +171,11 @@ const displayBio = (locale === 'en' && creator.bio_en) || creator.bio || buildFa
       box-shadow var(--duration-fast),
       background var(--duration-fast);
     min-width: 0;
+    /* Render-perf (zelfde patroon als feedzz-homepage): laat de browser
+       layout/paint van off-screen kaarten overslaan. De intrinsieke hoogte
+       voorkomt scroll-sprongen bij het overslaan. */
+    content-visibility: auto;
+    contain-intrinsic-size: auto 280px;
   }
   .creator-card:hover {
     transform: translateY(-2px);

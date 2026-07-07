@@ -13,6 +13,7 @@ import { ClientRouter } from 'astro:transitions';
 import '../styles/main.css';
 import SiteHeader from '../components/SiteHeader.astro';
 import SiteFooter from '../components/SiteFooter.astro';
+import IconSprite from '../components/atoms/IconSprite.astro';
 import BackToTop from '../components/BackToTop.astro';
 import ReadingProgress from '../components/ReadingProgress.astro';
 import { siteConfig } from '../config/site';
@@ -170,6 +171,9 @@ const hreflangs = [
     <ClientRouter />
   </head>
   <body>
+    {/* Lucide <symbol>-sprite — één definitie per pagina; creator-cards
+        verwijzen ernaar via <use> (SpriteIcon.astro). */}
+    <IconSprite />
     <ReadingProgress selector={progressTarget} />
     <SiteHeader locale={locale} />
 

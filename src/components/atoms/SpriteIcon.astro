@@ -1,0 +1,34 @@
+---
+/**
+ * SpriteIcon — Lucide-icoon via de <symbol>-sprite in IconSprite.astro
+ * (die staat één keer in Layout.astro). Drop-in vervanger voor de
+ * @lucide/astro componenten op plekken die honderden keren renderen
+ * (CreatorCard): 2 DOM-nodes per icoon i.p.v. een volledige inline SVG.
+ */
+interface Props {
+  /** Lucide-naam in kebab-case, bv. "github" of "shield-check" */
+  name: string;
+  size?: number;
+  'stroke-width'?: number;
+  class?: string;
+}
+
+const {
+  name,
+  size = 24,
+  'stroke-width': strokeWidth = 2,
+  class: className,
+} = Astro.props;
+---
+<svg
+  width={size}
+  height={size}
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width={strokeWidth}
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  class:list={['lucide', className]}
+  aria-hidden="true"
+><use href={`#li-${name}`} /></svg>

@@ -1,0 +1,184 @@
+---
+/**
+ * Custom 404 — naar het model van hetlaatsteainieuws-v2.
+ *
+ * Extra belangrijk voor deze site: creator-slugs roteren wekelijks uit de
+ * data-export, dus oude Google-/social-links naar detailpagina's landen
+ * structureel op een 404. Vang dat op met routes terug: de roundup-hubs
+ * (must-follow + per platform), de categorie-hubs en home — allemaal
+ * stabiele URL's die nooit uitroteren.
+ */
+export const prerender = true;
+import Layout from '../layouts/Layout.astro';
+import SpriteIcon from '../components/atoms/SpriteIcon.astro';
+import { getCounts, categoryLabel } from '../lib/data';
+import { ROUNDUPS } from '../lib/roundups';
+import { ArrowRight } from '@lucide/astro';
+
+// Zelfde volgorde als de homepage-filterbalk; alleen categorieën met inhoud.
+const CATEGORY_ORDER = [
+  'claude', 'coding', 'agents', 'tool-insights', 'fundamentals',
+  'research', 'business', 'creative', 'beginners', 'branding', 'official',
+];
+const counts = getCounts();
+const categories = CATEGORY_ORDER.filter((c) => (counts.byCategory?.[c] ?? 0) > 0);
+
+const roundupIconName: Record<string, string> = {
+  star: 'star', github: 'github', youtube: 'youtube',
+  twitter: 'twitter', bluesky: 'cloud',
+};
+---
+
+<Layout title="404 — niet gevonden · whotofollow" noindex={true}>
+  <div class="notfound">
+    <div class="notfound__inner">
+      <p class="notfound__code">404</p>
+      <h1 class="notfound__title">Deze pagina staat niet (meer) in de directory.</h1>
+      <p class="notfound__lede">
+        De creator-lijst wordt wekelijks ververst — profielen die niet meer aan de
+        selectiecriteria voldoen, roteren eruit. Misschien kwam je via een oude link.
+        Kies hieronder een lijst of onderwerp om verder te gaan.
+        <span lang="en" class="notfound__en">This page may have rotated out of our
+        weekly-refreshed directory — pick a list or topic below.</span>
+      </p>
+
+      <nav class="notfound__hubs" aria-label="Lijsten">
+        {ROUNDUPS.map((r) => (
+          <a class="notfound__hub" href={`/${r.slug}/`}>
+            <SpriteIcon name={roundupIconName[r.icon]} size={14} stroke-width={1.8} />
+            <span class="notfound__hub-label">{r.nl.kicker}</span>
+            <ArrowRight size={14} stroke-width={1.75} aria-hidden="true" />
+          </a>
+        ))}
+      </nav>
+
+      <nav class="notfound__cats" aria-label="Onderwerpen">
+        {categories.map((c) => (
+          <a class="notfound__cat" href={`/onderwerp/${c}/`}>{categoryLabel(c, 'nl')}</a>
+        ))}
+      </nav>
+
+      <p class="notfound__home">
+        Of terug naar <a href="/">alle creators</a> · <a href="/en/" lang="en">English</a>.
+      </p>
+    </div>
+  </div>
+
+  {/* 404-meting: log de niet-gevonden URL + referrer. Vangt uitgeroteerde
+      creator-slugs en kapotte inbound links live op (zelfde patroon als hln-v2). */}
+  <script is:inline>
+    (function () {
+      function fire() {
+        if (!(window.umami && window.umami.track)) return false;
+        window.umami.track('not-found', { path: location.pathname, ref: document.referrer || '' });
+        return true;
+      }
+      if (fire()) return;
+      var n = 0;
+      var iv = setInterval(function () { if (fire() || ++n > 100) clearInterval(iv); }, 50);
+    })();
+  </script>
+</Layout>
+
+<style>
+  .notfound {
+    display: grid;
+    place-items: center;
+    min-height: 70dvh;
+    padding: var(--space-12) var(--space-6);
+  }
+
+  .notfound__inner {
+    max-width: 60ch;
+    text-align: center;
+  }
+
+  .notfound__code {
+    font-family: var(--font-mono, monospace);
+    font-size: var(--text-xs);
+    color: var(--primary-bright);
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    margin: 0 0 var(--space-4) 0;
+  }
+
+  .notfound__title {
+    font-family: var(--font-display);
+    font-size: clamp(1.75rem, 1.25rem + 2vw, 2.75rem);
+    line-height: 1.1;
+    color: var(--text-primary);
+    margin: 0 0 var(--space-5) 0;
+  }
+
+  .notfound__lede {
+    font-size: var(--text-base);
+    color: var(--text-secondary);
+    line-height: var(--leading-relaxed, 1.6);
+    margin: 0 0 var(--space-8) 0;
+  }
+  .notfound__en {
+    display: block;
+    margin-top: var(--space-2);
+    font-size: var(--text-sm);
+    color: var(--text-muted);
+  }
+
+  .notfound__hubs {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-2);
+    margin: 0 0 var(--space-6) 0;
+    text-align: left;
+  }
+  @media (min-width: 30em) {
+    .notfound__hubs { grid-template-columns: 1fr 1fr; }
+  }
+
+  .notfound__hub {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    padding: var(--space-3) var(--space-4);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: var(--text-sm);
+    transition: color var(--duration-fast), border-color var(--duration-fast), transform var(--duration-fast);
+  }
+  .notfound__hub:hover {
+    color: var(--text-primary);
+    border-color: var(--border-accent, var(--border-strong));
+    transform: translateX(2px);
+  }
+  .notfound__hub-label { flex: 1; }
+
+  .notfound__cats {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--space-2);
+    margin: 0 0 var(--space-8) 0;
+  }
+
+  .notfound__cat {
+    padding: var(--space-1) var(--space-3);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-full);
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: var(--text-xs);
+    transition: color var(--duration-fast), border-color var(--duration-fast);
+  }
+  .notfound__cat:hover {
+    color: var(--text-primary);
+    border-color: var(--border-accent, var(--border-strong));
+  }
+
+  .notfound__home {
+    font-size: var(--text-sm);
+    color: var(--text-muted);
+  }
+  .notfound__home a { color: var(--primary-bright); text-decoration: none; }
+  .notfound__home a:hover { text-decoration: underline; }
+</style>

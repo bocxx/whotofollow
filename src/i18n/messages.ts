@@ -208,25 +208,35 @@ function stripTrailingSlash(p: string): string {
 }
 
 /**
+ * De site serveert álle pagina's in de mét-trailing-slash-vorm (directory
+ * build + Cloudflare 307 op de slashloze variant). Alternates/hreflang moeten
+ * dus altijd op `/` eindigen, anders wijzen ze naar een redirect.
+ */
+function ensureTrailingSlash(p: string): string {
+  return p.endsWith('/') ? p : `${p}/`;
+}
+
+/**
  * Return the URL for the same logical page in the other locale.
+ * Always returns the trailing-slash (200) form.
  */
 export function getAlternateUrl(currentPath: string, currentLocale: Locale): string {
   const target: Locale = currentLocale === 'nl' ? 'en' : 'nl';
   const cleaned = stripTrailingSlash(currentPath);
 
   for (const aliases of Object.values(PATH_ALIASES)) {
-    if (cleaned === aliases[currentLocale]) return aliases[target];
+    if (cleaned === aliases[currentLocale]) return ensureTrailingSlash(aliases[target]);
   }
 
   // Category routes — /onderwerp/agents ↔ /en/topic/agents
   const catMatch = cleaned.match(/^(?:\/en)?\/(onderwerp|topic)\/([a-z0-9-]+)$/);
   if (catMatch) {
     const slug = catMatch[2];
-    return `${CATEGORY_ROOT[target]}/${slug}`;
+    return ensureTrailingSlash(`${CATEGORY_ROOT[target]}/${slug}`);
   }
 
   const noLocale = pathWithoutLocale(cleaned);
-  return localizedHref(noLocale, target);
+  return ensureTrailingSlash(localizedHref(noLocale, target));
 }
 
 /** Build a localized category page URL: /onderwerp/X or /en/topic/X */

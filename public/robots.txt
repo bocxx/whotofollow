@@ -7,6 +7,12 @@
 # Alle standaard crawlers
 User-agent: *
 Allow: /
+# Content Signals (https://contentsignals.org/) — AI-inzet-voorkeuren,
+# zelfde beleid als hetlaatsteainieuws.nl:
+# ai-train: nee (geen trainingsdata zonder licentie)
+# search: ja (indexering welkom)
+# ai-input: ja (content als agent-context gebruiken mag)
+Content-Signal: ai-train=no, search=yes, ai-input=yes
 Disallow: /api/
 
 # ——— OPENAI ———

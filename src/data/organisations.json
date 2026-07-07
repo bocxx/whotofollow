@@ -1,0 +1,44 @@
+[
+  {
+    "id": "org-allai",
+    "slug": "allai",
+    "name": "ALLAI",
+    "primary_handle": "allai_nl",
+    "primary_platform": "website",
+    "type": "organization",
+    "bio": "Dutch AI Coalition — verbindt overheid, bedrijfsleven, onderwijs en maatschappij om Nederland sterk te positioneren in de AI-transitie.",
+    "location": "Den Haag, Nederland",
+    "company": "",
+    "avatar": null,
+    "platforms": [
+      { "type": "website", "handle": "allai.nl", "url": "https://allai.nl", "followers": null },
+      { "type": "twitter", "handle": "allai_nl", "url": "https://twitter.com/allai_nl", "followers": null }
+    ],
+    "stats": {},
+    "tags": ["official", "research"],
+    "is_curator_pick": true,
+    "curator_tier": "official",
+    "editor_note": "De Nederlandse AI-coalitie — de plek voor beleid, standaarden en publiek debat over AI in Nederland."
+  },
+  {
+    "id": "org-rathenau",
+    "slug": "rathenau-instituut",
+    "name": "Rathenau Instituut",
+    "primary_handle": "rathenau",
+    "primary_platform": "website",
+    "type": "organization",
+    "bio": "Onafhankelijk onderzoeksinstituut dat de maatschappelijke impact van technologie en wetenschap in kaart brengt — inclusief AI, algoritmische besluitvorming en digitale rechten.",
+    "location": "Den Haag, Nederland",
+    "company": "",
+    "avatar": null,
+    "platforms": [
+      { "type": "website", "handle": "rathenau.nl", "url": "https://www.rathenau.nl", "followers": null },
+      { "type": "twitter", "handle": "rathenau", "url": "https://twitter.com/rathenau", "followers": null }
+    ],
+    "stats": {},
+    "tags": ["research", "official"],
+    "is_curator_pick": true,
+    "curator_tier": "official",
+    "editor_note": "Dé Nederlandse denktank voor technologie & samenleving — onmisbaar voor AI-beleid en ethiekdebat."
+  }
+]

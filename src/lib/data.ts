@@ -1,10 +1,22 @@
 import payload from '../data/whotofollow_creators.json';
+import orgData from '../data/organisations.json';
 import type { Creator, CreatorsPayload } from '../types/creator';
 
 const data = payload as unknown as CreatorsPayload;
+const orgs = orgData as unknown as Creator[];
+
+// Merge curated organisations into the full creator list.
+// The organisations.json contains hand-picked entries not in the auto-generated
+// whotofollow_creators.json (e.g. Dutch policy orgs); merging here means they
+// automatically get detail pages via [slug].astro getStaticPaths().
+const allCreators: Creator[] = [...data.creators, ...orgs];
 
 export function getAllCreators(): Creator[] {
-  return data.creators;
+  return allCreators;
+}
+
+export function getOrganisations(): Creator[] {
+  return allCreators.filter((c) => c.type === 'organization');
 }
 
 export function getGeneratedAt(): string {

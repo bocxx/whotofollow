@@ -15,6 +15,7 @@ const otherHref = getAlternateUrl(Astro.url.pathname, locale);
 const primary = [
   { label: t.nav.everyone, href: localizedHref('/', locale) },
   { label: 'Must-follow', href: localizedHref('/must-follow', locale) },
+  { label: t.nav.organisations, href: t.organisatiesPath },
 ];
 
 const lists = [

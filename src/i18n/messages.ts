@@ -15,6 +15,7 @@ export const messages = {
       twitter: 'Twitter',
       bluesky: 'Bluesky',
       about: 'Over',
+      organisations: 'Organisaties',
     },
 
     hero: {
@@ -83,6 +84,7 @@ export const messages = {
     },
 
     aboutPath: '/over',
+    organisatiesPath: '/organisaties',
   },
 
   en: {
@@ -97,6 +99,7 @@ export const messages = {
       twitter: 'Twitter',
       bluesky: 'Bluesky',
       about: 'About',
+      organisations: 'Organisations',
     },
 
     hero: {
@@ -165,6 +168,7 @@ export const messages = {
     },
 
     aboutPath: '/en/about',
+    organisatiesPath: '/en/organisations',
   },
 } as const;
 
@@ -192,6 +196,7 @@ export function localizedHref(path: string, locale: Locale): string {
  */
 const PATH_ALIASES: Record<string, { nl: string; en: string }> = {
   about: { nl: '/over', en: '/en/about' },
+  organisations: { nl: '/organisaties', en: '/en/organisations' },
 };
 
 // Category pages use different slugs per locale (/onderwerp ↔ /en/topic).

@@ -17,6 +17,7 @@ export interface Creator {
   primary_platform: Platform;
   type: 'person' | 'organization';
   bio: string;
+  bio_en?: string;
   location: string;
   company: string;
   avatar?: string | null;
@@ -26,6 +27,7 @@ export interface Creator {
   is_curator_pick?: boolean;
   curator_tier?: CuratorTier;
   editor_note?: string;
+  editor_note_en?: string;
   category_scores?: Record<string, number>;
 }
 

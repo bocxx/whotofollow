@@ -7,6 +7,7 @@
     "primary_platform": "website",
     "type": "organization",
     "bio": "Dutch AI Coalition — verbindt overheid, bedrijfsleven, onderwijs en maatschappij om Nederland sterk te positioneren in de AI-transitie.",
+    "bio_en": "Dutch AI Coalition — connecting government, business, education and civil society to position the Netherlands in the AI transition.",
     "location": "Den Haag, Nederland",
     "company": "",
     "avatar": null,
@@ -18,7 +19,8 @@
     "tags": ["official", "research"],
     "is_curator_pick": true,
     "curator_tier": "official",
-    "editor_note": "De Nederlandse AI-coalitie — de plek voor beleid, standaarden en publiek debat over AI in Nederland."
+    "editor_note": "De Nederlandse AI-coalitie — de plek voor beleid, standaarden en publiek debat over AI in Nederland.",
+    "editor_note_en": "The Dutch AI coalition — the hub for policy, standards and public debate on AI in the Netherlands."
   },
   {
     "id": "org-rathenau",
@@ -28,6 +30,7 @@
     "primary_platform": "website",
     "type": "organization",
     "bio": "Onafhankelijk onderzoeksinstituut dat de maatschappelijke impact van technologie en wetenschap in kaart brengt — inclusief AI, algoritmische besluitvorming en digitale rechten.",
+    "bio_en": "Independent research institute mapping the societal impact of technology and science — including AI, algorithmic decision-making and digital rights.",
     "location": "Den Haag, Nederland",
     "company": "",
     "avatar": null,
@@ -39,6 +42,7 @@
     "tags": ["research", "official"],
     "is_curator_pick": true,
     "curator_tier": "official",
-    "editor_note": "Dé Nederlandse denktank voor technologie & samenleving — onmisbaar voor AI-beleid en ethiekdebat."
+    "editor_note": "Dé Nederlandse denktank voor technologie & samenleving — onmisbaar voor AI-beleid en ethiekdebat.",
+    "editor_note_en": "The Dutch think tank on technology and society — essential for AI policy and ethics debate."
   }
 ]

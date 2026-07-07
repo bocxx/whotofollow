@@ -70,7 +70,7 @@ function buildFallbackBio(): string {
   }
   return locale === 'nl' ? `Actief op ${plat}.` : `Active on ${plat}.`;
 }
-const displayBio = creator.bio || buildFallbackBio();
+const displayBio = (locale === 'en' && creator.bio_en) || creator.bio || buildFallbackBio();
 ---
 
 <a href={href}
@@ -106,10 +106,10 @@ const displayBio = creator.bio || buildFallbackBio();
   <h3 class="creator-card__name">{creator.name}</h3>
   <span class="creator-card__handle">@{creator.primary_handle}</span>
 
-  {isPick && creator.editor_note ? (
+  {isPick && (creator.editor_note_en || creator.editor_note) ? (
     <div class="editor-note" role="note">
-      <span class="editor-note__quote" aria-hidden="true">“</span>
-      <p>{creator.editor_note}</p>
+      <span class="editor-note__quote" aria-hidden="true">"</span>
+      <p>{(locale === 'en' && creator.editor_note_en) || creator.editor_note}</p>
     </div>
   ) : (
     <p class={creator.bio ? 'creator-card__bio' : 'creator-card__bio creator-card__bio--fallback'}>

@@ -20,7 +20,7 @@
     "@fontsource-variable/space-grotesk": "^5.2.10",
     "@fontsource/jetbrains-mono": "^5.2.8",
     "@lucide/astro": "^0.563.0",
-    "astro": "^7.2.3",
+    "astro": "^7.3.3",
     "d3-drag": "^3.0.0",
     "d3-force": "^3.0.0",
     "d3-selection": "^3.0.0",
@@ -30,9 +30,9 @@
     "typescript": "^5.9.3"
   },
   "devDependencies": {
-    "@astrojs/cloudflare": "^14.2.2",
+    "@astrojs/cloudflare": "^14.3.2",
     "@resvg/resvg-js": "^2.6.2",
     "satori": "^0.26.0",
-    "wrangler": "^4.124.0"
+    "wrangler": "^4.133.0"
   }
 }

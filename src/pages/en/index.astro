@@ -53,7 +53,7 @@ const websiteJsonLd = {
     <section class="hero">
       <div class="hero__meta">
         <span class="badge badge--primary"><Users size={11} stroke-width={2} /> {t.hero.graph}</span>
-        <span>{t.hero.updated} {updated}</span>
+        <time datetime={generatedAt}>{t.hero.updated} {updated}</time>
       </div>
       <h1 class="hero__title">
         <span class="hero__gradient">{t.hero.titleA}</span>

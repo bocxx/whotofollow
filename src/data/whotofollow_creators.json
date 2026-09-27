@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-20T04:50:01.964788",
+  "generated_at": "2026-09-27T04:50:02.325654",
   "count": 792,
   "creators": [
     {
@@ -57,19 +57,19 @@
           "type": "twitter",
           "handle": "gregisenberg",
           "url": "https://twitter.com/gregisenberg",
-          "followers": 712983
+          "followers": 717400
         }
       ],
       "stats": {
-        "followers": 712983,
-        "tweets_60d": 22,
-        "likes_60d": 13867
+        "followers": 717400,
+        "tweets_60d": 24,
+        "likes_60d": 18904
       },
       "tags": [
         "business",
         "agents"
       ],
-      "_score": 100085165,
+      "_score": 100090644,
       "is_curator_pick": true,
       "curator_tier": "must-follow",
       "editor_note": "Business- en marketingtoepassingen: AI agent armies, repeatable workflows met Skills. Schaalbare commerci\u00eble uses.",
@@ -93,20 +93,20 @@
           "type": "twitter",
           "handle": "AlexFinn",
           "url": "https://twitter.com/AlexFinn",
-          "followers": 474201
+          "followers": 475225
         }
       ],
       "stats": {
-        "followers": 474201,
-        "tweets_60d": 45,
-        "likes_60d": 27892
+        "followers": 475225,
+        "tweets_60d": 47,
+        "likes_60d": 28899
       },
       "tags": [
         "claude",
         "coding",
         "agents"
       ],
-      "_score": 100075312,
+      "_score": 100076421,
       "is_curator_pick": true,
       "curator_tier": "must-follow",
       "editor_note": "Claude Code maximalist \u2014 gaat diep op agentic setups en pushing the limits. Voor wie serieus wil bouwen.",
@@ -131,64 +131,25 @@
           "type": "twitter",
           "handle": "steipete",
           "url": "https://twitter.com/steipete",
-          "followers": 588368
+          "followers": 591657
         }
       ],
       "stats": {
-        "followers": 588368,
+        "followers": 591657,
         "tweets_60d": 9,
-        "likes_60d": 1754
+        "likes_60d": 1982
       },
       "tags": [
         "agents",
         "coding"
       ],
-      "_score": 100060590,
+      "_score": 100061147,
       "is_curator_pick": true,
       "curator_tier": "must-follow",
       "editor_note": "Open-source AI agent builder (OpenClaw). Authentieke posts over agentic engineering \u2014 grounded en praktisch.",
       "category_scores": {
         "agents": 5,
         "coding": 5
-      }
-    },
-    {
-      "id": "tw-emollick",
-      "slug": "emollick",
-      "name": "Ethan Mollick",
-      "primary_handle": "emollick",
-      "primary_platform": "twitter",
-      "type": "person",
-      "bio": "",
-      "location": "Philadelphia, PA",
-      "company": "",
-      "avatar": "https://pbs.twimg.com/profile_images/1601382188712398850/3AAOlqrX_normal.jpg",
-      "platforms": [
-        {
-          "type": "twitter",
-          "handle": "emollick",
-          "url": "https://twitter.com/emollick",
-          "followers": 389537
-        }
-      ],
-      "stats": {
-        "followers": 389537,
-        "tweets_60d": 62,
-        "likes_60d": 19480
-      },
-      "tags": [
-        "business",
-        "tool-insights",
-        "beginners"
-      ],
-      "_score": 100058433,
-      "is_curator_pick": true,
-      "curator_tier": "must-follow",
-      "editor_note": "Wharton professor. Praktische toepassing van AI in werk en business. Weinig hype, veel real-world tests.",
-      "category_scores": {
-        "business": 5,
-        "tool-insights": 5,
-        "beginners": 5
       }
     },
     {
@@ -229,6 +190,45 @@
       }
     },
     {
+      "id": "tw-emollick",
+      "slug": "emollick",
+      "name": "Ethan Mollick",
+      "primary_handle": "emollick",
+      "primary_platform": "twitter",
+      "type": "person",
+      "bio": "",
+      "location": "Philadelphia, PA",
+      "company": "",
+      "avatar": "https://pbs.twimg.com/profile_images/1601382188712398850/3AAOlqrX_normal.jpg",
+      "platforms": [
+        {
+          "type": "twitter",
+          "handle": "emollick",
+          "url": "https://twitter.com/emollick",
+          "followers": 391675
+        }
+      ],
+      "stats": {
+        "followers": 391675,
+        "tweets_60d": 60,
+        "likes_60d": 17634
+      },
+      "tags": [
+        "business",
+        "tool-insights",
+        "beginners"
+      ],
+      "_score": 100056801,
+      "is_curator_pick": true,
+      "curator_tier": "must-follow",
+      "editor_note": "Wharton professor. Praktische toepassing van AI in werk en business. Weinig hype, veel real-world tests.",
+      "category_scores": {
+        "business": 5,
+        "tool-insights": 5,
+        "beginners": 5
+      }
+    },
+    {
       "id": "tw-mattshumer",
       "slug": "mattshumer",
       "name": "Matt Shumer",
@@ -244,19 +244,19 @@
           "type": "twitter",
           "handle": "mattshumer_",
           "url": "https://twitter.com/mattshumer_",
-          "followers": 395542
+          "followers": 396038
         }
       ],
       "stats": {
-        "followers": 395542,
-        "tweets_60d": 17,
-        "likes_60d": 4403
+        "followers": 396038,
+        "tweets_60d": 16,
+        "likes_60d": 4060
       },
       "tags": [
         "agents",
         "coding"
       ],
-      "_score": 100043957,
+      "_score": 100043663,
       "is_curator_pick": true,
       "curator_tier": "must-follow",
       "editor_note": "Bouwt agents en pushing boundaries met automation en frontier modellen. Eerlijk over wat werkt en wat faalt.",
@@ -281,19 +281,19 @@
           "type": "twitter",
           "handle": "simonw",
           "url": "https://twitter.com/simonw",
-          "followers": 218861
+          "followers": 226239
         }
       ],
       "stats": {
-        "followers": 218861,
+        "followers": 226239,
         "tweets_60d": 9,
-        "likes_60d": 3248
+        "likes_60d": 2977
       },
       "tags": [
         "coding",
         "tool-insights"
       ],
-      "_score": 100025134,
+      "_score": 100025600,
       "is_curator_pick": true,
       "curator_tier": "must-follow",
       "editor_note": "Een van de allerbeste voor praktische LLM usage. Experiments, prompts, tooling breakdowns en eerlijke reflecties.",
@@ -318,26 +318,65 @@
           "type": "twitter",
           "handle": "rubenhassid",
           "url": "https://twitter.com/rubenhassid",
-          "followers": 95245
+          "followers": 95799
         }
       ],
       "stats": {
-        "followers": 95245,
-        "tweets_60d": 14,
-        "likes_60d": 6315
+        "followers": 95799,
+        "tweets_60d": 15,
+        "likes_60d": 6302
       },
       "tags": [
         "claude",
         "tool-insights",
         "beginners"
       ],
-      "_score": 100015839,
+      "_score": 100015881,
       "is_curator_pick": true,
       "curator_tier": "must-follow",
       "editor_note": "Substack-stijl content op X over Claude Skills, Cowork en Design. Goede structuur, echte workflows, minder hype.",
       "category_scores": {
         "claude": 5,
         "tool-insights": 5,
+        "beginners": 5
+      }
+    },
+    {
+      "id": "tw-alliekmiller",
+      "slug": "alliekmiller",
+      "name": "Allie K. Miller",
+      "primary_handle": "alliekmiller",
+      "primary_platform": "twitter",
+      "type": "person",
+      "bio": "",
+      "location": "New York, NY",
+      "company": "",
+      "avatar": "https://pbs.twimg.com/profile_images/1221821474790494208/ALX9y7KT_normal.jpg",
+      "platforms": [
+        {
+          "type": "twitter",
+          "handle": "alliekmiller",
+          "url": "https://twitter.com/alliekmiller",
+          "followers": 109540
+        }
+      ],
+      "stats": {
+        "followers": 109540,
+        "tweets_60d": 4,
+        "likes_60d": 233
+      },
+      "tags": [
+        "business",
+        "branding",
+        "beginners"
+      ],
+      "_score": 100011187,
+      "is_curator_pick": true,
+      "curator_tier": "must-follow",
+      "editor_note": "Business & praktische AI-toepassingen voor non-tech professionals. AI leadership voor wie waarde wil cre\u00ebren in z'n team.",
+      "category_scores": {
+        "business": 5,
+        "branding": 5,
         "beginners": 5
       }
     },
@@ -357,64 +396,25 @@
           "type": "twitter",
           "handle": "Shruti_0810",
           "url": "https://twitter.com/Shruti_0810",
-          "followers": 106676
+          "followers": 106583
         }
       ],
       "stats": {
-        "followers": 106676,
-        "tweets_60d": 6,
-        "likes_60d": 497
+        "followers": 106583,
+        "tweets_60d": 7,
+        "likes_60d": 524
       },
       "tags": [
         "claude",
         "tool-insights"
       ],
-      "_score": 100011164,
+      "_score": 100011182,
       "is_curator_pick": true,
       "curator_tier": "must-follow",
       "editor_note": "Concrete cheat sheets en guides over Claude Skills, Plugins en system prompts. Praktisch en direct toepasbaar.",
       "category_scores": {
         "claude": 5,
         "tool-insights": 5
-      }
-    },
-    {
-      "id": "tw-alliekmiller",
-      "slug": "alliekmiller",
-      "name": "Allie K. Miller",
-      "primary_handle": "alliekmiller",
-      "primary_platform": "twitter",
-      "type": "person",
-      "bio": "",
-      "location": "New York, NY",
-      "company": "",
-      "avatar": "https://pbs.twimg.com/profile_images/1221821474790494208/ALX9y7KT_normal.jpg",
-      "platforms": [
-        {
-          "type": "twitter",
-          "handle": "alliekmiller",
-          "url": "https://twitter.com/alliekmiller",
-          "followers": 109176
-        }
-      ],
-      "stats": {
-        "followers": 109176,
-        "tweets_60d": 3,
-        "likes_60d": 119
-      },
-      "tags": [
-        "business",
-        "branding",
-        "beginners"
-      ],
-      "_score": 100011036,
-      "is_curator_pick": true,
-      "curator_tier": "must-follow",
-      "editor_note": "Business & praktische AI-toepassingen voor non-tech professionals. AI leadership voor wie waarde wil cre\u00ebren in z'n team.",
-      "category_scores": {
-        "business": 5,
-        "branding": 5,
-        "beginners": 5
       }
     },
     {
@@ -433,11 +433,11 @@
           "type": "twitter",
           "handle": "Suryanshti777",
           "url": "https://twitter.com/Suryanshti777",
-          "followers": 44544
+          "followers": 44524
         }
       ],
       "stats": {
-        "followers": 44544,
+        "followers": 44524,
         "tweets_60d": 14,
         "likes_60d": 4090
       },
@@ -445,7 +445,7 @@
         "claude",
         "tool-insights"
       ],
-      "_score": 100008544,
+      "_score": 100008542,
       "is_curator_pick": true,
       "curator_tier": "must-follow",
       "editor_note": "Diepgaande breakdowns van Claude Cowork, Plugins en Skills. Praktische guides en complete architectuur \u2014 niet alleen oppervlakkige tips.",
@@ -542,19 +542,19 @@
           "type": "twitter",
           "handle": "AnthropicAI",
           "url": "https://twitter.com/AnthropicAI",
-          "followers": 1723476
+          "followers": 1753938
         }
       ],
       "stats": {
-        "followers": 1723476,
-        "tweets_60d": 37,
-        "likes_60d": 127584
+        "followers": 1753938,
+        "tweets_60d": 38,
+        "likes_60d": 132562
       },
       "tags": [
         "claude",
         "official"
       ],
-      "_score": 50299931,
+      "_score": 50307955,
       "is_curator_pick": true,
       "curator_tier": "official",
       "editor_note": "Offici\u00eble Anthropic announcements \u2014 essentieel voor nieuwe features.",
@@ -579,19 +579,19 @@
           "type": "twitter",
           "handle": "claudeai",
           "url": "https://twitter.com/claudeai",
-          "followers": 1786394
+          "followers": 1821530
         }
       ],
       "stats": {
-        "followers": 1786394,
-        "tweets_60d": 11,
-        "likes_60d": 26155
+        "followers": 1821530,
+        "tweets_60d": 19,
+        "likes_60d": 57422
       },
       "tags": [
         "claude",
         "official"
       ],
-      "_score": 50204794,
+      "_score": 50239575,
       "is_curator_pick": true,
       "curator_tier": "official",
       "editor_note": "Officieel Claude-account. Raw updates en feature announcements.",
@@ -726,20 +726,20 @@
           "type": "twitter",
           "handle": "rasbt",
           "url": "https://twitter.com/rasbt",
-          "followers": 508991
+          "followers": 513616
         }
       ],
       "stats": {
-        "followers": 508991,
+        "followers": 513616,
         "tweets_60d": 13,
-        "likes_60d": 9624
+        "likes_60d": 8167
       },
       "tags": [
         "fundamentals",
         "research",
         "coding"
       ],
-      "_score": 10060523,
+      "_score": 10059528,
       "is_curator_pick": true,
       "curator_tier": "recommended",
       "editor_note": "ML-research en LLM-technieken. Zeer technisch maar duidelijk \u2014 auteur van LLM-boeken.",
@@ -770,14 +770,14 @@
       ],
       "stats": {
         "followers": 244723,
-        "tweets_60d": 19,
-        "likes_60d": 33790
+        "tweets_60d": 16,
+        "likes_60d": 27949
       },
       "tags": [
         "creative",
         "tool-insights"
       ],
-      "_score": 10058262,
+      "_score": 10052421,
       "is_curator_pick": true,
       "curator_tier": "recommended",
       "editor_note": "Justine Moore \u2014 coole AI-video experiments (design, horror) die miljoenen views trekken. Goede ontdekker van verborgen parels.",
@@ -802,19 +802,19 @@
           "type": "twitter",
           "handle": "pitdesi",
           "url": "https://twitter.com/pitdesi",
-          "followers": 210214
+          "followers": 211463
         }
       ],
       "stats": {
-        "followers": 210214,
-        "tweets_60d": 7,
-        "likes_60d": 1498
+        "followers": 211463,
+        "tweets_60d": 6,
+        "likes_60d": 1559
       },
       "tags": [
         "tool-insights",
         "business"
       ],
-      "_score": 10022519,
+      "_score": 10022705,
       "is_curator_pick": true,
       "curator_tier": "recommended",
       "editor_note": "Sheel Mohnot \u2014 breder AI/Cursor/Claude vergelijkend en strategisch.",
@@ -839,19 +839,19 @@
           "type": "twitter",
           "handle": "KiranKS",
           "url": "https://twitter.com/KiranKS",
-          "followers": 175030
+          "followers": 176576
         }
       ],
       "stats": {
-        "followers": 175030,
-        "tweets_60d": 0,
-        "likes_60d": 0
+        "followers": 176576,
+        "tweets_60d": 1,
+        "likes_60d": 26
       },
       "tags": [
         "claude",
         "business"
       ],
-      "_score": 10017503,
+      "_score": 10017683,
       "is_curator_pick": true,
       "curator_tier": "recommended",
       "editor_note": "Diepgaande analyses over Claude Cowork's impact (IT, legal, finance). Goede context over waarom het disruptief is.",
@@ -876,19 +876,19 @@
           "type": "twitter",
           "handle": "aiedge_",
           "url": "https://twitter.com/aiedge_",
-          "followers": 77973
+          "followers": 78750
         }
       ],
       "stats": {
-        "followers": 77973,
+        "followers": 78750,
         "tweets_60d": 15,
-        "likes_60d": 6107
+        "likes_60d": 6256
       },
       "tags": [
         "tool-insights",
         "claude"
       ],
-      "_score": 10013904,
+      "_score": 10014131,
       "is_curator_pick": true,
       "curator_tier": "recommended",
       "editor_note": "Curatie van top resources, marketplaces en praktische lijsten met skills/plugins. Goed voor ontdekking.",
@@ -1096,19 +1096,19 @@
           "type": "twitter",
           "handle": "repligate",
           "url": "https://twitter.com/repligate",
-          "followers": 68739
+          "followers": 69350
         }
       ],
       "stats": {
-        "followers": 68739,
-        "tweets_60d": 8,
-        "likes_60d": 689
+        "followers": 69350,
+        "tweets_60d": 12,
+        "likes_60d": 1202
       },
       "tags": [
         "creative",
         "research"
       ],
-      "_score": 1007562,
+      "_score": 1008137,
       "is_curator_pick": true,
       "curator_tier": "niche",
       "editor_note": "Diep experimenteel \u2014 verkent de grenzen van wat AI kan op een artistieke manier. Voor wie van weird & deep houdt.",
@@ -1175,14 +1175,14 @@
       ],
       "stats": {
         "followers": 13095,
-        "tweets_60d": 6,
-        "likes_60d": 275
+        "tweets_60d": 5,
+        "likes_60d": 252
       },
       "tags": [
         "claude",
         "tool-insights"
       ],
-      "_score": 1001584,
+      "_score": 1001561,
       "is_curator_pick": true,
       "curator_tier": "niche",
       "editor_note": "Plugin-overzichten en concrete Claude setups.",
@@ -1336,38 +1336,6 @@
       }
     },
     {
-      "id": "tw-osint613",
-      "slug": "osint613",
-      "name": "Open Source Intel",
-      "primary_handle": "Osint613",
-      "primary_platform": "twitter",
-      "type": "person",
-      "bio": "",
-      "location": "N.Y - Northern Israel",
-      "company": "",
-      "avatar": "https://pbs.twimg.com/profile_images/2094762039746936832/f8vexHZ2_normal.jpg",
-      "platforms": [
-        {
-          "type": "twitter",
-          "handle": "Osint613",
-          "url": "https://twitter.com/Osint613",
-          "followers": 1737015
-        }
-      ],
-      "stats": {
-        "followers": 1737015,
-        "tweets_60d": 1069,
-        "likes_60d": 269586
-      },
-      "tags": [
-        "coding"
-      ],
-      "_score": 443287,
-      "category_scores": {
-        "coding": 3
-      }
-    },
-    {
       "id": "tw-marionawfal",
       "slug": "marionawfal",
       "name": "Mario Nawfal",
@@ -1383,18 +1351,18 @@
           "type": "twitter",
           "handle": "MarioNawfal",
           "url": "https://twitter.com/MarioNawfal",
-          "followers": 3908163
+          "followers": 3920491
         }
       ],
       "stats": {
-        "followers": 3908163,
-        "tweets_60d": 158,
-        "likes_60d": 45754
+        "followers": 3920491,
+        "tweets_60d": 167,
+        "likes_60d": 46286
       },
       "tags": [
         "business"
       ],
-      "_score": 436570,
+      "_score": 438335,
       "category_scores": {
         "business": 5
       }
@@ -1415,20 +1383,84 @@
           "type": "twitter",
           "handle": "solana",
           "url": "https://twitter.com/solana",
-          "followers": 4183535
+          "followers": 4197328
         }
       ],
       "stats": {
-        "followers": 4183535,
-        "tweets_60d": 16,
-        "likes_60d": 6006
+        "followers": 4197328,
+        "tweets_60d": 17,
+        "likes_60d": 6637
       },
       "tags": [
         "agents"
       ],
-      "_score": 424359,
+      "_score": 426369,
       "category_scores": {
         "agents": 6
+      }
+    },
+    {
+      "id": "tw-brian-armstrong",
+      "slug": "brian-armstrong",
+      "name": "Brian Armstrong",
+      "primary_handle": "brian_armstrong",
+      "primary_platform": "twitter",
+      "type": "person",
+      "bio": "",
+      "location": "Earth",
+      "company": "",
+      "avatar": "https://pbs.twimg.com/profile_images/2078293582918934528/YZjOB_hV_normal.jpg",
+      "platforms": [
+        {
+          "type": "twitter",
+          "handle": "brian_armstrong",
+          "url": "https://twitter.com/brian_armstrong",
+          "followers": 3930040
+        }
+      ],
+      "stats": {
+        "followers": 3930040,
+        "tweets_60d": 7,
+        "likes_60d": 3418
+      },
+      "tags": [
+        "business"
+      ],
+      "_score": 396422,
+      "category_scores": {
+        "business": 4
+      }
+    },
+    {
+      "id": "tw-osint613",
+      "slug": "osint613",
+      "name": "Open Source Intel",
+      "primary_handle": "Osint613",
+      "primary_platform": "twitter",
+      "type": "person",
+      "bio": "",
+      "location": "N.Y - Northern Israel",
+      "company": "",
+      "avatar": "https://pbs.twimg.com/profile_images/2094762039746936832/f8vexHZ2_normal.jpg",
+      "platforms": [
+        {
+          "type": "twitter",
+          "handle": "Osint613",
+          "url": "https://twitter.com/Osint613",
+          "followers": 1750882
+        }
+      ],
+      "stats": {
+        "followers": 1750882,
+        "tweets_60d": 900,
+        "likes_60d": 216643
+      },
+      "tags": [
+        "coding"
+      ],
+      "_score": 391731,
+      "category_scores": {
+        "coding": 3
       }
     },
     {
@@ -1452,13 +1484,13 @@
       ],
       "stats": {
         "followers": 3442445,
-        "tweets_60d": 18,
-        "likes_60d": 3973
+        "tweets_60d": 15,
+        "likes_60d": 3626
       },
       "tags": [
         "business"
       ],
-      "_score": 348217,
+      "_score": 347870,
       "category_scores": {
         "business": 4
       }
@@ -1516,13 +1548,13 @@
       ],
       "stats": {
         "followers": 1865970,
-        "tweets_60d": 8,
-        "likes_60d": 21669
+        "tweets_60d": 7,
+        "likes_60d": 19991
       },
       "tags": [
         "research"
       ],
-      "_score": 208266,
+      "_score": 206588,
       "category_scores": {
         "research": 5
       }
@@ -1543,18 +1575,18 @@
           "type": "twitter",
           "handle": "RaoulGMI",
           "url": "https://twitter.com/RaoulGMI",
-          "followers": 1496939
+          "followers": 1498010
         }
       ],
       "stats": {
-        "followers": 1496939,
+        "followers": 1498010,
         "tweets_60d": 26,
-        "likes_60d": 7481
+        "likes_60d": 6815
       },
       "tags": [
         "business"
       ],
-      "_score": 157174,
+      "_score": 156616,
       "category_scores": {
         "business": 4
       }
@@ -1575,18 +1607,18 @@
           "type": "twitter",
           "handle": "NoLimitGains",
           "url": "https://twitter.com/NoLimitGains",
-          "followers": 1510956
+          "followers": 1512021
         }
       ],
       "stats": {
-        "followers": 1510956,
-        "tweets_60d": 17,
-        "likes_60d": 4872
+        "followers": 1512021,
+        "tweets_60d": 13,
+        "likes_60d": 4002
       },
       "tags": [
         "business"
       ],
-      "_score": 155967,
+      "_score": 155204,
       "category_scores": {
         "business": 4
       }
@@ -1621,38 +1653,6 @@
       "_score": 142000,
       "category_scores": {
         "fundamentals": 3
-      }
-    },
-    {
-      "id": "tw-levelsio",
-      "slug": "levelsio",
-      "name": "@levelsio",
-      "primary_handle": "levelsio",
-      "primary_platform": "twitter",
-      "type": "person",
-      "bio": "",
-      "location": "\ud83d\udcd5My book $7K/m \ud83d\udc49",
-      "company": "",
-      "avatar": "https://pbs.twimg.com/profile_images/2077111020305162240/PwddgOau_normal.jpg",
-      "platforms": [
-        {
-          "type": "twitter",
-          "handle": "levelsio",
-          "url": "https://twitter.com/levelsio",
-          "followers": 958238
-        }
-      ],
-      "stats": {
-        "followers": 958238,
-        "tweets_60d": 43,
-        "likes_60d": 29429
-      },
-      "tags": [
-        "business"
-      ],
-      "_score": 125252,
-      "category_scores": {
-        "business": 5
       }
     },
     {
@@ -2750,6 +2750,46 @@
       "category_scores": {
         "research": 5
       }
+    },
+    {
+      "id": "gh-xiaolai",
+      "slug": "xiaolai",
+      "name": "xiaolai",
+      "primary_handle": "xiaolai",
+      "primary_platform": "github",
+      "type": "person",
+      "bio": "A lifelong student.",
+      "location": "beijing",
+      "company": "inblockchain",
+      "avatar": "https://avatars.githubusercontent.com/u/152970?v=4",
+      "platforms": [
+        {
+          "type": "github",
+          "handle": "xiaolai",
+          "url": "https://github.com/xiaolai",
+          "followers": 23683
+        },
+        {
+          "type": "twitter",
+          "handle": "xiaolai",
+          "url": "https://twitter.com/xiaolai",
+          "followers": null
+        },
+        {
+          "type": "website",
+          "handle": "lixiaolai.com",
+          "url": "http://lixiaolai.com",
+          "followers": null
+        }
+      ],
+      "stats": {
+        "followers": 23683,
+        "following": 41,
+        "repos": 264
+      },
+      "tags": [],
+      "_score": 24183,
+      "category_scores": {}
     },
     {
       "id": "gh-donnemartin",
@@ -4100,41 +4140,6 @@
       }
     },
     {
-      "id": "bsky-edzitron-com",
-      "slug": "edzitron-com",
-      "name": "Ed Zitron",
-      "primary_handle": "edzitron.com",
-      "primary_platform": "bluesky",
-      "type": "person",
-      "bio": "",
-      "location": "",
-      "company": "",
-      "avatar": null,
-      "platforms": [
-        {
-          "type": "bluesky",
-          "handle": "edzitron.com",
-          "url": "https://bsky.app/profile/edzitron.com",
-          "followers": null
-        }
-      ],
-      "stats": {
-        "posts": 40,
-        "likes": 15473
-      },
-      "tags": [
-        "business",
-        "claude",
-        "coding"
-      ],
-      "_score": 15473,
-      "category_scores": {
-        "business": 11,
-        "claude": 5,
-        "coding": 3
-      }
-    },
-    {
       "id": "gh-anuraghazra",
       "slug": "anuraghazra",
       "name": "Anurag Hazra",
@@ -4176,6 +4181,41 @@
       "_score": 15285,
       "category_scores": {
         "coding": 5
+      }
+    },
+    {
+      "id": "bsky-edzitron-com",
+      "slug": "edzitron-com",
+      "name": "Ed Zitron",
+      "primary_handle": "edzitron.com",
+      "primary_platform": "bluesky",
+      "type": "person",
+      "bio": "",
+      "location": "",
+      "company": "",
+      "avatar": null,
+      "platforms": [
+        {
+          "type": "bluesky",
+          "handle": "edzitron.com",
+          "url": "https://bsky.app/profile/edzitron.com",
+          "followers": null
+        }
+      ],
+      "stats": {
+        "posts": 39,
+        "likes": 15169
+      },
+      "tags": [
+        "business",
+        "claude",
+        "coding"
+      ],
+      "_score": 15169,
+      "category_scores": {
+        "business": 11,
+        "claude": 5,
+        "coding": 3
       }
     },
     {
@@ -4533,6 +4573,37 @@
       "tags": [],
       "_score": 13934,
       "category_scores": {}
+    },
+    {
+      "id": "bsky-atrupar-com",
+      "slug": "atrupar-com",
+      "name": "Aaron Rupar",
+      "primary_handle": "atrupar.com",
+      "primary_platform": "bluesky",
+      "type": "person",
+      "bio": "",
+      "location": "",
+      "company": "",
+      "avatar": null,
+      "platforms": [
+        {
+          "type": "bluesky",
+          "handle": "atrupar.com",
+          "url": "https://bsky.app/profile/atrupar.com",
+          "followers": null
+        }
+      ],
+      "stats": {
+        "posts": 5,
+        "likes": 13799
+      },
+      "tags": [
+        "claude"
+      ],
+      "_score": 13799,
+      "category_scores": {
+        "claude": 3
+      }
     },
     {
       "id": "gh-yangshun",
@@ -6789,10 +6860,10 @@
       ],
       "stats": {
         "posts": 5,
-        "likes": 7989
+        "likes": 8006
       },
       "tags": [],
-      "_score": 7989,
+      "_score": 8006,
       "category_scores": {}
     },
     {
@@ -8108,6 +8179,41 @@
       }
     },
     {
+      "id": "bsky-carlquintanilla-bsky-social",
+      "slug": "carlquintanilla-bsky-social",
+      "name": "Carl Quintanilla",
+      "primary_handle": "carlquintanilla.bsky.social",
+      "primary_platform": "bluesky",
+      "type": "person",
+      "bio": "",
+      "location": "",
+      "company": "",
+      "avatar": null,
+      "platforms": [
+        {
+          "type": "bluesky",
+          "handle": "carlquintanilla.bsky.social",
+          "url": "https://bsky.app/profile/carlquintanilla.bsky.social",
+          "followers": null
+        }
+      ],
+      "stats": {
+        "posts": 20,
+        "likes": 6447
+      },
+      "tags": [
+        "agents",
+        "claude",
+        "coding"
+      ],
+      "_score": 6447,
+      "category_scores": {
+        "agents": 6,
+        "claude": 5,
+        "coding": 5
+      }
+    },
+    {
       "id": "gh-scikit-learn",
       "slug": "scikit-learn",
       "name": "scikit-learn",
@@ -8180,41 +8286,6 @@
       ],
       "_score": 6416,
       "category_scores": {
-        "coding": 5
-      }
-    },
-    {
-      "id": "bsky-carlquintanilla-bsky-social",
-      "slug": "carlquintanilla-bsky-social",
-      "name": "Carl Quintanilla",
-      "primary_handle": "carlquintanilla.bsky.social",
-      "primary_platform": "bluesky",
-      "type": "person",
-      "bio": "",
-      "location": "",
-      "company": "",
-      "avatar": null,
-      "platforms": [
-        {
-          "type": "bluesky",
-          "handle": "carlquintanilla.bsky.social",
-          "url": "https://bsky.app/profile/carlquintanilla.bsky.social",
-          "followers": null
-        }
-      ],
-      "stats": {
-        "posts": 20,
-        "likes": 6339
-      },
-      "tags": [
-        "agents",
-        "claude",
-        "coding"
-      ],
-      "_score": 6339,
-      "category_scores": {
-        "agents": 8,
-        "claude": 5,
         "coding": 5
       }
     },
@@ -8385,6 +8456,40 @@
       "category_scores": {
         "coding": 3
       }
+    },
+    {
+      "id": "gh-spotify",
+      "slug": "spotify",
+      "name": "Spotify",
+      "primary_handle": "spotify",
+      "primary_platform": "github",
+      "type": "organization",
+      "bio": "",
+      "location": "Stockholm, Sweden",
+      "company": "",
+      "avatar": "https://avatars.githubusercontent.com/u/251374?v=4",
+      "platforms": [
+        {
+          "type": "github",
+          "handle": "spotify",
+          "url": "https://github.com/spotify",
+          "followers": 5278
+        },
+        {
+          "type": "website",
+          "handle": "spotify.github.io",
+          "url": "https://spotify.github.io/",
+          "followers": null
+        }
+      ],
+      "stats": {
+        "followers": 5278,
+        "following": 0,
+        "repos": 289
+      },
+      "tags": [],
+      "_score": 6278,
+      "category_scores": {}
     },
     {
       "id": "gh-practical-tutorials",
@@ -9511,41 +9616,6 @@
       }
     },
     {
-      "id": "bsky-carnage4life-bsky-social",
-      "slug": "carnage4life-bsky-social",
-      "name": "Dare Obasanjo",
-      "primary_handle": "carnage4life.bsky.social",
-      "primary_platform": "bluesky",
-      "type": "person",
-      "bio": "",
-      "location": "",
-      "company": "",
-      "avatar": null,
-      "platforms": [
-        {
-          "type": "bluesky",
-          "handle": "carnage4life.bsky.social",
-          "url": "https://bsky.app/profile/carnage4life.bsky.social",
-          "followers": null
-        }
-      ],
-      "stats": {
-        "posts": 79,
-        "likes": 5701
-      },
-      "tags": [
-        "coding",
-        "agents",
-        "research"
-      ],
-      "_score": 5701,
-      "category_scores": {
-        "coding": 16,
-        "agents": 12,
-        "research": 11
-      }
-    },
-    {
       "id": "gh-nestjs",
       "slug": "nestjs",
       "name": "nestjs",
@@ -9706,10 +9776,10 @@
       }
     },
     {
-      "id": "bsky-segyges-bsky-social",
-      "slug": "segyges-bsky-social",
-      "name": "SE Gyges",
-      "primary_handle": "segyges.bsky.social",
+      "id": "bsky-hypervisible-blacksky-app",
+      "slug": "hypervisible-blacksky-app",
+      "name": "Hypervisible ",
+      "primary_handle": "hypervisible.blacksky.app",
       "primary_platform": "bluesky",
       "type": "person",
       "bio": "",
@@ -9719,25 +9789,25 @@
       "platforms": [
         {
           "type": "bluesky",
-          "handle": "segyges.bsky.social",
-          "url": "https://bsky.app/profile/segyges.bsky.social",
+          "handle": "hypervisible.blacksky.app",
+          "url": "https://bsky.app/profile/hypervisible.blacksky.app",
           "followers": null
         }
       ],
       "stats": {
-        "posts": 29,
-        "likes": 5614
+        "posts": 31,
+        "likes": 5551
       },
       "tags": [
-        "claude",
-        "coding",
-        "fundamentals"
+        "agents",
+        "business",
+        "claude"
       ],
-      "_score": 5614,
+      "_score": 5551,
       "category_scores": {
-        "claude": 5,
-        "coding": 3,
-        "fundamentals": 3
+        "agents": 8,
+        "business": 5,
+        "claude": 3
       }
     },
     {
@@ -9983,6 +10053,40 @@
       "category_scores": {
         "coding": 5
       }
+    },
+    {
+      "id": "gh-op7418",
+      "slug": "op7418",
+      "name": "\u6b78\u85cf",
+      "primary_handle": "op7418",
+      "primary_platform": "github",
+      "type": "person",
+      "bio": "\u4ea7\u54c1\u8bbe\u8ba1\u5e08\ud83c\udfa8\r\nAI\u753b\u56fe\u5de5\u5177\u64cd\u4f5c\u5458\ud83d\udd27\r\nAI\u8bfe\u7a0b\u64b0\u5199\u4e0e\u4fe1\u606f\u6536\u96c6\u6574\u7406\ud83d\udcf0\r\n\u81f4\u529b\u4e8e\u53d1\u6398\u501f\u52a9AI\u5de5\u5177\u6539\u5584\u8bbe\u8ba1\u4e0e\u4ea7\u54c1\u5f00\u53d1\u6d41\u7a0b\u7684\u5404\u79cd\u53ef\u80fd\u6027\ud83e\udd14",
+      "location": "beijing",
+      "company": "",
+      "avatar": "https://avatars.githubusercontent.com/u/13505770?v=4",
+      "platforms": [
+        {
+          "type": "github",
+          "handle": "op7418",
+          "url": "https://github.com/op7418",
+          "followers": 4972
+        },
+        {
+          "type": "twitter",
+          "handle": "op7418",
+          "url": "https://twitter.com/op7418",
+          "followers": null
+        }
+      ],
+      "stats": {
+        "followers": 4972,
+        "following": 8,
+        "repos": 32
+      },
+      "tags": [],
+      "_score": 5472,
+      "category_scores": {}
     },
     {
       "id": "gh-blackmatrix7",
@@ -10800,41 +10904,6 @@
       }
     },
     {
-      "id": "bsky-hypervisible-blacksky-app",
-      "slug": "hypervisible-blacksky-app",
-      "name": "Hypervisible ",
-      "primary_handle": "hypervisible.blacksky.app",
-      "primary_platform": "bluesky",
-      "type": "person",
-      "bio": "",
-      "location": "",
-      "company": "",
-      "avatar": null,
-      "platforms": [
-        {
-          "type": "bluesky",
-          "handle": "hypervisible.blacksky.app",
-          "url": "https://bsky.app/profile/hypervisible.blacksky.app",
-          "followers": null
-        }
-      ],
-      "stats": {
-        "posts": 30,
-        "likes": 4899
-      },
-      "tags": [
-        "business",
-        "claude",
-        "beginners"
-      ],
-      "_score": 4899,
-      "category_scores": {
-        "business": 5,
-        "claude": 3,
-        "beginners": 3
-      }
-    },
-    {
       "id": "gh-dusty-nv",
       "slug": "dusty-nv",
       "name": "Dustin Franklin",
@@ -11195,6 +11264,41 @@
       "category_scores": {}
     },
     {
+      "id": "bsky-segyges-bsky-social",
+      "slug": "segyges-bsky-social",
+      "name": "SE Gyges",
+      "primary_handle": "segyges.bsky.social",
+      "primary_platform": "bluesky",
+      "type": "person",
+      "bio": "",
+      "location": "",
+      "company": "",
+      "avatar": null,
+      "platforms": [
+        {
+          "type": "bluesky",
+          "handle": "segyges.bsky.social",
+          "url": "https://bsky.app/profile/segyges.bsky.social",
+          "followers": null
+        }
+      ],
+      "stats": {
+        "posts": 24,
+        "likes": 4636
+      },
+      "tags": [
+        "claude",
+        "coding",
+        "fundamentals"
+      ],
+      "_score": 4636,
+      "category_scores": {
+        "claude": 5,
+        "coding": 3,
+        "fundamentals": 3
+      }
+    },
+    {
       "id": "gh-yt-dlp",
       "slug": "yt-dlp",
       "name": "yt-dlp",
@@ -11320,41 +11424,6 @@
       "_score": 4629,
       "category_scores": {
         "research": 5
-      }
-    },
-    {
-      "id": "bsky-pbsnews-org",
-      "slug": "pbsnews-org",
-      "name": "PBS News",
-      "primary_handle": "pbsnews.org",
-      "primary_platform": "bluesky",
-      "type": "person",
-      "bio": "",
-      "location": "",
-      "company": "",
-      "avatar": null,
-      "platforms": [
-        {
-          "type": "bluesky",
-          "handle": "pbsnews.org",
-          "url": "https://bsky.app/profile/pbsnews.org",
-          "followers": null
-        }
-      ],
-      "stats": {
-        "posts": 23,
-        "likes": 4619
-      },
-      "tags": [
-        "business",
-        "agents",
-        "claude"
-      ],
-      "_score": 4619,
-      "category_scores": {
-        "business": 6,
-        "agents": 5,
-        "claude": 3
       }
     },
     {
@@ -11514,6 +11583,41 @@
       "tags": [],
       "_score": 4579,
       "category_scores": {}
+    },
+    {
+      "id": "bsky-carnage4life-bsky-social",
+      "slug": "carnage4life-bsky-social",
+      "name": "Dare Obasanjo",
+      "primary_handle": "carnage4life.bsky.social",
+      "primary_platform": "bluesky",
+      "type": "person",
+      "bio": "",
+      "location": "",
+      "company": "",
+      "avatar": null,
+      "platforms": [
+        {
+          "type": "bluesky",
+          "handle": "carnage4life.bsky.social",
+          "url": "https://bsky.app/profile/carnage4life.bsky.social",
+          "followers": null
+        }
+      ],
+      "stats": {
+        "posts": 78,
+        "likes": 4573
+      },
+      "tags": [
+        "coding",
+        "business",
+        "agents"
+      ],
+      "_score": 4573,
+      "category_scores": {
+        "coding": 16,
+        "business": 14,
+        "agents": 12
+      }
     },
     {
       "id": "gh-ansible",
@@ -11930,6 +12034,76 @@
       }
     },
     {
+      "id": "bsky-pbsnews-org",
+      "slug": "pbsnews-org",
+      "name": "PBS News",
+      "primary_handle": "pbsnews.org",
+      "primary_platform": "bluesky",
+      "type": "person",
+      "bio": "",
+      "location": "",
+      "company": "",
+      "avatar": null,
+      "platforms": [
+        {
+          "type": "bluesky",
+          "handle": "pbsnews.org",
+          "url": "https://bsky.app/profile/pbsnews.org",
+          "followers": null
+        }
+      ],
+      "stats": {
+        "posts": 21,
+        "likes": 4388
+      },
+      "tags": [
+        "business",
+        "agents",
+        "claude"
+      ],
+      "_score": 4388,
+      "category_scores": {
+        "business": 6,
+        "agents": 5,
+        "claude": 3
+      }
+    },
+    {
+      "id": "bsky-theverge-com",
+      "slug": "theverge-com",
+      "name": "The Verge",
+      "primary_handle": "theverge.com",
+      "primary_platform": "bluesky",
+      "type": "person",
+      "bio": "",
+      "location": "",
+      "company": "",
+      "avatar": null,
+      "platforms": [
+        {
+          "type": "bluesky",
+          "handle": "theverge.com",
+          "url": "https://bsky.app/profile/theverge.com",
+          "followers": null
+        }
+      ],
+      "stats": {
+        "posts": 45,
+        "likes": 4387
+      },
+      "tags": [
+        "claude",
+        "agents",
+        "business"
+      ],
+      "_score": 4387,
+      "category_scores": {
+        "claude": 8,
+        "agents": 8,
+        "business": 4
+      }
+    },
+    {
       "id": "bsky-jmiers230-bsky-social",
       "slug": "jmiers230-bsky-social",
       "name": "Jess Miers \ud83e\udd9d",
@@ -12258,6 +12432,37 @@
       "category_scores": {
         "research": 5,
         "coding": 5
+      }
+    },
+    {
+      "id": "bsky-gregpak-net",
+      "slug": "gregpak-net",
+      "name": "Greg Pak",
+      "primary_handle": "gregpak.net",
+      "primary_platform": "bluesky",
+      "type": "person",
+      "bio": "",
+      "location": "",
+      "company": "",
+      "avatar": null,
+      "platforms": [
+        {
+          "type": "bluesky",
+          "handle": "gregpak.net",
+          "url": "https://bsky.app/profile/gregpak.net",
+          "followers": null
+        }
+      ],
+      "stats": {
+        "posts": 16,
+        "likes": 4240
+      },
+      "tags": [
+        "fundamentals"
+      ],
+      "_score": 4240,
+      "category_scores": {
+        "fundamentals": 5
       }
     },
     {
@@ -12753,6 +12958,40 @@
       }
     },
     {
+      "id": "gh-shareAI-lab",
+      "slug": "shareai-lab",
+      "name": "shareAI-Lab",
+      "primary_handle": "shareAI-lab",
+      "primary_platform": "github",
+      "type": "organization",
+      "bio": "Hacking & Accelerating & Saving the World",
+      "location": "Singapore",
+      "company": "",
+      "avatar": "https://avatars.githubusercontent.com/u/189210346?v=4",
+      "platforms": [
+        {
+          "type": "github",
+          "handle": "shareAI-lab",
+          "url": "https://github.com/shareAI-lab",
+          "followers": 3080
+        },
+        {
+          "type": "website",
+          "handle": "shareai-lab.com",
+          "url": "https://shareAI-Lab.com",
+          "followers": null
+        }
+      ],
+      "stats": {
+        "followers": 3080,
+        "following": 0,
+        "repos": 38
+      },
+      "tags": [],
+      "_score": 4080,
+      "category_scores": {}
+    },
+    {
       "id": "gh-adobe",
       "slug": "adobe",
       "name": "Adobe, Inc.",
@@ -12789,40 +13028,6 @@
       "category_scores": {
         "coding": 3
       }
-    },
-    {
-      "id": "gh-shareAI-lab",
-      "slug": "shareai-lab",
-      "name": "shareAI-Lab",
-      "primary_handle": "shareAI-lab",
-      "primary_platform": "github",
-      "type": "organization",
-      "bio": "Hacking & Accelerating & Saving the World",
-      "location": "Singapore",
-      "company": "",
-      "avatar": "https://avatars.githubusercontent.com/u/189210346?v=4",
-      "platforms": [
-        {
-          "type": "github",
-          "handle": "shareAI-lab",
-          "url": "https://github.com/shareAI-lab",
-          "followers": 3080
-        },
-        {
-          "type": "website",
-          "handle": "shareai-lab.com",
-          "url": "https://shareAI-Lab.com",
-          "followers": null
-        }
-      ],
-      "stats": {
-        "followers": 3080,
-        "following": 0,
-        "repos": 38
-      },
-      "tags": [],
-      "_score": 4080,
-      "category_scores": {}
     },
     {
       "id": "gh-PatrickJS",
@@ -12978,6 +13183,37 @@
       "_score": 4014,
       "category_scores": {
         "coding": 5
+      }
+    },
+    {
+      "id": "bsky-josephcox-bsky-social",
+      "slug": "josephcox-bsky-social",
+      "name": "Joseph Cox",
+      "primary_handle": "josephcox.bsky.social",
+      "primary_platform": "bluesky",
+      "type": "person",
+      "bio": "",
+      "location": "",
+      "company": "",
+      "avatar": null,
+      "platforms": [
+        {
+          "type": "bluesky",
+          "handle": "josephcox.bsky.social",
+          "url": "https://bsky.app/profile/josephcox.bsky.social",
+          "followers": null
+        }
+      ],
+      "stats": {
+        "posts": 5,
+        "likes": 3984
+      },
+      "tags": [
+        "agents"
+      ],
+      "_score": 3984,
+      "category_scores": {
+        "agents": 3
       }
     },
     {
@@ -13224,6 +13460,41 @@
       "category_scores": {
         "coding": 5,
         "tool-insights": 5
+      }
+    },
+    {
+      "id": "bsky-wired-com",
+      "slug": "wired-com",
+      "name": "WIRED",
+      "primary_handle": "wired.com",
+      "primary_platform": "bluesky",
+      "type": "person",
+      "bio": "",
+      "location": "",
+      "company": "",
+      "avatar": null,
+      "platforms": [
+        {
+          "type": "bluesky",
+          "handle": "wired.com",
+          "url": "https://bsky.app/profile/wired.com",
+          "followers": null
+        }
+      ],
+      "stats": {
+        "posts": 55,
+        "likes": 3914
+      },
+      "tags": [
+        "coding",
+        "research",
+        "agents"
+      ],
+      "_score": 3914,
+      "category_scores": {
+        "coding": 10,
+        "research": 9,
+        "agents": 8
       }
     },
     {
@@ -13613,41 +13884,6 @@
       }
     },
     {
-      "id": "bsky-timnitgebru-blacksky-app",
-      "slug": "timnitgebru-blacksky-app",
-      "name": "Timnit Gebru",
-      "primary_handle": "timnitgebru.blacksky.app",
-      "primary_platform": "bluesky",
-      "type": "person",
-      "bio": "",
-      "location": "",
-      "company": "",
-      "avatar": null,
-      "platforms": [
-        {
-          "type": "bluesky",
-          "handle": "timnitgebru.blacksky.app",
-          "url": "https://bsky.app/profile/timnitgebru.blacksky.app",
-          "followers": null
-        }
-      ],
-      "stats": {
-        "posts": 14,
-        "likes": 3820
-      },
-      "tags": [
-        "business",
-        "fundamentals",
-        "claude"
-      ],
-      "_score": 3820,
-      "category_scores": {
-        "business": 7,
-        "fundamentals": 6,
-        "claude": 3
-      }
-    },
-    {
       "id": "gh-OpenBB-finance",
       "slug": "openbb-finance",
       "name": "OpenBB",
@@ -13692,37 +13928,6 @@
       }
     },
     {
-      "id": "bsky-gregpak-net",
-      "slug": "gregpak-net",
-      "name": "Greg Pak",
-      "primary_handle": "gregpak.net",
-      "primary_platform": "bluesky",
-      "type": "person",
-      "bio": "",
-      "location": "",
-      "company": "",
-      "avatar": null,
-      "platforms": [
-        {
-          "type": "bluesky",
-          "handle": "gregpak.net",
-          "url": "https://bsky.app/profile/gregpak.net",
-          "followers": null
-        }
-      ],
-      "stats": {
-        "posts": 14,
-        "likes": 3792
-      },
-      "tags": [
-        "fundamentals"
-      ],
-      "_score": 3792,
-      "category_scores": {
-        "fundamentals": 5
-      }
-    },
-    {
       "id": "gh-ysymyth",
       "slug": "ysymyth",
       "name": "Shunyu Yao",
@@ -13757,39 +13962,38 @@
       }
     },
     {
-      "id": "bsky-wired-com",
-      "slug": "wired-com",
-      "name": "WIRED",
-      "primary_handle": "wired.com",
-      "primary_platform": "bluesky",
-      "type": "person",
-      "bio": "",
+      "id": "gh-XiaomiMiMo",
+      "slug": "xiaomimimo",
+      "name": "Xiaomi MiMo",
+      "primary_handle": "XiaomiMiMo",
+      "primary_platform": "github",
+      "type": "organization",
+      "bio": "Ignite every curiosity with creative spark.  Ask Mi Anything!",
       "location": "",
       "company": "",
-      "avatar": null,
+      "avatar": "https://avatars.githubusercontent.com/u/208276378?v=4",
       "platforms": [
         {
-          "type": "bluesky",
-          "handle": "wired.com",
-          "url": "https://bsky.app/profile/wired.com",
+          "type": "github",
+          "handle": "XiaomiMiMo",
+          "url": "https://github.com/XiaomiMiMo",
+          "followers": 2235
+        },
+        {
+          "type": "twitter",
+          "handle": "XiaomiMiMo",
+          "url": "https://twitter.com/XiaomiMiMo",
           "followers": null
         }
       ],
       "stats": {
-        "posts": 51,
-        "likes": 3686
+        "followers": 2235,
+        "following": 0,
+        "repos": 18
       },
-      "tags": [
-        "coding",
-        "research",
-        "agents"
-      ],
-      "_score": 3686,
-      "category_scores": {
-        "coding": 10,
-        "research": 9,
-        "agents": 8
-      }
+      "tags": [],
+      "_score": 3735,
+      "category_scores": {}
     },
     {
       "id": "gh-figma",
@@ -15226,6 +15430,40 @@
       "category_scores": {}
     },
     {
+      "id": "gh-antvis",
+      "slug": "antvis",
+      "name": "AntV AI Visualization Team",
+      "primary_handle": "antvis",
+      "primary_platform": "github",
+      "type": "organization",
+      "bio": "Visualize Data with Vitality by AI  \u8ba9\u6570\u636e\u6829\u6829\u5982\u751f",
+      "location": "Hangzhou, China",
+      "company": "",
+      "avatar": "https://avatars.githubusercontent.com/u/19199542?v=4",
+      "platforms": [
+        {
+          "type": "github",
+          "handle": "antvis",
+          "url": "https://github.com/antvis",
+          "followers": 2345
+        },
+        {
+          "type": "website",
+          "handle": "antv.antgroup.com",
+          "url": "https://antv.antgroup.com",
+          "followers": null
+        }
+      ],
+      "stats": {
+        "followers": 2345,
+        "following": 0,
+        "repos": 123
+      },
+      "tags": [],
+      "_score": 3345,
+      "category_scores": {}
+    },
+    {
       "id": "gh-ROCm",
       "slug": "rocm",
       "name": "AMD ROCm\u2122 Software",
@@ -15262,40 +15500,6 @@
       "category_scores": {
         "coding": 5
       }
-    },
-    {
-      "id": "gh-antvis",
-      "slug": "antvis",
-      "name": "AntV AI Visualization Team",
-      "primary_handle": "antvis",
-      "primary_platform": "github",
-      "type": "organization",
-      "bio": "Visualize Data with Vitality by AI  \u8ba9\u6570\u636e\u6829\u6829\u5982\u751f",
-      "location": "Hangzhou, China",
-      "company": "",
-      "avatar": "https://avatars.githubusercontent.com/u/19199542?v=4",
-      "platforms": [
-        {
-          "type": "github",
-          "handle": "antvis",
-          "url": "https://github.com/antvis",
-          "followers": 2345
-        },
-        {
-          "type": "website",
-          "handle": "antv.antgroup.com",
-          "url": "https://antv.antgroup.com",
-          "followers": null
-        }
-      ],
-      "stats": {
-        "followers": 2345,
-        "following": 0,
-        "repos": 123
-      },
-      "tags": [],
-      "_score": 3345,
-      "category_scores": {}
     },
     {
       "id": "gh-megadose",
@@ -15701,6 +15905,37 @@
       "_score": 3270,
       "category_scores": {
         "coding": 5
+      }
+    },
+    {
+      "id": "bsky-quantian-bsky-social",
+      "slug": "quantian-bsky-social",
+      "name": "Quantian",
+      "primary_handle": "quantian.bsky.social",
+      "primary_platform": "bluesky",
+      "type": "person",
+      "bio": "",
+      "location": "",
+      "company": "",
+      "avatar": null,
+      "platforms": [
+        {
+          "type": "bluesky",
+          "handle": "quantian.bsky.social",
+          "url": "https://bsky.app/profile/quantian.bsky.social",
+          "followers": null
+        }
+      ],
+      "stats": {
+        "posts": 6,
+        "likes": 3265
+      },
+      "tags": [
+        "claude"
+      ],
+      "_score": 3265,
+      "category_scores": {
+        "claude": 3
       }
     },
     {
@@ -17420,37 +17655,6 @@
       }
     },
     {
-      "id": "bsky-quantian-bsky-social",
-      "slug": "quantian-bsky-social",
-      "name": "Quantian",
-      "primary_handle": "quantian.bsky.social",
-      "primary_platform": "bluesky",
-      "type": "person",
-      "bio": "",
-      "location": "",
-      "company": "",
-      "avatar": null,
-      "platforms": [
-        {
-          "type": "bluesky",
-          "handle": "quantian.bsky.social",
-          "url": "https://bsky.app/profile/quantian.bsky.social",
-          "followers": null
-        }
-      ],
-      "stats": {
-        "posts": 6,
-        "likes": 2933
-      },
-      "tags": [
-        "claude"
-      ],
-      "_score": 2933,
-      "category_scores": {
-        "claude": 3
-      }
-    },
-    {
       "id": "gh-maotoumao",
       "slug": "maotoumao",
       "name": "\u732b\u5934\u732b",
@@ -17647,6 +17851,74 @@
       "category_scores": {}
     },
     {
+      "id": "bsky-timnitgebru-blacksky-app",
+      "slug": "timnitgebru-blacksky-app",
+      "name": "Timnit Gebru",
+      "primary_handle": "timnitgebru.blacksky.app",
+      "primary_platform": "bluesky",
+      "type": "person",
+      "bio": "",
+      "location": "",
+      "company": "",
+      "avatar": null,
+      "platforms": [
+        {
+          "type": "bluesky",
+          "handle": "timnitgebru.blacksky.app",
+          "url": "https://bsky.app/profile/timnitgebru.blacksky.app",
+          "followers": null
+        }
+      ],
+      "stats": {
+        "posts": 11,
+        "likes": 2894
+      },
+      "tags": [
+        "business",
+        "claude",
+        "fundamentals"
+      ],
+      "_score": 2894,
+      "category_scores": {
+        "business": 5,
+        "claude": 3,
+        "fundamentals": 3
+      }
+    },
+    {
+      "id": "bsky-esqueer-net",
+      "slug": "esqueer-net",
+      "name": "Alejandra Caraballo",
+      "primary_handle": "esqueer.net",
+      "primary_platform": "bluesky",
+      "type": "person",
+      "bio": "",
+      "location": "",
+      "company": "",
+      "avatar": null,
+      "platforms": [
+        {
+          "type": "bluesky",
+          "handle": "esqueer.net",
+          "url": "https://bsky.app/profile/esqueer.net",
+          "followers": null
+        }
+      ],
+      "stats": {
+        "posts": 13,
+        "likes": 2888
+      },
+      "tags": [
+        "agents",
+        "claude"
+      ],
+      "_score": 2888,
+      "category_scores": {
+        "agents": 6,
+        "claude": 5
+      }
+    },
+    {
       "id": "gh-tldraw",
       "slug": "tldraw",
       "name": "tldraw",
@@ -17818,37 +18090,6 @@
       "category_scores": {
         "coding": 5,
         "tool-insights": 5
-      }
-    },
-    {
-      "id": "bsky-volts-wtf",
-      "slug": "volts-wtf",
-      "name": "David Roberts",
-      "primary_handle": "volts.wtf",
-      "primary_platform": "bluesky",
-      "type": "person",
-      "bio": "",
-      "location": "",
-      "company": "",
-      "avatar": null,
-      "platforms": [
-        {
-          "type": "bluesky",
-          "handle": "volts.wtf",
-          "url": "https://bsky.app/profile/volts.wtf",
-          "followers": null
-        }
-      ],
-      "stats": {
-        "posts": 6,
-        "likes": 2859
-      },
-      "tags": [
-        "fundamentals"
-      ],
-      "_score": 2859,
-      "category_scores": {
-        "fundamentals": 3
       }
     },
     {
@@ -18266,6 +18507,34 @@
       "category_scores": {
         "coding": 3
       }
+    },
+    {
+      "id": "gh-stepfun-ai",
+      "slug": "stepfun-ai",
+      "name": "stepfun-ai",
+      "primary_handle": "stepfun-ai",
+      "primary_platform": "github",
+      "type": "organization",
+      "bio": "",
+      "location": "",
+      "company": "",
+      "avatar": "https://avatars.githubusercontent.com/u/178004800?v=4",
+      "platforms": [
+        {
+          "type": "github",
+          "handle": "stepfun-ai",
+          "url": "https://github.com/stepfun-ai",
+          "followers": 1783
+        }
+      ],
+      "stats": {
+        "followers": 1783,
+        "following": 0,
+        "repos": 33
+      },
+      "tags": [],
+      "_score": 2783,
+      "category_scores": {}
     },
     {
       "id": "gh-bigskysoftware",
@@ -18940,6 +19209,37 @@
       }
     },
     {
+      "id": "bsky-volts-wtf",
+      "slug": "volts-wtf",
+      "name": "David Roberts",
+      "primary_handle": "volts.wtf",
+      "primary_platform": "bluesky",
+      "type": "person",
+      "bio": "",
+      "location": "",
+      "company": "",
+      "avatar": null,
+      "platforms": [
+        {
+          "type": "bluesky",
+          "handle": "volts.wtf",
+          "url": "https://bsky.app/profile/volts.wtf",
+          "followers": null
+        }
+      ],
+      "stats": {
+        "posts": 5,
+        "likes": 2704
+      },
+      "tags": [
+        "fundamentals"
+      ],
+      "_score": 2704,
+      "category_scores": {
+        "fundamentals": 3
+      }
+    },
+    {
       "id": "gh-fastify",
       "slug": "fastify",
       "name": "Fastify",
@@ -19065,41 +19365,6 @@
       "_score": 2699,
       "category_scores": {
         "coding": 5
-      }
-    },
-    {
-      "id": "bsky-emilymbender-bsky-social",
-      "slug": "emilymbender-bsky-social",
-      "name": "Emily M. Bender",
-      "primary_handle": "emilymbender.bsky.social",
-      "primary_platform": "bluesky",
-      "type": "person",
-      "bio": "",
-      "location": "",
-      "company": "",
-      "avatar": null,
-      "platforms": [
-        {
-          "type": "bluesky",
-          "handle": "emilymbender.bsky.social",
-          "url": "https://bsky.app/profile/emilymbender.bsky.social",
-          "followers": null
-        }
-      ],
-      "stats": {
-        "posts": 14,
-        "likes": 2697
-      },
-      "tags": [
-        "research",
-        "claude",
-        "fundamentals"
-      ],
-      "_score": 2697,
-      "category_scores": {
-        "research": 6,
-        "claude": 5,
-        "fundamentals": 5
       }
     },
     {
@@ -19825,6 +20090,39 @@
       }
     },
     {
+      "id": "bsky-npr-org",
+      "slug": "npr-org",
+      "name": "NPR",
+      "primary_handle": "npr.org",
+      "primary_platform": "bluesky",
+      "type": "person",
+      "bio": "",
+      "location": "",
+      "company": "",
+      "avatar": null,
+      "platforms": [
+        {
+          "type": "bluesky",
+          "handle": "npr.org",
+          "url": "https://bsky.app/profile/npr.org",
+          "followers": null
+        }
+      ],
+      "stats": {
+        "posts": 16,
+        "likes": 2572
+      },
+      "tags": [
+        "agents",
+        "claude"
+      ],
+      "_score": 2572,
+      "category_scores": {
+        "agents": 6,
+        "claude": 3
+      }
+    },
+    {
       "id": "gh-vas3k",
       "slug": "vas3k",
       "name": "Vasily Zubarev",
@@ -20211,6 +20509,33 @@
       "category_scores": {}
     },
     {
+      "id": "bsky-wajali-bsky-social",
+      "slug": "wajali-bsky-social",
+      "name": "Wajahat Ali",
+      "primary_handle": "wajali.bsky.social",
+      "primary_platform": "bluesky",
+      "type": "person",
+      "bio": "",
+      "location": "",
+      "company": "",
+      "avatar": null,
+      "platforms": [
+        {
+          "type": "bluesky",
+          "handle": "wajali.bsky.social",
+          "url": "https://bsky.app/profile/wajali.bsky.social",
+          "followers": null
+        }
+      ],
+      "stats": {
+        "posts": 7,
+        "likes": 2518
+      },
+      "tags": [],
+      "_score": 2518,
+      "category_scores": {}
+    },
+    {
       "id": "gh-alphagov",
       "slug": "alphagov",
       "name": "Government Digital Service",
@@ -20490,72 +20815,6 @@
       "_score": 2491,
       "category_scores": {
         "coding": 3
-      }
-    },
-    {
-      "id": "bsky-timkellogg-me",
-      "slug": "timkellogg-me",
-      "name": "mr. TIM",
-      "primary_handle": "timkellogg.me",
-      "primary_platform": "bluesky",
-      "type": "person",
-      "bio": "",
-      "location": "",
-      "company": "",
-      "avatar": null,
-      "platforms": [
-        {
-          "type": "bluesky",
-          "handle": "timkellogg.me",
-          "url": "https://bsky.app/profile/timkellogg.me",
-          "followers": null
-        }
-      ],
-      "stats": {
-        "posts": 55,
-        "likes": 2490
-      },
-      "tags": [
-        "claude",
-        "coding",
-        "business"
-      ],
-      "_score": 2490,
-      "category_scores": {
-        "claude": 13,
-        "coding": 5,
-        "business": 4
-      }
-    },
-    {
-      "id": "bsky-esqueer-net",
-      "slug": "esqueer-net",
-      "name": "Alejandra Caraballo",
-      "primary_handle": "esqueer.net",
-      "primary_platform": "bluesky",
-      "type": "person",
-      "bio": "",
-      "location": "",
-      "company": "",
-      "avatar": null,
-      "platforms": [
-        {
-          "type": "bluesky",
-          "handle": "esqueer.net",
-          "url": "https://bsky.app/profile/esqueer.net",
-          "followers": null
-        }
-      ],
-      "stats": {
-        "posts": 9,
-        "likes": 2489
-      },
-      "tags": [
-        "claude"
-      ],
-      "_score": 2489,
-      "category_scores": {
-        "claude": 5
       }
     },
     {
@@ -20913,47 +21172,36 @@
       }
     },
     {
-      "id": "gh-eslint",
-      "slug": "eslint",
-      "name": "ESLint",
-      "primary_handle": "eslint",
-      "primary_platform": "github",
-      "type": "organization",
-      "bio": "Find and fix problems in your JavaScript code.",
+      "id": "bsky-ketanjoshi-co",
+      "slug": "ketanjoshi-co",
+      "name": "Ketan Joshi",
+      "primary_handle": "ketanjoshi.co",
+      "primary_platform": "bluesky",
+      "type": "person",
+      "bio": "",
       "location": "",
       "company": "",
-      "avatar": "https://avatars.githubusercontent.com/u/6019716?v=4",
+      "avatar": null,
       "platforms": [
         {
-          "type": "github",
-          "handle": "eslint",
-          "url": "https://github.com/eslint",
-          "followers": 955
-        },
-        {
-          "type": "twitter",
-          "handle": "geteslint",
-          "url": "https://twitter.com/geteslint",
-          "followers": null
-        },
-        {
-          "type": "website",
-          "handle": "eslint.org",
-          "url": "https://eslint.org",
+          "type": "bluesky",
+          "handle": "ketanjoshi.co",
+          "url": "https://bsky.app/profile/ketanjoshi.co",
           "followers": null
         }
       ],
       "stats": {
-        "followers": 955,
-        "following": 0,
-        "repos": 34
+        "posts": 17,
+        "likes": 2451
       },
       "tags": [
-        "coding"
+        "fundamentals",
+        "claude"
       ],
-      "_score": 2455,
+      "_score": 2451,
       "category_scores": {
-        "coding": 5
+        "fundamentals": 8,
+        "claude": 5
       }
     },
     {
@@ -21405,39 +21653,6 @@
       "category_scores": {}
     },
     {
-      "id": "bsky-lorak-bsky-social",
-      "slug": "lorak-bsky-social",
-      "name": "Lora Kolodny",
-      "primary_handle": "lorak.bsky.social",
-      "primary_platform": "bluesky",
-      "type": "person",
-      "bio": "",
-      "location": "",
-      "company": "",
-      "avatar": null,
-      "platforms": [
-        {
-          "type": "bluesky",
-          "handle": "lorak.bsky.social",
-          "url": "https://bsky.app/profile/lorak.bsky.social",
-          "followers": null
-        }
-      ],
-      "stats": {
-        "posts": 10,
-        "likes": 2374
-      },
-      "tags": [
-        "coding",
-        "claude"
-      ],
-      "_score": 2374,
-      "category_scores": {
-        "coding": 10,
-        "claude": 3
-      }
-    },
-    {
       "id": "gh-soxoj",
       "slug": "soxoj",
       "name": "Soxoj",
@@ -21524,6 +21739,39 @@
       }
     },
     {
+      "id": "bsky-gracekind-net",
+      "slug": "gracekind-net",
+      "name": "Grace",
+      "primary_handle": "gracekind.net",
+      "primary_platform": "bluesky",
+      "type": "person",
+      "bio": "",
+      "location": "",
+      "company": "",
+      "avatar": null,
+      "platforms": [
+        {
+          "type": "bluesky",
+          "handle": "gracekind.net",
+          "url": "https://bsky.app/profile/gracekind.net",
+          "followers": null
+        }
+      ],
+      "stats": {
+        "posts": 21,
+        "likes": 2367
+      },
+      "tags": [
+        "agents",
+        "claude"
+      ],
+      "_score": 2367,
+      "category_scores": {
+        "agents": 6,
+        "claude": 5
+      }
+    },
+    {
       "id": "gh-agentskills",
       "slug": "agentskills",
       "name": "Agent Skills",
@@ -21599,6 +21847,41 @@
       "category_scores": {
         "business": 5,
         "coding": 3
+      }
+    },
+    {
+      "id": "bsky-abeba-blacksky-app",
+      "slug": "abeba-blacksky-app",
+      "name": "Dr Abeba Birhane",
+      "primary_handle": "abeba.blacksky.app",
+      "primary_platform": "bluesky",
+      "type": "person",
+      "bio": "",
+      "location": "",
+      "company": "",
+      "avatar": null,
+      "platforms": [
+        {
+          "type": "bluesky",
+          "handle": "abeba.blacksky.app",
+          "url": "https://bsky.app/profile/abeba.blacksky.app",
+          "followers": null
+        }
+      ],
+      "stats": {
+        "posts": 12,
+        "likes": 2354
+      },
+      "tags": [
+        "fundamentals",
+        "agents",
+        "claude"
+      ],
+      "_score": 2354,
+      "category_scores": {
+        "fundamentals": 9,
+        "agents": 6,
+        "claude": 5
       }
     },
     {
@@ -21744,6 +22027,41 @@
       }
     },
     {
+      "id": "bsky-timkellogg-me",
+      "slug": "timkellogg-me",
+      "name": "mr. TIM",
+      "primary_handle": "timkellogg.me",
+      "primary_platform": "bluesky",
+      "type": "person",
+      "bio": "",
+      "location": "",
+      "company": "",
+      "avatar": null,
+      "platforms": [
+        {
+          "type": "bluesky",
+          "handle": "timkellogg.me",
+          "url": "https://bsky.app/profile/timkellogg.me",
+          "followers": null
+        }
+      ],
+      "stats": {
+        "posts": 52,
+        "likes": 2314
+      },
+      "tags": [
+        "claude",
+        "agents",
+        "fundamentals"
+      ],
+      "_score": 2314,
+      "category_scores": {
+        "claude": 10,
+        "agents": 6,
+        "fundamentals": 5
+      }
+    },
+    {
       "id": "gh-songquanpeng",
       "slug": "songquanpeng",
       "name": "JustSong",
@@ -21782,6 +22100,72 @@
       "tags": [],
       "_score": 2309,
       "category_scores": {}
+    },
+    {
+      "id": "bsky-zachweinersmith-bsky-social",
+      "slug": "zachweinersmith-bsky-social",
+      "name": "Zach Weinersmith",
+      "primary_handle": "zachweinersmith.bsky.social",
+      "primary_platform": "bluesky",
+      "type": "person",
+      "bio": "",
+      "location": "",
+      "company": "",
+      "avatar": null,
+      "platforms": [
+        {
+          "type": "bluesky",
+          "handle": "zachweinersmith.bsky.social",
+          "url": "https://bsky.app/profile/zachweinersmith.bsky.social",
+          "followers": null
+        }
+      ],
+      "stats": {
+        "posts": 17,
+        "likes": 2304
+      },
+      "tags": [
+        "research",
+        "fundamentals",
+        "claude"
+      ],
+      "_score": 2304,
+      "category_scores": {
+        "research": 6,
+        "fundamentals": 6,
+        "claude": 5
+      }
+    },
+    {
+      "id": "bsky-astrra-space",
+      "slug": "astrra-space",
+      "name": "Astra \u2b50",
+      "primary_handle": "astrra.space",
+      "primary_platform": "bluesky",
+      "type": "person",
+      "bio": "",
+      "location": "",
+      "company": "",
+      "avatar": null,
+      "platforms": [
+        {
+          "type": "bluesky",
+          "handle": "astrra.space",
+          "url": "https://bsky.app/profile/astrra.space",
+          "followers": null
+        }
+      ],
+      "stats": {
+        "posts": 40,
+        "likes": 2297
+      },
+      "tags": [
+        "agents"
+      ],
+      "_score": 2297,
+      "category_scores": {
+        "agents": 6
+      }
     },
     {
       "id": "gh-Vaibhavs10",
@@ -21872,39 +22256,6 @@
       }
     },
     {
-      "id": "bsky-quinnslobodian-com",
-      "slug": "quinnslobodian-com",
-      "name": "Quinn Slobodian",
-      "primary_handle": "quinnslobodian.com",
-      "primary_platform": "bluesky",
-      "type": "person",
-      "bio": "",
-      "location": "",
-      "company": "",
-      "avatar": null,
-      "platforms": [
-        {
-          "type": "bluesky",
-          "handle": "quinnslobodian.com",
-          "url": "https://bsky.app/profile/quinnslobodian.com",
-          "followers": null
-        }
-      ],
-      "stats": {
-        "posts": 5,
-        "likes": 2268
-      },
-      "tags": [
-        "agents",
-        "claude"
-      ],
-      "_score": 2268,
-      "category_scores": {
-        "agents": 6,
-        "claude": 3
-      }
-    },
-    {
       "id": "gh-0xSero",
       "slug": "0xsero",
       "name": "0xSero",
@@ -21974,33 +22325,6 @@
       },
       "tags": [],
       "_score": 2260,
-      "category_scores": {}
-    },
-    {
-      "id": "bsky-wajali-bsky-social",
-      "slug": "wajali-bsky-social",
-      "name": "Wajahat Ali",
-      "primary_handle": "wajali.bsky.social",
-      "primary_platform": "bluesky",
-      "type": "person",
-      "bio": "",
-      "location": "",
-      "company": "",
-      "avatar": null,
-      "platforms": [
-        {
-          "type": "bluesky",
-          "handle": "wajali.bsky.social",
-          "url": "https://bsky.app/profile/wajali.bsky.social",
-          "followers": null
-        }
-      ],
-      "stats": {
-        "posts": 6,
-        "likes": 2259
-      },
-      "tags": [],
-      "_score": 2259,
       "category_scores": {}
     },
     {
@@ -22726,37 +23050,6 @@
       "category_scores": {}
     },
     {
-      "id": "bsky-gracekind-net",
-      "slug": "gracekind-net",
-      "name": "Grace",
-      "primary_handle": "gracekind.net",
-      "primary_platform": "bluesky",
-      "type": "person",
-      "bio": "",
-      "location": "",
-      "company": "",
-      "avatar": null,
-      "platforms": [
-        {
-          "type": "bluesky",
-          "handle": "gracekind.net",
-          "url": "https://bsky.app/profile/gracekind.net",
-          "followers": null
-        }
-      ],
-      "stats": {
-        "posts": 20,
-        "likes": 2162
-      },
-      "tags": [
-        "claude"
-      ],
-      "_score": 2162,
-      "category_scores": {
-        "claude": 3
-      }
-    },
-    {
       "id": "gh-unclecode",
       "slug": "unclecode",
       "name": "UncleCode",
@@ -22798,41 +23091,6 @@
       "_score": 2160,
       "category_scores": {
         "research": 3
-      }
-    },
-    {
-      "id": "bsky-zachweinersmith-bsky-social",
-      "slug": "zachweinersmith-bsky-social",
-      "name": "Zach Weinersmith",
-      "primary_handle": "zachweinersmith.bsky.social",
-      "primary_platform": "bluesky",
-      "type": "person",
-      "bio": "",
-      "location": "",
-      "company": "",
-      "avatar": null,
-      "platforms": [
-        {
-          "type": "bluesky",
-          "handle": "zachweinersmith.bsky.social",
-          "url": "https://bsky.app/profile/zachweinersmith.bsky.social",
-          "followers": null
-        }
-      ],
-      "stats": {
-        "posts": 16,
-        "likes": 2153
-      },
-      "tags": [
-        "fundamentals",
-        "claude",
-        "research"
-      ],
-      "_score": 2153,
-      "category_scores": {
-        "fundamentals": 6,
-        "claude": 5,
-        "research": 4
       }
     },
     {
@@ -22929,13 +23187,13 @@
         }
       ],
       "stats": {
-        "posts": 14,
-        "likes": 2134
+        "posts": 15,
+        "likes": 2139
       },
       "tags": [
         "fundamentals"
       ],
-      "_score": 2134,
+      "_score": 2139,
       "category_scores": {
         "fundamentals": 13
       }
@@ -23775,41 +24033,6 @@
       }
     },
     {
-      "id": "bsky-cnn-com",
-      "slug": "cnn-com",
-      "name": "CNN",
-      "primary_handle": "cnn.com",
-      "primary_platform": "bluesky",
-      "type": "person",
-      "bio": "",
-      "location": "",
-      "company": "",
-      "avatar": null,
-      "platforms": [
-        {
-          "type": "bluesky",
-          "handle": "cnn.com",
-          "url": "https://bsky.app/profile/cnn.com",
-          "followers": null
-        }
-      ],
-      "stats": {
-        "posts": 17,
-        "likes": 1978
-      },
-      "tags": [
-        "agents",
-        "business",
-        "claude"
-      ],
-      "_score": 1978,
-      "category_scores": {
-        "agents": 6,
-        "business": 4,
-        "claude": 3
-      }
-    },
-    {
       "id": "gh-NVIDIA-NeMo",
       "slug": "nvidia-nemo",
       "name": "NVIDIA-NeMo",
@@ -23850,10 +24073,10 @@
       }
     },
     {
-      "id": "bsky-motherjones-com",
-      "slug": "motherjones-com",
-      "name": "Mother Jones",
-      "primary_handle": "motherjones.com",
+      "id": "bsky-emilymbender-bsky-social",
+      "slug": "emilymbender-bsky-social",
+      "name": "Emily M. Bender",
+      "primary_handle": "emilymbender.bsky.social",
       "primary_platform": "bluesky",
       "type": "person",
       "bio": "",
@@ -23863,132 +24086,26 @@
       "platforms": [
         {
           "type": "bluesky",
-          "handle": "motherjones.com",
-          "url": "https://bsky.app/profile/motherjones.com",
+          "handle": "emilymbender.bsky.social",
+          "url": "https://bsky.app/profile/emilymbender.bsky.social",
           "followers": null
         }
       ],
       "stats": {
-        "posts": 14,
+        "posts": 12,
         "likes": 1962
       },
       "tags": [
-        "agents",
-        "claude"
+        "research",
+        "claude",
+        "fundamentals"
       ],
       "_score": 1962,
       "category_scores": {
-        "agents": 6,
-        "claude": 3
+        "research": 6,
+        "claude": 5,
+        "fundamentals": 3
       }
-    },
-    {
-      "id": "gh-openinterpreter",
-      "slug": "openinterpreter",
-      "name": "Open Interpreter",
-      "primary_handle": "openinterpreter",
-      "primary_platform": "github",
-      "type": "organization",
-      "bio": "",
-      "location": "",
-      "company": "",
-      "avatar": "https://avatars.githubusercontent.com/u/163192481?v=4",
-      "platforms": [
-        {
-          "type": "github",
-          "handle": "openinterpreter",
-          "url": "https://github.com/openinterpreter",
-          "followers": 961
-        },
-        {
-          "type": "website",
-          "handle": "openinterpreter.com",
-          "url": "https://www.openinterpreter.com",
-          "followers": null
-        }
-      ],
-      "stats": {
-        "followers": 961,
-        "following": 0,
-        "repos": 5
-      },
-      "tags": [
-        "agents",
-        "coding"
-      ],
-      "_score": 1961,
-      "category_scores": {
-        "agents": 5,
-        "coding": 5
-      }
-    },
-    {
-      "id": "gh-mozilla-firefox",
-      "slug": "mozilla-firefox",
-      "name": "Mozilla-Firefox",
-      "primary_handle": "mozilla-firefox",
-      "primary_platform": "github",
-      "type": "organization",
-      "bio": "",
-      "location": "",
-      "company": "",
-      "avatar": "https://avatars.githubusercontent.com/u/148481591?v=4",
-      "platforms": [
-        {
-          "type": "github",
-          "handle": "mozilla-firefox",
-          "url": "https://github.com/mozilla-firefox",
-          "followers": 958
-        },
-        {
-          "type": "website",
-          "handle": "firefox.com",
-          "url": "https://www.firefox.com/",
-          "followers": null
-        }
-      ],
-      "stats": {
-        "followers": 958,
-        "following": 0,
-        "repos": 10
-      },
-      "tags": [],
-      "_score": 1958,
-      "category_scores": {}
-    },
-    {
-      "id": "gh-h5bp",
-      "slug": "h5bp",
-      "name": "H5BP",
-      "primary_handle": "h5bp",
-      "primary_platform": "github",
-      "type": "organization",
-      "bio": "",
-      "location": "",
-      "company": "",
-      "avatar": "https://avatars.githubusercontent.com/u/1136800?v=4",
-      "platforms": [
-        {
-          "type": "github",
-          "handle": "h5bp",
-          "url": "https://github.com/h5bp",
-          "followers": 957
-        },
-        {
-          "type": "website",
-          "handle": "h5bp.org",
-          "url": "https://h5bp.org",
-          "followers": null
-        }
-      ],
-      "stats": {
-        "followers": 957,
-        "following": 0,
-        "repos": 28
-      },
-      "tags": [],
-      "_score": 1957,
-      "category_scores": {}
     },
     {
       "id": "gh-alirezarezvani",
@@ -24037,10 +24154,10 @@
       }
     },
     {
-      "id": "bsky-forbes-com",
-      "slug": "forbes-com",
-      "name": "Forbes",
-      "primary_handle": "forbes.com",
+      "id": "bsky-cnn-com",
+      "slug": "cnn-com",
+      "name": "CNN",
+      "primary_handle": "cnn.com",
       "primary_platform": "bluesky",
       "type": "person",
       "bio": "",
@@ -24050,24 +24167,24 @@
       "platforms": [
         {
           "type": "bluesky",
-          "handle": "forbes.com",
-          "url": "https://bsky.app/profile/forbes.com",
+          "handle": "cnn.com",
+          "url": "https://bsky.app/profile/cnn.com",
           "followers": null
         }
       ],
       "stats": {
-        "posts": 19,
-        "likes": 1937
+        "posts": 17,
+        "likes": 1949
       },
       "tags": [
         "agents",
-        "research",
+        "creative",
         "business"
       ],
-      "_score": 1937,
+      "_score": 1949,
       "category_scores": {
-        "agents": 8,
-        "research": 5,
+        "agents": 6,
+        "creative": 6,
         "business": 4
       }
     },
@@ -24146,10 +24263,10 @@
       }
     },
     {
-      "id": "bsky-astrra-space",
-      "slug": "astrra-space",
-      "name": "Astra \u2b50",
-      "primary_handle": "astrra.space",
+      "id": "bsky-motherjones-com",
+      "slug": "motherjones-com",
+      "name": "Mother Jones",
+      "primary_handle": "motherjones.com",
       "primary_platform": "bluesky",
       "type": "person",
       "bio": "",
@@ -24159,51 +24276,22 @@
       "platforms": [
         {
           "type": "bluesky",
-          "handle": "astrra.space",
-          "url": "https://bsky.app/profile/astrra.space",
+          "handle": "motherjones.com",
+          "url": "https://bsky.app/profile/motherjones.com",
           "followers": null
         }
       ],
       "stats": {
-        "posts": 35,
-        "likes": 1902
+        "posts": 13,
+        "likes": 1922
       },
       "tags": [
-        "agents"
-      ],
-      "_score": 1902,
-      "category_scores": {
-        "agents": 6
-      }
-    },
-    {
-      "id": "bsky-apnews-com",
-      "slug": "apnews-com",
-      "name": "The Associated Press",
-      "primary_handle": "apnews.com",
-      "primary_platform": "bluesky",
-      "type": "person",
-      "bio": "",
-      "location": "",
-      "company": "",
-      "avatar": null,
-      "platforms": [
-        {
-          "type": "bluesky",
-          "handle": "apnews.com",
-          "url": "https://bsky.app/profile/apnews.com",
-          "followers": null
-        }
-      ],
-      "stats": {
-        "posts": 18,
-        "likes": 1900
-      },
-      "tags": [
+        "agents",
         "claude"
       ],
-      "_score": 1900,
+      "_score": 1922,
       "category_scores": {
+        "agents": 6,
         "claude": 3
       }
     },
@@ -24474,6 +24562,39 @@
       }
     },
     {
+      "id": "bsky-theguardian-com",
+      "slug": "theguardian-com",
+      "name": "The Guardian",
+      "primary_handle": "theguardian.com",
+      "primary_platform": "bluesky",
+      "type": "person",
+      "bio": "",
+      "location": "",
+      "company": "",
+      "avatar": null,
+      "platforms": [
+        {
+          "type": "bluesky",
+          "handle": "theguardian.com",
+          "url": "https://bsky.app/profile/theguardian.com",
+          "followers": null
+        }
+      ],
+      "stats": {
+        "posts": 21,
+        "likes": 1827
+      },
+      "tags": [
+        "agents",
+        "claude"
+      ],
+      "_score": 1827,
+      "category_scores": {
+        "agents": 6,
+        "claude": 5
+      }
+    },
+    {
       "id": "gh-mvanhorn",
       "slug": "mvanhorn",
       "name": "Matt Van Horn",
@@ -24558,39 +24679,6 @@
       }
     },
     {
-      "id": "bsky-ketanjoshi-co",
-      "slug": "ketanjoshi-co",
-      "name": "Ketan Joshi",
-      "primary_handle": "ketanjoshi.co",
-      "primary_platform": "bluesky",
-      "type": "person",
-      "bio": "",
-      "location": "",
-      "company": "",
-      "avatar": null,
-      "platforms": [
-        {
-          "type": "bluesky",
-          "handle": "ketanjoshi.co",
-          "url": "https://bsky.app/profile/ketanjoshi.co",
-          "followers": null
-        }
-      ],
-      "stats": {
-        "posts": 16,
-        "likes": 1808
-      },
-      "tags": [
-        "fundamentals",
-        "claude"
-      ],
-      "_score": 1808,
-      "category_scores": {
-        "fundamentals": 6,
-        "claude": 5
-      }
-    },
-    {
       "id": "gh-RVC-Boss",
       "slug": "rvc-boss",
       "name": "RVC-Boss",
@@ -24623,6 +24711,33 @@
         "creative": 5,
         "coding": 5
       }
+    },
+    {
+      "id": "bsky-chadbourn-bsky-social",
+      "slug": "chadbourn-bsky-social",
+      "name": "Mark Chadbourn",
+      "primary_handle": "chadbourn.bsky.social",
+      "primary_platform": "bluesky",
+      "type": "person",
+      "bio": "",
+      "location": "",
+      "company": "",
+      "avatar": null,
+      "platforms": [
+        {
+          "type": "bluesky",
+          "handle": "chadbourn.bsky.social",
+          "url": "https://bsky.app/profile/chadbourn.bsky.social",
+          "followers": null
+        }
+      ],
+      "stats": {
+        "posts": 5,
+        "likes": 1807
+      },
+      "tags": [],
+      "_score": 1807,
+      "category_scores": {}
     },
     {
       "id": "gh-jianchang512",
@@ -24660,6 +24775,70 @@
       "_score": 1806,
       "category_scores": {
         "coding": 5
+      }
+    },
+    {
+      "id": "bsky-eugenemcparland-bsky-social",
+      "slug": "eugenemcparland-bsky-social",
+      "name": "Eugene McParland \ud83c\uddfa\ud83c\udde6",
+      "primary_handle": "eugenemcparland.bsky.social",
+      "primary_platform": "bluesky",
+      "type": "person",
+      "bio": "",
+      "location": "",
+      "company": "",
+      "avatar": null,
+      "platforms": [
+        {
+          "type": "bluesky",
+          "handle": "eugenemcparland.bsky.social",
+          "url": "https://bsky.app/profile/eugenemcparland.bsky.social",
+          "followers": null
+        }
+      ],
+      "stats": {
+        "posts": 129,
+        "likes": 1800
+      },
+      "tags": [
+        "claude"
+      ],
+      "_score": 1800,
+      "category_scores": {
+        "claude": 5
+      }
+    },
+    {
+      "id": "bsky-nytimes-com",
+      "slug": "nytimes-com",
+      "name": "The New York Times",
+      "primary_handle": "nytimes.com",
+      "primary_platform": "bluesky",
+      "type": "person",
+      "bio": "",
+      "location": "",
+      "company": "",
+      "avatar": null,
+      "platforms": [
+        {
+          "type": "bluesky",
+          "handle": "nytimes.com",
+          "url": "https://bsky.app/profile/nytimes.com",
+          "followers": null
+        }
+      ],
+      "stats": {
+        "posts": 10,
+        "likes": 1795
+      },
+      "tags": [
+        "claude",
+        "fundamentals"
+      ],
+      "_score": 1795,
+      "category_scores": {
+        "claude": 5,
+        "fundamentals": 3
       }
     },
     {
@@ -24707,10 +24886,10 @@
       }
     },
     {
-      "id": "bsky-npr-org",
-      "slug": "npr-org",
-      "name": "NPR",
-      "primary_handle": "npr.org",
+      "id": "bsky-brunodias-dev",
+      "slug": "brunodias-dev",
+      "name": "Bruno Dias",
+      "primary_handle": "brunodias.dev",
       "primary_platform": "bluesky",
       "type": "person",
       "bio": "",
@@ -24720,23 +24899,23 @@
       "platforms": [
         {
           "type": "bluesky",
-          "handle": "npr.org",
-          "url": "https://bsky.app/profile/npr.org",
+          "handle": "brunodias.dev",
+          "url": "https://bsky.app/profile/brunodias.dev",
           "followers": null
         }
       ],
       "stats": {
-        "posts": 13,
-        "likes": 1777
+        "posts": 10,
+        "likes": 1772
       },
       "tags": [
-        "agents",
-        "claude"
+        "claude",
+        "fundamentals"
       ],
-      "_score": 1777,
+      "_score": 1772,
       "category_scores": {
-        "agents": 6,
-        "claude": 3
+        "claude": 5,
+        "fundamentals": 5
       }
     },
     {
@@ -24781,6 +24960,41 @@
       "_score": 1770,
       "category_scores": {
         "research": 6
+      }
+    },
+    {
+      "id": "bsky-forbes-com",
+      "slug": "forbes-com",
+      "name": "Forbes",
+      "primary_handle": "forbes.com",
+      "primary_platform": "bluesky",
+      "type": "person",
+      "bio": "",
+      "location": "",
+      "company": "",
+      "avatar": null,
+      "platforms": [
+        {
+          "type": "bluesky",
+          "handle": "forbes.com",
+          "url": "https://bsky.app/profile/forbes.com",
+          "followers": null
+        }
+      ],
+      "stats": {
+        "posts": 17,
+        "likes": 1769
+      },
+      "tags": [
+        "agents",
+        "research",
+        "claude"
+      ],
+      "_score": 1769,
+      "category_scores": {
+        "agents": 8,
+        "research": 5,
+        "claude": 3
       }
     },
     {
@@ -24830,39 +25044,6 @@
       }
     },
     {
-      "id": "bsky-theguardian-com",
-      "slug": "theguardian-com",
-      "name": "The Guardian",
-      "primary_handle": "theguardian.com",
-      "primary_platform": "bluesky",
-      "type": "person",
-      "bio": "",
-      "location": "",
-      "company": "",
-      "avatar": null,
-      "platforms": [
-        {
-          "type": "bluesky",
-          "handle": "theguardian.com",
-          "url": "https://bsky.app/profile/theguardian.com",
-          "followers": null
-        }
-      ],
-      "stats": {
-        "posts": 21,
-        "likes": 1761
-      },
-      "tags": [
-        "agents",
-        "claude"
-      ],
-      "_score": 1761,
-      "category_scores": {
-        "agents": 6,
-        "claude": 5
-      }
-    },
-    {
       "id": "gh-bojieli",
       "slug": "bojieli",
       "name": "Bojie Li",
@@ -24904,37 +25085,6 @@
       "_score": 1750,
       "category_scores": {
         "research": 5
-      }
-    },
-    {
-      "id": "bsky-eugenemcparland-bsky-social",
-      "slug": "eugenemcparland-bsky-social",
-      "name": "Eugene McParland \ud83c\uddfa\ud83c\udde6",
-      "primary_handle": "eugenemcparland.bsky.social",
-      "primary_platform": "bluesky",
-      "type": "person",
-      "bio": "",
-      "location": "",
-      "company": "",
-      "avatar": null,
-      "platforms": [
-        {
-          "type": "bluesky",
-          "handle": "eugenemcparland.bsky.social",
-          "url": "https://bsky.app/profile/eugenemcparland.bsky.social",
-          "followers": null
-        }
-      ],
-      "stats": {
-        "posts": 124,
-        "likes": 1749
-      },
-      "tags": [
-        "claude"
-      ],
-      "_score": 1749,
-      "category_scores": {
-        "claude": 5
       }
     },
     {
@@ -25062,41 +25212,6 @@
       }
     },
     {
-      "id": "bsky-disabilitystor1-bsky-social",
-      "slug": "disabilitystor1-bsky-social",
-      "name": "Aparna Nair",
-      "primary_handle": "disabilitystor1.bsky.social",
-      "primary_platform": "bluesky",
-      "type": "person",
-      "bio": "",
-      "location": "",
-      "company": "",
-      "avatar": null,
-      "platforms": [
-        {
-          "type": "bluesky",
-          "handle": "disabilitystor1.bsky.social",
-          "url": "https://bsky.app/profile/disabilitystor1.bsky.social",
-          "followers": null
-        }
-      ],
-      "stats": {
-        "posts": 5,
-        "likes": 1725
-      },
-      "tags": [
-        "agents",
-        "beginners",
-        "fundamentals"
-      ],
-      "_score": 1725,
-      "category_scores": {
-        "agents": 6,
-        "beginners": 3,
-        "fundamentals": 3
-      }
-    },
-    {
       "id": "gh-wangrongding",
       "slug": "wangrongding",
       "name": "\u8363\u9876",
@@ -25138,39 +25253,6 @@
       "_score": 1722,
       "category_scores": {
         "coding": 5
-      }
-    },
-    {
-      "id": "bsky-nytimes-com",
-      "slug": "nytimes-com",
-      "name": "The New York Times",
-      "primary_handle": "nytimes.com",
-      "primary_platform": "bluesky",
-      "type": "person",
-      "bio": "",
-      "location": "",
-      "company": "",
-      "avatar": null,
-      "platforms": [
-        {
-          "type": "bluesky",
-          "handle": "nytimes.com",
-          "url": "https://bsky.app/profile/nytimes.com",
-          "followers": null
-        }
-      ],
-      "stats": {
-        "posts": 10,
-        "likes": 1712
-      },
-      "tags": [
-        "claude",
-        "fundamentals"
-      ],
-      "_score": 1712,
-      "category_scores": {
-        "claude": 5,
-        "fundamentals": 3
       }
     },
     {
@@ -25278,10 +25360,10 @@
       }
     },
     {
-      "id": "bsky-brunodias-dev",
-      "slug": "brunodias-dev",
-      "name": "Bruno Dias",
-      "primary_handle": "brunodias.dev",
+      "id": "bsky-jasonkoebler-bsky-social",
+      "slug": "jasonkoebler-bsky-social",
+      "name": "Jason Koebler",
+      "primary_handle": "jasonkoebler.bsky.social",
       "primary_platform": "bluesky",
       "type": "person",
       "bio": "",
@@ -25291,23 +25373,21 @@
       "platforms": [
         {
           "type": "bluesky",
-          "handle": "brunodias.dev",
-          "url": "https://bsky.app/profile/brunodias.dev",
+          "handle": "jasonkoebler.bsky.social",
+          "url": "https://bsky.app/profile/jasonkoebler.bsky.social",
           "followers": null
         }
       ],
       "stats": {
-        "posts": 8,
+        "posts": 7,
         "likes": 1696
       },
       "tags": [
-        "fundamentals",
-        "claude"
+        "agents"
       ],
       "_score": 1696,
       "category_scores": {
-        "fundamentals": 5,
-        "claude": 3
+        "agents": 6
       }
     },
     {
@@ -25546,41 +25626,6 @@
       "_score": 1663,
       "category_scores": {
         "coding": 5
-      }
-    },
-    {
-      "id": "bsky-abeba-blacksky-app",
-      "slug": "abeba-blacksky-app",
-      "name": "Dr Abeba Birhane",
-      "primary_handle": "abeba.blacksky.app",
-      "primary_platform": "bluesky",
-      "type": "person",
-      "bio": "",
-      "location": "",
-      "company": "",
-      "avatar": null,
-      "platforms": [
-        {
-          "type": "bluesky",
-          "handle": "abeba.blacksky.app",
-          "url": "https://bsky.app/profile/abeba.blacksky.app",
-          "followers": null
-        }
-      ],
-      "stats": {
-        "posts": 10,
-        "likes": 1658
-      },
-      "tags": [
-        "agents",
-        "fundamentals",
-        "claude"
-      ],
-      "_score": 1658,
-      "category_scores": {
-        "agents": 6,
-        "fundamentals": 6,
-        "claude": 5
       }
     },
     {
@@ -25870,72 +25915,6 @@
       }
     },
     {
-      "id": "bsky-couts-bsky-social",
-      "slug": "couts-bsky-social",
-      "name": "Andrew Couts",
-      "primary_handle": "couts.bsky.social",
-      "primary_platform": "bluesky",
-      "type": "person",
-      "bio": "",
-      "location": "",
-      "company": "",
-      "avatar": null,
-      "platforms": [
-        {
-          "type": "bluesky",
-          "handle": "couts.bsky.social",
-          "url": "https://bsky.app/profile/couts.bsky.social",
-          "followers": null
-        }
-      ],
-      "stats": {
-        "posts": 5,
-        "likes": 1554
-      },
-      "tags": [
-        "agents"
-      ],
-      "_score": 1554,
-      "category_scores": {
-        "agents": 6
-      }
-    },
-    {
-      "id": "bsky-sungkim-bsky-social",
-      "slug": "sungkim-bsky-social",
-      "name": "Sung Kim",
-      "primary_handle": "sungkim.bsky.social",
-      "primary_platform": "bluesky",
-      "type": "person",
-      "bio": "",
-      "location": "",
-      "company": "",
-      "avatar": null,
-      "platforms": [
-        {
-          "type": "bluesky",
-          "handle": "sungkim.bsky.social",
-          "url": "https://bsky.app/profile/sungkim.bsky.social",
-          "followers": null
-        }
-      ],
-      "stats": {
-        "posts": 41,
-        "likes": 1554
-      },
-      "tags": [
-        "coding",
-        "claude",
-        "agents"
-      ],
-      "_score": 1554,
-      "category_scores": {
-        "coding": 15,
-        "claude": 8,
-        "agents": 8
-      }
-    },
-    {
       "id": "gh-NaiboWang",
       "slug": "naibowang",
       "name": "Naibo Wang",
@@ -26058,10 +26037,10 @@
       "category_scores": {}
     },
     {
-      "id": "bsky-jessefelder-com",
-      "slug": "jessefelder-com",
-      "name": "Jesse Felder",
-      "primary_handle": "jessefelder.com",
+      "id": "bsky-apnews-com",
+      "slug": "apnews-com",
+      "name": "The Associated Press",
+      "primary_handle": "apnews.com",
       "primary_platform": "bluesky",
       "type": "person",
       "bio": "",
@@ -26071,23 +26050,56 @@
       "platforms": [
         {
           "type": "bluesky",
-          "handle": "jessefelder.com",
-          "url": "https://bsky.app/profile/jessefelder.com",
+          "handle": "apnews.com",
+          "url": "https://bsky.app/profile/apnews.com",
           "followers": null
         }
       ],
       "stats": {
         "posts": 14,
-        "likes": 1510
+        "likes": 1513
       },
       "tags": [
-        "business",
         "claude"
       ],
-      "_score": 1510,
+      "_score": 1513,
       "category_scores": {
-        "business": 9,
-        "claude": 8
+        "claude": 3
+      }
+    },
+    {
+      "id": "bsky-disabilitystor1-bsky-social",
+      "slug": "disabilitystor1-bsky-social",
+      "name": "Aparna Nair",
+      "primary_handle": "disabilitystor1.bsky.social",
+      "primary_platform": "bluesky",
+      "type": "person",
+      "bio": "",
+      "location": "",
+      "company": "",
+      "avatar": null,
+      "platforms": [
+        {
+          "type": "bluesky",
+          "handle": "disabilitystor1.bsky.social",
+          "url": "https://bsky.app/profile/disabilitystor1.bsky.social",
+          "followers": null
+        }
+      ],
+      "stats": {
+        "posts": 6,
+        "likes": 1512
+      },
+      "tags": [
+        "beginners",
+        "creative",
+        "fundamentals"
+      ],
+      "_score": 1512,
+      "category_scores": {
+        "beginners": 3,
+        "creative": 3,
+        "fundamentals": 3
       }
     },
     {
@@ -26164,6 +26176,41 @@
       "_score": 1504,
       "category_scores": {
         "agents": 6
+      }
+    },
+    {
+      "id": "bsky-sungkim-bsky-social",
+      "slug": "sungkim-bsky-social",
+      "name": "Sung Kim",
+      "primary_handle": "sungkim.bsky.social",
+      "primary_platform": "bluesky",
+      "type": "person",
+      "bio": "",
+      "location": "",
+      "company": "",
+      "avatar": null,
+      "platforms": [
+        {
+          "type": "bluesky",
+          "handle": "sungkim.bsky.social",
+          "url": "https://bsky.app/profile/sungkim.bsky.social",
+          "followers": null
+        }
+      ],
+      "stats": {
+        "posts": 41,
+        "likes": 1504
+      },
+      "tags": [
+        "coding",
+        "claude",
+        "agents"
+      ],
+      "_score": 1504,
+      "category_scores": {
+        "coding": 13,
+        "claude": 8,
+        "agents": 8
       }
     },
     {
@@ -26385,10 +26432,10 @@
       }
     },
     {
-      "id": "bsky-bloomberg-com",
-      "slug": "bloomberg-com",
-      "name": "Bloomberg News",
-      "primary_handle": "bloomberg.com",
+      "id": "bsky-jessefelder-com",
+      "slug": "jessefelder-com",
+      "name": "Jesse Felder",
+      "primary_handle": "jessefelder.com",
       "primary_platform": "bluesky",
       "type": "person",
       "bio": "",
@@ -26398,32 +26445,30 @@
       "platforms": [
         {
           "type": "bluesky",
-          "handle": "bloomberg.com",
-          "url": "https://bsky.app/profile/bloomberg.com",
+          "handle": "jessefelder.com",
+          "url": "https://bsky.app/profile/jessefelder.com",
           "followers": null
         }
       ],
       "stats": {
-        "posts": 44,
-        "likes": 1421
+        "posts": 13,
+        "likes": 1460
       },
       "tags": [
-        "research",
-        "agents",
+        "business",
         "claude"
       ],
-      "_score": 1421,
+      "_score": 1460,
       "category_scores": {
-        "research": 7,
-        "agents": 6,
-        "claude": 5
+        "business": 9,
+        "claude": 8
       }
     },
     {
-      "id": "bsky-emollick-bsky-social",
-      "slug": "emollick-bsky-social",
-      "name": "Ethan Mollick",
-      "primary_handle": "emollick.bsky.social",
+      "id": "bsky-reuters-com",
+      "slug": "reuters-com",
+      "name": "Reuters",
+      "primary_handle": "reuters.com",
       "primary_platform": "bluesky",
       "type": "person",
       "bio": "",
@@ -26433,56 +26478,25 @@
       "platforms": [
         {
           "type": "bluesky",
-          "handle": "emollick.bsky.social",
-          "url": "https://bsky.app/profile/emollick.bsky.social",
+          "handle": "reuters.com",
+          "url": "https://bsky.app/profile/reuters.com",
           "followers": null
         }
       ],
       "stats": {
-        "posts": 15,
-        "likes": 1414
+        "posts": 63,
+        "likes": 1409
       },
       "tags": [
         "agents",
         "claude",
         "coding"
       ],
-      "_score": 1414,
+      "_score": 1409,
       "category_scores": {
-        "agents": 8,
+        "agents": 10,
         "claude": 5,
-        "coding": 3
-      }
-    },
-    {
-      "id": "bsky-jasonkoebler-bsky-social",
-      "slug": "jasonkoebler-bsky-social",
-      "name": "Jason Koebler",
-      "primary_handle": "jasonkoebler.bsky.social",
-      "primary_platform": "bluesky",
-      "type": "person",
-      "bio": "",
-      "location": "",
-      "company": "",
-      "avatar": null,
-      "platforms": [
-        {
-          "type": "bluesky",
-          "handle": "jasonkoebler.bsky.social",
-          "url": "https://bsky.app/profile/jasonkoebler.bsky.social",
-          "followers": null
-        }
-      ],
-      "stats": {
-        "posts": 6,
-        "likes": 1398
-      },
-      "tags": [
-        "agents"
-      ],
-      "_score": 1398,
-      "category_scores": {
-        "agents": 6
+        "coding": 5
       }
     },
     {
@@ -26524,10 +26538,10 @@
       }
     },
     {
-      "id": "bsky-reuters-com",
-      "slug": "reuters-com",
-      "name": "Reuters",
-      "primary_handle": "reuters.com",
+      "id": "bsky-leahmcelrath-bsky-social",
+      "slug": "leahmcelrath-bsky-social",
+      "name": "Leah McElrath",
+      "primary_handle": "leahmcelrath.bsky.social",
       "primary_platform": "bluesky",
       "type": "person",
       "bio": "",
@@ -26537,25 +26551,93 @@
       "platforms": [
         {
           "type": "bluesky",
-          "handle": "reuters.com",
-          "url": "https://bsky.app/profile/reuters.com",
+          "handle": "leahmcelrath.bsky.social",
+          "url": "https://bsky.app/profile/leahmcelrath.bsky.social",
           "followers": null
         }
       ],
       "stats": {
-        "posts": 59,
-        "likes": 1345
+        "posts": 23,
+        "likes": 1381
       },
       "tags": [
-        "coding",
-        "agents",
-        "business"
+        "claude",
+        "fundamentals"
       ],
-      "_score": 1345,
+      "_score": 1381,
       "category_scores": {
-        "coding": 8,
+        "claude": 5,
+        "fundamentals": 5
+      }
+    },
+    {
+      "id": "bsky-emollick-bsky-social",
+      "slug": "emollick-bsky-social",
+      "name": "Ethan Mollick",
+      "primary_handle": "emollick.bsky.social",
+      "primary_platform": "bluesky",
+      "type": "person",
+      "bio": "",
+      "location": "",
+      "company": "",
+      "avatar": null,
+      "platforms": [
+        {
+          "type": "bluesky",
+          "handle": "emollick.bsky.social",
+          "url": "https://bsky.app/profile/emollick.bsky.social",
+          "followers": null
+        }
+      ],
+      "stats": {
+        "posts": 14,
+        "likes": 1360
+      },
+      "tags": [
+        "agents",
+        "claude",
+        "coding"
+      ],
+      "_score": 1360,
+      "category_scores": {
         "agents": 8,
-        "business": 6
+        "claude": 5,
+        "coding": 3
+      }
+    },
+    {
+      "id": "bsky-ponder-ooo",
+      "slug": "ponder-ooo",
+      "name": "ponder",
+      "primary_handle": "ponder.ooo",
+      "primary_platform": "bluesky",
+      "type": "person",
+      "bio": "",
+      "location": "",
+      "company": "",
+      "avatar": null,
+      "platforms": [
+        {
+          "type": "bluesky",
+          "handle": "ponder.ooo",
+          "url": "https://bsky.app/profile/ponder.ooo",
+          "followers": null
+        }
+      ],
+      "stats": {
+        "posts": 29,
+        "likes": 1347
+      },
+      "tags": [
+        "claude",
+        "fundamentals",
+        "tool-insights"
+      ],
+      "_score": 1347,
+      "category_scores": {
+        "claude": 5,
+        "fundamentals": 5,
+        "tool-insights": 3
       }
     },
     {
@@ -26594,6 +26676,37 @@
       "_score": 1344,
       "category_scores": {
         "coding": 5
+      }
+    },
+    {
+      "id": "bsky-pwnallthethings-bsky-social",
+      "slug": "pwnallthethings-bsky-social",
+      "name": "Pwnallthethings",
+      "primary_handle": "pwnallthethings.bsky.social",
+      "primary_platform": "bluesky",
+      "type": "person",
+      "bio": "",
+      "location": "",
+      "company": "",
+      "avatar": null,
+      "platforms": [
+        {
+          "type": "bluesky",
+          "handle": "pwnallthethings.bsky.social",
+          "url": "https://bsky.app/profile/pwnallthethings.bsky.social",
+          "followers": null
+        }
+      ],
+      "stats": {
+        "posts": 6,
+        "likes": 1334
+      },
+      "tags": [
+        "claude"
+      ],
+      "_score": 1334,
+      "category_scores": {
+        "claude": 5
       }
     },
     {
@@ -26937,74 +27050,6 @@
       }
     },
     {
-      "id": "bsky-aellalabrys-bsky-social",
-      "slug": "aellalabrys-bsky-social",
-      "name": "Labrys of A\u00eblla",
-      "primary_handle": "aellalabrys.bsky.social",
-      "primary_platform": "bluesky",
-      "type": "person",
-      "bio": "",
-      "location": "",
-      "company": "",
-      "avatar": null,
-      "platforms": [
-        {
-          "type": "bluesky",
-          "handle": "aellalabrys.bsky.social",
-          "url": "https://bsky.app/profile/aellalabrys.bsky.social",
-          "followers": null
-        }
-      ],
-      "stats": {
-        "posts": 34,
-        "likes": 1240
-      },
-      "tags": [
-        "fundamentals",
-        "agents",
-        "claude"
-      ],
-      "_score": 1240,
-      "category_scores": {
-        "fundamentals": 17,
-        "agents": 9,
-        "claude": 5
-      }
-    },
-    {
-      "id": "bsky-mossworm-bsky-social",
-      "slug": "mossworm-bsky-social",
-      "name": "mossworm.bsky.social",
-      "primary_handle": "mossworm.bsky.social",
-      "primary_platform": "bluesky",
-      "type": "person",
-      "bio": "",
-      "location": "",
-      "company": "",
-      "avatar": null,
-      "platforms": [
-        {
-          "type": "bluesky",
-          "handle": "mossworm.bsky.social",
-          "url": "https://bsky.app/profile/mossworm.bsky.social",
-          "followers": null
-        }
-      ],
-      "stats": {
-        "posts": 16,
-        "likes": 1239
-      },
-      "tags": [
-        "fundamentals",
-        "tool-insights"
-      ],
-      "_score": 1239,
-      "category_scores": {
-        "fundamentals": 3,
-        "tool-insights": 3
-      }
-    },
-    {
       "id": "gh-JoeanAmier",
       "slug": "joeanamier",
       "name": "Quan",
@@ -27034,6 +27079,74 @@
       "_score": 1225,
       "category_scores": {
         "coding": 5
+      }
+    },
+    {
+      "id": "bsky-aellalabrys-bsky-social",
+      "slug": "aellalabrys-bsky-social",
+      "name": "Labrys of A\u00eblla",
+      "primary_handle": "aellalabrys.bsky.social",
+      "primary_platform": "bluesky",
+      "type": "person",
+      "bio": "",
+      "location": "",
+      "company": "",
+      "avatar": null,
+      "platforms": [
+        {
+          "type": "bluesky",
+          "handle": "aellalabrys.bsky.social",
+          "url": "https://bsky.app/profile/aellalabrys.bsky.social",
+          "followers": null
+        }
+      ],
+      "stats": {
+        "posts": 32,
+        "likes": 1220
+      },
+      "tags": [
+        "fundamentals",
+        "agents",
+        "claude"
+      ],
+      "_score": 1220,
+      "category_scores": {
+        "fundamentals": 17,
+        "agents": 9,
+        "claude": 5
+      }
+    },
+    {
+      "id": "bsky-peark-es",
+      "slug": "peark-es",
+      "name": "George Pearkes",
+      "primary_handle": "peark.es",
+      "primary_platform": "bluesky",
+      "type": "person",
+      "bio": "",
+      "location": "",
+      "company": "",
+      "avatar": null,
+      "platforms": [
+        {
+          "type": "bluesky",
+          "handle": "peark.es",
+          "url": "https://bsky.app/profile/peark.es",
+          "followers": null
+        }
+      ],
+      "stats": {
+        "posts": 14,
+        "likes": 1218
+      },
+      "tags": [
+        "business",
+        "claude"
+      ],
+      "_score": 1218,
+      "category_scores": {
+        "business": 7,
+        "claude": 5
       }
     },
     {
@@ -27129,35 +27242,38 @@
       }
     },
     {
-      "id": "bsky-leahmcelrath-bsky-social",
-      "slug": "leahmcelrath-bsky-social",
-      "name": "Leah McElrath",
-      "primary_handle": "leahmcelrath.bsky.social",
-      "primary_platform": "bluesky",
+      "id": "gh-bbfamily",
+      "slug": "bbfamily",
+      "name": "\u963f\u5e03",
+      "primary_handle": "bbfamily",
+      "primary_platform": "github",
       "type": "person",
       "bio": "",
       "location": "",
       "company": "",
-      "avatar": null,
+      "avatar": "https://avatars.githubusercontent.com/u/6149331?v=4",
       "platforms": [
         {
-          "type": "bluesky",
-          "handle": "leahmcelrath.bsky.social",
-          "url": "https://bsky.app/profile/leahmcelrath.bsky.social",
+          "type": "github",
+          "handle": "bbfamily",
+          "url": "https://github.com/bbfamily",
+          "followers": 1182
+        },
+        {
+          "type": "website",
+          "handle": "abuquant.com",
+          "url": "https://www.abuquant.com",
           "followers": null
         }
       ],
       "stats": {
-        "posts": 18,
-        "likes": 1186
+        "followers": 1182,
+        "following": 0,
+        "repos": 6
       },
-      "tags": [
-        "claude"
-      ],
-      "_score": 1186,
-      "category_scores": {
-        "claude": 5
-      }
+      "tags": [],
+      "_score": 1182,
+      "category_scores": {}
     },
     {
       "id": "gh-derv82",
@@ -27189,6 +27305,74 @@
       "_score": 1151,
       "category_scores": {
         "coding": 5
+      }
+    },
+    {
+      "id": "bsky-english-lemonde-fr",
+      "slug": "english-lemonde-fr",
+      "name": "Le Monde in English",
+      "primary_handle": "english.lemonde.fr",
+      "primary_platform": "bluesky",
+      "type": "person",
+      "bio": "",
+      "location": "",
+      "company": "",
+      "avatar": null,
+      "platforms": [
+        {
+          "type": "bluesky",
+          "handle": "english.lemonde.fr",
+          "url": "https://bsky.app/profile/english.lemonde.fr",
+          "followers": null
+        }
+      ],
+      "stats": {
+        "posts": 6,
+        "likes": 1141
+      },
+      "tags": [
+        "agents",
+        "claude"
+      ],
+      "_score": 1141,
+      "category_scores": {
+        "agents": 6,
+        "claude": 5
+      }
+    },
+    {
+      "id": "bsky-financialtimes-com",
+      "slug": "financialtimes-com",
+      "name": "Financial Times",
+      "primary_handle": "financialtimes.com",
+      "primary_platform": "bluesky",
+      "type": "person",
+      "bio": "",
+      "location": "",
+      "company": "",
+      "avatar": null,
+      "platforms": [
+        {
+          "type": "bluesky",
+          "handle": "financialtimes.com",
+          "url": "https://bsky.app/profile/financialtimes.com",
+          "followers": null
+        }
+      ],
+      "stats": {
+        "posts": 31,
+        "likes": 1135
+      },
+      "tags": [
+        "agents",
+        "claude",
+        "fundamentals"
+      ],
+      "_score": 1135,
+      "category_scores": {
+        "agents": 8,
+        "claude": 5,
+        "fundamentals": 3
       }
     },
     {
@@ -27300,6 +27484,41 @@
       }
     },
     {
+      "id": "bsky-bloomberg-com",
+      "slug": "bloomberg-com",
+      "name": "Bloomberg News",
+      "primary_handle": "bloomberg.com",
+      "primary_platform": "bluesky",
+      "type": "person",
+      "bio": "",
+      "location": "",
+      "company": "",
+      "avatar": null,
+      "platforms": [
+        {
+          "type": "bluesky",
+          "handle": "bloomberg.com",
+          "url": "https://bsky.app/profile/bloomberg.com",
+          "followers": null
+        }
+      ],
+      "stats": {
+        "posts": 37,
+        "likes": 1103
+      },
+      "tags": [
+        "research",
+        "agents",
+        "claude"
+      ],
+      "_score": 1103,
+      "category_scores": {
+        "research": 7,
+        "agents": 6,
+        "claude": 5
+      }
+    },
+    {
       "id": "yt-UCpV_X0VrL8-jg3t6wYGS-1g",
       "slug": "1littlecoder",
       "name": "1littlecoder",
@@ -27368,70 +27587,6 @@
       }
     },
     {
-      "id": "bsky-karlbode-com",
-      "slug": "karlbode-com",
-      "name": "Karl Bode",
-      "primary_handle": "karlbode.com",
-      "primary_platform": "bluesky",
-      "type": "person",
-      "bio": "",
-      "location": "",
-      "company": "",
-      "avatar": null,
-      "platforms": [
-        {
-          "type": "bluesky",
-          "handle": "karlbode.com",
-          "url": "https://bsky.app/profile/karlbode.com",
-          "followers": null
-        }
-      ],
-      "stats": {
-        "posts": 8,
-        "likes": 1074
-      },
-      "tags": [
-        "claude"
-      ],
-      "_score": 1074,
-      "category_scores": {
-        "claude": 3
-      }
-    },
-    {
-      "id": "bsky-yourdigitalbrain-bsky-social",
-      "slug": "yourdigitalbrain-bsky-social",
-      "name": "Digital Brain",
-      "primary_handle": "yourdigitalbrain.bsky.social",
-      "primary_platform": "bluesky",
-      "type": "person",
-      "bio": "",
-      "location": "",
-      "company": "",
-      "avatar": null,
-      "platforms": [
-        {
-          "type": "bluesky",
-          "handle": "yourdigitalbrain.bsky.social",
-          "url": "https://bsky.app/profile/yourdigitalbrain.bsky.social",
-          "followers": null
-        }
-      ],
-      "stats": {
-        "posts": 16,
-        "likes": 1072
-      },
-      "tags": [
-        "claude",
-        "fundamentals"
-      ],
-      "_score": 1072,
-      "category_scores": {
-        "claude": 5,
-        "fundamentals": 3
-      }
-    },
-    {
       "id": "gh-Chocobozzz",
       "slug": "chocobozzz",
       "name": "Chocobozzz",
@@ -27464,10 +27619,10 @@
       }
     },
     {
-      "id": "bsky-isaiahbishop-bsky-social",
-      "slug": "isaiahbishop-bsky-social",
-      "name": "Isaiah Bishop",
-      "primary_handle": "isaiahbishop.bsky.social",
+      "id": "bsky-techcrunch-com",
+      "slug": "techcrunch-com",
+      "name": "TechCrunch",
+      "primary_handle": "techcrunch.com",
       "primary_platform": "bluesky",
       "type": "person",
       "bio": "",
@@ -27477,60 +27632,25 @@
       "platforms": [
         {
           "type": "bluesky",
-          "handle": "isaiahbishop.bsky.social",
-          "url": "https://bsky.app/profile/isaiahbishop.bsky.social",
+          "handle": "techcrunch.com",
+          "url": "https://bsky.app/profile/techcrunch.com",
           "followers": null
         }
       ],
       "stats": {
-        "posts": 15,
-        "likes": 1061
-      },
-      "tags": [
-        "agents",
-        "claude",
-        "fundamentals"
-      ],
-      "_score": 1061,
-      "category_scores": {
-        "agents": 6,
-        "claude": 3,
-        "fundamentals": 3
-      }
-    },
-    {
-      "id": "bsky-theverge-com",
-      "slug": "theverge-com",
-      "name": "The Verge",
-      "primary_handle": "theverge.com",
-      "primary_platform": "bluesky",
-      "type": "person",
-      "bio": "",
-      "location": "",
-      "company": "",
-      "avatar": null,
-      "platforms": [
-        {
-          "type": "bluesky",
-          "handle": "theverge.com",
-          "url": "https://bsky.app/profile/theverge.com",
-          "followers": null
-        }
-      ],
-      "stats": {
-        "posts": 36,
-        "likes": 1048
+        "posts": 68,
+        "likes": 1066
       },
       "tags": [
         "claude",
-        "agents",
-        "fundamentals"
+        "business",
+        "agents"
       ],
-      "_score": 1048,
+      "_score": 1066,
       "category_scores": {
-        "claude": 8,
-        "agents": 8,
-        "fundamentals": 3
+        "claude": 13,
+        "business": 8,
+        "agents": 6
       }
     },
     {
@@ -27562,10 +27682,10 @@
       "category_scores": {}
     },
     {
-      "id": "bsky-peark-es",
-      "slug": "peark-es",
-      "name": "George Pearkes",
-      "primary_handle": "peark.es",
+      "id": "bsky-colin-fraser-net",
+      "slug": "colin-fraser-net",
+      "name": "Colin",
+      "primary_handle": "colin-fraser.net",
       "primary_platform": "bluesky",
       "type": "person",
       "bio": "",
@@ -27575,54 +27695,56 @@
       "platforms": [
         {
           "type": "bluesky",
-          "handle": "peark.es",
-          "url": "https://bsky.app/profile/peark.es",
+          "handle": "colin-fraser.net",
+          "url": "https://bsky.app/profile/colin-fraser.net",
           "followers": null
         }
       ],
       "stats": {
-        "posts": 13,
-        "likes": 1047
-      },
-      "tags": [
-        "business",
-        "claude"
-      ],
-      "_score": 1047,
-      "category_scores": {
-        "business": 7,
-        "claude": 5
-      }
-    },
-    {
-      "id": "bsky-philpax-me",
-      "slug": "philpax-me",
-      "name": "philpax",
-      "primary_handle": "philpax.me",
-      "primary_platform": "bluesky",
-      "type": "person",
-      "bio": "",
-      "location": "",
-      "company": "",
-      "avatar": null,
-      "platforms": [
-        {
-          "type": "bluesky",
-          "handle": "philpax.me",
-          "url": "https://bsky.app/profile/philpax.me",
-          "followers": null
-        }
-      ],
-      "stats": {
-        "posts": 11,
+        "posts": 21,
         "likes": 1043
       },
       "tags": [
-        "claude"
+        "fundamentals",
+        "claude",
+        "agents"
       ],
       "_score": 1043,
       "category_scores": {
-        "claude": 5
+        "fundamentals": 12,
+        "claude": 5,
+        "agents": 4
+      }
+    },
+    {
+      "id": "bsky-404media-co",
+      "slug": "404media-co",
+      "name": "404 Media",
+      "primary_handle": "404media.co",
+      "primary_platform": "bluesky",
+      "type": "person",
+      "bio": "",
+      "location": "",
+      "company": "",
+      "avatar": null,
+      "platforms": [
+        {
+          "type": "bluesky",
+          "handle": "404media.co",
+          "url": "https://bsky.app/profile/404media.co",
+          "followers": null
+        }
+      ],
+      "stats": {
+        "posts": 8,
+        "likes": 1029
+      },
+      "tags": [
+        "agents"
+      ],
+      "_score": 1029,
+      "category_scores": {
+        "agents": 6
       }
     },
     {
@@ -27666,41 +27788,6 @@
       }
     },
     {
-      "id": "bsky-techcrunch-com",
-      "slug": "techcrunch-com",
-      "name": "TechCrunch",
-      "primary_handle": "techcrunch.com",
-      "primary_platform": "bluesky",
-      "type": "person",
-      "bio": "",
-      "location": "",
-      "company": "",
-      "avatar": null,
-      "platforms": [
-        {
-          "type": "bluesky",
-          "handle": "techcrunch.com",
-          "url": "https://bsky.app/profile/techcrunch.com",
-          "followers": null
-        }
-      ],
-      "stats": {
-        "posts": 67,
-        "likes": 1010
-      },
-      "tags": [
-        "claude",
-        "business",
-        "agents"
-      ],
-      "_score": 1010,
-      "category_scores": {
-        "claude": 13,
-        "business": 8,
-        "agents": 6
-      }
-    },
-    {
       "id": "gh-simonlin1212",
       "slug": "simonlin1212",
       "name": "simonlin",
@@ -27739,10 +27826,10 @@
       }
     },
     {
-      "id": "bsky-isolyth-dev",
-      "slug": "isolyth-dev",
-      "name": "Eris",
-      "primary_handle": "isolyth.dev",
+      "id": "bsky-isaiahbishop-bsky-social",
+      "slug": "isaiahbishop-bsky-social",
+      "name": "Isaiah Bishop",
+      "primary_handle": "isaiahbishop.bsky.social",
       "primary_platform": "bluesky",
       "type": "person",
       "bio": "",
@@ -27752,22 +27839,55 @@
       "platforms": [
         {
           "type": "bluesky",
-          "handle": "isolyth.dev",
-          "url": "https://bsky.app/profile/isolyth.dev",
+          "handle": "isaiahbishop.bsky.social",
+          "url": "https://bsky.app/profile/isaiahbishop.bsky.social",
           "followers": null
         }
       ],
       "stats": {
-        "posts": 15,
-        "likes": 1002
+        "posts": 13,
+        "likes": 999
       },
       "tags": [
-        "fundamentals",
+        "agents",
+        "claude",
+        "fundamentals"
+      ],
+      "_score": 999,
+      "category_scores": {
+        "agents": 6,
+        "claude": 3,
+        "fundamentals": 3
+      }
+    },
+    {
+      "id": "bsky-philpax-me",
+      "slug": "philpax-me",
+      "name": "philpax",
+      "primary_handle": "philpax.me",
+      "primary_platform": "bluesky",
+      "type": "person",
+      "bio": "",
+      "location": "",
+      "company": "",
+      "avatar": null,
+      "platforms": [
+        {
+          "type": "bluesky",
+          "handle": "philpax.me",
+          "url": "https://bsky.app/profile/philpax.me",
+          "followers": null
+        }
+      ],
+      "stats": {
+        "posts": 11,
+        "likes": 996
+      },
+      "tags": [
         "claude"
       ],
-      "_score": 1002,
+      "_score": 996,
       "category_scores": {
-        "fundamentals": 6,
         "claude": 5
       }
     },
@@ -27810,10 +27930,10 @@
       }
     },
     {
-      "id": "bsky-financialtimes-com",
-      "slug": "financialtimes-com",
-      "name": "Financial Times",
-      "primary_handle": "financialtimes.com",
+      "id": "bsky-proptermalone-bsky-social",
+      "slug": "proptermalone-bsky-social",
+      "name": "post malone ergo propter malone",
+      "primary_handle": "proptermalone.bsky.social",
       "primary_platform": "bluesky",
       "type": "person",
       "bio": "",
@@ -27823,23 +27943,52 @@
       "platforms": [
         {
           "type": "bluesky",
-          "handle": "financialtimes.com",
-          "url": "https://bsky.app/profile/financialtimes.com",
+          "handle": "proptermalone.bsky.social",
+          "url": "https://bsky.app/profile/proptermalone.bsky.social",
           "followers": null
         }
       ],
       "stats": {
-        "posts": 25,
-        "likes": 974
+        "posts": 7,
+        "likes": 986
       },
       "tags": [
-        "agents",
         "claude"
       ],
-      "_score": 974,
+      "_score": 986,
       "category_scores": {
-        "agents": 8,
-        "claude": 3
+        "claude": 8
+      }
+    },
+    {
+      "id": "bsky-simonwillison-net",
+      "slug": "simonwillison-net",
+      "name": "Simon Willison",
+      "primary_handle": "simonwillison.net",
+      "primary_platform": "bluesky",
+      "type": "person",
+      "bio": "",
+      "location": "",
+      "company": "",
+      "avatar": null,
+      "platforms": [
+        {
+          "type": "bluesky",
+          "handle": "simonwillison.net",
+          "url": "https://bsky.app/profile/simonwillison.net",
+          "followers": null
+        }
+      ],
+      "stats": {
+        "posts": 8,
+        "likes": 965
+      },
+      "tags": [
+        "claude"
+      ],
+      "_score": 965,
+      "category_scores": {
+        "claude": 5
       }
     },
     {
@@ -27879,113 +28028,6 @@
       }
     },
     {
-      "id": "bsky-justinhendrix-bsky-social",
-      "slug": "justinhendrix-bsky-social",
-      "name": "Justin Hendrix",
-      "primary_handle": "justinhendrix.bsky.social",
-      "primary_platform": "bluesky",
-      "type": "person",
-      "bio": "",
-      "location": "",
-      "company": "",
-      "avatar": null,
-      "platforms": [
-        {
-          "type": "bluesky",
-          "handle": "justinhendrix.bsky.social",
-          "url": "https://bsky.app/profile/justinhendrix.bsky.social",
-          "followers": null
-        }
-      ],
-      "stats": {
-        "posts": 11,
-        "likes": 958
-      },
-      "tags": [
-        "research",
-        "agents",
-        "claude"
-      ],
-      "_score": 958,
-      "category_scores": {
-        "research": 9,
-        "agents": 6,
-        "claude": 3
-      }
-    },
-    {
-      "id": "gh-golbin",
-      "slug": "golbin",
-      "name": "Jin Kim",
-      "primary_handle": "golbin",
-      "primary_platform": "github",
-      "type": "person",
-      "bio": "",
-      "location": "Seoul",
-      "company": "",
-      "avatar": "https://avatars.githubusercontent.com/u/6277035?v=4",
-      "platforms": [
-        {
-          "type": "github",
-          "handle": "golbin",
-          "url": "https://github.com/golbin",
-          "followers": 956
-        }
-      ],
-      "stats": {
-        "followers": 956,
-        "following": 0,
-        "repos": 90
-      },
-      "tags": [
-        "coding",
-        "agents"
-      ],
-      "_score": 956,
-      "category_scores": {
-        "coding": 5,
-        "agents": 5
-      }
-    },
-    {
-      "id": "gh-nikopueringer",
-      "slug": "nikopueringer",
-      "name": "Niko",
-      "primary_handle": "nikopueringer",
-      "primary_platform": "github",
-      "type": "person",
-      "bio": "One of those Corridor Digital guys",
-      "location": "",
-      "company": "Corridor Digital",
-      "avatar": "https://avatars.githubusercontent.com/u/52174106?v=4",
-      "platforms": [
-        {
-          "type": "github",
-          "handle": "nikopueringer",
-          "url": "https://github.com/nikopueringer",
-          "followers": 955
-        },
-        {
-          "type": "website",
-          "handle": "corridordigital.com",
-          "url": "https://corridordigital.com",
-          "followers": null
-        }
-      ],
-      "stats": {
-        "followers": 955,
-        "following": 0,
-        "repos": 4
-      },
-      "tags": [
-        "creative"
-      ],
-      "_score": 955,
-      "category_scores": {
-        "creative": 5
-      }
-    },
-    {
       "id": "yt-UCHaF9kM2wn8C3CLRwLkC2GQ",
       "slug": "matt-williams",
       "name": "Matt Williams",
@@ -28022,10 +28064,10 @@
       }
     },
     {
-      "id": "bsky-ponder-ooo",
-      "slug": "ponder-ooo",
-      "name": "ponder",
-      "primary_handle": "ponder.ooo",
+      "id": "bsky-justinhendrix-bsky-social",
+      "slug": "justinhendrix-bsky-social",
+      "name": "Justin Hendrix",
+      "primary_handle": "justinhendrix.bsky.social",
       "primary_platform": "bluesky",
       "type": "person",
       "bio": "",
@@ -28035,25 +28077,58 @@
       "platforms": [
         {
           "type": "bluesky",
-          "handle": "ponder.ooo",
-          "url": "https://bsky.app/profile/ponder.ooo",
+          "handle": "justinhendrix.bsky.social",
+          "url": "https://bsky.app/profile/justinhendrix.bsky.social",
           "followers": null
         }
       ],
       "stats": {
-        "posts": 27,
-        "likes": 914
+        "posts": 10,
+        "likes": 940
       },
       "tags": [
-        "claude",
-        "fundamentals",
-        "tool-insights"
+        "research",
+        "agents",
+        "claude"
       ],
-      "_score": 914,
+      "_score": 940,
       "category_scores": {
-        "claude": 5,
-        "fundamentals": 3,
-        "tool-insights": 3
+        "research": 9,
+        "agents": 6,
+        "claude": 3
+      }
+    },
+    {
+      "id": "bsky-isolyth-dev",
+      "slug": "isolyth-dev",
+      "name": "Eris",
+      "primary_handle": "isolyth.dev",
+      "primary_platform": "bluesky",
+      "type": "person",
+      "bio": "",
+      "location": "",
+      "company": "",
+      "avatar": null,
+      "platforms": [
+        {
+          "type": "bluesky",
+          "handle": "isolyth.dev",
+          "url": "https://bsky.app/profile/isolyth.dev",
+          "followers": null
+        }
+      ],
+      "stats": {
+        "posts": 15,
+        "likes": 908
+      },
+      "tags": [
+        "fundamentals",
+        "claude"
+      ],
+      "_score": 908,
+      "category_scores": {
+        "fundamentals": 6,
+        "claude": 5
       }
     },
     {
@@ -28093,10 +28168,10 @@
       }
     },
     {
-      "id": "bsky-roopikarisam-bsky-social",
-      "slug": "roopikarisam-bsky-social",
-      "name": "Roopika Risam",
-      "primary_handle": "roopikarisam.bsky.social",
+      "id": "bsky-sifu-tweety-fish",
+      "slug": "sifu-tweety-fish",
+      "name": "tweety fish",
+      "primary_handle": "sifu.tweety.fish",
       "primary_platform": "bluesky",
       "type": "person",
       "bio": "",
@@ -28106,87 +28181,54 @@
       "platforms": [
         {
           "type": "bluesky",
-          "handle": "roopikarisam.bsky.social",
-          "url": "https://bsky.app/profile/roopikarisam.bsky.social",
-          "followers": null
-        }
-      ],
-      "stats": {
-        "posts": 6,
-        "likes": 871
-      },
-      "tags": [
-        "agents",
-        "claude",
-        "fundamentals"
-      ],
-      "_score": 871,
-      "category_scores": {
-        "agents": 6,
-        "claude": 5,
-        "fundamentals": 3
-      }
-    },
-    {
-      "id": "bsky-jennycohn-bsky-social",
-      "slug": "jennycohn-bsky-social",
-      "name": "Jenny Cohn",
-      "primary_handle": "jennycohn.bsky.social",
-      "primary_platform": "bluesky",
-      "type": "person",
-      "bio": "",
-      "location": "",
-      "company": "",
-      "avatar": null,
-      "platforms": [
-        {
-          "type": "bluesky",
-          "handle": "jennycohn.bsky.social",
-          "url": "https://bsky.app/profile/jennycohn.bsky.social",
-          "followers": null
-        }
-      ],
-      "stats": {
-        "posts": 6,
-        "likes": 858
-      },
-      "tags": [
-        "claude"
-      ],
-      "_score": 858,
-      "category_scores": {
-        "claude": 3
-      }
-    },
-    {
-      "id": "bsky-simonwillison-net",
-      "slug": "simonwillison-net",
-      "name": "Simon Willison",
-      "primary_handle": "simonwillison.net",
-      "primary_platform": "bluesky",
-      "type": "person",
-      "bio": "",
-      "location": "",
-      "company": "",
-      "avatar": null,
-      "platforms": [
-        {
-          "type": "bluesky",
-          "handle": "simonwillison.net",
-          "url": "https://bsky.app/profile/simonwillison.net",
+          "handle": "sifu.tweety.fish",
+          "url": "https://bsky.app/profile/sifu.tweety.fish",
           "followers": null
         }
       ],
       "stats": {
         "posts": 8,
-        "likes": 847
+        "likes": 867
+      },
+      "tags": [
+        "claude",
+        "fundamentals"
+      ],
+      "_score": 867,
+      "category_scores": {
+        "claude": 5,
+        "fundamentals": 3
+      }
+    },
+    {
+      "id": "bsky-karlbode-com",
+      "slug": "karlbode-com",
+      "name": "Karl Bode",
+      "primary_handle": "karlbode.com",
+      "primary_platform": "bluesky",
+      "type": "person",
+      "bio": "",
+      "location": "",
+      "company": "",
+      "avatar": null,
+      "platforms": [
+        {
+          "type": "bluesky",
+          "handle": "karlbode.com",
+          "url": "https://bsky.app/profile/karlbode.com",
+          "followers": null
+        }
+      ],
+      "stats": {
+        "posts": 6,
+        "likes": 824
       },
       "tags": [
         "claude"
       ],
-      "_score": 847,
+      "_score": 824,
       "category_scores": {
-        "claude": 5
+        "claude": 3
       }
     },
     {
@@ -28209,81 +28251,15 @@
         }
       ],
       "stats": {
-        "posts": 7,
-        "likes": 826
+        "posts": 6,
+        "likes": 798
       },
       "tags": [
         "business"
       ],
-      "_score": 826,
+      "_score": 798,
       "category_scores": {
         "business": 4
-      }
-    },
-    {
-      "id": "bsky-colin-fraser-net",
-      "slug": "colin-fraser-net",
-      "name": "Colin",
-      "primary_handle": "colin-fraser.net",
-      "primary_platform": "bluesky",
-      "type": "person",
-      "bio": "",
-      "location": "",
-      "company": "",
-      "avatar": null,
-      "platforms": [
-        {
-          "type": "bluesky",
-          "handle": "colin-fraser.net",
-          "url": "https://bsky.app/profile/colin-fraser.net",
-          "followers": null
-        }
-      ],
-      "stats": {
-        "posts": 17,
-        "likes": 821
-      },
-      "tags": [
-        "fundamentals",
-        "claude"
-      ],
-      "_score": 821,
-      "category_scores": {
-        "fundamentals": 12,
-        "claude": 5
-      }
-    },
-    {
-      "id": "bsky-regimecpa-bsky-social",
-      "slug": "regimecpa-bsky-social",
-      "name": "Regime Accountant, CPA \u2620\ufe0f\ud83c\udfa2",
-      "primary_handle": "regimecpa.bsky.social",
-      "primary_platform": "bluesky",
-      "type": "person",
-      "bio": "",
-      "location": "",
-      "company": "",
-      "avatar": null,
-      "platforms": [
-        {
-          "type": "bluesky",
-          "handle": "regimecpa.bsky.social",
-          "url": "https://bsky.app/profile/regimecpa.bsky.social",
-          "followers": null
-        }
-      ],
-      "stats": {
-        "posts": 11,
-        "likes": 820
-      },
-      "tags": [
-        "claude",
-        "coding"
-      ],
-      "_score": 820,
-      "category_scores": {
-        "claude": 8,
-        "coding": 3
       }
     },
     {
@@ -28321,6 +28297,37 @@
       }
     },
     {
+      "id": "bsky-the-independent-com",
+      "slug": "the-independent-com",
+      "name": "The Independent",
+      "primary_handle": "the-independent.com",
+      "primary_platform": "bluesky",
+      "type": "person",
+      "bio": "",
+      "location": "",
+      "company": "",
+      "avatar": null,
+      "platforms": [
+        {
+          "type": "bluesky",
+          "handle": "the-independent.com",
+          "url": "https://bsky.app/profile/the-independent.com",
+          "followers": null
+        }
+      ],
+      "stats": {
+        "posts": 7,
+        "likes": 783
+      },
+      "tags": [
+        "claude"
+      ],
+      "_score": 783,
+      "category_scores": {
+        "claude": 5
+      }
+    },
+    {
       "id": "bsky-charleswlogan-bsky-social",
       "slug": "charleswlogan-bsky-social",
       "name": "Charles Logan",
@@ -28340,22 +28347,22 @@
         }
       ],
       "stats": {
-        "posts": 6,
-        "likes": 789
+        "posts": 5,
+        "likes": 781
       },
       "tags": [
         "fundamentals"
       ],
-      "_score": 789,
+      "_score": 781,
       "category_scores": {
         "fundamentals": 3
       }
     },
     {
-      "id": "bsky-dame-is",
-      "slug": "dame-is",
-      "name": "dame",
-      "primary_handle": "dame.is",
+      "id": "bsky-regimecpa-bsky-social",
+      "slug": "regimecpa-bsky-social",
+      "name": "Regime Accountant, CPA \u2620\ufe0f\ud83c\udfa2",
+      "primary_handle": "regimecpa.bsky.social",
       "primary_platform": "bluesky",
       "type": "person",
       "bio": "",
@@ -28365,54 +28372,19 @@
       "platforms": [
         {
           "type": "bluesky",
-          "handle": "dame.is",
-          "url": "https://bsky.app/profile/dame.is",
+          "handle": "regimecpa.bsky.social",
+          "url": "https://bsky.app/profile/regimecpa.bsky.social",
           "followers": null
         }
       ],
       "stats": {
-        "posts": 13,
-        "likes": 774
-      },
-      "tags": [
-        "claude",
-        "agents",
-        "creative"
-      ],
-      "_score": 774,
-      "category_scores": {
-        "claude": 8,
-        "agents": 8,
-        "creative": 3
-      }
-    },
-    {
-      "id": "bsky-proptermalone-bsky-social",
-      "slug": "proptermalone-bsky-social",
-      "name": "post malone ergo propter malone",
-      "primary_handle": "proptermalone.bsky.social",
-      "primary_platform": "bluesky",
-      "type": "person",
-      "bio": "",
-      "location": "",
-      "company": "",
-      "avatar": null,
-      "platforms": [
-        {
-          "type": "bluesky",
-          "handle": "proptermalone.bsky.social",
-          "url": "https://bsky.app/profile/proptermalone.bsky.social",
-          "followers": null
-        }
-      ],
-      "stats": {
-        "posts": 6,
-        "likes": 759
+        "posts": 9,
+        "likes": 773
       },
       "tags": [
         "claude"
       ],
-      "_score": 759,
+      "_score": 773,
       "category_scores": {
         "claude": 8
       }
@@ -28437,15 +28409,15 @@
         }
       ],
       "stats": {
-        "posts": 5,
-        "likes": 728
+        "posts": 6,
+        "likes": 740
       },
       "tags": [
         "agents",
         "claude",
         "business"
       ],
-      "_score": 728,
+      "_score": 740,
       "category_scores": {
         "agents": 6,
         "claude": 3,
@@ -28453,10 +28425,10 @@
       }
     },
     {
-      "id": "bsky-ens0-me",
-      "slug": "ens0-me",
-      "name": "Thorne \ud83c\udf38",
-      "primary_handle": "ens0.me",
+      "id": "bsky-dame-is",
+      "slug": "dame-is",
+      "name": "dame",
+      "primary_handle": "dame.is",
       "primary_platform": "bluesky",
       "type": "person",
       "bio": "",
@@ -28466,21 +28438,56 @@
       "platforms": [
         {
           "type": "bluesky",
-          "handle": "ens0.me",
-          "url": "https://bsky.app/profile/ens0.me",
+          "handle": "dame.is",
+          "url": "https://bsky.app/profile/dame.is",
           "followers": null
         }
       ],
       "stats": {
         "posts": 12,
+        "likes": 733
+      },
+      "tags": [
+        "claude",
+        "agents",
+        "creative"
+      ],
+      "_score": 733,
+      "category_scores": {
+        "claude": 8,
+        "agents": 8,
+        "creative": 3
+      }
+    },
+    {
+      "id": "bsky-hailey-at",
+      "slug": "hailey-at",
+      "name": "hailey",
+      "primary_handle": "hailey.at",
+      "primary_platform": "bluesky",
+      "type": "person",
+      "bio": "",
+      "location": "",
+      "company": "",
+      "avatar": null,
+      "platforms": [
+        {
+          "type": "bluesky",
+          "handle": "hailey.at",
+          "url": "https://bsky.app/profile/hailey.at",
+          "followers": null
+        }
+      ],
+      "stats": {
+        "posts": 10,
         "likes": 713
       },
       "tags": [
-        "fundamentals"
+        "claude"
       ],
       "_score": 713,
       "category_scores": {
-        "fundamentals": 3
+        "claude": 5
       }
     },
     {
@@ -28517,132 +28524,6 @@
       }
     },
     {
-      "id": "bsky-hailey-at",
-      "slug": "hailey-at",
-      "name": "hailey",
-      "primary_handle": "hailey.at",
-      "primary_platform": "bluesky",
-      "type": "person",
-      "bio": "",
-      "location": "",
-      "company": "",
-      "avatar": null,
-      "platforms": [
-        {
-          "type": "bluesky",
-          "handle": "hailey.at",
-          "url": "https://bsky.app/profile/hailey.at",
-          "followers": null
-        }
-      ],
-      "stats": {
-        "posts": 9,
-        "likes": 690
-      },
-      "tags": [
-        "claude"
-      ],
-      "_score": 690,
-      "category_scores": {
-        "claude": 5
-      }
-    },
-    {
-      "id": "bsky-radiodeadair-com",
-      "slug": "radiodeadair-com",
-      "name": "Nash",
-      "primary_handle": "radiodeadair.com",
-      "primary_platform": "bluesky",
-      "type": "person",
-      "bio": "",
-      "location": "",
-      "company": "",
-      "avatar": null,
-      "platforms": [
-        {
-          "type": "bluesky",
-          "handle": "radiodeadair.com",
-          "url": "https://bsky.app/profile/radiodeadair.com",
-          "followers": null
-        }
-      ],
-      "stats": {
-        "posts": 5,
-        "likes": 680
-      },
-      "tags": [
-        "agents"
-      ],
-      "_score": 680,
-      "category_scores": {
-        "agents": 8
-      }
-    },
-    {
-      "id": "bsky-unusualwhales-bsky-social",
-      "slug": "unusualwhales-bsky-social",
-      "name": "Unusual Whales",
-      "primary_handle": "unusualwhales.bsky.social",
-      "primary_platform": "bluesky",
-      "type": "person",
-      "bio": "",
-      "location": "",
-      "company": "",
-      "avatar": null,
-      "platforms": [
-        {
-          "type": "bluesky",
-          "handle": "unusualwhales.bsky.social",
-          "url": "https://bsky.app/profile/unusualwhales.bsky.social",
-          "followers": null
-        }
-      ],
-      "stats": {
-        "posts": 8,
-        "likes": 667
-      },
-      "tags": [
-        "claude",
-        "agents"
-      ],
-      "_score": 667,
-      "category_scores": {
-        "claude": 3,
-        "agents": 3
-      }
-    },
-    {
-      "id": "bsky-thdxr-com",
-      "slug": "thdxr-com",
-      "name": "dax",
-      "primary_handle": "thdxr.com",
-      "primary_platform": "bluesky",
-      "type": "person",
-      "bio": "",
-      "location": "",
-      "company": "",
-      "avatar": null,
-      "platforms": [
-        {
-          "type": "bluesky",
-          "handle": "thdxr.com",
-          "url": "https://bsky.app/profile/thdxr.com",
-          "followers": null
-        }
-      ],
-      "stats": {
-        "posts": 11,
-        "likes": 664
-      },
-      "tags": [
-        "claude"
-      ],
-      "_score": 664,
-      "category_scores": {
-        "claude": 3
-      }
-    },
-    {
       "id": "bsky-davidcrespo-bsky-social",
       "slug": "davidcrespo-bsky-social",
       "name": "conputer dipshit",
@@ -28663,49 +28544,18 @@
       ],
       "stats": {
         "posts": 22,
-        "likes": 658
+        "likes": 713
       },
       "tags": [
         "claude",
         "coding",
         "fundamentals"
       ],
-      "_score": 658,
+      "_score": 713,
       "category_scores": {
         "claude": 8,
         "coding": 5,
         "fundamentals": 5
-      }
-    },
-    {
-      "id": "bsky-coolhand-bsky-social",
-      "slug": "coolhand-bsky-social",
-      "name": "Luke Steuber",
-      "primary_handle": "coolhand.bsky.social",
-      "primary_platform": "bluesky",
-      "type": "person",
-      "bio": "",
-      "location": "",
-      "company": "",
-      "avatar": null,
-      "platforms": [
-        {
-          "type": "bluesky",
-          "handle": "coolhand.bsky.social",
-          "url": "https://bsky.app/profile/coolhand.bsky.social",
-          "followers": null
-        }
-      ],
-      "stats": {
-        "posts": 6,
-        "likes": 656
-      },
-      "tags": [
-        "fundamentals"
-      ],
-      "_score": 656,
-      "category_scores": {
-        "fundamentals": 6
       }
     },
     {
@@ -28740,10 +28590,10 @@
       }
     },
     {
-      "id": "bsky-404media-co",
-      "slug": "404media-co",
-      "name": "404 Media",
-      "primary_handle": "404media.co",
+      "id": "bsky-thdxr-com",
+      "slug": "thdxr-com",
+      "name": "dax",
+      "primary_handle": "thdxr.com",
       "primary_platform": "bluesky",
       "type": "person",
       "bio": "",
@@ -28753,21 +28603,151 @@
       "platforms": [
         {
           "type": "bluesky",
-          "handle": "404media.co",
-          "url": "https://bsky.app/profile/404media.co",
+          "handle": "thdxr.com",
+          "url": "https://bsky.app/profile/thdxr.com",
           "followers": null
         }
       ],
       "stats": {
-        "posts": 5,
-        "likes": 635
+        "posts": 12,
+        "likes": 650
       },
       "tags": [
-        "agents"
+        "claude"
       ],
-      "_score": 635,
+      "_score": 650,
       "category_scores": {
-        "agents": 6
+        "claude": 3
+      }
+    },
+    {
+      "id": "bsky-ens0-me",
+      "slug": "ens0-me",
+      "name": "Thorne \ud83c\udf38",
+      "primary_handle": "ens0.me",
+      "primary_platform": "bluesky",
+      "type": "person",
+      "bio": "",
+      "location": "",
+      "company": "",
+      "avatar": null,
+      "platforms": [
+        {
+          "type": "bluesky",
+          "handle": "ens0.me",
+          "url": "https://bsky.app/profile/ens0.me",
+          "followers": null
+        }
+      ],
+      "stats": {
+        "posts": 10,
+        "likes": 646
+      },
+      "tags": [
+        "fundamentals"
+      ],
+      "_score": 646,
+      "category_scores": {
+        "fundamentals": 3
+      }
+    },
+    {
+      "id": "bsky-mossworm-bsky-social",
+      "slug": "mossworm-bsky-social",
+      "name": "mossworm.bsky.social",
+      "primary_handle": "mossworm.bsky.social",
+      "primary_platform": "bluesky",
+      "type": "person",
+      "bio": "",
+      "location": "",
+      "company": "",
+      "avatar": null,
+      "platforms": [
+        {
+          "type": "bluesky",
+          "handle": "mossworm.bsky.social",
+          "url": "https://bsky.app/profile/mossworm.bsky.social",
+          "followers": null
+        }
+      ],
+      "stats": {
+        "posts": 7,
+        "likes": 626
+      },
+      "tags": [
+        "fundamentals",
+        "tool-insights"
+      ],
+      "_score": 626,
+      "category_scores": {
+        "fundamentals": 3,
+        "tool-insights": 3
+      }
+    },
+    {
+      "id": "bsky-politico-com",
+      "slug": "politico-com",
+      "name": "Politico",
+      "primary_handle": "politico.com",
+      "primary_platform": "bluesky",
+      "type": "person",
+      "bio": "",
+      "location": "",
+      "company": "",
+      "avatar": null,
+      "platforms": [
+        {
+          "type": "bluesky",
+          "handle": "politico.com",
+          "url": "https://bsky.app/profile/politico.com",
+          "followers": null
+        }
+      ],
+      "stats": {
+        "posts": 18,
+        "likes": 612
+      },
+      "tags": [
+        "agents",
+        "claude"
+      ],
+      "_score": 612,
+      "category_scores": {
+        "agents": 6,
+        "claude": 3
+      }
+    },
+    {
+      "id": "bsky-washingtonpost-com",
+      "slug": "washingtonpost-com",
+      "name": "The Washington Post",
+      "primary_handle": "washingtonpost.com",
+      "primary_platform": "bluesky",
+      "type": "person",
+      "bio": "",
+      "location": "",
+      "company": "",
+      "avatar": null,
+      "platforms": [
+        {
+          "type": "bluesky",
+          "handle": "washingtonpost.com",
+          "url": "https://bsky.app/profile/washingtonpost.com",
+          "followers": null
+        }
+      ],
+      "stats": {
+        "posts": 13,
+        "likes": 609
+      },
+      "tags": [
+        "agents",
+        "claude"
+      ],
+      "_score": 609,
+      "category_scores": {
+        "agents": 6,
+        "claude": 5
       }
     },
     {
@@ -28791,21 +28771,23 @@
       ],
       "stats": {
         "posts": 12,
-        "likes": 623
+        "likes": 594
       },
       "tags": [
-        "claude"
+        "claude",
+        "fundamentals"
       ],
-      "_score": 623,
+      "_score": 594,
       "category_scores": {
-        "claude": 5
+        "claude": 5,
+        "fundamentals": 3
       }
     },
     {
-      "id": "bsky-wittywebhandle-bsky-social",
-      "slug": "wittywebhandle-bsky-social",
-      "name": "Blaise Ulysse Bernard Collins",
-      "primary_handle": "wittywebhandle.bsky.social",
+      "id": "bsky-raphae-li",
+      "slug": "raphae-li",
+      "name": "Raphael Satter",
+      "primary_handle": "raphae.li",
       "primary_platform": "bluesky",
       "type": "person",
       "bio": "",
@@ -28815,19 +28797,19 @@
       "platforms": [
         {
           "type": "bluesky",
-          "handle": "wittywebhandle.bsky.social",
-          "url": "https://bsky.app/profile/wittywebhandle.bsky.social",
+          "handle": "raphae.li",
+          "url": "https://bsky.app/profile/raphae.li",
           "followers": null
         }
       ],
       "stats": {
-        "posts": 19,
-        "likes": 594
+        "posts": 5,
+        "likes": 593
       },
       "tags": [
         "agents"
       ],
-      "_score": 594,
+      "_score": 593,
       "category_scores": {
         "agents": 3
       }
@@ -28865,10 +28847,10 @@
       }
     },
     {
-      "id": "bsky-eryk-bsky-social",
-      "slug": "eryk-bsky-social",
-      "name": "Eryk Salvaggio",
-      "primary_handle": "eryk.bsky.social",
+      "id": "bsky-fintwitter-bsky-social",
+      "slug": "fintwitter-bsky-social",
+      "name": "FinTwitter",
+      "primary_handle": "fintwitter.bsky.social",
       "primary_platform": "bluesky",
       "type": "person",
       "bio": "",
@@ -28878,21 +28860,56 @@
       "platforms": [
         {
           "type": "bluesky",
-          "handle": "eryk.bsky.social",
-          "url": "https://bsky.app/profile/eryk.bsky.social",
+          "handle": "fintwitter.bsky.social",
+          "url": "https://bsky.app/profile/fintwitter.bsky.social",
+          "followers": null
+        }
+      ],
+      "stats": {
+        "posts": 12,
+        "likes": 558
+      },
+      "tags": [
+        "agents",
+        "claude"
+      ],
+      "_score": 558,
+      "category_scores": {
+        "agents": 6,
+        "claude": 5
+      }
+    },
+    {
+      "id": "bsky-aljazeera-com",
+      "slug": "aljazeera-com",
+      "name": "Al Jazeera English",
+      "primary_handle": "aljazeera.com",
+      "primary_platform": "bluesky",
+      "type": "person",
+      "bio": "",
+      "location": "",
+      "company": "",
+      "avatar": null,
+      "platforms": [
+        {
+          "type": "bluesky",
+          "handle": "aljazeera.com",
+          "url": "https://bsky.app/profile/aljazeera.com",
           "followers": null
         }
       ],
       "stats": {
         "posts": 8,
-        "likes": 576
+        "likes": 556
       },
       "tags": [
+        "agents",
         "claude"
       ],
-      "_score": 576,
+      "_score": 556,
       "category_scores": {
-        "claude": 3
+        "agents": 11,
+        "claude": 5
       }
     },
     {
@@ -28932,6 +28949,37 @@
       }
     },
     {
+      "id": "bsky-unusualwhales-bsky-social",
+      "slug": "unusualwhales-bsky-social",
+      "name": "Unusual Whales",
+      "primary_handle": "unusualwhales.bsky.social",
+      "primary_platform": "bluesky",
+      "type": "person",
+      "bio": "",
+      "location": "",
+      "company": "",
+      "avatar": null,
+      "platforms": [
+        {
+          "type": "bluesky",
+          "handle": "unusualwhales.bsky.social",
+          "url": "https://bsky.app/profile/unusualwhales.bsky.social",
+          "followers": null
+        }
+      ],
+      "stats": {
+        "posts": 6,
+        "likes": 540
+      },
+      "tags": [
+        "claude"
+      ],
+      "_score": 540,
+      "category_scores": {
+        "claude": 3
+      }
+    },
+    {
       "id": "bsky-iansociologo-bsky-social",
       "slug": "iansociologo-bsky-social",
       "name": "Ian Carrillo",
@@ -28951,80 +28999,14 @@
         }
       ],
       "stats": {
-        "posts": 6,
-        "likes": 509
+        "posts": 7,
+        "likes": 537
       },
       "tags": [
         "claude"
       ],
-      "_score": 509,
+      "_score": 537,
       "category_scores": {
-        "claude": 3
-      }
-    },
-    {
-      "id": "bsky-politico-com",
-      "slug": "politico-com",
-      "name": "Politico",
-      "primary_handle": "politico.com",
-      "primary_platform": "bluesky",
-      "type": "person",
-      "bio": "",
-      "location": "",
-      "company": "",
-      "avatar": null,
-      "platforms": [
-        {
-          "type": "bluesky",
-          "handle": "politico.com",
-          "url": "https://bsky.app/profile/politico.com",
-          "followers": null
-        }
-      ],
-      "stats": {
-        "posts": 15,
-        "likes": 502
-      },
-      "tags": [
-        "agents",
-        "claude"
-      ],
-      "_score": 502,
-      "category_scores": {
-        "agents": 6,
-        "claude": 3
-      }
-    },
-    {
-      "id": "bsky-wsj-com",
-      "slug": "wsj-com",
-      "name": "The Wall Street Journal",
-      "primary_handle": "wsj.com",
-      "primary_platform": "bluesky",
-      "type": "person",
-      "bio": "",
-      "location": "",
-      "company": "",
-      "avatar": null,
-      "platforms": [
-        {
-          "type": "bluesky",
-          "handle": "wsj.com",
-          "url": "https://bsky.app/profile/wsj.com",
-          "followers": null
-        }
-      ],
-      "stats": {
-        "posts": 9,
-        "likes": 491
-      },
-      "tags": [
-        "agents",
-        "claude"
-      ],
-      "_score": 491,
-      "category_scores": {
-        "agents": 6,
         "claude": 3
       }
     },
@@ -29048,15 +29030,79 @@
         }
       ],
       "stats": {
-        "posts": 12,
-        "likes": 484
+        "posts": 13,
+        "likes": 527
       },
       "tags": [
         "agents"
       ],
-      "_score": 484,
+      "_score": 527,
       "category_scores": {
         "agents": 3
+      }
+    },
+    {
+      "id": "bsky-radiodeadair-com",
+      "slug": "radiodeadair-com",
+      "name": "Nash",
+      "primary_handle": "radiodeadair.com",
+      "primary_platform": "bluesky",
+      "type": "person",
+      "bio": "",
+      "location": "",
+      "company": "",
+      "avatar": null,
+      "platforms": [
+        {
+          "type": "bluesky",
+          "handle": "radiodeadair.com",
+          "url": "https://bsky.app/profile/radiodeadair.com",
+          "followers": null
+        }
+      ],
+      "stats": {
+        "posts": 5,
+        "likes": 522
+      },
+      "tags": [
+        "agents",
+        "fundamentals"
+      ],
+      "_score": 522,
+      "category_scores": {
+        "agents": 8,
+        "fundamentals": 3
+      }
+    },
+    {
+      "id": "bsky-spavel-bsky-social",
+      "slug": "spavel-bsky-social",
+      "name": "Pavel",
+      "primary_handle": "spavel.bsky.social",
+      "primary_platform": "bluesky",
+      "type": "person",
+      "bio": "",
+      "location": "",
+      "company": "",
+      "avatar": null,
+      "platforms": [
+        {
+          "type": "bluesky",
+          "handle": "spavel.bsky.social",
+          "url": "https://bsky.app/profile/spavel.bsky.social",
+          "followers": null
+        }
+      ],
+      "stats": {
+        "posts": 9,
+        "likes": 511
+      },
+      "tags": [
+        "claude"
+      ],
+      "_score": 511,
+      "category_scores": {
+        "claude": 3
       }
     },
     {
@@ -29080,21 +29126,21 @@
       ],
       "stats": {
         "posts": 5,
-        "likes": 482
+        "likes": 506
       },
       "tags": [
         "claude"
       ],
-      "_score": 482,
+      "_score": 506,
       "category_scores": {
         "claude": 5
       }
     },
     {
-      "id": "bsky-the-independent-com",
-      "slug": "the-independent-com",
-      "name": "The Independent",
-      "primary_handle": "the-independent.com",
+      "id": "bsky-nathantankus-bsky-social",
+      "slug": "nathantankus-bsky-social",
+      "name": "Nathan Tankus",
+      "primary_handle": "nathantankus.bsky.social",
       "primary_platform": "bluesky",
       "type": "person",
       "bio": "",
@@ -29104,30 +29150,57 @@
       "platforms": [
         {
           "type": "bluesky",
-          "handle": "the-independent.com",
-          "url": "https://bsky.app/profile/the-independent.com",
+          "handle": "nathantankus.bsky.social",
+          "url": "https://bsky.app/profile/nathantankus.bsky.social",
           "followers": null
         }
       ],
       "stats": {
         "posts": 5,
-        "likes": 481
+        "likes": 490
+      },
+      "tags": [],
+      "_score": 490,
+      "category_scores": {}
+    },
+    {
+      "id": "bsky-numb-comfortab-ly",
+      "slug": "numb-comfortab-ly",
+      "name": " Comfortably Numb",
+      "primary_handle": "numb.comfortab.ly",
+      "primary_platform": "bluesky",
+      "type": "person",
+      "bio": "",
+      "location": "",
+      "company": "",
+      "avatar": null,
+      "platforms": [
+        {
+          "type": "bluesky",
+          "handle": "numb.comfortab.ly",
+          "url": "https://bsky.app/profile/numb.comfortab.ly",
+          "followers": null
+        }
+      ],
+      "stats": {
+        "posts": 6,
+        "likes": 466
       },
       "tags": [
         "claude",
-        "fundamentals"
+        "coding"
       ],
-      "_score": 481,
+      "_score": 466,
       "category_scores": {
         "claude": 5,
-        "fundamentals": 3
+        "coding": 3
       }
     },
     {
-      "id": "bsky-washingtonpost-com",
-      "slug": "washingtonpost-com",
-      "name": "The Washington Post",
-      "primary_handle": "washingtonpost.com",
+      "id": "bsky-duckaislop-bsky-social",
+      "slug": "duckaislop-bsky-social",
+      "name": "Duck AI Slop!!",
+      "primary_handle": "duckaislop.bsky.social",
       "primary_platform": "bluesky",
       "type": "person",
       "bio": "",
@@ -29137,28 +29210,28 @@
       "platforms": [
         {
           "type": "bluesky",
-          "handle": "washingtonpost.com",
-          "url": "https://bsky.app/profile/washingtonpost.com",
+          "handle": "duckaislop.bsky.social",
+          "url": "https://bsky.app/profile/duckaislop.bsky.social",
           "followers": null
         }
       ],
       "stats": {
-        "posts": 11,
-        "likes": 478
+        "posts": 13,
+        "likes": 461
       },
       "tags": [
-        "claude"
+        "creative"
       ],
-      "_score": 478,
+      "_score": 461,
       "category_scores": {
-        "claude": 5
+        "creative": 3
       }
     },
     {
-      "id": "bsky-nature-com",
-      "slug": "nature-com",
-      "name": "Nature",
-      "primary_handle": "nature.com",
+      "id": "bsky-arstechnica-com",
+      "slug": "arstechnica-com",
+      "name": "Ars Technica",
+      "primary_handle": "arstechnica.com",
       "primary_platform": "bluesky",
       "type": "person",
       "bio": "",
@@ -29168,25 +29241,23 @@
       "platforms": [
         {
           "type": "bluesky",
-          "handle": "nature.com",
-          "url": "https://bsky.app/profile/nature.com",
+          "handle": "arstechnica.com",
+          "url": "https://bsky.app/profile/arstechnica.com",
           "followers": null
         }
       ],
       "stats": {
-        "posts": 17,
-        "likes": 477
+        "posts": 12,
+        "likes": 452
       },
       "tags": [
         "agents",
-        "claude",
-        "fundamentals"
+        "claude"
       ],
-      "_score": 477,
+      "_score": 452,
       "category_scores": {
         "agents": 6,
-        "claude": 5,
-        "fundamentals": 3
+        "claude": 3
       }
     },
     {
@@ -29209,22 +29280,22 @@
         }
       ],
       "stats": {
-        "posts": 37,
-        "likes": 477
+        "posts": 35,
+        "likes": 452
       },
       "tags": [
         "claude"
       ],
-      "_score": 477,
+      "_score": 452,
       "category_scores": {
         "claude": 13
       }
     },
     {
-      "id": "bsky-fintwitter-bsky-social",
-      "slug": "fintwitter-bsky-social",
-      "name": "FinTwitter",
-      "primary_handle": "fintwitter.bsky.social",
+      "id": "bsky-coolhand-bsky-social",
+      "slug": "coolhand-bsky-social",
+      "name": "Luke Steuber",
+      "primary_handle": "coolhand.bsky.social",
       "primary_platform": "bluesky",
       "type": "person",
       "bio": "",
@@ -29234,23 +29305,21 @@
       "platforms": [
         {
           "type": "bluesky",
-          "handle": "fintwitter.bsky.social",
-          "url": "https://bsky.app/profile/fintwitter.bsky.social",
+          "handle": "coolhand.bsky.social",
+          "url": "https://bsky.app/profile/coolhand.bsky.social",
           "followers": null
         }
       ],
       "stats": {
-        "posts": 13,
-        "likes": 466
+        "posts": 5,
+        "likes": 451
       },
       "tags": [
-        "agents",
-        "claude"
+        "fundamentals"
       ],
-      "_score": 466,
+      "_score": 451,
       "category_scores": {
-        "agents": 6,
-        "claude": 5
+        "fundamentals": 6
       }
     },
     {
@@ -29281,6 +29350,72 @@
       ],
       "_score": 440,
       "category_scores": {
+        "agents": 6
+      }
+    },
+    {
+      "id": "bsky-eryk-bsky-social",
+      "slug": "eryk-bsky-social",
+      "name": "Eryk Salvaggio",
+      "primary_handle": "eryk.bsky.social",
+      "primary_platform": "bluesky",
+      "type": "person",
+      "bio": "",
+      "location": "",
+      "company": "",
+      "avatar": null,
+      "platforms": [
+        {
+          "type": "bluesky",
+          "handle": "eryk.bsky.social",
+          "url": "https://bsky.app/profile/eryk.bsky.social",
+          "followers": null
+        }
+      ],
+      "stats": {
+        "posts": 8,
+        "likes": 431
+      },
+      "tags": [
+        "agents"
+      ],
+      "_score": 431,
+      "category_scores": {
+        "agents": 8
+      }
+    },
+    {
+      "id": "bsky-markriedl-bsky-social",
+      "slug": "markriedl-bsky-social",
+      "name": "Mark Riedl",
+      "primary_handle": "markriedl.bsky.social",
+      "primary_platform": "bluesky",
+      "type": "person",
+      "bio": "",
+      "location": "",
+      "company": "",
+      "avatar": null,
+      "platforms": [
+        {
+          "type": "bluesky",
+          "handle": "markriedl.bsky.social",
+          "url": "https://bsky.app/profile/markriedl.bsky.social",
+          "followers": null
+        }
+      ],
+      "stats": {
+        "posts": 13,
+        "likes": 428
+      },
+      "tags": [
+        "fundamentals",
+        "research",
+        "agents"
+      ],
+      "_score": 428,
+      "category_scores": {
+        "fundamentals": 8,
+        "research": 7,
         "agents": 6
       }
     },
@@ -29316,163 +29451,6 @@
       "category_scores": {
         "business": 6,
         "tool-insights": 6
-      }
-    },
-    {
-      "id": "bsky-spavel-bsky-social",
-      "slug": "spavel-bsky-social",
-      "name": "Pavel",
-      "primary_handle": "spavel.bsky.social",
-      "primary_platform": "bluesky",
-      "type": "person",
-      "bio": "",
-      "location": "",
-      "company": "",
-      "avatar": null,
-      "platforms": [
-        {
-          "type": "bluesky",
-          "handle": "spavel.bsky.social",
-          "url": "https://bsky.app/profile/spavel.bsky.social",
-          "followers": null
-        }
-      ],
-      "stats": {
-        "posts": 8,
-        "likes": 411
-      },
-      "tags": [
-        "claude"
-      ],
-      "_score": 411,
-      "category_scores": {
-        "claude": 3
-      }
-    },
-    {
-      "id": "bsky-aly-codes",
-      "slug": "aly-codes",
-      "name": "aly",
-      "primary_handle": "aly.codes",
-      "primary_platform": "bluesky",
-      "type": "person",
-      "bio": "",
-      "location": "",
-      "company": "",
-      "avatar": null,
-      "platforms": [
-        {
-          "type": "bluesky",
-          "handle": "aly.codes",
-          "url": "https://bsky.app/profile/aly.codes",
-          "followers": null
-        }
-      ],
-      "stats": {
-        "posts": 16,
-        "likes": 411
-      },
-      "tags": [
-        "coding"
-      ],
-      "_score": 411,
-      "category_scores": {
-        "coding": 4
-      }
-    },
-    {
-      "id": "bsky-raphae-li",
-      "slug": "raphae-li",
-      "name": "Raphael Satter",
-      "primary_handle": "raphae.li",
-      "primary_platform": "bluesky",
-      "type": "person",
-      "bio": "",
-      "location": "",
-      "company": "",
-      "avatar": null,
-      "platforms": [
-        {
-          "type": "bluesky",
-          "handle": "raphae.li",
-          "url": "https://bsky.app/profile/raphae.li",
-          "followers": null
-        }
-      ],
-      "stats": {
-        "posts": 5,
-        "likes": 396
-      },
-      "tags": [
-        "agents"
-      ],
-      "_score": 396,
-      "category_scores": {
-        "agents": 3
-      }
-    },
-    {
-      "id": "bsky-duckaislop-bsky-social",
-      "slug": "duckaislop-bsky-social",
-      "name": "Duck AI Slop!!",
-      "primary_handle": "duckaislop.bsky.social",
-      "primary_platform": "bluesky",
-      "type": "person",
-      "bio": "",
-      "location": "",
-      "company": "",
-      "avatar": null,
-      "platforms": [
-        {
-          "type": "bluesky",
-          "handle": "duckaislop.bsky.social",
-          "url": "https://bsky.app/profile/duckaislop.bsky.social",
-          "followers": null
-        }
-      ],
-      "stats": {
-        "posts": 12,
-        "likes": 393
-      },
-      "tags": [
-        "creative"
-      ],
-      "_score": 393,
-      "category_scores": {
-        "creative": 3
-      }
-    },
-    {
-      "id": "bsky-ed3d-net",
-      "slug": "ed3d-net",
-      "name": "Ed",
-      "primary_handle": "ed3d.net",
-      "primary_platform": "bluesky",
-      "type": "person",
-      "bio": "",
-      "location": "",
-      "company": "",
-      "avatar": null,
-      "platforms": [
-        {
-          "type": "bluesky",
-          "handle": "ed3d.net",
-          "url": "https://bsky.app/profile/ed3d.net",
-          "followers": null
-        }
-      ],
-      "stats": {
-        "posts": 7,
-        "likes": 382
-      },
-      "tags": [
-        "fundamentals",
-        "claude"
-      ],
-      "_score": 382,
-      "category_scores": {
-        "fundamentals": 6,
-        "claude": 5
       }
     },
     {

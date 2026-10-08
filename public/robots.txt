@@ -3,59 +3,36 @@
 # Doel: volledige indexering van de creator-directory
 # (1600+ pagina's) + maximale AI-zichtbaarheid.
 # =============================================
+#
+# Eén groep voor alle crawlers. Let op bij uitbreiden: een eigen
+# "User-agent: X"-blok vervangt voor die bot de regels van "User-agent: *"
+# volledig (RFC 9309). Losse blokken met alleen "Allow: /" haalden daardoor
+# Disallow: /api/ en het Content-Signal weg voor juist de AI-bots
+# (gevonden 8 okt 2026). Wil je een bot noemen: zet hem in deze groep.
 
-# Alle standaard crawlers
 User-agent: *
+User-agent: GPTBot
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: ClaudeBot
+User-agent: Claude-SearchBot
+User-agent: Claude-User
+User-agent: anthropic-ai
+User-agent: claude-web
+User-agent: PerplexityBot
+User-agent: Perplexity-User
+User-agent: Googlebot
+User-agent: Google-Extended
+User-agent: Bingbot
+User-agent: Applebot
 Allow: /
+Disallow: /api/
 # Content Signals (https://contentsignals.org/) — AI-inzet-voorkeuren,
 # zelfde beleid als hetlaatsteainieuws.nl:
 # ai-train: nee (geen trainingsdata zonder licentie)
 # search: ja (indexering welkom)
 # ai-input: ja (content als agent-context gebruiken mag)
 Content-Signal: ai-train=no, search=yes, ai-input=yes
-Disallow: /api/
-
-# ——— OPENAI ———
-User-agent: GPTBot
-Allow: /
-
-User-agent: OAI-SearchBot
-Allow: /
-
-User-agent: ChatGPT-User
-Allow: /
-
-# ——— ANTHROPIC (Claude) ———
-User-agent: ClaudeBot
-Allow: /
-
-User-agent: anthropic-ai
-Allow: /
-
-User-agent: claude-web
-Allow: /
-
-# ——— PERPLEXITY ———
-User-agent: PerplexityBot
-Allow: /
-
-User-agent: Perplexity-User
-Allow: /
-
-# ——— GOOGLE (Gemini / Search) ———
-User-agent: Googlebot
-Allow: /
-
-User-agent: Google-Extended
-Allow: /
-
-# ——— MICROSOFT (Bing / Copilot) ———
-User-agent: Bingbot
-Allow: /
-
-# ——— APPLE ———
-User-agent: Applebot
-Allow: /
 
 # =============================================
 # Sitemaps

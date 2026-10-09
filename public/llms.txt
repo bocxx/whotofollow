@@ -32,6 +32,10 @@ Belangrijk voor citaties: opgenomen zijn accounts die als AI-relevant zijn gemar
 - [Sitemap](https://whotofollow.online/sitemap-index.xml): alle pagina's
 - [English version](https://whotofollow.online/en/)
 
+## Agent-discovery
+
+- [AI-catalogus (ARD)](https://whotofollow.online/.well-known/ai-catalog.json): machine-leesbaar overzicht van alle agent-bronnen
+
 ## Netwerk
 
 Zustersites, elk met een eigen rol:

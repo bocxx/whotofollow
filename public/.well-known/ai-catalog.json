@@ -1,0 +1,41 @@
+{
+  "specVersion": "1.0",
+  "host": {
+    "displayName": "whotofollow.online",
+    "identifier": "did:web:whotofollow.online",
+    "description": "Directory van AI-makers, onderzoekers en bedrijven om te volgen"
+  },
+  "entries": [
+    {
+      "identifier": "urn:air:whotofollow.online:docs:llms-txt",
+      "displayName": "whotofollow.online llms.txt",
+      "type": "text/plain",
+      "url": "https://whotofollow.online/llms.txt",
+      "representativeQueries": [
+        "wie moet ik volgen over AI",
+        "AI-experts op YouTube",
+        "AI-onderzoekers op Bluesky"
+      ]
+    },
+    {
+      "identifier": "urn:air:whotofollow.online:feed:rss",
+      "displayName": "whotofollow.online RSS-feed",
+      "type": "application/rss+xml",
+      "url": "https://whotofollow.online/rss.xml",
+      "representativeQueries": [
+        "nieuwste items op whotofollow.online",
+        "volg whotofollow.online via RSS"
+      ]
+    },
+    {
+      "identifier": "urn:air:whotofollow.online:index:sitemap",
+      "displayName": "whotofollow.online sitemap",
+      "type": "application/xml",
+      "url": "https://whotofollow.online/sitemap-index.xml",
+      "representativeQueries": [
+        "alle pagina's van whotofollow.online",
+        "overzicht van whotofollow.online"
+      ]
+    }
+  ]
+}

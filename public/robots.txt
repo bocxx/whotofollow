@@ -38,3 +38,6 @@ Content-Signal: ai-train=no, search=yes, ai-input=yes
 # Sitemaps
 # =============================================
 Sitemap: https://whotofollow.online/sitemap-index.xml
+
+# ARD-catalogus voor AI-agents (Agentic Resource Discovery)
+Agentmap: https://whotofollow.online/.well-known/ai-catalog.json

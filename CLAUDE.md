@@ -68,6 +68,8 @@ Twee gates die een stille regressie moeten tegenhouden; faalt een van beide, dan
 
 Beide hangen in `package.json`-scripts; nooit stilletjes uitzetten zonder PR-noot.
 
+- **`seo-guard` (postbuild, sinds 9 okt 2026)** vergelijkt de live sitemap met de nieuwe build en keurt verdwenen URL's af. Profielen die de wekelijkse verversing laat vallen, verdwijnen elke zondag; daarom staan `/[slug]` en `/en/[slug]` als `vervalbareRoutes` in `seo-guard.config.json` (5 nov 2026). Daar is verdwijnen een waarschuwing, geen fout. Zonder die regel hield de guard van 13 okt tot 5 nov elke deploy tegen en kwamen vier wekelijkse updates niet live.
+
 ---
 
 ## SEO — AI-crawler-signalen (okt 2026)

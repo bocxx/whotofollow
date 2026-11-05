@@ -1,6 +1,12 @@
 {
-  "_comment": "Voor scripts/seo-guard.mjs (ongewijzigd uit astro-starter). ssrRoutes/ssrPrefixes = routes met `prerender = false` (bestaan alleen on-demand). gone = bewust verwijderde paden zonder redirect. Zie de kop van scripts/seo-guard.mjs.",
+  "_comment": "Voor scripts/seo-guard.mjs (uit astro-starter, aangevuld met vervalbareRoutes op 5 nov 2026). ssrRoutes/ssrPrefixes = routes met `prerender = false` (bestaan alleen on-demand). gone = bewust verwijderde paden zonder redirect. Zie de kop van scripts/seo-guard.mjs. vervalbareRoutes = dynamische routes waarvan pagina's bewust komen en gaan (profielen die de wekelijkse verversing laat vallen); verdwijnen daar is een waarschuwing, geen fout.",
   "ssrRoutes": [],
-  "ssrPrefixes": ["/api/"],
-  "gone": []
+  "ssrPrefixes": [
+    "/api/"
+  ],
+  "gone": [],
+  "vervalbareRoutes": [
+    "/[slug]",
+    "/en/[slug]"
+  ]
 }

@@ -35,6 +35,13 @@
  * standaard <domein>/sitemap-index.xml; `false` zolang de site niet live is.
  * Het domein wordt uit de sitemap afgeleid.
  *
+ * vervalbareRoutes (optioneel, sinds 5 nov 2026): dynamische routes waarvan
+ * pagina's bewust komen en gaan, zoals profielen die de wekelijkse
+ * data-verversing laat vallen. Notatie: "/[slug]" of "/en/[slug]", waarbij
+ * [x] precies één padsegment is. Een verdwenen live-URL die op zo'n patroon
+ * past, is een waarschuwing in plaats van een fout. Zonder deze optie hield de
+ * guard op whotofollow.online vier weken elke deploy tegen (okt 2026).
+ *
  * Bron van waarheid: astro-starter/scripts/seo-guard.mjs. Sites kopiëren hem
  * ongewijzigd; site-specifieke instellingen alleen in seo-guard.config.json.
  */
@@ -53,6 +60,9 @@ try {
 const SSR_ROUTES = new Set(guardConfig.ssrRoutes ?? []);
 const SSR_PREFIXES = guardConfig.ssrPrefixes ?? ['/api/'];
 const GONE = guardConfig.gone ?? [];
+const VERVALBAAR = (guardConfig.vervalbareRoutes ?? []).map((r) => new RegExp(
+  '^' + r.split(/\[[^\]]+\]/).map((d) => d.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('[^/]+') + '/?$',
+));
 const OFFLINE = process.argv.includes('--offline') || process.env.SEO_GUARD_OFFLINE === '1';
 
 if (!existsSync(join(DIST, 'sitemap-0.xml'))) {
@@ -187,14 +197,19 @@ if (!OFFLINE && SITE && guardConfig.liveSitemap !== false) {
     const built = new Set(locs.map((l) => norm(l.replace(SITE, '') || '/')));
     const vanished = [];
     const vanishedSsr = [];
+    const vervallen = [];
     for (const loc of live) {
       let p;
       try { p = norm(new URL(loc).pathname); } catch { continue; }
       if (built.has(p) || pageFile(p) || isRedirect(p) || isGone(p)) continue;
+      if (VERVALBAAR.some((re) => re.test(p))) { vervallen.push(p); continue; }
       (isSsr(p) ? vanishedSsr : vanished).push(p);
     }
     for (const p of vanished) {
       errors.push(`live-URL verdwenen zonder redirect: ${p} — voeg een redirect toe of zet hem in "gone" (loopt je checkout achter? git pull)`);
+    }
+    if (vervallen.length) {
+      warnings.push(`${vervallen.length} vervallen pagina('s) op vervalbare routes (worden 404): ${vervallen.slice(0, 5).join(', ')}${vervallen.length > 5 ? ' …' : ''}`);
     }
     if (vanishedSsr.length) {
       warnings.push(`${vanishedSsr.length} live-URL('s) op on-demand routes niet meer in de sitemap: ${vanishedSsr.slice(0, 5).join(', ')}${vanishedSsr.length > 5 ? ' …' : ''}`);

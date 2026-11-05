@@ -2,6 +2,7 @@ import { defineConfig, fontProviders } from 'astro/config';
 import cloudflare from '@astrojs/cloudflare';
 import sitemap from '@astrojs/sitemap';
 import { readFileSync } from 'node:fs';
+import cssPurge from './scripts/css-purge.mjs';
 
 const isDev = process.argv.includes('dev');
 
@@ -77,4 +78,8 @@ export default defineConfig({
   ],
   build: { assets: 'assets' },
   prefetch: { prefetchAll: false, defaultStrategy: 'hover' },
+  vite: {
+    // Snoeit ongebruikte regels uit src/styles/ bij een productiebuild (scripts/css-purge.mjs)
+    css: { postcss: { plugins: [cssPurge()] } },
+  },
 });

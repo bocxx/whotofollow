@@ -6,7 +6,7 @@ import { localizedHref, type Locale } from '../../i18n/messages';
 // rendert ~800× per lijstpagina; inline @lucide/astro-SVG's bliezen de
 // homepage-DOM op tot 3.700+ SVG-kopieën (audit juli 2026).
 import SpriteIcon from '../atoms/SpriteIcon.astro';
-import { formatShare, xCopy } from '../../lib/x';
+import { formatShare, xCopy, TOON_X_CIJFERS } from '../../lib/x';
 
 const categoryIconName: Record<string, string> = {
   'claude':        'sparkles',
@@ -145,10 +145,10 @@ const displayBio = (locale === 'en' && creator.bio_en) || creator.bio || buildFa
       <SpriteIcon name="users" size={12} stroke-width={2} />
       {formatNumber(primaryFollowers)}
     </span>
-    {x?.ai_aandeel != null && (
+    {TOON_X_CIJFERS && x?.ai_aandeel != null && (
       <span class="creator-card__stat creator-card__stat--x">{formatShare(x.ai_aandeel)} {xc.shareShort}</span>
     )}
-    {x && x.uitschieters_30d > 0 && (
+    {TOON_X_CIJFERS && x && x.uitschieters_30d > 0 && (
       <span class="creator-card__stat creator-card__stat--x">{x.uitschieters_30d}× {xc.hitsShort}</span>
     )}
     <div class="creator-card__platforms">

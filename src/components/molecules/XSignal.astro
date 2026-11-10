@@ -7,7 +7,7 @@
  */
 import type { Creator } from '../../types/creator';
 import type { Locale } from '../../i18n/messages';
-import { formatFactor, formatShare, xCopy } from '../../lib/x';
+import { formatFactor, formatShare, xCopy, TOON_X_CIJFERS } from '../../lib/x';
 
 interface Props { creator: Creator; locale?: Locale; }
 const { creator, locale = 'nl' } = Astro.props;
@@ -18,18 +18,18 @@ const c = xCopy[locale];
   <section class="x-signal">
     <h2>{c.detailHeading}</h2>
     <dl class="dl-grid">
-      {x.ai_aandeel != null && <Fragment><dt>{c.share}</dt><dd class="mono">{formatShare(x.ai_aandeel)}</dd></Fragment>}
-      <dt>{c.hits}</dt><dd class="mono">{x.uitschieters_30d}</dd>
+      {TOON_X_CIJFERS && x.ai_aandeel != null && <Fragment><dt>{c.share}</dt><dd class="mono">{formatShare(x.ai_aandeel)}</dd></Fragment>}
+      {TOON_X_CIJFERS && <Fragment><dt>{c.hits}</dt><dd class="mono">{x.uitschieters_30d}</dd></Fragment>}
       <dt>{c.followed}</dt><dd>{x.gevolgd ? c.yes : c.no}</dd>
     </dl>
     {x.beste_post && (
       <p class="x-signal__post">
         <a href={x.beste_post.url} target="_blank" rel="noopener noreferrer">{c.bestPost}</a>
-        <span class="mono"> · {formatFactor(x.beste_post.factor, locale)}</span>
+        {TOON_X_CIJFERS && <span class="mono"> · {formatFactor(x.beste_post.factor, locale)}</span>}
         <span class="x-signal__text">{x.beste_post.tekst}</span>
       </p>
     )}
-    <p class="x-signal__note">{c.method}</p>
+    {TOON_X_CIJFERS && <p class="x-signal__note">{c.method}</p>}
   </section>
 )}
 

@@ -7,6 +7,15 @@ import { getByPlatform } from './data';
 import type { Creator } from '../types/creator';
 import type { Locale } from '../i18n/messages';
 
+/**
+ * De cijfers (aandeel over AI, keer raak, factor) staan uit tot de basislijn eerlijk is.
+ * 10 nov 2026: personen volgen we pas sinds 3 nov rechtstreeks; hun eerdere posts kwamen
+ * binnen via trefwoorden, dus alleen de posts die al goed liepen. Likes worden bovendien
+ * kort na plaatsing opgeslagen, wat factoren van honderden keren oplevert. Opnieuw
+ * beoordelen na 15 dec 2026 (claim-validatie); tot dan toont de site alleen de selectie.
+ */
+export const TOON_X_CIJFERS = false;
+
 export function formatShare(share: number): string {
   return `${Math.round(share * 100)}%`;
 }
@@ -18,6 +27,7 @@ export function formatFactor(factor: number, locale: Locale = 'nl'): string {
 
 /** X-accounts met minstens één uitschieter, vaakst raak eerst. */
 export function getXHits(limit = 15): Creator[] {
+  if (!TOON_X_CIJFERS) return [];
   return getByPlatform('twitter', 2000)
     .filter((c) => (c.x?.uitschieters_30d ?? 0) > 0 && c.x?.beste_post)
     .sort((a, b) =>
@@ -34,7 +44,7 @@ export const xCopy = {
     followed: 'Volgen wij rechtstreeks',
     yes: 'ja',
     no: 'nee',
-    bestPost: 'Beste post',
+    bestPost: 'Veel gelezen post',
     method: 'Raak is een post over AI die minstens drie keer zoveel likes haalde als wat hetzelfde account normaal haalt. Likes zijn een momentopname.',
     listHeading: 'Vaakst raak in de laatste 30 dagen',
     shareShort: 'over AI',
@@ -47,7 +57,7 @@ export const xCopy = {
     followed: 'Followed directly by us',
     yes: 'yes',
     no: 'no',
-    bestPost: 'Best post',
+    bestPost: 'Widely read post',
     method: 'A hit is a post about AI that got at least three times the likes the same account normally gets. Likes are a snapshot.',
     listHeading: 'Most hits in the last 30 days',
     shareShort: 'about AI',

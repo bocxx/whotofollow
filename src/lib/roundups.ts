@@ -85,12 +85,12 @@ export const ROUNDUPS: RoundupConfig[] = [
     nl: {
       kicker: 'X / Twitter',
       title: 'Beste AI-accounts om te volgen op X',
-      lead: 'De AI-onderzoekers, -bouwers en -labs die wij zelf dagelijks volgen op X (Twitter) en die vooral over AI posten, gerangschikt op volgers. Per account zie je welk deel van de posts over AI gaat en hoe vaak een post raak was.',
+      lead: 'De AI-onderzoekers, -bouwers en -labs die wij zelf dagelijks volgen op X (Twitter) en die vooral over AI posten, gerangschikt op volgers.',
     },
     en: {
       kicker: 'X / Twitter',
       title: 'Best AI accounts to follow on X',
-      lead: 'The AI researchers, builders and labs we follow daily on X (Twitter) and that post mostly about AI, ranked by followers. For each account you see what share of posts is about AI and how often a post was a hit.',
+      lead: 'The AI researchers, builders and labs we follow daily on X (Twitter) and that post mostly about AI, ranked by followers.',
     },
   },
   {

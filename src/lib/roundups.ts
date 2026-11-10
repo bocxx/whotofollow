@@ -24,6 +24,8 @@ export interface RoundupConfig {
   slug: string;
   scope: RoundupScope;
   icon: 'star' | 'github' | 'youtube' | 'twitter' | 'bluesky';
+  /** Hoeveel profielen de pagina toont (standaard 60). */
+  limit?: number;
   nl: RoundupCopy;
   en: RoundupCopy;
 }
@@ -78,15 +80,17 @@ export const ROUNDUPS: RoundupConfig[] = [
     slug: 'twitter',
     scope: { kind: 'platform', platform: 'twitter' },
     icon: 'twitter',
+    // De X-lijst is gekozen op gevolgd en raak en blijft klein: toon hem helemaal.
+    limit: 200,
     nl: {
       kicker: 'X / Twitter',
       title: 'Beste AI-accounts om te volgen op X',
-      lead: 'De AI-onderzoekers, -bouwers en -denkers met de meeste invloed op X (Twitter), gerangschikt op volgers — voor wie de AI-tijdlijn scherp wil houden.',
+      lead: 'De AI-onderzoekers, -bouwers en -labs die wij zelf dagelijks volgen op X (Twitter) en die vooral over AI posten, gerangschikt op volgers. Per account zie je welk deel van de posts over AI gaat en hoe vaak een post raak was.',
     },
     en: {
       kicker: 'X / Twitter',
       title: 'Best AI accounts to follow on X',
-      lead: 'The AI researchers, builders and thinkers with the most influence on X (Twitter), ranked by followers — to keep your AI timeline sharp.',
+      lead: 'The AI researchers, builders and labs we follow daily on X (Twitter) and that post mostly about AI, ranked by followers. For each account you see what share of posts is about AI and how often a post was a hit.',
     },
   },
   {
@@ -122,7 +126,7 @@ export interface RoundupData {
 
 const followers = (c: Creator) => (c.stats as any)?.followers ?? 0;
 
-export function getRoundupData(cfg: RoundupConfig, limit = 60): RoundupData {
+export function getRoundupData(cfg: RoundupConfig, limit = cfg.limit ?? 60): RoundupData {
   let pool: Creator[];
   if (cfg.scope.kind === 'picks') {
     pool = [...curatorPicks()].sort(

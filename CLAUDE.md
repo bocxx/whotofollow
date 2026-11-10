@@ -23,6 +23,8 @@ python3 src/export_for_sites.py --copy-to-sites
 |---|---|---|
 | `src/data/whotofollow_creators.json` | `data/reports/whotofollow_creators.json` | ~800 AI-experts met platform-metadata, categorieën, follower-counts, bio's |
 
+**X-accounts (sinds 10 nov 2026): gevolgd en raak.** De export kiest X-accounts niet meer op volgers. Erop staan: de curator picks, elk account dat NewsFlux rechtstreeks volgt met minstens 5 posts in 60 dagen en minstens 30% posts over AI, en de handmatig goedgekeurde lijst in `newsflux/data/configs/whotofollow_x_extra.json` (daar staan ook picks die niet in de tabel `curator_picks` zitten). Regel en tests: `newsflux/src/x_selectie.py`, `newsflux/tests/test_whotofollow_x_selectie.py`. Elk X-account draagt een veld `x` (`gevolgd`, `ai_aandeel`, `uitschieters_30d`, `beste_post`); de site toont het op de kaart, op `/twitter` (lijst "Vaakst raak") en op het profiel (`XSignal.astro`, teksten in `src/lib/x.ts`). X-accounts tellen niet mee in de grens van 800: het bestand bevat ~800 profielen plus de X-lijst.
+
 **Gegevensbronnen in newsflux:** `github_users`, `youtube_channels`, `tweet_authors`, `creator_categories`, `github_trending_snapshots`.
 
 **Hoe de data wordt opgebouwd (zondag-cron volgorde):**

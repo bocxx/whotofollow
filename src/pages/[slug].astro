@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import CategoryRadar from '../components/molecules/CategoryRadar.astro';
+import XSignal from '../components/molecules/XSignal.astro';
 import { getAllCreators, platformLabels, formatNumber, categoryLabel, tierLabel } from '../lib/data';
 import { useTranslations, localizedHref, type Locale } from '../i18n/messages';
 import {
@@ -156,6 +157,8 @@ const personJsonLd = {
     </section>
 
     <CategoryRadar creator={creator} locale={locale} />
+
+    <XSignal creator={creator} locale={locale} />
 
     {Object.keys(creator.stats || {}).length > 0 && (
       <section style="margin-bottom: var(--space-8);">

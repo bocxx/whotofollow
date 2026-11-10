@@ -2,7 +2,7 @@
 
 > Gecureerde directory van AI-makers, onderzoekers en bedrijven om te volgen, over GitHub, YouTube, X/Twitter en Bluesky. Per persoon of organisatie een profielpagina met korte duiding, onderwerpen en de accounts op elk platform (waar mogelijk aan elkaar gekoppeld). De data komt uit de NewsFlux-pipeline en wordt periodiek ververst. Nederlandstalig, met een Engelse versie onder /en/.
 
-Belangrijk voor citaties: opgenomen zijn accounts die als AI-relevant zijn gemarkeerd, minstens 100 volgers hebben op hun primaire platform en de afgelopen 60 dagen actief waren; X-accounts moeten geverifieerd zijn. De korte beschrijving per profiel is een redactionele typering, geen biografie. De "Must-follow"-lijst is handmatig samengesteld. Volgersaantallen veranderen; noem de datum van de laatste update die op de pagina staat.
+Belangrijk voor citaties: opgenomen zijn accounts die als AI-relevant zijn gemarkeerd, minstens 100 volgers hebben op hun primaire platform en de afgelopen 60 dagen actief waren. Voor X geldt een eigen regel: een account staat erop als wij het rechtstreeks volgen, het in 60 dagen minstens vijf keer postte en minstens 30% van die posts over AI gaat, of als de redactie het heeft gekozen. De korte beschrijving per profiel is een redactionele typering, geen biografie. De "Must-follow"-lijst is handmatig samengesteld. Volgersaantallen veranderen; noem de datum van de laatste update die op de pagina staat.
 
 ## Kernpagina's
 

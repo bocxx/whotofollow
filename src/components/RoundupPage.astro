@@ -10,6 +10,7 @@ import LoadMore from './LoadMore.astro';
 import { siteConfig } from '../config/site';
 import { getRoundupConfig, getRoundupData, ROUNDUPS } from '../lib/roundups';
 import { getGeneratedAt, formatNumber } from '../lib/data';
+import { getXHits, formatFactor, formatShare, xCopy } from '../lib/x';
 import { useTranslations, localizedHref, getDateLocale, type Locale } from '../i18n/messages';
 import { Star, Github, Youtube, Twitter, AtSign, ArrowLeft, ArrowRight } from '@lucide/astro';
 
@@ -36,6 +37,10 @@ if (data.top) {
     ? `We tonen er ${data.total}. De grootste is ${data.top.name} met ${topFollowers} volgers.`
     : `Showing ${data.total}. The largest is ${data.top.name} with ${topFollowers} followers.`;
 }
+
+// Alleen op de X-pagina: de accounts die het vaakst raak waren, met hun beste post.
+const xHits = slug === 'twitter' ? getXHits(15) : [];
+const xc = xCopy[locale];
 
 const pageUrl = `${siteConfig.url}${localizedHref(`/${slug}`, locale)}`;
 const others = ROUNDUPS.filter((r) => r.slug !== slug);
@@ -88,6 +93,27 @@ const jsonLd = {
     </div>
 
     <LoadMore gridId="roundup-grid" initial={24} step={24} locale={locale} />
+
+    {xHits.length > 0 && (
+      <section class="x-hits">
+        <h2>{xc.listHeading}</h2>
+        <p class="x-hits__note">{xc.method}</p>
+        <ol class="x-hits__list">
+          {xHits.map((c) => (
+            <li>
+              <a class="x-hits__name" href={localizedHref(`/${c.slug}`, locale)}>{c.name}</a>
+              <span class="x-hits__meta">
+                {c.x!.ai_aandeel != null && <span>{formatShare(c.x!.ai_aandeel)} {xc.shareShort}</span>}
+                <span>{c.x!.uitschieters_30d}× {xc.hitsShort}</span>
+                <a href={c.x!.beste_post!.url} target="_blank" rel="noopener noreferrer">
+                  {xc.bestPost} ({formatFactor(c.x!.beste_post!.factor, locale)})
+                </a>
+              </span>
+            </li>
+          ))}
+        </ol>
+      </section>
+    )}
 
     <section class="roundup-more">
       <h2>{locale === 'nl' ? 'Meer overzichten' : 'More roundups'}</h2>
@@ -145,6 +171,26 @@ const jsonLd = {
     font-family: var(--font-mono); font-size: var(--text-sm);
     color: var(--text-muted); margin: 0;
   }
+
+  .x-hits {
+    margin-top: var(--space-12); padding-top: var(--space-8);
+    border-top: 1px solid var(--border-subtle); max-width: 760px;
+  }
+  .x-hits h2 { font-size: var(--text-xl); font-weight: var(--font-bold); margin: 0 0 var(--space-2); }
+  .x-hits__note { color: var(--text-muted); font-size: var(--text-sm); margin: 0 0 var(--space-4); }
+  .x-hits__list { list-style: none; margin: 0; padding: 0; }
+  .x-hits__list li {
+    display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between;
+    gap: var(--space-1) var(--space-4); padding: var(--space-3) 0;
+    border-bottom: 1px solid var(--border-subtle);
+  }
+  .x-hits__name { color: var(--text-primary); font-weight: var(--font-medium); text-decoration: none; }
+  .x-hits__name:hover { color: var(--primary-bright); }
+  .x-hits__meta {
+    display: inline-flex; flex-wrap: wrap; gap: var(--space-1) var(--space-3);
+    font-family: var(--font-mono); font-size: var(--text-xs); color: var(--text-muted);
+  }
+  .x-hits__meta a { color: var(--primary-bright); }
 
   .roundup-more {
     margin-top: var(--space-16); padding-top: var(--space-8);
